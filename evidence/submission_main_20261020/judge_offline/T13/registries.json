@@ -1,0 +1,20 @@
+[
+  {
+    "kind": "credential",
+    "hash": "46b6e8b28440c4f3d7d1bd6a58853cbfd93659d79d4bc9857ba56388675145d6",
+    "status": "valid",
+    "mode": "local"
+  },
+  {
+    "kind": "credential",
+    "hash": "323681d8cdd72a59834f367ad78baf92f6771dd92c18d2ea0dc052d4ec04a229",
+    "status": "valid",
+    "mode": "local"
+  },
+  {
+    "kind": "mandate",
+    "hash": "282f17d65eacdef48112917bd393763bf55a38afc6cf6b3437d456070d60fa34",
+    "status": "suspended",
+    "mode": "off-chain"
+  }
+]

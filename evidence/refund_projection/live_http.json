@@ -1,0 +1,72 @@
+{
+  "transcript": [
+    {
+      "user": "con gái tôi sắp đi du học hàn, nếu đóng tiền rồi mà bị trượt visa thì sao, có lấy lại được ko",
+      "assistant": "Có anh nhé: nếu hồ sơ hoàn tiền do trượt visa được nộp trước ngày khai giảng 02/03/2027, trường hoàn toàn bộ học phí đã đóng, tiền ký túc xá chưa sử dụng và bảo hiểm chưa kích hoạt; thời hạn hoàn là 16/03/2027, tính từ ngày khai giảng chứ không phải ngày nộp yêu cầu. Tiền chỉ được hoàn về đúng tài khoản gốc của anh đã chuyển tiền; gia đình chịu phí ngân hàng ban đầu, phí ngân hàng trung gian và chênh lệch tỷ giá nên số thực nhận có thể thấp hơn.",
+      "sources": [
+        "openai"
+      ],
+      "firstStepMs": 8.4,
+      "totalMs": 7105.1,
+      "cards": []
+    },
+    {
+      "user": "bao lâu thì tiền về, mất phí gì ko",
+      "assistant": "Nếu hồ sơ được nộp trước ngày khai giảng, trường cam kết hoàn chậm nhất 16/03/2027, tính từ ngày khai giảng 02/03/2027 chứ không phải ngày nộp yêu cầu, anh nhé. Gia đình chịu phí ngân hàng chuyển tiền ban đầu, phí chuyển tiền quốc tế qua ngân hàng trung gian và khoản hao hụt khi đổi KRW qua USD sang nội tệ, nên không bảo đảm số tiền thực nhận bằng toàn bộ số đã đóng.",
+      "sources": [
+        "openai"
+      ],
+      "firstStepMs": 8.6,
+      "totalMs": 6568.8,
+      "cards": []
+    },
+    {
+      "user": "lỡ chậm đóng đợt 2 thì sao?",
+      "assistant": "Anh nhé, đợt hai là 4.477.000 KRW, hạn đóng 15/02/2027; nếu quá hạn mà chưa thanh toán, trường sẽ tạm giữ xác nhận đủ điều kiện đăng ký học cho đến khi phòng tài vụ xác nhận thanh toán hoặc ban hành thông báo phí sửa đổi có ký xác nhận. Điều khoản hiện tại không nêu mức phí phạt chậm đóng; nếu cần gia hạn, anh liên hệ phòng tài vụ trường vì chỉ đơn vị này có quyền duyệt qua thông báo phí sửa đổi.",
+      "sources": [
+        "openai"
+      ],
+      "firstStepMs": 8.4,
+      "totalMs": 7208.6,
+      "cards": []
+    },
+    {
+      "user": "riêng tiền bảo hiểm là bao nhiêu vậy?",
+      "assistant": "Riêng tiền bảo hiểm trong hóa đơn học kỳ là 280.000 KRW, anh nhé.",
+      "sources": [
+        "openai"
+      ],
+      "firstStepMs": 9.7,
+      "totalMs": 4457.9,
+      "cards": []
+    }
+  ],
+  "referenceStable": true,
+  "financialStateUnchanged": true,
+  "initialCounts": {
+    "/approvals?status=all": 0,
+    "/payments": 0,
+    "/refunds": 0,
+    "/mandates": 0,
+    "/documents": 0
+  },
+  "invoiceVersion": "semester-2027-v6",
+  "health": {
+    "ok": true,
+    "demo": true,
+    "bank": "MOCK",
+    "bursar": "MOCK",
+    "llmProvider": "openai",
+    "chainMode": "fisco",
+    "screeningMode": "watchman",
+    "llm": {
+      "configuredProvider": "openai",
+      "effectiveProvider": "openai",
+      "status": "ready",
+      "lastError": null,
+      "lastSuccessAt": "2026-10-17T19:43:21.894434+00:00"
+    },
+    "publicDemo": false
+  },
+  "limits": "New parent thread in the backed-up/reseeded v6 private dev ledger; no documents, payments, signatures or grants"
+}

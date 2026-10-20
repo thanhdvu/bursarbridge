@@ -1,0 +1,13 @@
+[
+  {
+    "root": "bb28a83777890bff33fa9d165c03cd53d398966f70e896c8b0b7b7e584813f29",
+    "firstSeq": 1,
+    "lastSeq": 2,
+    "at": "2027-01-12T03:00:00Z",
+    "mode": "fisco",
+    "txHash": "0x75f742278a2d5a9ab2a500bfcab881ab8b2e91ad280ce3f5c34c1ae6bfcfaa01",
+    "blockNumber": 2168,
+    "contract": "0xc75d7F89e39166D1A49C2FcD567EfAbce798eEb4",
+    "index": 991
+  }
+]

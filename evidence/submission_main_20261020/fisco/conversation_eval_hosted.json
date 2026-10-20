@@ -1,0 +1,5 @@
+{
+  "status": "not_run",
+  "hostedTested": false,
+  "reason": "No hosted API key configured; mock HTTP tests are not live hosted validation"
+}

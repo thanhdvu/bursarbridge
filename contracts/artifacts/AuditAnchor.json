@@ -1,0 +1,113 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "root",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "firstSeq",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "lastSeq",
+          "type": "uint256"
+        }
+      ],
+      "name": "Anchored",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "root",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "first",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "last",
+          "type": "uint256"
+        }
+      ],
+      "name": "anchor",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "count",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "roots",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "evm": {
+    "bytecode": {
+      "object": "60a060405234801561001057600080fd5b50336080526080516102da61003560003960008181606d015260da01526102da6000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806306661abd146100515780638da5cb5b14610068578063a0d11260146100a7578063c2b40ae4146100bc575b600080fd5b6000545b6040519081526020015b60405180910390f35b61008f7f000000000000000000000000000000000000000000000000000000000000000081565b6040516001600160a01b03909116815260200161005f565b6100ba6100b5366004610238565b6100cf565b005b6100556100ca366004610264565b610217565b336001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016146101395760405162461bcd60e51b815260206004820152600a6024820152696f776e6572206f6e6c7960b01b60448201526064015b60405180910390fd5b82158015906101485750600082115b80156101545750818110155b6101905760405162461bcd60e51b815260206004820152600d60248201526c696e76616c69642072616e676560981b6044820152606401610130565b60008054600181810183558280527f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56390910185905590546101d1919061027d565b60408051858152602081018590529081018390527f4be48ba87b7b62bb34ea6cd6df6629196f9008660355ad313b3fe961fa5fc6bd9060600160405180910390a2505050565b6000818154811061022757600080fd5b600091825260209091200154905081565b60008060006060848603121561024d57600080fd5b505081359360208301359350604090920135919050565b60006020828403121561027657600080fd5b5035919050565b8181038181111561029e57634e487b7160e01b600052601160045260246000fd5b9291505056fea2646970667358221220aae5a4a96b24cf38081c18ff8256f41a3a74e92e201a4a34b3e4dcb8be9a903764736f6c63430008130033"
+    }
+  }
+}

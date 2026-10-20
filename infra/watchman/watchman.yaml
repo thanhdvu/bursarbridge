@@ -1,0 +1,9 @@
+Watchman:
+  Servers:
+    BindAddress: "127.0.0.1:8084"
+    AdminAddress: "127.0.0.1:9094"
+    Pprof:
+      Enabled: false
+  Download:
+    IncludedLists: [us_ofac]
+    RefreshInterval: "12h"

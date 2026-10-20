@@ -1,0 +1,38 @@
+{
+  "requestedModel": "gpt-6.1-sol",
+  "endpoint": "http://127.0.0.1:8318/v1/responses",
+  "strictJsonSchema": true,
+  "reasoningEffort": "unset",
+  "readTimeoutSeconds": 60.0,
+  "compatibility": {
+    "responses": {
+      "status": 200,
+      "seconds": 2.45
+    },
+    "adversarialSchemaProbe": {
+      "passed": true,
+      "seconds": 2.5
+    },
+    "chatCompletions": {
+      "outcome": "ReadTimeout",
+      "timeoutSeconds": 90
+    }
+  },
+  "initialSummary": {
+    "passed": 30,
+    "failed": 5,
+    "total": 35
+  },
+  "finalSummary": {
+    "passed": 35,
+    "failed": 0,
+    "total": 35
+  },
+  "caseLatencySeconds": {
+    "median": 7.23,
+    "p95": 17.86,
+    "maximum": 18.29
+  },
+  "verificationMethod": "Latest full run plus two fresh focused reruns (C32/C33) after correcting generic-role-word false positives. No model or policy changes between those runs. Raw reports retained separately.",
+  "limits": "Case time includes all turns and both proposal/reply phases; multi-turn cases are longer. Live hosted inference via owner proxy; banking/screening/chain isolated and synthetic in conversation evals. Not a native-speaker panel or production bank test."
+}

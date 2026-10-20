@@ -1,0 +1,18 @@
+[
+  {
+    "kind": "credential",
+    "hash": "09f4b3e671ae5cde1f33e27c876b774bf0426d1603f5e6dc5d169de37923fe9a",
+    "status": "valid",
+    "mode": "fisco",
+    "blockNumber": 2132,
+    "txHash": "0x5d7523ea398b7a9815dd143a9f3e3b034522b5db4a86cb6fe649b699f58e8fa8"
+  },
+  {
+    "kind": "credential",
+    "hash": "fb703ba2e377e337055acfd4f29f66f169eacfb316973b7bb249a1b400d1d076",
+    "status": "valid",
+    "mode": "fisco",
+    "blockNumber": 2133,
+    "txHash": "0xa10026affa9ff6c14d6b99ddc1241f306d6dd1aba8fc5fdd5c204f56900ab996"
+  }
+]

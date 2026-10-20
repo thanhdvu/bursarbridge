@@ -1,0 +1,59 @@
+{
+  "tests": {
+    "passed": 218,
+    "failed": 0
+  },
+  "scripted": {
+    "passed": 74,
+    "failed": 0,
+    "total": 74
+  },
+  "hosted": {
+    "passed": 74,
+    "failed": 0,
+    "total": 74
+  },
+  "focusedContinuity": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5
+  },
+  "focusedRegressions": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5
+  },
+  "scenarios": {
+    "passed": 20,
+    "failed": 0,
+    "total": 20
+  },
+  "audit": {
+    "runs": 20,
+    "entries": 151,
+    "anchors": 36,
+    "receiptsVerified": true
+  },
+  "invoiceVersion": "semester-2027-v5",
+  "latePolicy": "HBU-LATE-01-v1",
+  "liveStateUnchanged": true,
+  "liveReferenceStable": true,
+  "pdfVisualCheck": true,
+  "model": "gpt-6.1-sol",
+  "sourceSha256LF": {
+    "services/api/bursarbridge/reference.py": "ffa279af034e09e510e941f044da8b33971d80e099c849dc3ff43629a80e3a9d",
+    "services/api/bursarbridge/providers.py": "58f9bdb162ed9c5ea0507cf4d240a5d218478f26dfb048c9934aab4efaf46104",
+    "services/api/bursarbridge/conversation.py": "2068e2279049afa50695aec7ce91fae54581d14788ffa513f4d518b905861b16",
+    "services/api/bursarbridge/agent.py": "77c57eda24bbb452059f6986e247b47a830cdc69fbdff3ea82ceaad97ffdcfc1",
+    "services/api/bursarbridge/catalog.py": "334cc1007fada82b3fdf3078ec76563669885db462d5b135e215830572682326",
+    "services/api/bursarbridge/engine.py": "932e6b561865fae99e1f4fd4a62fd641182769538a4ec005f79a6b9a2b815133",
+    "services/api/bursarbridge/policy_questions.py": "14f8fe4a904d3f1f65a4973d4ac6104315efdec727b47a09dc46d7d37a207b08",
+    "services/api/bursarbridge/conversation_evals.py": "9c78e1386a375f9e5334947d393e8e994a6785d5b5dc5e4c0b891ae7159b7aef"
+  },
+  "limits": [
+    "Fictional university policy; no live academic registration integration",
+    "Hosted evals use local chain and synthetic screening; T01-T20 separately use real FISCO/Watchman",
+    "No real money, immigration decision, university submission or bank credentials",
+    "Bounded evals and non-native engineering review; unknown late fee remains unknown"
+  ]
+}

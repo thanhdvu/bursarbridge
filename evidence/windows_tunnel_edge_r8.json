@@ -1,0 +1,24 @@
+{
+  "transport": "Actual loopback HTTP Caddy, simulated named-tunnel HTTPS/client headers",
+  "twoBrowsersSameNetworkIsolated": true,
+  "parallelPersonaBootstrap": true,
+  "crossSandboxTokenRejected": true,
+  "resetIsolated": true,
+  "cfClientIpUsed": true,
+  "forgedXffIgnored": true,
+  "visitorMessageLimitIsolated": true,
+  "firstStepMs": 40.9,
+  "replyMs": 2064.3,
+  "fallback": {
+    "source": "scripted_fallback",
+    "code": "hosted_budget_exhausted",
+    "frozen": false
+  },
+  "quietStreamSeconds": 130.45,
+  "heartbeatCount": 130,
+  "maxHeartbeatGapSeconds": 1.03,
+  "disconnectedStreamReleased": true,
+  "compression": false,
+  "cacheControl": "no-store, no-transform",
+  "limits": "Controlled delayed adapter, local hash chain/synthetic screening and HTML upstream isolate edge behavior. No model calls, public DNS/Cloudflare path or phone/passkey acceptance claimed."
+}

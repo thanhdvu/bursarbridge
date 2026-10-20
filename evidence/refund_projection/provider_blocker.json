@@ -1,0 +1,19 @@
+{
+  "provider": "openai",
+  "model": "gpt-6.1-sol",
+  "proxy": "127.0.0.1:8318",
+  "httpStatus": 429,
+  "retryAfterSeconds": 6299,
+  "fullHostedGreen": false,
+  "fullRun": {
+    "passed": 71,
+    "failed": 4,
+    "total": 75
+  },
+  "focusedRun": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2
+  },
+  "policyBoundaryWeakened": false
+}

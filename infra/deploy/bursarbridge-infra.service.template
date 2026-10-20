@@ -1,0 +1,28 @@
+[Unit]
+Description=BursarBridge native FISCO and government-only Watchman
+After=network-online.target
+Wants=network-online.target
+Before=bursarbridge-api.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+User=bursarbridge
+Group=bursarbridge
+WorkingDirectory=@@ROOT@@/services/api
+EnvironmentFile=/etc/bursarbridge/api.env
+Environment=HOME=/var/lib/bursarbridge
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+ExecStart=@@ROOT@@/services/api/.venv/bin/python -c "from bursarbridge.runtime import infrastructure; infrastructure()"
+ExecStop=/bin/bash @@ROOT@@/infra/fisco/nodes/127.0.0.1/stop_all.sh
+ExecStop=@@ROOT@@/services/api/.venv/bin/python @@ROOT@@/infra/watchman/stop.py
+TimeoutStartSec=1800
+TimeoutStopSec=90
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=full
+ProtectHome=yes
+
+[Install]
+WantedBy=multi-user.target

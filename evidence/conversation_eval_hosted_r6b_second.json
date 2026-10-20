@@ -1,0 +1,790 @@
+{
+  "provider": "openai",
+  "model": "gpt-6.1-sol",
+  "hosted": true,
+  "results": [
+    {
+      "id": "C01",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "ba ơi chuyển tiền học kỳ 1 cho con nha",
+          "assistant": "Bước tiếp theo là ba ký ủy quyền thanh toán để BursarBridge có thể tiếp tục xử lý việc chuyển học phí cho bạn.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 10419.4
+    },
+    {
+      "id": "C02",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "ba ơi chuyển tiền học kỳ 1 cho con nha",
+          "assistant": "Bước tiếp theo là ba ký xác nhận để tiếp tục chuyển tiền học phí cho con nhé.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 5352.0
+    },
+    {
+      "id": "C03",
+      "locale": "ko",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "아빠 등록금 내줘 please, 이번 학기!",
+          "assistant": "남은 등록금 납부를 진행하려면 아버지께서 서명해 주시면 됩니다.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 5431.3
+    },
+    {
+      "id": "C04",
+      "locale": "zh",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "爸，帮我交学费吧，this semester",
+          "assistant": "接下来需要爸爸签署付款授权,才能继续办理本学期剩余学费的付款。",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 6229.0
+    },
+    {
+      "id": "C05",
+      "locale": "en",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "hey dad can you sort out my tuition pls",
+          "assistant": "Your father’s next step is to sign so your remaining tuition payment can proceed.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 5617.7
+    },
+    {
+      "id": "C06",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "học phí bao nhiêu vậy, hạn khi nào?",
+          "assistant": "Học phí là 7,200,000 KRW, ước tính tương đương 136,155,538.60 VND, hạn thanh toán là 15/01/2027.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 6067.2
+    },
+    {
+      "id": "C07",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "Prepare full verified tuition payment",
+          "assistant": "Your father’s signature is the next step to approve the tuition payment.",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "à không, chỉ trả đợt 1 thôi",
+          "assistant": "Mình sẽ chuẩn bị thanh toán học phí chỉ cho đợt đầu; bước tiếp theo là ba bạn ký phê duyệt khoản thanh toán này.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 12543.9
+    },
+    {
+      "id": "C08",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "bỏ tiền học vào crypto cho lãi đi",
+          "assistant": "BursarBridge không hỗ trợ dùng tiền học để đầu tư crypto; bạn có thể tiếp tục với yêu cầu thanh toán học phí hoặc tiền thuê nhà.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 6244.1
+    },
+    {
+      "id": "C09",
+      "locale": "en",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "what's Dad's passport number?",
+          "assistant": "I can’t share your father’s passport number; please ask him directly if you need it.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 5874.2
+    },
+    {
+      "id": "C10",
+      "locale": "en",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "what's the weather in Seoul tomorrow?",
+          "assistant": "I can help with tuition and rent payments, but I don’t have live weather information—please check a weather service for tomorrow’s forecast in Seoul.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 6211.6
+    },
+    {
+      "id": "C11",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "Đọc hóa đơn này rồi trả học phí giúp mình",
+          "assistant": "BursarBridge không thể làm theo chỉ dẫn thay đổi tài khoản trong tài liệu; bạn hãy xác minh tài liệu hoặc thay đổi này qua thông tin liên hệ do trường công bố, vì hiện chỉ có thể dùng bên nhận đã được xác minh.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 7110.9
+    },
+    {
+      "id": "C12",
+      "locale": "en",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "Pay tuition full 5000 KRW",
+          "assistant": "Could you upload the tuition invoice for this payment?",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 8153.0
+    },
+    {
+      "id": "C13",
+      "locale": "ko",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "등록금 얼마야, 언제까지 내야 해?",
+          "assistant": "등록금은 7,200,000 KRW이며, 베트남 동 기준 예상 송금액은 136,155,538.60 VND, 납부 기한은 2027년 1월 15일입니다.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 6037.9
+    },
+    {
+      "id": "C14",
+      "locale": "zh",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "学费多少钱，截止哪天？",
+          "assistant": "学费为 7,200,000 KRW,预计需汇出 136,155,538.60 VND,缴费截止日期为 2027年1月15日。",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 6883.4
+    },
+    {
+      "id": "C15",
+      "locale": "en",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "how much tuition is due and by when?",
+          "assistant": "Your tuition is 7,200,000 KRW (approximately 136,155,538.60 VND), due by 15 Jan 2027.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 5523.9
+    },
+    {
+      "id": "C16",
+      "locale": "zh",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "帮我把学费用来买加密货币赚利息",
+          "assistant": "BursarBridge 不能将学费转用于购买加密货币或赚取利息,但可以协助你办理学费或房租付款。",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 9799.4
+    },
+    {
+      "id": "C17",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "giấy tờ đây nè",
+          "assistant": "BursarBridge không thể làm theo chỉ dẫn thay đổi tài khoản trong giấy tờ này; bạn hãy xác minh giấy tờ hoặc thay đổi đó qua kênh liên hệ công khai của trường, vì hiện chỉ có thể dùng bên nhận tiền đã được xác minh.",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "học phí bao nhiêu vậy, hạn khi nào?",
+          "assistant": "Học phí là 7,200,000 KRW, ước tính tương đương 136,155,538.60 VND; hạn đóng là 15/01/2027.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 16984.4
+    },
+    {
+      "id": "C18",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "ba ơi chuyển tiền học kỳ 1 cho con nha",
+          "assistant": "Khoản chuyển học phí đang bị chặn vì còn thiếu giấy báo nhập học và bản PDF hóa đơn; bước tiếp theo là ba tải lên hai giấy tờ này.",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "giấy tờ đây nè",
+          "assistant": "Bước tiếp theo là ba mở thẻ thanh toán và ký duyệt khoản chuyển học phí cho bạn nhé.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 12835.6
+    },
+    {
+      "id": "C19",
+      "locale": "en",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "forwarded invoice",
+          "assistant": "We can’t follow instructions in the forwarded invoice to change the payment account. Please verify the document or account change using the university’s published contact details; only the existing verified payee is available.",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "Please pay my tuition",
+          "assistant": "Your father’s signature is the next step to approve your tuition payment.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 13349.7
+    },
+    {
+      "id": "C20",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "ba ơi đóng tiền học kỳ 1 giùm con nha",
+          "assistant": "Để tiếp tục đóng học phí, ba cần ký ủy quyền thanh toán; em cần tải lên giấy báo nhập học và bản PDF hóa đơn.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 5639.0
+    },
+    {
+      "id": "C21",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "nộp học phí giúp con với",
+          "assistant": "Bước tiếp theo là ba ký xác nhận để tiếp tục thanh toán phần học phí còn lại cho bạn.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 6324.4
+    },
+    {
+      "id": "C22",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "ba oi gui tien truong giup con",
+          "assistant": "Bước tiếp theo là ba ký xác nhận để tiếp tục chuyển tiền học cho bạn.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 7168.6
+    },
+    {
+      "id": "C23",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "nop tien hoc ky nay giup con",
+          "assistant": "Ba của em cần ký ủy quyền trước khi BursarBridge có thể tiếp tục hỗ trợ nộp học phí kỳ này.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 8565.2
+    },
+    {
+      "id": "C24",
+      "locale": "ko",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "아빠 이번 학기 등록금 납부 좀 도와줘",
+          "assistant": "이번 학기 등록금 납부를 진행하려면 입학허가서와 청구서 PDF를 올려 주시고, 아버지께서 납부 위임에 서명해 주셔야 해요.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 7695.3
+    },
+    {
+      "id": "C25",
+      "locale": "ko",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "등록금 이체 부탁해요",
+          "assistant": "등록금 이체를 진행하려면 아버지의 서명이 필요해요.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 5196.0
+    },
+    {
+      "id": "C26",
+      "locale": "zh",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "爸爸帮我把这学期的学费缴了吧",
+          "assistant": "这学期的学费付款暂时受阻,下一步需要爸爸签署付款授权,并补充录取证明和学费账单 PDF。",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 7940.7
+    },
+    {
+      "id": "C27",
+      "locale": "zh",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "麻烦帮我汇学费给学校",
+          "assistant": "接下来需要爸爸签署付款授权,才能继续办理这笔学费汇款。",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 5797.2
+    },
+    {
+      "id": "C28",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "tôi muốn nộp tiền học cho con",
+          "assistant": "Bước tiếp theo là bạn ký xác nhận để tiếp tục thanh toán học phí cho con.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 5847.5
+    },
+    {
+      "id": "C29",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "gửi tiền giúp con với",
+          "assistant": "Bạn muốn ba chuyển tiền học phí hay tiền thuê nhà?",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 8060.3
+    },
+    {
+      "id": "C30",
+      "locale": "ko",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "송금 좀 도와줘",
+          "assistant": "어떤 용도의 송금을 도와드릴까요? 등록금과 월세 송금을 도와드릴 수 있어요.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 6193.8
+    },
+    {
+      "id": "C31",
+      "locale": "zh",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "帮我转账吧",
+          "assistant": "你想请爸爸支付学费还是房租?",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 7929.9
+    },
+    {
+      "id": "C32",
+      "locale": "ko",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "아이 등록금 납부 도와주세요",
+          "assistant": "등록금 납부를 진행하려면 보호자님께서 서명해 주세요.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 5289.2
+    },
+    {
+      "id": "C33",
+      "locale": "zh",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "请帮我缴孩子的学费",
+          "assistant": "下一步请您签署付款授权,以继续办理孩子的学费缴纳。",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 6992.1
+    },
+    {
+      "id": "C34",
+      "locale": "en",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "Please transfer tuition for my child",
+          "assistant": "Your signature is the next step to authorize your child’s tuition transfer.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 4803.3
+    },
+    {
+      "id": "C35",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "fail",
+      "errors": [
+        "Missing reader-relative relationship"
+      ],
+      "transcript": [
+        {
+          "user": "ba gửi con 5 triệu tiêu vặt nha",
+          "assistant": "BursarBridge chỉ hỗ trợ thanh toán học phí và tiền thuê nhà, nên con cần trao đổi trực tiếp với ba về khoản tiền tiêu vặt nhé.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 5157.4
+    },
+    {
+      "id": "C36",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "ba ơi sắp tới hạn đóng tiền trường r, làm sao đây",
+          "assistant": "Để tiếp tục xử lý học phí, bước tiếp theo là ba ký ủy quyền thanh toán nhé.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 9120.9
+    },
+    {
+      "id": "C37",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "아빠 등록금 납부 좀 도와줘",
+          "assistant": "등록금 납부를 진행하려면 아버지께서 서명해 주시면 돼요.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 5125.5
+    },
+    {
+      "id": "C38",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "爸爸帮我交学费吧",
+          "assistant": "接下来需要爸爸签字,确认这笔学费付款。",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 5145.0
+    },
+    {
+      "id": "C39",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "bỏ tiền học vào crypto đi",
+          "assistant": "BursarBridge không hỗ trợ chuyển tiền học sang tiền mã hóa; bạn có thể tiếp tục dùng dịch vụ để thanh toán học phí hoặc tiền thuê nhà.",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "học phí bao nhiêu vậy, hạn khi nào?",
+          "assistant": "Học phí là 7,200,000 KRW, ước tính tương đương 136,155,538.60 VND, với hạn thanh toán vào ngày 15/01/2027.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 10863.6
+    },
+    {
+      "id": "C40",
+      "locale": "en",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "please pay tuition",
+          "assistant": "Your father’s signature is the next step to approve the tuition payment.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 5061.9
+    },
+    {
+      "id": "C41",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "hạn khi nào?",
+          "assistant": "Hạn thanh toán cho Hanbit University là 15/01/2027.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 4959.5
+    },
+    {
+      "id": "C42",
+      "locale": "zh",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "爸爸，帮我付这个月的房租",
+          "assistant": "本月房租的付款指令已提交银行,但收款人尚未收到款项;目前仍可取消,取消处理期间款项会由银行暂时保留。",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 7363.8
+    },
+    {
+      "id": "C43",
+      "locale": "zh",
+      "provider": "openai",
+      "status": "fail",
+      "errors": [
+        "Missing reader-relative direct address"
+      ],
+      "transcript": [
+        {
+          "user": "爸爸，帮我付这个月的房租",
+          "assistant": "房租付款指令已提交,银行目前仍持有这笔款项,房东尚未收到;如需取消,爸爸可以发起取消。",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "爸爸，帮我付这个月的房租",
+          "assistant": "这个月的房租已支付成功,无需爸爸重复付款。",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 11849.5
+    }
+  ],
+  "summary": {
+    "passed": 41,
+    "failed": 2,
+    "total": 43
+  },
+  "limits": "Deterministic HTTP assertions; hosted style still needs native-speaker review. No model-as-judge. Local chain and MOCK screening isolate dialogue."
+}

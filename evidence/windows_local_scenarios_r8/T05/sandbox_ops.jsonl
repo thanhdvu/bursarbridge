@@ -1,0 +1,2 @@
+{"action": "payment_executed", "actor": "bank", "at": "2026-10-16T12:00:00Z", "mock": true, "requestId": "pay_25086e77e60db636", "result": "debited_held_MOCK"}
+{"action": "cancel", "actor": "bank", "at": "2026-10-16T12:00:00Z", "mock": true, "requestId": "pay_25086e77e60db636", "result": "reversed"}

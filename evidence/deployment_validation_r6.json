@@ -1,0 +1,12 @@
+{
+  "systemdVerifyExitCode": 0,
+  "systemdOutput": "netplan-ovs-cleanup.service: Failed to open /run/systemd/system/netplan-ovs-cleanup.service: Permission denied\n/lib/systemd/system/snapd.service:23: Unknown key name 'RestartMode' in section 'Service', ignoring.\n",
+  "node": {
+    "version": "v22.23.3",
+    "sha256": "df450af89261115ef9f9e3830c3eeb2cc9213b63c720b1af623cb5dcbe2e02de"
+  },
+  "amd64PlanExitCode": 0,
+  "arm64PlanExitCode": 0,
+  "arm64Plan": "Plan: Ubuntu native arm64; Node 22, uv, FISCO, Watchman, private API sandboxes, Next, Caddy HTTPS for demo.example.org. No changes made.",
+  "limits": "Unit structure validated with real executable paths relocated into a temporary filesystem. No services installed, firewall changed, cloud reached, or full VM install performed."
+}

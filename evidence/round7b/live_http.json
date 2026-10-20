@@ -1,0 +1,20 @@
+{
+  "base": "http://127.0.0.1:8000",
+  "realMoney": false,
+  "firstStepMs": 15.4,
+  "replyMs": 7211.2,
+  "reply": "Tổng hóa đơn học kỳ của Linh là 8.954.000 KRW, gồm học phí, ký túc xá và bảo hiểm, tương đương khoảng 169.318.450 VND theo tỷ giá mô phỏng (MOCK); lịch thanh toán đã ký chia thành 2 đợt: 4.477.000 KRW + 4.477.000 KRW.",
+  "source": "openai",
+  "quote": {
+    "send": {
+      "amount": "169318450.36",
+      "currency": "VND"
+    },
+    "receive": {
+      "amount": "8954000.00",
+      "currency": "KRW"
+    },
+    "rate": "0.05289041",
+    "source": "MOCK"
+  }
+}

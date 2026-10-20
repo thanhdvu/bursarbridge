@@ -1,0 +1,46 @@
+
+> web@0.1.0 build C:\Users\DELL\Documents\Personal\output\submission\bursarbridge-thanhdvu-clean\apps\web
+> next build
+
+▲ Next.js 16.4.2 (Turbopack)
+✓ Running next.config.ts took 1666ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 42s
+  Running TypeScript ...
+  Finished TypeScript in 31.2s ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/17) ...
+  Generating static pages using 15 workers (4/17)
+  Generating static pages using 15 workers (8/17)
+  Generating static pages using 15 workers (12/17)
+✓ Generating static pages using 15 workers (17/17) in 2.8s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ƒ /
+├ ƒ /_not-found
+├ ƒ /cosigner
+├ ƒ /demo
+├ ƒ /judge
+├ ○ /opengraph-image
+├ ƒ /parent
+├ ƒ /parent/activity
+├ ƒ /parent/approvals/[id]
+├ ƒ /parent/chat
+├ ƒ /parent/freeze
+├ ƒ /parent/mandate/new
+├ ƒ /parent/payments/[id]
+├ ƒ /parent/refunds/[id]
+├ ƒ /student
+├ ƒ /student/documents
+├ ƒ /student/payments/[id]
+├ ƒ /student/refunds/[id]
+├ ƒ /student/timeline
+└ ƒ /trust
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand

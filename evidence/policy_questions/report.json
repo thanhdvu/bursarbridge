@@ -1,0 +1,47 @@
+{
+  "tests": {
+    "passed": 208,
+    "failed": 0
+  },
+  "scripted": {
+    "passed": 69,
+    "failed": 0,
+    "total": 69
+  },
+  "hostedGroundingFull": {
+    "passed": 69,
+    "failed": 0,
+    "total": 69
+  },
+  "hostedFinalProseProjection": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11
+  },
+  "scenarios": {
+    "passed": 20,
+    "failed": 0,
+    "total": 20
+  },
+  "audit": {
+    "runs": 20,
+    "entries": 151,
+    "anchors": 36,
+    "receiptsVerified": true
+  },
+  "liveStateUnchanged": true,
+  "model": "gpt-6.1-sol",
+  "sourceSha256LF": {
+    "services/api/bursarbridge/agent.py": "799c12cc2d917430626f9a17395a74c02600dc3197f68b424e8ca7d80cc3c241",
+    "services/api/bursarbridge/conversation.py": "784438199622679198dd5bc5ca519ed9d6960386611b402a638d1a28e30ee295",
+    "services/api/bursarbridge/policy_questions.py": "1fa4c0cc43d231baa4b5d9f87b3362d129d6d2589466b8196434a43f2146ee56",
+    "services/api/bursarbridge/providers.py": "fd08a12b93f6f1037138b177c169c072a9f4bec1d042fa64c9043d3b04cfd325",
+    "services/api/bursarbridge/conversation_evals.py": "ceda83369a5a3d8625d80896f1ce69abcacbd15742ccdd284fd60ba710f74488"
+  },
+  "limits": [
+    "Fictional Hanbit terms, MOCK banks/fees/FX, no actual refusal or claim for a hypothetical",
+    "Bounded dialogue evals; natural language is not mechanically proven correct",
+    "Full hosted grounding run preceded card removal; eleven final new cases rerun prose-only",
+    "Local chain and synthetic screening for hosted evals; T01-T20 separately use real FISCO/Watchman"
+  ]
+}

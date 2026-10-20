@@ -1,0 +1,30 @@
+{
+  "platform": "native Linux worker subprocess",
+  "pypdfVersion": "6.21.0",
+  "pypdfWheelSha256": "3aec619699dacb1b73f57e87d9adaa4424814517b2cc028de20adba5a37af4c4",
+  "credentialEnvironment": "omitted",
+  "resourceLimits": {
+    "addressSpaceMiB": 512,
+    "cpuSeconds": 3,
+    "wallSeconds": 5,
+    "parserSlots": 2
+  },
+  "results": [
+    {
+      "case": "synthetic invoice",
+      "exitCode": 0,
+      "expectedAccepted": true
+    },
+    {
+      "case": "hidden injection retained as text",
+      "exitCode": 0,
+      "expectedAccepted": true
+    },
+    {
+      "case": "over page limit",
+      "exitCode": 1,
+      "expectedAccepted": false
+    }
+  ],
+  "limits": "Parser resource controls, not a malware sandbox. Not a cloud or full arm64 VM test."
+}

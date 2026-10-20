@@ -1,0 +1,16 @@
+{
+  "note": "Final publication source snapshot; complete hosted run plus post-cleanup regression checks are separate reports",
+  "sha256LF": {
+    "services/api/bursarbridge/agent.py": "d78c8cc6e2ab516637d48da91f0a74e0650ac35f0bf56a3d70625d8ca580f138",
+    "services/api/bursarbridge/engine.py": "e1bc2e26f9c5fa8f026c5bdaccf47f23dc2954a1a6a5f59a973f47d974756f06",
+    "services/api/bursarbridge/conversation.py": "50572404dbd17fbaf8bb085cee7cc642843fa07031643a557612f1feab70238e",
+    "services/api/bursarbridge/providers.py": "c0f50d8438c4da90bbf40a0da895fad65b0ad0611cb25ce5854d95eae31403d3",
+    "services/api/bursarbridge/reference.py": "62679a88bfa378ae406fbd707815d560adc46dafe71050031a84bdd4df01bcc4",
+    "services/api/bursarbridge/catalog.py": "4be7b8286e9ce54372a300ac135346aae48d0dd497f21f4a92fde3a26428c4f4",
+    "services/api/bursarbridge/refund_policy.py": "95ed20cf55476db4b716a50920ea58125ac43936d887e3db4ee21246935b2664",
+    "services/api/bursarbridge/models.py": "8c3bdffa5c7deb5472a4be66bfe9e06f4f830c75e6e16236758020628d90b320",
+    "services/api/bursarbridge/main.py": "f590aa2599e03d70eef73deb3f4b249b9cc5a6d91376f1f9ea0ae7f6bd3d23e6",
+    "services/api/evals/conversations.json": "a23284f8b42ac8748a0590f442c20dcbb987396451012219e59d4f1c51c520ee",
+    "services/api/tests/test_refund_contract.py": "3dfb72a46843f5f7fdf3b3709a14b48200b1491729b108803197697357a56e4d"
+  }
+}

@@ -1,0 +1,25 @@
+[Unit]
+Description=BursarBridge live web app
+After=network-online.target bursarbridge-api.service
+Wants=network-online.target
+
+[Service]
+User=bursarweb
+Group=bursarweb
+WorkingDirectory=@@ROOT@@/apps/web
+EnvironmentFile=/etc/bursarbridge/web.env
+Environment=NODE_ENV=production
+ExecStart=/usr/local/bin/node node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port 3000
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=full
+ProtectHome=yes
+MemoryMax=2G
+TasksMax=128
+LogRateLimitIntervalSec=30s
+LogRateLimitBurst=100
+
+[Install]
+WantedBy=multi-user.target

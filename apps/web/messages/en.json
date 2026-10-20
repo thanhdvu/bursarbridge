@@ -1,0 +1,1443 @@
+{
+  "common": {
+    "language": "Language",
+    "theme": "Appearance",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "Match device",
+    "simClock": "Simulated clock (demo only)",
+    "today": "Today in the demo: {date}"
+  },
+  "mock": {
+    "label": "Mock",
+    "why": {
+      "bank": "Lotus Home Bank is a fictional bank simulated for this demo. No real money or account is involved.",
+      "clock": "Demo time runs on a simulated clock so a 30-day refund can be shown in minutes.",
+      "authenticator": "Demo authenticator: no real biometric is read. Switch to your device’s passkey below if you have one.",
+      "chain": "Evidence anchors run on a team-operated FISCO BCOS test chain, or a local stand-in in mock mode. Hashes only, never money or personal data.",
+      "rate": "Exchange rate from a simulated bank board, not a live market feed.",
+      "bursar": "Hanbit University and its bursar are fictional and simulated.",
+      "generic": "Simulated for the demo. Every mocked part is listed in the Trust center.",
+      "harness": "Results replayed in the browser. Connect the API to run the real scenario harness."
+    }
+  },
+  "passkey": {
+    "exactly": "Your passkey signs exactly this and nothing else.",
+    "hash": "Fingerprint",
+    "scanning": "Confirming it’s you…",
+    "signed": "Signed",
+    "failed": "Couldn’t sign. Nothing was sent.",
+    "deviceHint": "Use Face ID, fingerprint or your device PIN",
+    "demoHint": "Demo authenticator: tap to confirm",
+    "retry": "Try again",
+    "cta": "Confirm with passkey",
+    "useDemo": "Use the demo authenticator instead",
+    "useDevice": "Use this device’s passkey instead",
+    "cancelled": "The passkey prompt was closed. Nothing was signed."
+  },
+  "payee": {
+    "verified": "Verified",
+    "vouched": "Vouched for by {issuer}",
+    "notVouched": "Not vouched for by the university",
+    "vouchedDetail": "The university signed a credential naming this account as its own.",
+    "accountMatch": "Account matches the university’s record",
+    "accountMismatch": "Account is not on the university’s record",
+    "name": {
+      "match": "Account holder name matches",
+      "close_match": "Name only looks similar",
+      "no_match": "Account holder name does not match"
+    },
+    "onChain": "Credential is current on the evidence chain",
+    "block": "Block #{n}",
+    "technical": "Technical details"
+  },
+  "quote": {
+    "converted": "Amount converted",
+    "fee": "Bank transfer fee",
+    "rate": "Exchange rate",
+    "mid": "Market mid-rate {mid}, bank margin {margin}%",
+    "youPay": "You pay in total",
+    "theyGet": "Hanbit receives",
+    "cancel": "Free to cancel for 30 minutes after you approve",
+    "details": "Rate details",
+    "sourceMock": "simulated rate board (MOCK)",
+    "sourceEcb": "ECB reference rate"
+  },
+  "pack": {
+    "ready": "Bank paperwork ready · {ready} of {total}",
+    "rule": "{corridor} · Circular 20/2022 (study abroad transfer)",
+    "version": "Rules version {v}",
+    "docs": {
+      "transfer_request_form": "Transfer request form",
+      "fee_notice": "University fee notice",
+      "admission_letter": "Admission letter",
+      "student_passport_redacted": "Student passport (masked)",
+      "sender_id_redacted": "Your ID (masked)",
+      "relationship_proof": "Proof you’re the parent",
+      "admission": "Admission letter",
+      "invoice": "University fee notice",
+      "identity": "ID documents (bank record)",
+      "relationship": "Proof you’re the parent (bank record)"
+    }
+  },
+  "cards": {
+    "quote": {
+      "title": "Today’s quote",
+      "at": "Quoted at {time}"
+    },
+    "approval": {
+      "title": {
+        "first_payment": "Tuition payment to Hanbit",
+        "payment": "Payment to Hanbit",
+        "refund_claim": "Cancel admission and claim the refund",
+        "escalation_letter": "Escalation letter",
+        "mandate_change": "Change to your limit",
+        "share_documents": "Share documents"
+      },
+      "forYou": "Needs your approval",
+      "forOther": {
+        "first_payment": "Sent to your parent to approve",
+        "payment": "Sent to your parent to approve",
+        "refund_claim": "Sent to the student to approve",
+        "escalation_letter": "Waiting for approval",
+        "mandate_change": "Waiting for approval",
+        "share_documents": "Waiting for approval"
+      },
+      "status": {
+        "pending": "Waiting",
+        "approved": "Approved",
+        "rejected": "Declined",
+        "expired": "Expired",
+        "cooling_off": "Cooling off"
+      },
+      "youPay": "Your parent pays",
+      "hanbitGets": "Hanbit receives",
+      "refundAmount": "Refund requested",
+      "refundDest": "Can only go back to the account that paid",
+      "review": "Review and approve",
+      "approveClaim": "Sign both forms",
+      "sign": {
+        "claim": "Claim for",
+        "to": "To",
+        "title": {
+          "first_payment": "Approve tuition payment",
+          "payment": "Approve payment",
+          "refund_claim": "Sign the refund forms",
+          "escalation_letter": "Send escalation letter",
+          "mandate_change": "Change your limit",
+          "share_documents": "Share documents"
+        },
+        "claimTuition": "Tuition paid to the university",
+        "forms": "Forms",
+        "formsValue": "Cancel admission + refund request",
+        "by": "Back by"
+      },
+      "youPayParent": "You pay",
+      "refundTo": "Back to the account that paid",
+      "after": {
+        "sent": "{who} approved it. The money is on its way to {payee}.",
+        "sentSub": "The bank holds it until {time}, so it can still be cancelled.",
+        "arrived": "{payee} has received the tuition. You're all set for the semester.",
+        "cancelled": "{who} cancelled this payment. No money left the account."
+      },
+      "refund": {
+        "forYou": "Needs your signature",
+        "signed": "Signed",
+        "claim": "Claimed",
+        "claimSub": "The tuition paid for the semester.",
+        "whereSub": "The account that paid (SWIFT {swift}). Nobody can change it.",
+        "youSign": "What you sign",
+        "theySign": "What the student signs",
+        "claimSubEstimate": "The tuition paid. About {amount} comes back after bank and exchange costs (MOCK estimate)."
+      }
+    },
+    "info": {
+      "openPayment": "See the payment",
+      "NEED_INVOICE": "Tip: tap the paperclip to forward the invoice PDF or the bursar’s email.",
+      "MANDATE_REQUESTED": "Asked your parent to set a tuition limit. Their approval card goes out as soon as they do.",
+      "MANDATE_SET_CONTINUING": "Your parent set the tuition limit, so I sent the payment for approval.",
+      "FREEZE_HINT": "Held payments are cancelled and the money returns. Other outgoing approvals wait. Incoming refunds keep coming back to Dad. Payments already received cannot be recalled here.",
+      "openFreeze": "Open Freeze",
+      "generic": "The assistant checked this; nothing needs you right now."
+    }
+  },
+  "blocked": {
+    "title": "Payment stopped",
+    "titleRedirect": "Refund redirect stopped",
+    "nothingMoved": "Nothing was sent. Your money is where it was.",
+    "attempted": "What was attempted",
+    "attemptPay": "Pay {amount} to “{payee}”",
+    "attemptRedirect": "Send the refund to a different account ({account})",
+    "source": "Came from an email: {sender}",
+    "why": "Why it was stopped",
+    "next": "What to do now",
+    "steps": {
+      "NEXT_NOTHING_MOVED": "Nothing. The payment was never created.",
+      "NEXT_REAL_INVOICE_SAFE": "Your real Hanbit invoice is unchanged and still payable to the verified account.",
+      "NEXT_REPORT_BURSAR": "If you want, report the email to Hanbit’s bursar using the contact on their official website.",
+      "NEXT_DONT_REPLY": "Don’t reply or click links in that email.",
+      "NEXT_REFUND_SAFE": "Your refund continues as normal, to your parent’s account only.",
+      "NEXT_NEVER_PAY_FEE": "Never pay a fee to “speed up” a refund."
+    },
+    "decidedBy": "Decided by the policy engine, not the AI:",
+    "titleEscalate": "Waiting on something",
+    "nothingMovedEscalate": "Nothing has been sent. Here’s what’s missing.",
+    "attemptDoc": "Instructions found in {file}",
+    "attemptDocDetail": "Account and amount in a forwarded document are treated as data, never as a payee.",
+    "stepsDefault": {
+      "NEXT_NOTHING_MOVED": "Nothing. No payment was created.",
+      "NEXT_VERIFY_OFFICIAL": "If a payment detail really changed, confirm it through the university’s official website or office.",
+      "NEXT_DONT_REPLY": "Don’t reply or click links in that message."
+    },
+    "stepsEscalate": {
+      "NEXT_SEND_DOCS": "Forward the missing documents in this chat.",
+      "NEXT_SET_LIMIT": "Ask your parent to set or raise the limit."
+    },
+    "whyEscalate": "Why it’s waiting",
+    "unverified": "Unverified account",
+    "titleCooling": "Paused for 24 hours",
+    "nothingMovedCooling": "Nothing was sent. The family is checking first.",
+    "stepsCooling": {
+      "NEXT_CALL": "Call your family on the number you always use.",
+      "NEXT_NO_SECRET": "Don’t keep it secret and never send a “deposit”.",
+      "NEXT_LAN": "Lan has been asked to check with you."
+    },
+    "attemptAccount": "Send money to account {account}",
+    "titleRefused": "That’s not something I can do"
+  },
+  "reasons": {
+    "FIRST_PAYMENT_TO_PAYEE": "First payment to this university, so a parent approves it",
+    "NO_SCAM_SIGNALS": "No scam signals in the request",
+    "WITHIN_MANDATE_CAP": "Within the limit you set",
+    "AMOUNT_WITHIN_FEE_NOTICE": "Amount matches the university’s fee notice",
+    "RELATIVE_SENDER_ALLOWED": "A parent may send tuition for their child",
+    "DOCS_COMPLETE": "All required documents are ready",
+    "PAYEE_NOT_CREDENTIALED": "The university has never vouched for this account",
+    "PARAMS_FROM_UNTRUSTED_DOC": "Payment details came from an email, not from the university",
+    "LOOKALIKE_SENDER": "Sender’s web address imitates the university’s",
+    "URGENCY_DISCOUNT": "Pressure tactics: a discount if you pay fast",
+    "REFUND_REDIRECT": "Refunds can only return to the account that paid",
+    "ADVANCE_FEE": "Asks for a fee before releasing money",
+    "REFUND_TO_ORIGINAL_PAYER": "Refund goes back to the original account only",
+    "REFUND_DEADLINE": "The university has 30 days to pay the refund",
+    "OUT_OF_SCOPE_CRYPTO": "Crypto and investments are outside what the assistant may do",
+    "PII_REQUEST": "Personal documents are never shared in chat",
+    "PAYEE_FROM_TEXT": "Payees can’t be added from chat or email text",
+    "SELF_LIMIT_CHANGE": "The assistant can’t change its own limits",
+    "STRUCTURING": "Splitting a payment to avoid a quota is not allowed",
+    "OVER_MANDATE_CAP": "Above the limit you set",
+    "ACCOUNT_HASH_MISMATCH": "Account differs from the university’s record",
+    "INSTRUCTION_IN_DOCUMENT": "Instructions hidden in a document are ignored",
+    "UNKNOWN_AGENT": "Request did not come from a recognised agent",
+    "NEVER_ALLOWED": "Instructions inside documents or emails are never followed",
+    "FROZEN_OR_UNAVAILABLE": "Payments are frozen or temporarily unavailable",
+    "MANDATE_REQUIRED": "No signed limit covers this payment yet",
+    "PAYEE_UNVERIFIED": "The university has never vouched for this account",
+    "NAME_MISMATCH": "Account holder name does not match",
+    "TAINTED_PARAMETERS": "Payment details came from untrusted text",
+    "INVALID_AMOUNT": "Amount is not valid",
+    "CAP_EXCEEDED": "Above the limit you signed",
+    "FEE_NOTICE_EXCEEDED": "More than the university’s fee notice",
+    "DOCUMENTS_REQUIRED": "The bank still needs documents",
+    "SANCTIONS_REVIEW": "Payee matches a sanctions list and needs review",
+    "COOLING_AND_COSIGN_REQUIRED": "Looks like a scam: 24-hour pause and a second family signature",
+    "FIRST_PAYMENT": "First payment to this university, so a parent approves it",
+    "WITHIN_MANDATE": "Within the limit you signed",
+    "NEW_PAYEE": "Account never paid before",
+    "UNVERIFIED_PAYEE": "Account not vouched for by the university",
+    "AUTHORITY": "Claims to be police or an official",
+    "URGENCY_SECRECY": "Pressure to act fast and keep it secret",
+    "RAIL_MISMATCH": "Asks for crypto or gift cards",
+    "SAFE_ACCOUNT": "Asks to move money to a “safe account”",
+    "MOCK_BANK_DOCUMENT_CHECK": "Bank document check passed (simulated bank)",
+    "UNTRUSTED_INSTRUCTIONS": "The document contains instructions, which are ignored",
+    "INVOICE_RECORD_MISMATCH": "Doesn’t match the university’s invoice record",
+    "ADMISSION_RECORD_MISMATCH": "Doesn’t match the university’s admission record",
+    "VERIFICATION_REQUIRED": "Needs independent verification first",
+    "REFUSAL_DOCUMENT_REQUIRED": "A visa decision letter is needed",
+    "DOCUMENT_INSTRUCTION": "The document tried to give a payment instruction",
+    "SCAM": "Matches a known scam pattern",
+    "CRYPTO": "Tuition is never moved into crypto or “yield” products",
+    "EXPORT_PII": "Personal documents and numbers are never shared in chat",
+    "RAISE_LIMIT": "The assistant can’t raise its own limit",
+    "REGISTRY_WRITE": "Nobody can add a payee by asking in chat",
+    "PAYMENT_PENDING": "This payment is already in progress",
+    "INVOICE_SETTLED": "This invoice is already paid",
+    "PAYMENT_SETTLEMENT_REQUIRED": "The tuition has to be paid before a refund can be claimed"
+  },
+  "chat": {
+    "working": "Working on it…",
+    "checked": "Checked {n, plural, one {# thing} other {# things}}",
+    "checkedFailed": "Checked {n, plural, one {# thing} other {# things}} · {failed} failed",
+    "emptyTitle": "Hi {name}",
+    "emptyBody": "Forward anything from the university and I’ll take it from there. I only pay accounts the university itself has vouched for.",
+    "emptyBodyParent": "Ask me where the money is or what anything costs. I’ll only ask you to act when something needs your approval.",
+    "placeholder": "Message the assistant",
+    "attach": "Forward a document",
+    "send": "Send",
+    "remove": "Remove",
+    "aiLabel": "AI assistant. It can’t move money on its own; payments follow your family’s rules.",
+    "disposition": {
+      "engine": "Policy engine",
+      "DENY": "refused",
+      "ESCALATE": "needs a person to approve",
+      "AUTO_EXECUTE": "allowed within the limit",
+      "OBSERVE": "logged only"
+    },
+    "newChat": "New conversation",
+    "hosted": "AI reply",
+    "scripted": "Scripted reply",
+    "document": "Document",
+    "uploading": "{n, plural, one {Sending the document…} other {Sending # documents…}}",
+    "reading": "Reading your message…",
+    "workingSlow": "Still working: checking the rules, the bank and the school can take a few seconds",
+    "more": "More",
+    "less": "Less",
+    "emptyBodyRent": "Ask me to pay this month's rent or check where the money is. Rent goes only to the landlord account your parent set and the bank name-checked; tuition only to accounts the university verified."
+  },
+  "docs": {
+    "trayTitle": "Forward a document",
+    "trayHint": "Anything you forward is treated as untrusted until the university’s signature checks out.",
+    "fromDevice": "Choose a file from this device",
+    "fromSchool": "Sample documents",
+    "attacks": "Test attacks (demo)",
+    "samples": {
+      "invoice": {
+        "title": "Hanbit tuition invoice, Spring 2027"
+      },
+      "admission": {
+        "title": "Hanbit admission letter"
+      },
+      "discount_email": {
+        "title": "“15% early payment discount” email"
+      },
+      "refusal": {
+        "title": "Visa decision letter (synthetic)"
+      },
+      "refund_agent_email": {
+        "title": "“Refund assistance in 72h” email"
+      },
+      "police": {
+        "title": "“Police: proof-of-funds deposit” message"
+      },
+      "rental_agreement": {
+        "title": "Seoul Garden Residence rental agreement (synthetic)"
+      }
+    },
+    "title": "Documents",
+    "lead": "Every field keeps track of where it came from. Only fields signed by the university can decide who gets paid.",
+    "prov": {
+      "verified_issuer": "Signed by university",
+      "untrusted_doc": "From the document only"
+    },
+    "empty": "Nothing forwarded yet.",
+    "forward": "Forward something",
+    "kind": {
+      "invoice": "Invoice",
+      "admission": "Admission letter",
+      "refusal": "Visa decision",
+      "email": "Email",
+      "rental_agreement": "Rental agreement"
+    },
+    "field": {
+      "issuer": "Issuer",
+      "student": "Student",
+      "invoiceRef": "Invoice",
+      "amount": "Amount",
+      "dueDate": "Due",
+      "payeeAccount": "Pay to",
+      "programme": "Programme",
+      "sender": "Sender",
+      "deadline": "Deadline",
+      "applicant": "Applicant",
+      "visaType": "Visa",
+      "decision": "Decision",
+      "newAccount": "New account",
+      "fee": "Fee asked",
+      "filename": "File",
+      "text": "What it says",
+      "account": "Pay to"
+    },
+    "attach": "{n, plural, =0 {Choose documents} one {Attach # document} other {Attach # documents}}",
+    "readText": "Text read from the file"
+  },
+  "demo": {
+    "label": "Demo",
+    "open": "Open demo controls",
+    "title": "Demo controls",
+    "playAs": "Play as",
+    "parent": "Parent · mobile",
+    "student": "Student · mobile",
+    "judge": "Trust center",
+    "judgeSub": "Audit, chain, scenarios",
+    "stage": "Demo stage",
+    "stageSub": "Both phones side by side",
+    "family": "Family",
+    "families": {
+      "nguyen": "Nguyễn · VN→KR",
+      "wang": "Wang · CN→KR"
+    },
+    "clock": "Simulated clock",
+    "advanced": "Clock moved forward {n, plural, one {# day} other {# days}}",
+    "reset": "Reset demo",
+    "resetConfirm": "Reset everything to the starting state?",
+    "resetDone": "Demo reset",
+    "mockTitle": "Using the in-browser mock API",
+    "cosigner": "Co-signer · mobile",
+    "resetAgain": "Tap again to reset everything",
+    "jumpPromise": "Jump to the refund promise",
+    "jumped": "Clock moved to {date}",
+    "noPromise": "No refund is waiting for a promise date yet"
+  },
+  "notify": {
+    "approval": "Tuition is ready for your approval",
+    "approvalBody": "Everything has been checked. It takes under a minute.",
+    "review": "Review",
+    "claimReady": "Refund claim drafted. Approve it to send.",
+    "paid": "Hanbit received the tuition. Invoice marked paid.",
+    "rentPaid": "Rent delivered to the landlord.",
+    "rentAuto": "Rent paid automatically",
+    "rentAutoBody": "Within your monthly limit. You can cancel for 30 minutes.",
+    "cancelled": "Payment cancelled",
+    "refundHome": "The refund is back in your account",
+    "refundApproved": "Hanbit approved the refund",
+    "blocked": "A payment request was blocked",
+    "blockedBody": "Someone tried to get money sent to an unverified account. Nothing moved.",
+    "frozen": "Outgoing payments paused",
+    "unfrozen": "Your signed limits resume if still valid. No new limit signature is needed. Cancelled payments are not sent again.",
+    "cosignNeeded": "The family needs your second signature",
+    "cosignNeededBody": "Something looks like a scam. Nothing has been sent.",
+    "scamPaused": "A suspicious request is paused for 24 hours",
+    "scamPausedBody": "Lan has been asked to check. Nothing was sent.",
+    "cosigned": "Lan checked the suspicious request"
+  },
+  "parent": {
+    "tabs": {
+      "home": "Home",
+      "activity": "Activity",
+      "assistant": "Assistant"
+    },
+    "home": {
+      "hello": "Hello, {name}",
+      "glance": "Right now",
+      "headline": {
+        "frozen": "Outgoing payments paused",
+        "approve": "{name}’s tuition is ready for you to approve.",
+        "approveGeneric": "Something needs your approval.",
+        "setLimit": "Set a tuition limit so the assistant can prepare Linh’s payment.",
+        "refund": "Getting the tuition back to you. Nothing for you to do.",
+        "moving": "The tuition is on its way to Hanbit. Nothing for you to do.",
+        "nothing": "Nothing for you to do.",
+        "studentSigns": "{name} is signing the refund forms. Nothing for you to do.",
+        "windowNotOpen": "Hanbit's payment window opens {date}. Nothing to do until then."
+      },
+      "cta": {
+        "unfreeze": "Manage freeze",
+        "review": "Review now",
+        "setLimit": "Set the limit"
+      },
+      "whereLabel": "Where the money is",
+      "where": {
+        "home": "In your account",
+        "onTheWay": "On its way to Seoul",
+        "atSchool": "Paid to Hanbit",
+        "atSchoolRefund": "At Hanbit, refund claimed",
+        "returning": "Coming back to you"
+      },
+      "safeLabel": "Is it safe",
+      "safe": "Only Hanbit-verified accounts",
+      "safeRent": "Only the checked landlord",
+      "balance": "Balance",
+      "boundaries": "Your limits",
+      "noMandate": "Set the tuition limit",
+      "noMandateSub": "Decide once. The assistant can never go beyond it.",
+      "seeAll": "See all",
+      "recent": "Recent",
+      "freeze": "Pause outgoing payments",
+      "freezeSub": "Held payments are cancelled and the money returns. Other outgoing approvals wait.",
+      "tuition": "Tuition",
+      "refund": "Refund",
+      "noRentMandate": "Set the monthly rent limit",
+      "noRentMandateSub": "Seoul Garden Residence, name-checked by your bank. Up to a fixed amount each month; cancel any time."
+    },
+    "activity": {
+      "title": "Activity",
+      "empty": "Nothing has happened yet.",
+      "refunds": "Refunds",
+      "payments": "Payments",
+      "approvals": "Approvals",
+      "blocked": "Blocked for your safety",
+      "blockedKind": {
+        "redirect": "Attempt to redirect the refund",
+        "fakeInvoice": "Fake invoice with a new account",
+        "other": "Request outside the rules"
+      }
+    },
+    "chat": {
+      "title": "Assistant",
+      "sub": "Ask anything about the tuition",
+      "s1": "Has the money arrived?",
+      "s2": "How much is due in VND?",
+      "s3": "Can I stop everything?",
+      "s4": "Put the tuition into crypto for yield"
+    }
+  },
+  "mandate": {
+    "purpose": {
+      "tuition": "Tuition",
+      "rent": "Monthly rent",
+      "living": "Living costs"
+    },
+    "status": {
+      "pending_signature": "Not signed",
+      "active": "Active",
+      "revoked": "Revoked",
+      "expired": "Expired",
+      "suspended": "Frozen"
+    },
+    "ruleCredentialed": "Tuition only, to accounts Hanbit University has verified",
+    "ruleNameChecked": "Only {payee}, name checked by the bank",
+    "cap": "Up to",
+    "capMonthly": "Up to, each month",
+    "used": "{amount} used",
+    "until": "Until {date}",
+    "cosigner": "Lan co-signs anything risky",
+    "onChain": "On evidence chain · block #{n}",
+    "cycle": "Paid once each calendar month, inside the limit",
+    "landlordCheck": "Only to this landlord's account, name-checked by the bank. No other account can be added.",
+    "change": "Change",
+    "cancel": "Cancel the limit",
+    "cancelConfirm": "Tap again to cancel"
+  },
+  "mandateNew": {
+    "back": "Back",
+    "title": "Set the tuition limit",
+    "lead": "You decide the boundary once. The assistant can prepare payments inside it, but can never go beyond it or change it.",
+    "who": "Who can be paid",
+    "whoValue": "Only accounts Hanbit University has verified",
+    "whoHint": "Accounts written in emails, invoices or chat can never be added. Only the university can vouch for its own account.",
+    "locked": "Fixed for your safety",
+    "cap": "Up to",
+    "presetInvoice": "Invoice amount {amount}",
+    "capHint": "Each payment still comes to you for approval the first time.",
+    "until": "Valid until",
+    "cosign": "Ask Lan to co-sign if something looks risky",
+    "cosignHint": "Only for unusual requests, never routine ones",
+    "summary": "The assistant may prepare tuition payments up to {cap}, only to accounts Hanbit University has verified, until {date}.",
+    "summaryCosign": "Lan co-signs anything that looks risky.",
+    "never": "The assistant can never: raise this limit, add a new account, send refunds anywhere but back to you, or move money into crypto.",
+    "sign": "Sign with passkey",
+    "sheetTitle": "Sign the tuition limit",
+    "done": {
+      "title": "Limit set",
+      "body": "The assistant now works inside this boundary. Its fingerprint is recorded so nobody can change it quietly.",
+      "hash": "Limit fingerprint",
+      "chain": "Evidence chain · block #{n}",
+      "home": "Done"
+    },
+    "titleRent": "Set the monthly rent limit",
+    "leadRent": "Rent goes to one landlord your bank has checked. Inside this limit it is paid automatically each month, with a notification and 30 minutes to cancel.",
+    "whoRent": "Only {payee}",
+    "whoRentHint": "Your bank checked that this account belongs to the landlord named on the lease. No other account can be paid.",
+    "presetRent": "Monthly rent {amount}",
+    "capHintRent": "Anything above this, or any other payee, still comes to you.",
+    "summaryRent": "The assistant may pay up to {cap} a month, only to {payee}, until {date}.",
+    "sheetTitleRent": "Sign the rent limit",
+    "leaseRequired": "Lease: waiting for the student to upload it",
+    "leaseVerified": "Lease checked against the bank's record (MOCK)",
+    "account": "Account {masked}, name-checked by the bank"
+  },
+  "payment": {
+    "status": {
+      "awaiting_approval": "Waiting for approval",
+      "executing": "Sending",
+      "sent": "On the way",
+      "received_by_bursar": "Received",
+      "matched": "Paid",
+      "cancelled": "Cancelled",
+      "failed": "Failed"
+    },
+    "statusLong": {
+      "awaiting_approval": "Waiting for approval.",
+      "executing": "Lotus Home Bank is sending it now.",
+      "sent": "On its way to Seoul.",
+      "received_by_bursar": "Hanbit received it and is matching it to the invoice.",
+      "matched": "Hanbit marked the invoice paid. All done.",
+      "cancelled": "Cancelled. The money is back in your account.",
+      "failed": "Failed. Nothing left your account."
+    },
+    "step": {
+      "executing": "Approved and sent by your bank",
+      "sent": "On the way to Seoul",
+      "received_by_bursar": "Received by Hanbit",
+      "matched": "Invoice marked paid"
+    },
+    "purpose": {
+      "tuition": "Tuition",
+      "rent": "Rent",
+      "living": "Living costs"
+    },
+    "auto": "automatic",
+    "back": "Back",
+    "to": "To {payee}",
+    "paid": "{amount} from your account",
+    "autoExplain": "Paid automatically because it’s within the monthly limit you signed, to the same checked landlord. You were notified and could cancel for 30 minutes.",
+    "cancelledBody": "Cancelled within the window. The full amount, fees included, is back in your account.",
+    "cancelConfirm": "Cancel this payment? The full amount returns to your account.",
+    "cancel": "Cancel for free · {m} min left",
+    "amounts": "Amounts",
+    "debited": "Converted",
+    "fees": "Fees",
+    "total": "Total from your account",
+    "received": "Received",
+    "reference": "Reference",
+    "evidence": "Evidence · block #{n}",
+    "payee": "Paid to",
+    "history": "History"
+  },
+  "refund": {
+    "title": "Tuition refund",
+    "daysLeft": "{n} days left",
+    "days": "days",
+    "status": {
+      "refusal_reported": "Refusal reported",
+      "evidence_verified": "Letter checked",
+      "requested": "Claim sent",
+      "acknowledged": "Hanbit acknowledged",
+      "approved": "Hanbit approved",
+      "sent": "On the way back",
+      "received": "Back in your account",
+      "reconciled": "Back · statement ready",
+      "manual_review": "School assessing"
+    },
+    "expected": "Expected back: {amount}",
+    "home": "Your account",
+    "bursar": "Office of the Bursar",
+    "destinationLocked": "Can only go back to the account that paid ({account}). Nobody can change this.",
+    "deadline": "Hanbit must pay by {date}",
+    "open": "See refund",
+    "back": "Back",
+    "statement": "Why it's a little less",
+    "sentOut": "Sent to Hanbit",
+    "receivedBack": "Back in your account",
+    "lines": {
+      "OUTBOUND_FEE": "Bank fee when sending",
+      "OUTBOUND_FX_MARGIN": "Bank margin when sending",
+      "NON_REFUNDABLE_FEE": "Admission fee kept by Hanbit",
+      "RATE_MOVEMENT": "Exchange rate moved",
+      "RETURN_FX_MARGIN": "Bank margin on return",
+      "INBOUND_FEE": "Bank fee on return",
+      "FX_MOVEMENT_MOCK": "Exchange back to your currency",
+      "RETENTION": "Kept by Hanbit",
+      "OUTBOUND_BANK_FEE": "Bank fee for sending",
+      "INTERMEDIARY_BANK_FEE_MOCK": "Middle bank's wire fee"
+    },
+    "lossNote": "Hanbit returned the tuition. The difference ({pct}% of what went out) went to banks and the exchange, line by line from bank records.",
+    "progress": "Progress",
+    "history": "History",
+    "backAmount": "Back in your account: {amount}",
+    "hero": {
+      "back": "{amount} is back in the account that paid",
+      "estimate": "About {amount} comes back",
+      "estimateNote": "Estimate until the money lands",
+      "manual": "Hanbit's degree office decides the amount",
+      "whole": "The tuition comes back"
+    },
+    "fact": {
+      "when": "When",
+      "where": "Where",
+      "why": "Why a little less"
+    },
+    "when": {
+      "promise": "By {date}",
+      "promiseSub": "Hanbit pays within {n} days after classes start on {start}.",
+      "back": "Arrived {date}",
+      "backSub": "On time: Hanbit's promise was {date}.",
+      "manual": "No date yet",
+      "manualSub": "Classes had already started, so the degree office assesses by hand. Nothing is guessed."
+    },
+    "where": {
+      "sub": "Only the account that paid. Nobody can change it, not in chat, email or a PDF."
+    },
+    "why": {
+      "value": "{amount} less than what went out",
+      "valueEstimate": "About {amount} less than what went out",
+      "sub": "Bank fees and the exchange back. Hanbit keeps nothing.",
+      "link": "See each cost"
+    },
+    "expectedBack": "Expected back",
+    "hints": {
+      "OUTBOUND_BANK_FEE": "Paid when the money left. Banks don't return it.",
+      "FX_MOVEMENT_MOCK": "Won to dollars to your currency on the way back, about {pct}%.",
+      "INTERMEDIARY_BANK_FEE_MOCK": "A bank in between charges for the international wire.",
+      "RETENTION": "Nothing: no admission fee was charged."
+    },
+    "lossNoteEstimate": "Hanbit returns the tuition. These bank and exchange costs (about {pct}%) are a MOCK estimate; the final figures come from your bank when the money lands.",
+    "paperwork": "Paperwork",
+    "forms": {
+      "admission_withdrawal": {
+        "title": "Cancel admission",
+        "sub": "Applying again later stays possible. This is not a leave of absence."
+      },
+      "tuition_refund_application": {
+        "title": "Refund request",
+        "sub": "Asks Hanbit to return what was paid, to the account that paid."
+      },
+      "visa_denial_letter": {
+        "title": "Visa decision letter",
+        "sub": "Attached as evidence"
+      },
+      "signed": "Signed by {who} · {date}",
+      "waiting": "Waiting for {who} to sign",
+      "view": "View",
+      "note": "A readable copy of what the passkey signed, not an ink signature. Nothing is emailed to the school from here.",
+      "signedYou": "Signed by you · {date}",
+      "waitingYou": "Waiting for your signature"
+    },
+    "steps": {
+      "requested": "Forms sent to Hanbit",
+      "acknowledged": "Hanbit acknowledged",
+      "approved": "Hanbit approved the refund",
+      "sent": "Hanbit wires the money",
+      "received": "Back in your account"
+    },
+    "eta": "by {date}",
+    "separateNote": "Dorm and health insurance were not paid through BursarBridge, so they are not in this refund. Unused dorm fees follow the dorm office's own rule."
+  },
+  "freeze": {
+    "bannerTitle": "Outgoing payments paused",
+    "bannerBody": "Incoming refunds keep coming back to Dad. Payments already received cannot be recalled here.",
+    "manage": "Manage",
+    "back": "Back",
+    "title": "Pause outgoing payments",
+    "lead": "Held payments are cancelled and the money returns. Other outgoing approvals wait.",
+    "frozenTitle": "Outgoing payments paused",
+    "frozenBody": "Payments still in their 30-minute hold were cancelled. Other outgoing approvals are paused.",
+    "what": {
+      "revoke": "Revoke unused payment permissions",
+      "cancel": "Cancel payments still in their 30-minute hold and return the money",
+      "pause": "Pause other outgoing approvals; keep their signatures unchanged"
+    },
+    "stats": {
+      "revoked": "permissions revoked",
+      "cancelled": "payments cancelled",
+      "ms": "milliseconds",
+      "paused": "approvals paused",
+      "suspended": "limits paused"
+    },
+    "cta": "Freeze now",
+    "ctaHint": "No passkey needed to freeze. Unfreezing needs one.",
+    "unfreeze": "Unfreeze",
+    "unfreezeHint": "Your signed limits resume if still valid. No new limit signature is needed. Cancelled payments are not sent again.",
+    "unfreezeTitle": "Unfreeze payments",
+    "unfreezeLine": "Unfrozen by",
+    "incoming": "Incoming refunds keep coming back to Dad. Payments already received cannot be recalled here.",
+    "approvalPaused": "This request is waiting. Unfreeze to review it. The details stay the same."
+  },
+  "approval": {
+    "close": "Close",
+    "expires": "Expires in {h} h",
+    "forInvoice": "Linh’s tuition · {term}",
+    "title": "Approval",
+    "firstPayment": "First payment to Hanbit",
+    "youPay": "You pay",
+    "fromAccount": "From Lotus Home Bank {account}, fees included",
+    "rateLine": "1 ₩ = {rate} {cur}",
+    "theyGet": "{payee} receives",
+    "glance": {
+      "payee": "The account really is {payee}’s",
+      "payeeSub": "Vouched for by the university, matched by the bank",
+      "cost": "Rate 1 ₩ = {rate} ₫ · fee {fee}",
+      "costSub": "{total} in total; Hanbit receives {receive}",
+      "pack": "Bank paperwork is ready",
+      "packSub": "No forms for you to fill",
+      "cancel": "You can cancel for 30 minutes",
+      "cancelSub": "Free, the full amount comes back"
+    },
+    "why": "Why you’re asked",
+    "whyFirst": "This is your first payment to {payee}, so the assistant can’t send it without you. Later payments to them inside your limit won’t need you.",
+    "whyGeneric": "This request is outside what the assistant may do on its own.",
+    "noCosign": "Nothing looks risky, so Lan doesn’t need to co-sign.",
+    "breakdown": "Cost breakdown",
+    "payee": "Who receives it",
+    "invoice": "What it pays for",
+    "due": "Due {date}",
+    "total": "Total",
+    "pack": "Bank paperwork",
+    "raw": "Technical details",
+    "rawHint": "This is the exact instruction your passkey signs. Your bank recomputes the fingerprint and rejects anything different.",
+    "consentHash": "Fingerprint",
+    "approve": "Approve with passkey",
+    "approveHint": "Approves exactly this payment, nothing else.",
+    "reject": "Decline",
+    "rejectConfirm": "Decline this payment? Nothing will be sent.",
+    "rejected": "Declined. Nothing was sent.",
+    "done": {
+      "title": "Approved",
+      "rejected": "Declined",
+      "expired": "This request expired",
+      "cooling_off": "Cooling off"
+    },
+    "cancelConfirm": "Cancel this payment? The full amount returns to your account.",
+    "cancelFree": "Cancel for free · {m} min left",
+    "viewPayment": "See payment details",
+    "backHome": "Back to home",
+    "expiresMin": "Expires in {m} min"
+  },
+  "student": {
+    "tabs": {
+      "assistant": "Assistant",
+      "documents": "Documents",
+      "timeline": "Timeline"
+    },
+    "home": {
+      "title": "Tuition assistant",
+      "sub": "Hanbit University · Spring 2027",
+      "subWang": "Hanbit University · Year 2",
+      "noPayment": "Nothing paid yet",
+      "s1": "ba ơi chuyển tiền học kỳ 1 cho con nha",
+      "s2": "How much is due in VND?",
+      "s3": "Visa bị từ chối rồi, giờ sao?",
+      "s4": "Put the tuition into crypto for yield",
+      "s5": "What’s Dad’s passport number?",
+      "w1": "房租交了吗？",
+      "w2": "让我叔叔也汇一部分，分开汇就不超额度了",
+      "w3": "Has the rent been paid?",
+      "titleWang": "Family payments assistant"
+    },
+    "timeline": {
+      "title": "Timeline",
+      "empty": "When money moves, every step shows up here.",
+      "payments": "Payments",
+      "everything": "Everything that happened"
+    }
+  },
+  "timeline": {
+    "APPROVED": "Approved with passkey",
+    "EXECUTING": "Bank started the transfer",
+    "SENT": "Sent to Seoul",
+    "RECEIVED_BY_BURSAR": "Received by Hanbit",
+    "MATCHED": "Matched to the invoice: paid",
+    "CANCELLED": "Cancelled",
+    "RECALLED": "Cancelled and recalled by the bank",
+    "AUTO_EXECUTED": "Paid automatically within the limit",
+    "REFUSAL_REPORTED": "Visa refusal letter received",
+    "EVIDENCE_VERIFIED": "Letter checked, refund eligible",
+    "REQUESTED": "Refund claim sent to Hanbit",
+    "ACKNOWLEDGED": "Hanbit acknowledged the claim",
+    "FOLLOWED_UP": "Assistant followed up on schedule",
+    "APPROVED_BY_BURSAR": "Hanbit approved the refund",
+    "RECONCILED": "Refund reconciled, statement ready",
+    "actor": {
+      "agent": "Assistant",
+      "parent": "Parent",
+      "student": "Student",
+      "bank": "Bank",
+      "bursar": "Hanbit",
+      "system": "System"
+    },
+    "REFUND_SENT": "Hanbit wired the refund",
+    "REFUND_RECEIVED": "Refund received in your account",
+    "PAYMENT_EXECUTED": "Sent by your bank",
+    "PAYMENT_MATCHED": "Matched to the invoice: paid",
+    "PAYMENT_CANCELLED": "Cancelled, money returned",
+    "EVIDENCE_VERIFIED_MOCK": "Letter checked, refund eligible",
+    "REFUND_REQUESTED": "Signed forms sent to Hanbit",
+    "REFUND_ACKNOWLEDGED": "Hanbit acknowledged the claim",
+    "REFUND_APPROVED": "Hanbit approved the refund",
+    "REFUND_NUDGE": "Assistant followed up on schedule",
+    "REFUND_ESCALATION_DRAFT": "Escalation letter drafted for you",
+    "REFUND_RECONCILED": "Refund reconciled, statement ready",
+    "REFUND_DEADLINE_BREACH": "Hanbit missed its promise date",
+    "ESCALATION_DRAFT_REQUIRES_STUDENT_APPROVAL": "Follow-up letter ready for the student to approve"
+  },
+  "site": {
+    "nav": {
+      "demo": "Demo stage",
+      "trust": "Trust center",
+      "judge": "Judge console"
+    }
+  },
+  "trust": {
+    "title": "Trust center",
+    "lead": "Every decision the agent and the policy engine make is written to a hash-chained log and anchored on a permissioned chain. Don’t take our word for it: change a byte and verify.",
+    "stats": {
+      "entries": "Log entries",
+      "anchors": "Anchors",
+      "block": "Latest block"
+    },
+    "log": "Audit log",
+    "logSub": "newest first",
+    "checking": "Checking {n} / {total}",
+    "anchoredIn": "Anchored in block #{n}",
+    "mismatch": "Hash mismatch: this entry was changed",
+    "verified": "Verified",
+    "verify": {
+      "title": "Verify",
+      "body": "Recomputes every hash from the first entry and checks each Merkle root against its anchor.",
+      "cta": "Verify the whole log",
+      "running": "Recomputing hashes…",
+      "ok": "Log intact",
+      "okDetail": "{entries} entries chain correctly; {anchors} anchors match their Merkle roots.",
+      "fail": "Tampering detected at entry #{seq}"
+    },
+    "tamper": {
+      "title": "Try to cheat",
+      "body": "Pick any entry and change one byte, the way an insider might edit a record. Then verify.",
+      "pick": "Click a row in the log to choose an entry, or just press the button.",
+      "selected": "Selected entry #{seq}",
+      "cta": "Change one byte",
+      "restore": "Restore"
+    },
+    "chain": {
+      "title": "Evidence chain",
+      "connected": "Connected",
+      "offline": "Offline",
+      "anchors": "Recent anchors",
+      "range": "entries {from}–{to}",
+      "mismatch": "Root mismatch",
+      "genesis": "Genesis",
+      "rootOk": "Root matches",
+      "pending": "{n} newest entries wait for the next anchor"
+    },
+    "realVsMocked": "What’s real and what’s mocked",
+    "realVsMockedLead": "Current API mode: {mode}. Fictional organisations, no real money, no personal data on chain.",
+    "chainSub": "oldest first; each entry seals the one before",
+    "untrusted": "Nothing after #{seq} can be trusted: every later link builds on the changed entry.",
+    "hero": {
+      "integrity": "Integrity",
+      "intact": "Intact",
+      "broken": "Broken at #{seq}",
+      "checking": "Checking…",
+      "unverified": "Not yet verified",
+      "contracts": "Contracts"
+    }
+  },
+  "rvm": {
+    "component": "Component",
+    "status": "Status",
+    "notes": "Notes",
+    "kind": {
+      "real": "Real",
+      "mock": "Mock",
+      "sim": "Simulated",
+      "browser": "In-browser mock",
+      "local": "Local only",
+      "scripted": "Scripted"
+    },
+    "rows": {
+      "policy": {
+        "name": "Policy engine (tiers L0–L3, L-X)",
+        "note": "Deterministic rules outside the LLM. In mock mode the browser replays the same decisions."
+      },
+      "audit": {
+        "name": "Hash-chained audit log",
+        "note": "SHA-256 chain; tamper and verify are genuine in both modes."
+      },
+      "anchor": {
+        "name": "Merkle anchoring on FISCO BCOS",
+        "note": "Team-operated permissioned test chain. Hashes only, no tokens, no personal data."
+      },
+      "passkey": {
+        "name": "Passkeys (WebAuthn)",
+        "note": "Real device passkeys sign the consent hash. A demo authenticator exists for demos and is labelled."
+      },
+      "credential": {
+        "name": "University payee credentials (VC-JWT)",
+        "note": "did:key Ed25519 credentials issued by the simulated university."
+      },
+      "agent": {
+        "name": "AI agent",
+        "note": "LLM via provider adapter, or a deterministic scripted provider. Never holds payment credentials."
+      },
+      "bank": {
+        "name": "Lotus Home Bank",
+        "note": "Fictional bank: ledgers, grants, cancel window and paperwork pack are simulated."
+      },
+      "bursar": {
+        "name": "Hanbit University bursar",
+        "note": "Fictional university: payment status and refund decisions are simulated."
+      },
+      "fx": {
+        "name": "Exchange rates",
+        "note": "Simulated bank board with a disclosed margin (ECB where covered in live mode)."
+      },
+      "clock": {
+        "name": "Clock for timers",
+        "note": "Simulated so a 30-day refund deadline can be shown in minutes."
+      },
+      "letters": {
+        "name": "Visa decision letters",
+        "note": "Synthetic samples. The agent never queries immigration systems."
+      },
+      "orgs": {
+        "name": "People and organisations",
+        "note": "Minh, Linh, Hanbit University and Lotus Home Bank are fictional."
+      },
+      "screening": {
+        "name": "Sanctions screening",
+        "note": "Screening of payee names against a sanctions list."
+      }
+    },
+    "runNotes": {
+      "anchorLocal": "This run uses a local hash chain only: nothing is anchored on FISCO BCOS.",
+      "agentScripted": "This run uses the deterministic scripted provider, not a hosted model.",
+      "screeningSynthetic": "This run screens against a small synthetic list, not a real sanctions dataset."
+    }
+  },
+  "judge": {
+    "title": "Judge console",
+    "lead": "Twenty scripted scenarios from the research plan, each with an expected disposition. Every run writes evidence to the audit log.",
+    "run": "Run {n} scenarios",
+    "runOne": "Run",
+    "stop": "Stop",
+    "mockNote": "You’re in mock mode: these results are replayed in the browser to show the console. Switch the demo controls to LIVE to run the real harness against the API.",
+    "score": {
+      "passed": "Passed",
+      "failed": "Failed",
+      "attacks": "Attacks blocked",
+      "avg": "Average time"
+    },
+    "filter": {
+      "all": "All",
+      "P0": "P0 only",
+      "attacks": "Attacks"
+    },
+    "summary": "{passed} of {total} passed",
+    "col": {
+      "id": "ID",
+      "scenario": "Scenario",
+      "tags": "Tags",
+      "result": "Result",
+      "ms": "ms"
+    },
+    "status": {
+      "pass": "Pass",
+      "fail": "Fail",
+      "running": "Running",
+      "queued": "Queued"
+    },
+    "details": "Details",
+    "expected": "Expected",
+    "actual": "Actual",
+    "evidence": "Evidence:",
+    "cli": "Same suite from a terminal:",
+    "toTrust": "Inspect the evidence in the Trust center",
+    "eyebrow": "Scripted scenarios with expected outcomes",
+    "groups": {
+      "flow": {
+        "title": "Everyday payments",
+        "body": "The agent helps within the parent’s mandate and asks when it should."
+      },
+      "attack": {
+        "title": "Scams and attacks",
+        "body": "Injected text, fake bank details and social engineering are stopped by rules, not by the model."
+      },
+      "refund": {
+        "title": "Refunds",
+        "body": "Money goes back to the original payer, and nobody can redirect it."
+      },
+      "control": {
+        "title": "Parent control and evidence",
+        "body": "Cancel held payments, pause outgoing approvals, and see any change in the log."
+      }
+    }
+  },
+  "stage": {
+    "title": "Demo stage",
+    "lead": "Both phones run the real app and share one backend. Follow the seven scenes; the buttons only pre-fill what a person would do.",
+    "advanced": "Clock moved forward {n, plural, one {# day} other {# days}}",
+    "reset": "Reset demo",
+    "resetConfirm": "Reset everything to the starting state?",
+    "phoneParent": "Minh · parent · Đà Nẵng",
+    "phoneStudent": "Linh · student",
+    "phoneParentWang": "王建国 · parent · Chengdu",
+    "phoneStudentWang": "王浩 · student · Seoul",
+    "log": "Live evidence",
+    "openTrust": "Open",
+    "smallTitle": "Your family demo, one phone at a time",
+    "smallBody": "Open a family member’s app below, or follow the seven scenes. The Demo controls let you switch people.",
+    "openParent": "Open the parent app",
+    "openStudent": "Open the student app",
+    "a": {
+      "openLimit": "Open on Minh’s phone",
+      "cueVague": "Linh asks vaguely",
+      "cueInvoice": "Linh forwards the invoice",
+      "openParent": "Show Minh’s home",
+      "cueDiscount": "Forward the “discount” email",
+      "cueRefusal": "Forward the refusal letter",
+      "plus3": "+3 days",
+      "cueRedirect": "Forward the “refund agent” email",
+      "openTrust": "Open Trust center",
+      "wang": "Switch to the Wang family",
+      "openRent": "Open the rent limit",
+      "cueRent": "Hao asks to pay rent",
+      "plus30": "+30 days",
+      "cuePolice": "Forward the “police” message",
+      "openLan": "Show Lan’s phone",
+      "backMinh": "Back to Minh’s phone",
+      "skipHold": "Skip the 30-min cancel window",
+      "weekLater": "A week later (+7 days)",
+      "jumpPromise": "Jump to Hanbit's promise date",
+      "cueLease": "Hao uploads the rental agreement",
+      "openTimeline": "Show the admission timeline",
+      "openStudentChat": "Back to Linh’s chat",
+      "openFreeze": "Open Freeze / unfreeze"
+    },
+    "scenes": {
+      "1": {
+        "title": "Set the boundary",
+        "cue": "On Minh’s phone, tap “Set the limit”: verified payees only, up to the invoice, until March. Sign with the passkey.",
+        "say": "Humans set the goal and the boundary once."
+      },
+      "2": {
+        "title": "Linh forwards the invoice",
+        "cue": "Linh starts vague in Vietnamese; the agent asks for the invoice instead of guessing. Then she forwards it and the agent checks the signature, the payee credential, the rules and the quote.",
+        "say": "Payee, amount and destination never come from the AI."
+      },
+      "3": {
+        "title": "Minh approves the exact action",
+        "cue": "Minh gets one card: what he pays in VND, what Hanbit receives in KRW, rate and margin, verified payee, paperwork ready. Approve with the passkey; Linh's thread says the money is on its way. Skip the 30-minute cancel window to watch it reach PAID.",
+        "say": "Under a minute, in Vietnamese, on a phone."
+      },
+      "4": {
+        "title": "The attack",
+        "cue": "Linh forwards a “15% early payment discount” email with a new account. The red card explains what was attempted and why it was stopped.",
+        "say": "Text in an email can never become a payee.",
+        "cue2": "Then the pressure scam: a “police” message demands a deposit to a “safe account”. Everything pauses for 24 hours and Lan, at home in Đà Nẵng, gets one calm request to check with Linh."
+      },
+      "5": {
+        "title": "Visa refused",
+        "cue": "A week later the visa is refused. Linh forwards the letter and signs two forms herself: cancel admission and the refund request. The money can only go back to Minh. A “refund agent” tries to redirect it and is denied. Jump to Hanbit's promise, two weeks after classes start, and Minh sees what came back and why it is a little less.",
+        "say": "Nobody else owns this unhappy path end to end."
+      },
+      "6": {
+        "title": "Prove it",
+        "cue": "In the Trust center, change one byte of the log and press Verify: it pinpoints the entry and the anchor. Restore and verify again.",
+        "say": "Tamper-evident and regulator-ready."
+      },
+      "7": {
+        "title": "Routine autonomy",
+        "cue": "Switch to the Wang family (CN→KR, Chinese UI). Hao asks to pay rent; the assistant asks for the rental agreement and a rent limit. Hao uploads the lease (checked against the bank's record), Wang sets the monthly limit for the name-checked landlord, and rent goes out on its own, inside the limit, with a notification and a cancel window.",
+        "say": "The agent participates, inside boundaries humans set."
+      }
+    },
+    "phoneLan": "Lan · co-signer · Đà Nẵng",
+    "advancedHours": "Clock moved forward {n, plural, one {# hour} other {# hours}}",
+    "jumped": "Clock moved to {date}",
+    "noPromise": "No refund is waiting for a promise date yet",
+    "phoneRefund": {
+      "title": "Refund story on one phone",
+      "s1": "As Linh: forward the visa refusal letter and sign both forms.",
+      "s2": "Classes start 2 March; Hanbit pays within two weeks. Move the clock there:",
+      "s3": "As Minh: see what came back, when, to which account, and why it is a little less."
+    }
+  },
+  "landing": {
+    "eyebrow": "Fintechathon 2026 · Topic C · AI as a financial participant",
+    "h1": "Tuition, paid safely. Refunded if the visa says no.",
+    "lead": "BursarBridge is an AI agent that pays an international student’s tuition from the family’s home bank, pays only accounts the university has cryptographically vouched for, and brings the money back to the parents if the visa is refused.",
+    "ctaDemo": "Enter the live demo",
+    "ctaParent": "Open the parent app",
+    "ctaTrust": "Trust center",
+    "honest": "Fictional university and bank, simulated money. Every mocked part is labelled.",
+    "hero": {
+      "label": "Linh’s tuition · Spring 2027",
+      "waiting": "Waiting for Dad",
+      "pay": "Minh pays",
+      "receives": "Hanbit University receives",
+      "c1": "Account vouched for by Hanbit",
+      "c2": "All-in cost 1.03% above mid-market",
+      "c3": "Bank paperwork ready",
+      "cta": "Approve with passkey",
+      "blocked": "Fake “15% discount” invoice stopped",
+      "blockedSub": "New account, not vouched for by the university"
+    },
+    "stats": {
+      "s1": {
+        "n": "1 in 5",
+        "text": "Australian student visa applications refused in FY2025-26. Families pay tuition before they know the outcome."
+      },
+      "s2": {
+        "n": "3–10 wks",
+        "text": "Typical wait for a refusal refund, re-converted at the refund-day rate, often minus fees and retentions."
+      },
+      "s3": {
+        "n": "15%",
+        "text": "The “early payment discount” fake invoices offer, with a brand-new account. A classic tuition scam."
+      }
+    },
+    "moments": {
+      "kicker": "Three moments",
+      "title": "One calm concierge for the family’s biggest transfer of the year",
+      "pay": {
+        "title": "Pays only the real university",
+        "body": "The agent reads the invoice, checks the university’s signed payee credential, gets an all-in quote and builds the bank paperwork. The parent signs exactly that.",
+        "c1": "Credential issued by the university",
+        "c2": "Account and name match",
+        "c3": "Circular 20/2022 pack ready"
+      },
+      "attack": {
+        "title": "Stops the fake invoice",
+        "body": "A discount email with a new account goes nowhere: the account was never vouched for and the details came from untrusted text. The family sees why, in plain words.",
+        "card": "Payment stopped. Nothing was sent."
+      },
+      "refund": {
+        "title": "Brings the money home",
+        "body": "When the visa is refused, the agent files the claim, chases on schedule and refuses any redirect. The refund can only return to the account that paid."
+      }
+    },
+    "tiers": {
+      "kicker": "Safe by construction",
+      "title": "The AI proposes. The policy engine decides.",
+      "lead": "Every action is wrapped in an envelope and judged by deterministic rules outside the model. The model never holds credentials and never supplies a payee, amount or destination.",
+      "L0": {
+        "name": "Inform",
+        "body": "Explain invoices, deadlines, rules and the all-in cost."
+      },
+      "L1": {
+        "name": "Prepare",
+        "body": "Read documents, build the paperwork pack, draft claims. Nothing leaves."
+      },
+      "L2": {
+        "name": "Execute within mandate",
+        "body": "Same checked payee, under the signed cap, no taint, with a cancel window."
+      },
+      "L3": {
+        "name": "Step up",
+        "body": "First payment, new payee, anything risky: the parent signs the exact action."
+      },
+      "LX": {
+        "name": "Never",
+        "body": "Raise its own limit, add payees from text, redirect refunds, split to dodge quotas, crypto."
+      }
+    },
+    "proof": {
+      "kicker": "Proof, not promises",
+      "title": "Change one byte and the log tells you where",
+      "lead": "Each decision is hash-chained to the one before and anchored in Merkle batches on a permissioned FISCO BCOS chain. Only hashes go on chain.",
+      "cta": "Try it in the Trust center",
+      "b1": "Mandate signed: tuition ≤ ₩7,174,000",
+      "b2": "ESCALATE: first payment to Hanbit",
+      "b3": "Payment to •••• 2207 → edited",
+      "b4": "Bursar: invoice PAID",
+      "mismatch": "mismatch"
+    },
+    "people": {
+      "kicker": "Designed for real people",
+      "title": "A nervous parent, a busy student, a sceptical judge",
+      "minh": {
+        "role": "Parent · Đà Nẵng · Vietnamese",
+        "name": "Minh",
+        "body": "Shop owner in Đà Nẵng paying his daughter's semester in Korea from his VND account. He only opens the app to say yes or no to something precise.",
+        "cta": "Open Minh’s phone"
+      },
+      "linh": {
+        "role": "Student · heading to Seoul",
+        "name": "Linh",
+        "body": "Forwards invoices and letters, chats in Vietnamese slang, and never has to be the go-between for money again.",
+        "cta": "Open Linh’s phone"
+      },
+      "judge": {
+        "role": "Judge · auditor",
+        "name": "You",
+        "body": "Run all twenty scenarios, read every decision, and break the log yourself.",
+        "cta": "Open the judge console"
+      }
+    },
+    "rvm": {
+      "kicker": "Honest by default",
+      "title": "What’s real, what’s mocked",
+      "lead": "No real money, banks or universities are involved. Here is exactly what runs for real in this demo."
+    },
+    "footer": {
+      "entry": "Fintechathon 2026 international track entry (PBCSF × WeBank)",
+      "fictional": "Hanbit University and Lotus Home Bank are fictional. No real money moves."
+    }
+  },
+  "errors": {
+    "FROZEN": "Payments are frozen. Unfreeze first.",
+    "APPROVAL_EXPIRED": "This request expired. Ask the assistant to prepare it again.",
+    "CONSENT_MISMATCH": "The details changed after you opened this. Nothing was sent.",
+    "INVOICE_SETTLED": "This invoice is already paid.",
+    "ROLE_REQUIRED": "This needs a different family member.",
+    "INVALID_STATE": "This is no longer waiting for you.",
+    "POLICY_DENIED": "Not allowed by the family’s rules.",
+    "UNAUTHENTICATED": "Session expired. Please try again.",
+    "RATE_LIMITED": "Too many requests. Wait a moment.",
+    "generic": "Something went wrong. Nothing was sent.",
+    "CHALLENGE_REQUIRED": "The signing request timed out. Tap again to sign.",
+    "NOT_APPROVER": "This one is for another family member to sign.",
+    "CONSENT_CHANGED": "The details changed. Open the request again.",
+    "NOT_PENDING": "This is no longer waiting for a signature.",
+    "ASSERTION_REQUIRED": "Sign with your passkey first.",
+    "CHAIN_UNAVAILABLE": "The evidence chain is briefly unavailable. Nothing was sent; try again in a moment.",
+    "INVALID_ASSERTION": "The passkey check didn't match. Nothing was signed; try again.",
+    "REFUND_POLICY_CHANGED": "Classes have started, so the forms need a fresh assessment. Ask the assistant again.",
+    "QUOTE_EXPIRED": "The rate expired. Ask the assistant for a fresh quote.",
+    "INSUFFICIENT_FUNDS": "Not enough money in the account. Nothing was sent."
+  },
+  "rel": {
+    "parent": "Your dad",
+    "student": "Linh",
+    "you": "You"
+  },
+  "needs": {
+    "title": "Before it can go out",
+    "body": "Nothing has moved yet. Here’s what’s left.",
+    "you": {
+      "mandate": "Sign the tuition limit",
+      "rent_mandate": "Set the monthly rent limit",
+      "admission": "Forward the admission letter",
+      "invoice": "Forward the fee notice",
+      "refusal": "Forward the visa decision letter",
+      "other": "Complete this step",
+      "refusal_and_refund_forms": "Forward the visa letter and sign the two refund forms",
+      "payment_settlement": "The bank finishes the tuition payment first",
+      "rental_agreement": "Upload the rental agreement"
+    },
+    "other": {
+      "mandate": "{who} signs the tuition limit",
+      "rent_mandate": "{who} sets the monthly rent limit",
+      "admission": "{who} forwards the admission letter",
+      "invoice": "{who} forwards the fee notice",
+      "refusal": "{who} forwards the visa decision letter",
+      "other": "{who} completes a step",
+      "refusal_and_refund_forms": "{who} forwards the visa letter and signs the refund forms",
+      "payment_settlement": "The bank finishes the tuition payment first",
+      "rental_agreement": "{who} uploads the rental agreement"
+    },
+    "asked": "Asked",
+    "ctaSign": "Set the limit",
+    "ctaUpload": "Forward it",
+    "done": "Done",
+    "resume": "Everything’s ready, continue",
+    "resumeText": "Everything is ready now, please go ahead with the semester 1 tuition",
+    "doneTitle": "All done",
+    "doneBody": "Every step is finished; the request has moved on.",
+    "doneBodyWaiting": "Every step is finished. Preparing the payment request…",
+    "refundTitle": "Before the refund can start",
+    "refundBody": "Only the student can cancel the admission and ask for the money back. Nothing has moved.",
+    "refundDone": "The forms are signed and the claim is with Hanbit.",
+    "rentTitle": "Before rent can be paid"
+  },
+  "cooling": {
+    "badge": "Paused 24 h",
+    "parentTitle": "A suspicious request is paused",
+    "parentBody": "Someone posing as the police asked for a “proof-of-funds deposit” into a “safe account”. Nothing was sent, and that account can never be paid.",
+    "waitingLan": "Waiting for Lan to check with Linh",
+    "lanChecked": "Lan checked with Linh: it’s a scam",
+    "close": "Close the request",
+    "closeConfirm": "Close this request? Nothing will be sent.",
+    "closed": "Closed. Nothing was sent.",
+    "studentTitle": "Your family is checking this",
+    "studentBody": "Nothing was sent. Real police never ask for deposits or secrecy. Your mum will call you on your usual number.",
+    "until": "Paused until {time}",
+    "score": "Scam signals {score}",
+    "waitingLanStudent": "Waiting for your mum to call you",
+    "lanCheckedStudent": "Your mum checked: it’s a scam",
+    "closeYes": "Yes, close it",
+    "parentHero": "Your money is safe. One thing needs a look."
+  },
+  "cosigner": {
+    "role": "Second signature · Nguyễn family",
+    "hello": "Hello, {name}",
+    "quietTitle": "Nothing needs you.",
+    "quietBody": "You are the family’s second signature. We only ask you when something looks like a scam, never for routine payments.",
+    "roleTitle": "What you’re here for",
+    "role1": "Check by phone that Linh and Minh are safe before any unusual money moves.",
+    "role2": "Confirm when a request is a scam, so the family can close it calmly.",
+    "role3": "Nobody can ask you to send money. Your signature can never pay an unverified account.",
+    "kicker": "Needs you now",
+    "title": "Someone is pressuring the family to send money",
+    "body": "A message posing as the police asked for a “proof-of-funds deposit” into a “safe account” and said to keep it secret. Nothing has been sent.",
+    "whyTitle": "Why it looks like a scam",
+    "toldTitle": "What Linh and Minh were told",
+    "told1": "Nothing was sent. That account can never be paid through BursarBridge.",
+    "told2": "Real police, embassies and universities never ask for deposits or secrecy.",
+    "told3": "Everything stays paused for 24 hours while the family checks.",
+    "doTitle": "What to do now",
+    "do1": "Call Linh yourself, on the number you always use. Never a number from the message.",
+    "do2": "Talk to Minh before anyone sends anything.",
+    "do3": "If you can’t reach Linh, call the police yourself on 113.",
+    "sign": "I checked: it’s a scam",
+    "signHint": "Your signature records that you checked with Linh. It can never make that account payable.",
+    "cantReach": "I can’t reach Linh",
+    "cantReachBody": "Keep trying her usual number and call Minh. Nothing can be sent while this is paused. If you are worried for Linh’s safety, call 113.",
+    "sheetTitle": "Sign your check",
+    "sheetWhat": "You confirm",
+    "sheetWhatValue": "I checked with Linh myself",
+    "signedTitle": "Thank you, {name}",
+    "signedBody": "Your check is recorded. Minh can now close the request. The money stays where it is.",
+    "history": "Earlier",
+    "historySigned": "You confirmed a scam",
+    "historyClosed": "Closed by Minh",
+    "historyOpen": "Paused, waiting"
+  },
+  "plan": {
+    "window": "Payment window {range}",
+    "due": "deadline {date} (Korea time)",
+    "status": {
+      "open": "open now",
+      "not_open": "not open yet",
+      "closed": "closed",
+      "settled": "paid",
+      "legacy_unspecified": "dates not signed"
+    },
+    "otherCosts": "Other costs this semester, paid separately",
+    "perMonth": "/month",
+    "collector": "Collected by {who}",
+    "notThroughUs": "Not paid through BursarBridge",
+    "nhis": "NHIS, Korea's national health insurance",
+    "dormOffice": "Hanbit dormitory office"
+  },
+  "overdue": {
+    "title": "Hanbit is {n, plural, one {# day} other {# days}} past its promise",
+    "promised": "Promised by {date}. Nothing is sent without the student's approval.",
+    "chaser": "Dated follow-up letter to the international office",
+    "chaserPreparing": "Being prepared.",
+    "chaserYou": "Ready for you to read and approve.",
+    "chaserWaiting": "Ready; {who} reads and approves it.",
+    "chaserSent": "Sent {date} to {to} (MOCK outbox).",
+    "chaserClosed": "Not sent.",
+    "view": "View",
+    "pack": "Complaint pack for the official route",
+    "packSub": "Prepared for {route}. The student files it herself; it does not guarantee the money back.",
+    "official": "Official site",
+    "honest": "Nobody can force a university to pay. BursarBridge keeps the claim complete, dated and evidenced, and makes sure a missed promise never goes quiet.",
+    "letterTitle": "Follow-up letter about the refund",
+    "letterTo": "To {to}",
+    "letterFacts": "Promise date {date} · prepared {prepared}",
+    "approve": "Approve and send (MOCK)",
+    "sentMock": "Sent (MOCK)",
+    "waiting": "Waiting",
+    "closed": "Closed",
+    "studentApproves": "Only the student can approve this letter.",
+    "to": "To",
+    "promise": "Promise date",
+    "channel": "How",
+    "channelMock": "MOCK outbox, no real email"
+  },
+  "studyProgress": {
+    "refusedTitle": "Visa refused. Tuition stopped.",
+    "moneySafe": "Nothing has been paid, so there is no money to recover. The pending tuition request is closed.",
+    "admissionNext": "Ask Hanbit about withdrawing admission or applying for the next intake. Admission has not been withdrawn for you.",
+    "parentNotice": "Update available in Dad’s family app since {date} (MOCK). No external message was sent; this does not mean he has read it.",
+    "catchingUpTitle": "Your records are catching up",
+    "catchingUp": "The evidence record is catching up in the background and will retry automatically. You can keep looking around; payment checks will wait if needed.",
+    "newAdmissionTitle": "Ask the university for new documents",
+    "newAdmission": "This tuition request stays stopped. A new admission and invoice signed by the university are needed before another payment.",
+    "windowTitle": "Check the payment dates",
+    "windowBody": "Payment is waiting for the school’s confirmed payment window. No money has moved.",
+    "journeyTitle": "From admission to the visa decision",
+    "accepted": "Admission accepted",
+    "certificate": "Admission certificate issued",
+    "visaPending": "Visa application submitted · decision pending",
+    "visaRefused": "Visa refusal received",
+    "paymentWindow": "Tuition window opens while the visa is pending",
+    "sequenceNote": "The certificate comes with admission, before payment. These are fictional demo dates.",
+    "viewCertificate": "View admission certificate",
+    "requestStopped": "This tuition request has stopped. No payment was sent.",
+    "approvalPaused": "This request is waiting. Unfreeze to review it. The details stay the same."
+  }
+}

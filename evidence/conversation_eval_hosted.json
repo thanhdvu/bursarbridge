@@ -1,0 +1,20 @@
+{
+  "status": "focused_only_by_request",
+  "hostedTested": true,
+  "provider": "openai",
+  "model": "gpt-6.1-sol",
+  "fullHostedSuiteRun": false,
+  "caseExecutions": 2,
+  "distinctCases": [
+    "C79"
+  ],
+  "initialReport": "presenter_r9c/hosted_initial.json",
+  "recheckReport": "presenter_r9c/hosted_recheck.json",
+  "manualInitialOmission": "Parent app notice omitted in prose; scripted was more complete. Corrected and rechecked.",
+  "recheckSummary": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1
+  },
+  "limits": "Two focused turns only; not a stitched full hosted-suite pass."
+}

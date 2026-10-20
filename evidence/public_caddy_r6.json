@@ -1,0 +1,91 @@
+{
+  "caddy": {
+    "version": "2.11.7",
+    "source": "https://github.com/caddyserver/caddy/releases/download/v2.11.7/caddy_2.11.7_windows_amd64.zip",
+    "sha512": "c308154504e53755958ffc62d8a2657ab17eefd6dd25c45dbb2c3d93d29519971f77ca652f7d0f2bcb7f980b9ba3822478865e29969d0272d7613550a43152b1"
+  },
+  "transport": "actual loopback TLS through Caddy (private test CA, trust installation disabled)",
+  "configValidated": true,
+  "bootstrapBeforeParallelPersonas": true,
+  "crossSandboxTokenRejected": true,
+  "resetIsolated": true,
+  "encoding": "none",
+  "events": [
+    {
+      "type": "step",
+      "ms": 54.4,
+      "source": null
+    },
+    {
+      "type": "step",
+      "ms": 1058.9,
+      "source": null
+    },
+    {
+      "type": "step",
+      "ms": 1059.6,
+      "source": null
+    },
+    {
+      "type": "step",
+      "ms": 1061.7,
+      "source": null
+    },
+    {
+      "type": "step",
+      "ms": 1062.4,
+      "source": null
+    },
+    {
+      "type": "step",
+      "ms": 1063.3,
+      "source": null
+    },
+    {
+      "type": "step",
+      "ms": 1063.8,
+      "source": null
+    },
+    {
+      "type": "step",
+      "ms": 1064.2,
+      "source": null
+    },
+    {
+      "type": "card",
+      "ms": 1070.5,
+      "source": null
+    },
+    {
+      "type": "card",
+      "ms": 1071.1,
+      "source": null
+    },
+    {
+      "type": "envelope",
+      "ms": 1071.5,
+      "source": null
+    },
+    {
+      "type": "disposition",
+      "ms": 1071.9,
+      "source": null
+    },
+    {
+      "type": "card",
+      "ms": 1072.3,
+      "source": null
+    },
+    {
+      "type": "token",
+      "ms": 2080.9,
+      "source": "scripted"
+    },
+    {
+      "type": "done",
+      "ms": 2081.6,
+      "source": null
+    }
+  ],
+  "limits": "Scripted delayed provider, local hash chain, synthetic screening and small HTML upstream isolate reverse-proxy behavior. No cloud deployment or real HTTPS certificate claim."
+}

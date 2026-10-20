@@ -1,0 +1,128 @@
+{
+  "transport": "two concurrent HTTP TestClient public sandboxes",
+  "provider": "scripted",
+  "chain": "real FISCO BCOS",
+  "screening": "native Watchman",
+  "resetIsolated": true,
+  "anchorIndicesUnique": true,
+  "ms": 15297.0,
+  "journeys": [
+    {
+      "paymentStatus": "matched",
+      "refundStatus": "reconciled",
+      "originalPayer": true,
+      "verify": {
+        "ok": true,
+        "entries": 32,
+        "anchors": 4,
+        "mode": "fisco",
+        "onChain": true
+      },
+      "anchors": [
+        {
+          "at": "2026-10-16T12:00:00Z",
+          "blockNumber": 898,
+          "contract": "0xc75d7F89e39166D1A49C2FcD567EfAbce798eEb4",
+          "firstSeq": 1,
+          "index": 395,
+          "lastSeq": 7,
+          "mode": "fisco",
+          "root": "9d7bfc8eb576090bf1abadcc3917c88aec456ae9fa6af928bbc9ef12ea6ac628",
+          "txHash": "0x29fe18b90a7c88647dd33889b19b2295f624a0a08e68a2d1efe69ef072e461f8"
+        },
+        {
+          "at": "2026-10-16T12:00:00Z",
+          "blockNumber": 900,
+          "contract": "0xc75d7F89e39166D1A49C2FcD567EfAbce798eEb4",
+          "firstSeq": 8,
+          "index": 397,
+          "lastSeq": 13,
+          "mode": "fisco",
+          "root": "b747f3e14b3527d56de1502f007677447302aa4dbe68732627582ef483308d36",
+          "txHash": "0xc71f47c43d2305e4cc6fa51fa3dc0baf12413b885a36430dc7df90411e5138b0"
+        },
+        {
+          "at": "2026-10-16T13:00:00Z",
+          "blockNumber": 902,
+          "contract": "0xc75d7F89e39166D1A49C2FcD567EfAbce798eEb4",
+          "firstSeq": 14,
+          "index": 399,
+          "lastSeq": 25,
+          "mode": "fisco",
+          "root": "22cdf8776bb64b27f24c596ab15321bb621db614d09efb38ba6e08e16e1cf821",
+          "txHash": "0xd0fc9ffbc216c5c45ae5bc7f49290f4263addd651c508d2c71a32a3da34ef3e8"
+        },
+        {
+          "at": "2026-10-26T13:00:00Z",
+          "blockNumber": 904,
+          "contract": "0xc75d7F89e39166D1A49C2FcD567EfAbce798eEb4",
+          "firstSeq": 26,
+          "index": 401,
+          "lastSeq": 32,
+          "mode": "fisco",
+          "root": "4fdef9b6c4151040488f813df3fead102a3af6228d35edaad8906e00af88a978",
+          "txHash": "0x4b5e7aadf5c45949144fc28950e4a12e2c070fca8e8fa5a04684116341954aaa"
+        }
+      ]
+    },
+    {
+      "paymentStatus": "matched",
+      "refundStatus": "reconciled",
+      "originalPayer": true,
+      "verify": {
+        "ok": true,
+        "entries": 32,
+        "anchors": 4,
+        "mode": "fisco",
+        "onChain": true
+      },
+      "anchors": [
+        {
+          "at": "2026-10-16T12:00:00Z",
+          "blockNumber": 897,
+          "contract": "0xc75d7F89e39166D1A49C2FcD567EfAbce798eEb4",
+          "firstSeq": 1,
+          "index": 394,
+          "lastSeq": 7,
+          "mode": "fisco",
+          "root": "995a29d4bcb7b3843b4b9c5f2f08646274685b20c9c72d4e00486366ad9e9000",
+          "txHash": "0x9c899b862808de562e3ab578b73fcb67477ff1c13025685120b66cff910264b1"
+        },
+        {
+          "at": "2026-10-16T12:00:00Z",
+          "blockNumber": 899,
+          "contract": "0xc75d7F89e39166D1A49C2FcD567EfAbce798eEb4",
+          "firstSeq": 8,
+          "index": 396,
+          "lastSeq": 13,
+          "mode": "fisco",
+          "root": "b2ddba62db03ebda5bb355440f00bc526c73940c44c00eb478ea59a72abe43b3",
+          "txHash": "0xbafc792ddb961814443bca9ca1c562711f34ad6cc0acbffc607423ebb3108e55"
+        },
+        {
+          "at": "2026-10-16T13:00:00Z",
+          "blockNumber": 901,
+          "contract": "0xc75d7F89e39166D1A49C2FcD567EfAbce798eEb4",
+          "firstSeq": 14,
+          "index": 398,
+          "lastSeq": 25,
+          "mode": "fisco",
+          "root": "10f7b5942e8991d61aaeb127757b152428c18da480ff64494683394180a93884",
+          "txHash": "0x2ae02001677d0ac08ffce22c0c8798e441938fd494ba5b579a7bc41a54811d23"
+        },
+        {
+          "at": "2026-10-26T13:00:00Z",
+          "blockNumber": 903,
+          "contract": "0xc75d7F89e39166D1A49C2FcD567EfAbce798eEb4",
+          "firstSeq": 26,
+          "index": 400,
+          "lastSeq": 32,
+          "mode": "fisco",
+          "root": "118a990aa2fadb4676e0f160203806287a0e2147a382c22db35c81037a2df60c",
+          "txHash": "0x89e7e5735bfc24f61283d336fe26001a4a0052d6cd5f4c967644c44cc8a19806"
+        }
+      ]
+    }
+  ],
+  "limits": "Local services, labelled DEMO assertions and MOCK bank/bursar. No cloud, public certificate, real money or hardware passkey claim."
+}

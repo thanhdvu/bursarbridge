@@ -1,0 +1,28 @@
+[Unit]
+Description=BursarBridge public synthetic API (single worker)
+After=bursarbridge-infra.service
+Requires=bursarbridge-infra.service
+
+[Service]
+User=bursarbridge
+Group=bursarbridge
+WorkingDirectory=@@ROOT@@/services/api
+EnvironmentFile=/etc/bursarbridge/api.env
+Environment=HOME=/var/lib/bursarbridge
+ExecStart=@@ROOT@@/services/api/.venv/bin/python -m uvicorn bursarbridge.public:create_public_app --factory --host 127.0.0.1 --port 8000 --workers 1 --proxy-headers --forwarded-allow-ips 127.0.0.1,::1 --no-access-log --limit-concurrency 200
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=90
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=full
+ProtectHome=yes
+MemoryMax=2G
+TasksMax=256
+LimitNOFILE=4096
+LogRateLimitIntervalSec=30s
+LogRateLimitBurst=100
+
+[Install]
+WantedBy=multi-user.target

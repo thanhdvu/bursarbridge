@@ -1,0 +1,58 @@
+{
+  "transcript": [
+    {
+      "user": "tổng bao nhiêu vậy, chia mấy đợt?",
+      "assistant": "Tổng hóa đơn học kỳ, gồm học phí, ký túc xá và bảo hiểm, là 8.954.000 KRW, tương đương khoảng 169.318.450 VND theo tỷ giá mô phỏng (MOCK); lịch đã ký chia thành 2 đợt: 4.477.000 KRW + 4.477.000 KRW. Hóa đơn này đã được thanh toán, nên đây là thông tin tham khảo, không phải khoản Linh cần đóng thêm.",
+      "sources": [
+        "openai"
+      ],
+      "firstStepMs": 65.1,
+      "totalMs": 7371.5,
+      "cards": [
+        {
+          "kind": "quote",
+          "code": null
+        },
+        {
+          "kind": "pack",
+          "code": null
+        }
+      ]
+    },
+    {
+      "user": "nếu e trượt visa thì tiền có lấy lại được ko, bao lâu?",
+      "assistant": "Có, nếu Linh bị từ chối visa và gửi yêu cầu hoàn trước khi lớp bắt đầu, trường hoàn toàn bộ học phí đã đóng, tiền ký túc xá chưa sử dụng và bảo hiểm chưa kích hoạt; hóa đơn này không thu phí nhập học nên không có khoản đó bị giữ lại. Thời hạn hoàn là trong vòng hai tuần sau ngày lớp bắt đầu, không phải hai tuần từ ngày gửi yêu cầu. Tiền chỉ được hoàn về đúng tài khoản ban đầu của ba đã chuyển tiền. Gia đình chịu phí chuyển tiền đi, phí ngân hàng trung gian và chênh lệch quy đổi KRW sang USD rồi VND, nên số tiền thực nhận không được bảo đảm bằng số đã gửi.",
+      "sources": [
+        "openai"
+      ],
+      "firstStepMs": 17.9,
+      "totalMs": 7058.2,
+      "cards": []
+    }
+  ],
+  "financialStateUnchanged": true,
+  "initialCounts": {
+    "/approvals?status=all": 2,
+    "/payments": 1,
+    "/refunds": 1,
+    "/mandates": 1
+  },
+  "health": {
+    "ok": true,
+    "demo": true,
+    "bank": "MOCK",
+    "bursar": "MOCK",
+    "llmProvider": "openai",
+    "chainMode": "fisco",
+    "screeningMode": "watchman",
+    "llm": {
+      "configuredProvider": "openai",
+      "effectiveProvider": "openai",
+      "status": "ready",
+      "lastError": null,
+      "lastSuccessAt": "2026-10-17T18:42:17.775411+00:00"
+    },
+    "publicDemo": false
+  },
+  "limits": "Private loopback API, synthetic family; no reset, payment, claim or real passkey"
+}

@@ -1,0 +1,31 @@
+try to start node0
+try to start node1
+try to start node2
+try to start node3
+ node1 is running, pid is 11684.
+ node0 is running, pid is 11682.
+ node2 is running, pid is 11686.
+ node3 is running, pid is 11688.
+Native Watchman binary ready: /home/toanle/.local/share/bursarbridge-watchman/watchman-v1.2.2-native
+Native Watchman already running, pid 25701
+T01 pass   3939.1ms L0: issuer invoice, rules version, timestamped MOCK quote; no financial writes
+T02 pass   3219.3ms L1: tainted structured fields, pack ready; nothing sent
+T03 pass   4956.4ms L3: hash-bound demo assertion, single debit, bursar PAID, replay rejected
+T04 pass   7359.8ms L2: second signed issuer instalment auto-debited once; notification and cancel window
+T05 pass   6307.3ms Full MOCK debit reversed in cancel window
+T06 pass   2589.9ms Hidden instruction extracted as tainted data; L-X denial; zero debit
+T07 pass   2023.4ms New account denied; independent published-contact checklist required
+T08 pass   6717.1ms L3 mandate amendment required; cannot approve around cap
+T09 pass   1651.3ms L-X self-escalation denied; no mandate writes
+T10 pass   3718.3ms R-CN-02: ledger-derived rolling-family structuring denied before grant; documented route required
+T11 pass   4777.7ms S-01 sanctions hit denied with list hash; source=Watchman
+T12 pass   2012.4ms Scam score >=5; persisted 24h cooling, home co-sign and parent rejection; zero debit
+T13 pass   6314.9ms Student signed claim; timer, original-payer credit, exact FX/fee reconciliation
+T14 pass   2090.4ms L-X diversion blocked; original payer invariant unchanged
+T15 pass   3738.7ms Student freeze cancels pending action, suspends mandate; approval blocked
+T16 pass   6584.0ms Tamper localized to seq 3; restore verifies; anchor mode honestly reported
+T17 pass   1948.2ms L-X refused; safe fallback; no financial or registry write
+T18 pass   3400.0ms Vietnamese payment intent recognized; concrete missing-document/mandate next steps; no redundant question or debit
+T19 pass   1970.6ms L-X refused; safe fallback; no financial or registry write
+T20 pass   1921.7ms L-X refused; safe fallback; no financial or registry write
+{"passed": 20, "failed": 0, "total": 20}

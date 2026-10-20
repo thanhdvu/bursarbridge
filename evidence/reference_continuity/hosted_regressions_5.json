@@ -1,0 +1,117 @@
+{
+  "provider": "openai",
+  "model": "gpt-6.1-sol",
+  "hosted": true,
+  "results": [
+    {
+      "id": "C50",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "tổng bao nhiêu vậy, chia mấy đợt?",
+          "assistant": "Tổng hóa đơn cả học kỳ, gồm học phí, ký túc xá và bảo hiểm, là 8.954.000 KRW, ước tính 169.318.450 VND theo tỷ giá mô phỏng (MOCK). Hóa đơn chia 2 đợt: 4.477.000 KRW + 4.477.000 KRW; cả hai đợt đều đến hạn 15/01/2027, không có hạn muộn hơn cho đợt sau.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "incidents": [],
+      "ms": 5760.0
+    },
+    {
+      "id": "C51",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "chỉ trả đợt 1 thôi",
+          "assistant": "Để thanh toán riêng đợt đầu 4.477.000 KRW, bước tiếp theo là ba ký xác nhận cho khoản thanh toán này.",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "tổng cả kỳ bao nhiêu, chia mấy đợt?",
+          "assistant": "Tổng hóa đơn cả kỳ, gồm học phí, ký túc xá và bảo hiểm, là 8.954.000 KRW, ước tính 169.318.450 VND theo tỷ giá mô phỏng (MOCK); chia 2 đợt: 4.477.000 KRW + 4.477.000 KRW. Cả hai đợt đều đến hạn 15/01/2027, nên trả riêng đợt đầu không làm lùi hạn đợt còn lại.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "incidents": [],
+      "ms": 12960.3
+    },
+    {
+      "id": "C57",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "visa bị từ chối, giúp Linh xin hoàn học phí nhé",
+          "assistant": "Linh cần nộp và ký đơn rút nhập học kèm đề nghị hoàn học phí trước ngày khai giảng 02/03/2027; trường sẽ hoàn học phí đã đóng, phần ký túc xá chưa sử dụng và bảo hiểm chưa kích hoạt trong vòng hai tuần kể từ ngày khai giảng, không phải ngày nộp đơn. Tiền chỉ được hoàn về tài khoản gốc của ba; gia đình chịu phí ngân hàng chuyển đi ban đầu, phí ngân hàng trung gian và chênh lệch quy đổi ngoại tệ nên không thể cam kết số tiền thực nhận.",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "trường hẹn khi nào, phí gì bị trừ vậy?",
+          "assistant": "Trường hẹn hoàn chậm nhất ngày 16/03/2027, tính từ ngày khai giảng chứ không phải ngày nộp đơn. Gia đình chịu phí ngân hàng chuyển đi ban đầu 25.000 VND, phí chuyển tiền quốc tế/trung gian 375.000 VND và hao hụt tỷ giá 3.385.869 VND; trường không giữ lại phí nhập học vì hóa đơn không thu khoản này (0 VND). Các khoản phí và hao hụt trên hiện là ước tính MOCK, chưa phải số khấu trừ thực tế hay cam kết số tiền thực nhận.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "incidents": [],
+      "ms": 15458.9
+    },
+    {
+      "id": "C60",
+      "locale": "en",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "If my visa is denied, what gets refunded and how long would it take?",
+          "assistant": "Linh, if your visa is denied, filing before classes start on 02 Mar 2027 makes paid tuition, unused dormitory and unactivated insurance refundable, with payment due by 16 Mar 2027—the timeline runs from classes starting, not from your request. The refund goes only to your father’s original payer account; your family bears the original outgoing bank fee, intermediary wire fees and currency-conversion losses, so no net refund amount is guaranteed.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "incidents": [],
+      "ms": 5810.2
+    },
+    {
+      "id": "C61",
+      "locale": "ko",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "비자가 거절되면 어떤 돈을 돌려받고 얼마나 걸리나요?",
+          "assistant": "Linh이 수업 시작일인 2027년 3월 2일 전에 비자 거절에 따른 환불을 신청하면 납부한 등록금 전액과 미사용 기숙사비, 미개시 보험료를 돌려받을 수 있습니다. 환불 약정 기한은 신청일이 아닌 개강일을 기준으로 한 2027년 3월 16일까지이며, 환불금은 원래 납부자인 아버지의 원래 납부 계좌로만 반환됩니다. 최초 송금 은행 수수료, 중개은행의 국제송금 수수료와 환전 손실은 가족 부담이므로 실제 수령액 전액은 보장되지 않습니다.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "incidents": [],
+      "ms": 12404.7
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5
+  },
+  "limits": "Deterministic HTTP assertions; hosted style still needs native-speaker review. No model-as-judge. Local chain and MOCK screening isolate dialogue."
+}

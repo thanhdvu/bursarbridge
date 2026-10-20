@@ -1,0 +1,5 @@
+{"action": "payment_executed", "actor": "bank", "at": "2027-01-12T03:00:00Z", "mock": true, "requestId": "pay_bd370d8ab2895405", "result": "debited_held_MOCK"}
+{"action": "received_by_bursar", "actor": "bursar", "at": "2027-01-12T03:30:00Z", "mock": true, "requestId": "pay_bd370d8ab2895405", "result": "PAID"}
+{"action": "payment_matched", "actor": "bursar", "at": "2027-01-12T03:30:00Z", "mock": true, "requestId": "pay_bd370d8ab2895405", "result": "PAID"}
+{"action": "refund_request", "actor": "bursar", "at": "2027-01-12T04:00:00Z", "mock": true, "requestId": "ref_ff31bb69102a8293", "result": "accepted_MOCK"}
+{"action": "refund_credit", "actor": "bank", "at": "2027-03-16T00:00:00Z", "mock": true, "requestId": "ref_ff31bb69102a8293", "result": "original_payer_only"}

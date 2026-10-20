@@ -1,0 +1,9 @@
+{
+  "source": "Read-only local public-live snapshots and API warning log; no visitor identifiers or text exported",
+  "rentRelatedThreadsObserved": 5,
+  "blockedRentThreadsObserved": 3,
+  "blockedReason": "MANDATE_REQUIRED",
+  "rentMandatesObserved": 0,
+  "rentalAgreementDocumentsObserved": 0,
+  "diagnosis": "No executable rent authority; prerequisite errors were projected as blocked instead of setup needs"
+}

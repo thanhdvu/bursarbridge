@@ -1,0 +1,30 @@
+[
+  {
+    "at": "2027-01-12T03:00:00Z",
+    "firstSeq": 1,
+    "lastSeq": 4,
+    "mode": "local",
+    "root": "24826d664d8a54393f107ac9dac27ff0d0cae2c2a94966d22a7f2c553c2da503"
+  },
+  {
+    "at": "2027-01-12T03:00:00Z",
+    "firstSeq": 5,
+    "lastSeq": 11,
+    "mode": "local",
+    "root": "0d21f5af80d354cb61ebb6779888ab98f05554aa4cb92c93a853005dbbeb538e"
+  },
+  {
+    "at": "2027-01-12T04:00:00Z",
+    "firstSeq": 12,
+    "lastSeq": 22,
+    "mode": "local",
+    "root": "5262e40de6e92f0a8149867f162d5e18d3cf979ec57d9d3651f3a65241743fca"
+  },
+  {
+    "root": "ef1121fa452e216e87c6b254d629a860433b8c138c1741e5911bff90edcc1f0b",
+    "firstSeq": 23,
+    "lastSeq": 31,
+    "at": "2027-03-16T00:00:00Z",
+    "mode": "local"
+  }
+]

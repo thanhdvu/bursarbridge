@@ -1,0 +1,539 @@
+{
+  "date": "2026-10-19",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "implementationCommit": "4bf41d2",
+  "mergedMain": "ef90f45",
+  "viewport": {
+    "width": 375,
+    "height": 812
+  },
+  "api": "http://127.0.0.1:8000",
+  "web": "http://localhost:3700",
+  "liveHealth": {
+    "effectiveProvider": "openai",
+    "status": "ready",
+    "chainMode": "fisco",
+    "screeningMode": "watchman"
+  },
+  "liveChatSends": 9,
+  "checks": {
+    "lint": "pass, zero warnings",
+    "typecheck": "pass",
+    "build": "pass"
+  },
+  "mock": {
+    "mode": "mock",
+    "scenes": {
+      "1_limit": "pass",
+      "2_invoice": "pass",
+      "3_approval_and_hold": "pass",
+      "4_discount_police_and_Lan": "pass",
+      "5_refusal_refund_and_redirect_denial": "pass",
+      "6_tamper_restore_verify": "pass",
+      "7_Wang_Hao_rent": "pass"
+    },
+    "reset": {
+      "ok": true,
+      "registrationStatus": "ready",
+      "anchorStatus": "pending",
+      "recovery": "automatic_retry",
+      "elapsedMs": 180.60000002384186
+    },
+    "admission": {
+      "invoiceVersion": "tuition-2027-v8",
+      "academicTimeline": {
+        "acceptedAt": "2026-12-15T00:00:00Z",
+        "certificateIssuedAt": "2026-12-22T00:00:00Z",
+        "visaAppliedAt": "2027-01-04T00:00:00Z",
+        "source": "Fictional signed calendar (MOCK)"
+      },
+      "certificate": {
+        "status": "issued_MOCK",
+        "issuedAt": "2026-12-22T00:00:00Z",
+        "basis": "acceptance",
+        "downloadUrl": "/api/study-plan/standard-admission-certificate.pdf"
+      },
+      "visa": {
+        "appliedAt": "2027-01-04T00:00:00Z",
+        "status": "processing_MOCK"
+      },
+      "certificatePdfBytesBeforePayment": 2104
+    },
+    "unpaidRefusal": {
+      "status": "refused_before_payment",
+      "refundRequired": false,
+      "moneyAtRisk": false,
+      "tuitionStopped": true,
+      "cancelledApprovalCount": 1,
+      "admissionWithdrawn": false,
+      "parentNotice": {
+        "status": "available_in_family_app_MOCK",
+        "at": "2027-01-12T03:00:00.000Z",
+        "recipientIds": [
+          "usr_parent_minh"
+        ],
+        "channel": "family_app_only",
+        "externalMessageSent": false
+      }
+    },
+    "freeze": {
+      "heldTuitionCancelledInPhoneUi": true,
+      "balanceReturnedVND": "1000000000.00",
+      "signedMandateActiveAfterUnfreeze": true,
+      "extraSyntheticBoundaryProbe": {
+        "frozen": {
+          "frozen": true,
+          "revokedTokens": 0,
+          "suspendedMandates": 1,
+          "cancelledPayments": 1,
+          "pausedApprovals": 2,
+          "incomingRefundsPaused": false,
+          "tookMs": 5
+        },
+        "expiredNotRevived": true,
+        "revokedNotRevived": true,
+        "consentsPreserved": true,
+        "restored": {
+          "id": "mdt_fce532a9",
+          "familyId": "fam_wang",
+          "purpose": "rent",
+          "payeeRule": {
+            "type": "name_checked",
+            "payeeId": "payee_landlord"
+          },
+          "cap": {
+            "amount": "900000.00",
+            "currency": "KRW"
+          },
+          "spent": {
+            "amount": "0.00",
+            "currency": "KRW"
+          },
+          "period": "monthly",
+          "expiresAt": "2027-06-01T16:59:00.000Z",
+          "cosignerId": null,
+          "status": "active",
+          "hash": "5acfc26af00d5b657fb5a67525ae57eb508f03f12b2449d244730f269d634fb1",
+          "chainTx": {
+            "txHash": "0xf0bffe6524755c5a184c4b4f37147691c9dfdc4f5dcd5516c900fdebc7616200",
+            "blockNumber": 1328
+          },
+          "payeeLabel": "Seoul Garden Residence (MOCK)",
+          "createdAt": "2027-03-16T00:00:00.000Z"
+        }
+      },
+      "pausedApprovalUi": {
+        "pausedWithoutSignature": true,
+        "availableAfterUnfreeze": true,
+        "method": "temporary synthetic pending approval fixture, restored after test"
+      }
+    },
+    "incomingRefund": {
+      "familyStillFrozen": true,
+      "status": "reconciled",
+      "receivedBack": {
+        "amount": "132551176.98",
+        "currency": "VND"
+      },
+      "destination": "•••• 4821",
+      "balance": {
+        "amount": "996887220.88",
+        "currency": "VND"
+      }
+    },
+    "rent": {
+      "parent": "Wang",
+      "status": "sent",
+      "amount": {
+        "amount": "900000.00",
+        "currency": "KRW"
+      },
+      "mandate": {
+        "amount": "900000.00",
+        "currency": "KRW"
+      }
+    },
+    "trust": {
+      "ok": true,
+      "entries": 48
+    },
+    "catchupDisplay": {
+      "method": "query-cache pending fixture; mock transport unchanged",
+      "pendingVisible": true,
+      "recoveredWithoutReload": true,
+      "stageCertificatePopup": true
+    },
+    "actualResetRecovery": {
+      "reset": {
+        "ok": true,
+        "registrationStatus": "ready",
+        "anchorStatus": "pending",
+        "recovery": "automatic_retry"
+      },
+      "elapsedMs": 149.29999995231628,
+      "events": [
+        {
+          "status": "ready",
+          "registrationStatus": "ready"
+        }
+      ],
+      "chain": {
+        "network": "FISCO BCOS (team-operated, 4 nodes)",
+        "connected": true,
+        "registrationStatus": "ready",
+        "anchorStatus": "ready",
+        "blockNumber": 1294,
+        "mock": true,
+        "contracts": [
+          {
+            "name": "AuditAnchor",
+            "address": "0x6a2f1c0e9b3d4a5f8e7c1b2a3d4e5f60718293a4"
+          },
+          {
+            "name": "CredentialRegistry",
+            "address": "0x91b4e2d7c8a6f5e3b2d1c0a9f8e7d6c5b4a39281"
+          },
+          {
+            "name": "MandateGuard",
+            "address": "0x3c8d7e6f5a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0d"
+          }
+        ]
+      }
+    },
+    "layout": {
+      "rows": [
+        {
+          "path": "/parent",
+          "width": 375,
+          "scrollWidth": 360
+        },
+        {
+          "path": "/parent/freeze",
+          "width": 375,
+          "scrollWidth": 375
+        },
+        {
+          "path": "/parent/activity",
+          "width": 375,
+          "scrollWidth": 375
+        },
+        {
+          "path": "/student",
+          "width": 375,
+          "scrollWidth": 360
+        },
+        {
+          "path": "/student/documents",
+          "width": 375,
+          "scrollWidth": 375
+        },
+        {
+          "path": "/student/timeline",
+          "width": 375,
+          "scrollWidth": 360
+        },
+        {
+          "path": "/cosigner",
+          "width": 375,
+          "scrollWidth": 375
+        },
+        {
+          "path": "/demo",
+          "width": 375,
+          "scrollWidth": 360
+        },
+        {
+          "path": "/trust",
+          "width": 375,
+          "scrollWidth": 360
+        }
+      ],
+      "errors": [],
+      "failed": []
+    },
+    "mobileCue": {
+      "navigatedToStudent": true,
+      "invoiceAndAdmissionAttached": true,
+      "prefilledWithoutSending": true
+    },
+    "heldCopyRegression": {
+      "heldTuitionReplyDoesNotClaimReceipt": true,
+      "settledTuitionReplyConfirmsReceipt": true,
+      "repeatedRequestCreatesNoExtraPayment": true,
+      "rentReplySaysBankHold": true,
+      "sendWaitsForReadyConversation": true
+    }
+  },
+  "live": {
+    "mode": "live",
+    "scenes": {
+      "1_limit": "pass",
+      "2_invoice": "pass",
+      "3_approval_and_hold": "pass",
+      "4_discount_police_and_Lan": "pass",
+      "5_refusal_refund_and_redirect_denial": "pass",
+      "6_tamper_restore_verify": "pass",
+      "7_Wang_Hao_rent": "pass"
+    },
+    "reset": {
+      "ok": true,
+      "registrationStatus": "pending",
+      "anchorStatus": "pending",
+      "recovery": "automatic_retry",
+      "elapsedMs": 129.4000000357628
+    },
+    "admission": {
+      "invoiceVersion": "tuition-2027-v8",
+      "academicTimeline": {
+        "acceptedAt": "2026-12-15T00:00:00Z",
+        "certificateIssuedAt": "2026-12-22T00:00:00Z",
+        "visaAppliedAt": "2027-01-04T00:00:00Z",
+        "visaStatusAtSeed": "processing_MOCK",
+        "source": "Fictional Hanbit academic calendar (MOCK); no embassy integration"
+      },
+      "certificate": {
+        "status": "issued_MOCK",
+        "issuedAt": "2026-12-22T00:00:00Z",
+        "basis": "acceptance",
+        "downloadUrl": "/api/study-plan/standard-admission-certificate.pdf"
+      },
+      "visa": {
+        "appliedAt": "2027-01-04T00:00:00Z",
+        "status": "processing_MOCK",
+        "integration": "MOCK sequence only; no embassy application is submitted"
+      },
+      "certificatePdfBytesBeforePayment": 2034
+    },
+    "unpaidRefusal": {
+      "status": "refused_before_payment",
+      "refundRequired": false,
+      "moneyAtRisk": false,
+      "tuitionStopped": true,
+      "cancelledApprovalCount": 1,
+      "admissionWithdrawn": false,
+      "parentNotice": {
+        "at": "2027-01-12T03:00:00Z",
+        "channel": "family_app_only",
+        "externalMessageSent": false,
+        "recipientIds": [
+          "usr_parent_minh"
+        ],
+        "status": "available_in_family_app_MOCK"
+      }
+    },
+    "freeze": {
+      "cancelled": "cancelled",
+      "balanceBefore": {
+        "amount": "864336043.90",
+        "currency": "VND"
+      },
+      "balanceAfter": {
+        "amount": "1000000000.00",
+        "currency": "VND"
+      },
+      "spentAfter": {
+        "amount": "0.00",
+        "currency": "KRW"
+      },
+      "unfrozen": true,
+      "mandateRestored": "active",
+      "originalMandateHashPreserved": true,
+      "cancelledPaymentNotResent": true
+    },
+    "incomingRefund": {
+      "familyStillFrozen": true,
+      "status": "reconciled",
+      "receivedBack": {
+        "amount": "132551176.98",
+        "currency": "VND"
+      },
+      "destination": "•••• 4821",
+      "balance": {
+        "amount": "996887220.88",
+        "currency": "VND"
+      }
+    },
+    "rent": {
+      "parent": "Wang",
+      "status": "sent",
+      "amount": {
+        "amount": "900000.00",
+        "currency": "KRW"
+      },
+      "mandate": {
+        "amount": "900000.00",
+        "currency": "KRW"
+      }
+    },
+    "trust": {
+      "ok": true,
+      "entries": 43
+    },
+    "catchupDisplay": {
+      "method": "browser HTTP response override; API unchanged",
+      "pendingVisible": true,
+      "recoveredWithoutReload": true,
+      "stageCertificatePopup": true
+    },
+    "actualResetRecovery": {
+      "events": [
+        {
+          "type": "anchor_updated",
+          "data": {
+            "recovery": "automatic_retry",
+            "registrationStatus": "pending",
+            "status": "pending",
+            "_eventId": 1
+          }
+        },
+        {
+          "type": "anchor_updated",
+          "data": {
+            "recovery": null,
+            "registrationStatus": "ready",
+            "status": "ready",
+            "_eventId": 4
+          }
+        }
+      ],
+      "chain": {
+        "network": "FISCO BCOS (team-operated, 4 nodes)",
+        "connected": true,
+        "blockNumber": 2099,
+        "contracts": [
+          {
+            "name": "AuditAnchor",
+            "address": "0xc75d7F89e39166D1A49C2FcD567EfAbce798eEb4"
+          },
+          {
+            "name": "CredentialRegistry",
+            "address": "0x9231AFfD3A36d050C6B89C57F8a1b195ccB0Cd33"
+          },
+          {
+            "name": "MandateGuard",
+            "address": "0xD1dd71115d9C9Cfc37fb2238933CFEDCa6eB61C2"
+          }
+        ],
+        "mode": "fisco",
+        "registrationStatus": "ready",
+        "anchorStatus": "ready"
+      },
+      "method": "Read actual reset event replay and /chain/status after catch-up; no API outage was injected."
+    },
+    "layout": {
+      "rows": [
+        {
+          "path": "/parent",
+          "width": 375,
+          "scrollWidth": 360
+        },
+        {
+          "path": "/parent/freeze",
+          "width": 375,
+          "scrollWidth": 375
+        },
+        {
+          "path": "/parent/activity",
+          "width": 375,
+          "scrollWidth": 375
+        },
+        {
+          "path": "/student",
+          "width": 375,
+          "scrollWidth": 360
+        },
+        {
+          "path": "/student/documents",
+          "width": 375,
+          "scrollWidth": 360
+        },
+        {
+          "path": "/student/timeline",
+          "width": 375,
+          "scrollWidth": 360
+        },
+        {
+          "path": "/cosigner",
+          "width": 375,
+          "scrollWidth": 375
+        },
+        {
+          "path": "/demo",
+          "width": 375,
+          "scrollWidth": 360
+        },
+        {
+          "path": "/trust",
+          "width": 375,
+          "scrollWidth": 360
+        }
+      ],
+      "errors": [],
+      "failed": [],
+      "requests": 67
+    },
+    "finalNetworkSweep": {
+      "rows": [
+        {
+          "path": "/parent",
+          "width": 375,
+          "scrollWidth": 360
+        },
+        {
+          "path": "/parent/freeze",
+          "width": 375,
+          "scrollWidth": 375
+        },
+        {
+          "path": "/parent/activity",
+          "width": 375,
+          "scrollWidth": 375
+        },
+        {
+          "path": "/student",
+          "width": 375,
+          "scrollWidth": 360
+        },
+        {
+          "path": "/student/documents",
+          "width": 375,
+          "scrollWidth": 375
+        },
+        {
+          "path": "/student/timeline",
+          "width": 375,
+          "scrollWidth": 360
+        },
+        {
+          "path": "/cosigner",
+          "width": 375,
+          "scrollWidth": 375
+        },
+        {
+          "path": "/demo",
+          "width": 375,
+          "scrollWidth": 360
+        },
+        {
+          "path": "/trust",
+          "width": 375,
+          "scrollWidth": 360
+        }
+      ],
+      "errors": [],
+      "failed": [],
+      "requests": 70,
+      "scope": "All API HTTP errors checked except expected session-renewal 401s."
+    }
+  },
+  "limitations": [
+    "Banks, bursar and funds are MOCK; all people and organisations are fictional.",
+    "Signatures used the clearly labelled demo authenticator, not a hardware WebAuthn acceptance test.",
+    "Slow-chain display was exercised with a browser response override (live) and query fixture (mock). Actual reset pending/ready events and final ready chain status were separately observed; no chain service was stopped.",
+    "This verifies the local web and local API. It is not a public deployment or public-link load test."
+  ],
+  "localeKeys": 1105,
+  "notes": [
+    "Family Activity does not call the judge-only audit endpoint in live mode; the API has no family blocked-audit history endpoint. Its family payments, approvals and refunds remain available."
+  ]
+}

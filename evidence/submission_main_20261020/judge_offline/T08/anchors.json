@@ -1,0 +1,16 @@
+[
+  {
+    "at": "2027-01-12T03:00:00Z",
+    "firstSeq": 1,
+    "lastSeq": 4,
+    "mode": "local",
+    "root": "9f8dc292cf41cfb398a098ebd32b4929fc767bdcb036c1925026f8c13b326256"
+  },
+  {
+    "root": "d409598a827b31c5c13a67b0740cccf0fc36a2e28b44546602a15b9b4d991a29",
+    "firstSeq": 5,
+    "lastSeq": 7,
+    "at": "2027-01-12T03:00:00Z",
+    "mode": "local"
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "provider": "openai",
+  "model": "gpt-6.1-sol",
+  "hosted": true,
+  "results": [
+    {
+      "id": "C32",
+      "locale": "ko",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "아이 등록금 납부 도와주세요",
+          "assistant": "자녀의 Hanbit University (MOCK) 등록금 납부를 위해 부모님께서 확인하고 서명하실 제안서를 준비했어요. 첫 납부에 필요한 일반적인 부모님 서명 단계이니, 제안서를 확인한 뒤 서명해 주세요. 아직 자금은 이동하지 않았으며, 은행과 학교 연동은 MOCK 환경입니다.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 6611.2
+    },
+    {
+      "id": "C33",
+      "locale": "zh",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "请帮我缴孩子的学费",
+          "assistant": "已为您准备好 Hanbit University (MOCK) 的学费付款方案,供您查看并签署:学费为 7,200,000 KRW,拟汇出金额为 136,155,538.60 VND。这是首次付款的常规家长签署步骤,目前尚未划转任何资金;请您核对方案后签署即可,银行和校方均为 MOCK 模拟环境。",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 6884.3
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2
+  },
+  "limits": "Deterministic HTTP assertions; hosted style still needs native-speaker review. No model-as-judge. Local chain and MOCK screening isolate dialogue."
+}

@@ -1,0 +1,4196 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "BursarBridge API",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_api_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/session": {
+      "post": {
+        "summary": "Session",
+        "operationId": "session_api_session_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SessionIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionOut"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/me": {
+      "get": {
+        "summary": "Me",
+        "operationId": "me_api_me_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/demo/reset": {
+      "post": {
+        "summary": "Reset",
+        "operationId": "reset_api_demo_reset_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResetOut"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/study-plan": {
+      "get": {
+        "summary": "Study",
+        "operationId": "study_api_study_plan_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "locale",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "en",
+              "title": "Locale"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudyPlan"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rent": {
+      "get": {
+        "summary": "Rent",
+        "operationId": "rent_api_rent_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "locale",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "en",
+              "title": "Locale"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RentSetup"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/study-plan/standard-admission-certificate.pdf": {
+      "get": {
+        "summary": "Standard Certificate",
+        "operationId": "standard_certificate_api_study_plan_standard_admission_certificate_pdf_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/pdf": {}
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/approvals/{ref}/letter.pdf": {
+      "get": {
+        "summary": "Escalation Letter",
+        "operationId": "escalation_letter_api_approvals__ref__letter_pdf_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/pdf": {}
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/refunds/{ref}/complaint-pack.pdf": {
+      "get": {
+        "summary": "Complaint Pack",
+        "operationId": "complaint_pack_api_refunds__ref__complaint_pack_pdf_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/pdf": {}
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clock": {
+      "get": {
+        "summary": "Clock",
+        "operationId": "clock_api_clock_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/clock/advance": {
+      "post": {
+        "summary": "Clock Advance",
+        "operationId": "clock_advance_api_clock_advance_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClockIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/webauthn/register/options": {
+      "post": {
+        "summary": "Register Options",
+        "operationId": "register_options_api_webauthn_register_options_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/webauthn/register/verify": {
+      "post": {
+        "summary": "Register Verify",
+        "operationId": "register_verify_api_webauthn_register_verify_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CredentialIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/webauthn/assert/options": {
+      "post": {
+        "summary": "Assert Options",
+        "operationId": "assert_options_api_webauthn_assert_options_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssertionOptions"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/webauthn/assert/verify": {
+      "post": {
+        "summary": "Assert Verify",
+        "operationId": "assert_verify_api_webauthn_assert_verify_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssertionVerify"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/mandates": {
+      "get": {
+        "summary": "Mandates",
+        "operationId": "mandates_api_mandates_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Mandate"
+                  },
+                  "type": "array",
+                  "title": "Response Mandates Api Mandates Get"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "Mandate Create",
+        "operationId": "mandate_create_api_mandates_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MandateIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mandate"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/mandates/{ref}/sign": {
+      "post": {
+        "summary": "Mandate Sign",
+        "operationId": "mandate_sign_api_mandates__ref__sign_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mandate"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/mandates/{ref}/revoke": {
+      "post": {
+        "summary": "Mandate Revoke",
+        "operationId": "mandate_revoke_api_mandates__ref__revoke_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mandate"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/documents": {
+      "get": {
+        "summary": "Document List",
+        "operationId": "document_list_api_documents_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Document"
+                  },
+                  "type": "array",
+                  "title": "Response Document List Api Documents Get"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "Document Upload",
+        "operationId": "document_upload_api_documents_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_document_upload_api_documents_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Document"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/documents/{ref}": {
+      "get": {
+        "summary": "Document Get",
+        "operationId": "document_get_api_documents__ref__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Document"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/agent/threads": {
+      "post": {
+        "summary": "Thread Create",
+        "operationId": "thread_create_api_agent_threads_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/agent/threads/{ref}": {
+      "get": {
+        "summary": "Thread Get",
+        "operationId": "thread_get_api_agent_threads__ref__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          },
+          {
+            "name": "locale",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Locale"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/agent/threads/{ref}/messages": {
+      "post": {
+        "summary": "Message",
+        "operationId": "message_api_agent_threads__ref__messages_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/approvals": {
+      "get": {
+        "summary": "Approvals",
+        "operationId": "approvals_api_approvals_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "pending",
+              "title": "Status"
+            }
+          },
+          {
+            "name": "locale",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Locale"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Approval"
+                  },
+                  "title": "Response Approvals Api Approvals Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/approvals/{ref}": {
+      "get": {
+        "summary": "Approval Get",
+        "operationId": "approval_get_api_approvals__ref__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          },
+          {
+            "name": "locale",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Locale"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Approval"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/approvals/{ref}/approve": {
+      "post": {
+        "summary": "Approval Approve",
+        "operationId": "approval_approve_api_approvals__ref__approve_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Approval"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/approvals/{ref}/reject": {
+      "post": {
+        "summary": "Approval Reject",
+        "operationId": "approval_reject_api_approvals__ref__reject_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectIn",
+                "default": {
+                  "reason": ""
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Approval"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/approvals/{ref}/cosign": {
+      "post": {
+        "summary": "Approval Cosign",
+        "operationId": "approval_cosign_api_approvals__ref__cosign_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Approval"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/catalog": {
+      "get": {
+        "summary": "Catalog",
+        "operationId": "catalog_api_catalog_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/screening": {
+      "get": {
+        "summary": "Screening",
+        "operationId": "screening_api_screening_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200,
+              "title": "Name"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "business",
+              "title": "Type"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/demo/scenario-fixture": {
+      "post": {
+        "summary": "Scenario Fixture",
+        "operationId": "scenario_fixture_api_demo_scenario_fixture_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScenarioFixtureIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/payments": {
+      "get": {
+        "summary": "Payments",
+        "operationId": "payments_api_payments_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Payment"
+                  },
+                  "type": "array",
+                  "title": "Response Payments Api Payments Get"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/payments/{ref}": {
+      "get": {
+        "summary": "Payment Get",
+        "operationId": "payment_get_api_payments__ref__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Payment"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/payments/{ref}/cancel": {
+      "post": {
+        "summary": "Payment Cancel",
+        "operationId": "payment_cancel_api_payments__ref__cancel_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Payment"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/approvals/{ref}/paperwork/{kind}": {
+      "get": {
+        "summary": "Approval Paperwork",
+        "operationId": "approval_paperwork_api_approvals__ref__paperwork__kind__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          },
+          {
+            "name": "kind",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Kind"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/pdf": {}
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/refunds": {
+      "get": {
+        "summary": "Refunds",
+        "operationId": "refunds_api_refunds_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "locale",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Locale"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Refund"
+                  },
+                  "title": "Response Refunds Api Refunds Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/refunds/{ref}": {
+      "get": {
+        "summary": "Refund Get",
+        "operationId": "refund_get_api_refunds__ref__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ref",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Ref"
+            }
+          },
+          {
+            "name": "locale",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Locale"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Refund"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/fx/quote": {
+      "get": {
+        "summary": "Fx",
+        "operationId": "fx_api_fx_quote_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "from",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "From"
+            }
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "KRW",
+              "title": "To"
+            }
+          },
+          {
+            "name": "amount",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "7174000",
+              "title": "Amount"
+            }
+          },
+          {
+            "name": "side",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "send",
+              "title": "Side"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FxQuote"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/events": {
+      "get": {
+        "summary": "Events",
+        "operationId": "events_api_events_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "After"
+            }
+          },
+          {
+            "name": "last-event-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "0",
+              "title": "Last-Event-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/freeze": {
+      "post": {
+        "summary": "Freeze",
+        "operationId": "freeze_api_freeze_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/unfreeze": {
+      "post": {
+        "summary": "Unfreeze",
+        "operationId": "unfreeze_api_unfreeze_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/audit/entries": {
+      "get": {
+        "summary": "Audit Entries",
+        "operationId": "audit_entries_api_audit_entries_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "After"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 500,
+              "minimum": 1,
+              "default": 100,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/audit/verify": {
+      "post": {
+        "summary": "Audit Verify",
+        "operationId": "audit_verify_api_audit_verify_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/chain/status": {
+      "get": {
+        "summary": "Chain Status",
+        "operationId": "chain_status_api_chain_status_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/chain/anchors": {
+      "get": {
+        "summary": "Anchors",
+        "operationId": "anchors_api_chain_anchors_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/chain/anchor": {
+      "post": {
+        "summary": "Anchor",
+        "operationId": "anchor_api_chain_anchor_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/demo/tamper": {
+      "post": {
+        "summary": "Tamper",
+        "operationId": "tamper_api_demo_tamper_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TamperIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/demo/restore": {
+      "post": {
+        "summary": "Restore",
+        "operationId": "restore_api_demo_restore_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/scenarios": {
+      "get": {
+        "summary": "Scenarios",
+        "operationId": "scenarios_api_scenarios_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/scenarios/run": {
+      "post": {
+        "summary": "Scenarios Run",
+        "operationId": "scenarios_run_api_scenarios_run_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScenarioIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/api/public/bootstrap": {
+      "get": {
+        "summary": "Public mode only: establish a stateless browser cookie; sandbox starts at persona login",
+        "responses": {
+          "303": {
+            "description": "Secure HttpOnly sandbox cookie and same-origin redirect"
+          },
+          "429": {
+            "description": "HTTP burst rate limited; HTML retry page or API JSON"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Account": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "bank": {
+            "type": "string",
+            "title": "Bank"
+          },
+          "currency": {
+            "type": "string",
+            "title": "Currency"
+          },
+          "maskedNumber": {
+            "type": "string",
+            "title": "Maskednumber"
+          },
+          "balance": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "swift": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Swift"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "bank",
+          "currency",
+          "maskedNumber",
+          "balance"
+        ],
+        "title": "Account"
+      },
+      "Approval": {
+        "properties": {
+          "rejectionReason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rejectionreason"
+          },
+          "refundSummary": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Refundsummary"
+          },
+          "correspondence": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Correspondence"
+          },
+          "cosigned": {
+            "type": "boolean",
+            "title": "Cosigned",
+            "default": false
+          },
+          "cosignedAt": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cosignedat"
+          },
+          "invoice": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/InvoiceSummary"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "approverId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Approverid"
+          },
+          "resultRef": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Resultref"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "approved",
+              "rejected",
+              "expired",
+              "cooling_off"
+            ],
+            "title": "Status"
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "first_payment",
+              "payment",
+              "refund_claim",
+              "escalation_letter",
+              "mandate_change",
+              "share_documents"
+            ],
+            "title": "Action"
+          },
+          "rawAction": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Rawaction"
+          },
+          "consentHash": {
+            "type": "string",
+            "title": "Consenthash"
+          },
+          "disclosure": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Disclosure"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "payee": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Payee"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "pack": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Pack"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "risk": {
+            "$ref": "#/components/schemas/Risk"
+          },
+          "cooling": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Cooling"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "requestedBy": {
+            "type": "string",
+            "title": "Requestedby"
+          },
+          "createdAt": {
+            "type": "string",
+            "title": "Createdat"
+          },
+          "expiresAt": {
+            "type": "string",
+            "title": "Expiresat"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "action",
+          "rawAction",
+          "consentHash",
+          "risk",
+          "requestedBy",
+          "createdAt",
+          "expiresAt"
+        ],
+        "title": "Approval"
+      },
+      "AssertionOptions": {
+        "properties": {
+          "purpose": {
+            "type": "string",
+            "enum": [
+              "mandate",
+              "approval",
+              "freeze",
+              "cosign"
+            ],
+            "title": "Purpose"
+          },
+          "refId": {
+            "type": "string",
+            "title": "Refid"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "purpose",
+          "refId"
+        ],
+        "title": "AssertionOptions"
+      },
+      "AssertionVerify": {
+        "properties": {
+          "credential": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Credential"
+          },
+          "refId": {
+            "type": "string",
+            "title": "Refid"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "credential",
+          "refId"
+        ],
+        "title": "AssertionVerify"
+      },
+      "Body_document_upload_api_documents_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File"
+          },
+          "kind": {
+            "type": "string",
+            "title": "Kind",
+            "default": "invoice"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file"
+        ],
+        "title": "Body_document_upload_api_documents_post"
+      },
+      "ChainTx": {
+        "properties": {
+          "txHash": {
+            "type": "string",
+            "title": "Txhash"
+          },
+          "blockNumber": {
+            "type": "integer",
+            "title": "Blocknumber"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "txHash",
+          "blockNumber"
+        ],
+        "title": "ChainTx"
+      },
+      "ClockIn": {
+        "properties": {
+          "days": {
+            "type": "integer",
+            "maximum": 365.0,
+            "minimum": 0.0,
+            "title": "Days",
+            "default": 0
+          },
+          "hours": {
+            "type": "integer",
+            "maximum": 8760.0,
+            "minimum": 0.0,
+            "title": "Hours",
+            "default": 0
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "ClockIn"
+      },
+      "Cooling": {
+        "properties": {
+          "until": {
+            "type": "string",
+            "title": "Until"
+          },
+          "cosignRequired": {
+            "type": "boolean",
+            "title": "Cosignrequired"
+          },
+          "cosignerId": {
+            "type": "string",
+            "title": "Cosignerid"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "until",
+          "cosignRequired",
+          "cosignerId"
+        ],
+        "title": "Cooling"
+      },
+      "CredentialIn": {
+        "properties": {
+          "credential": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Credential"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "credential"
+        ],
+        "title": "CredentialIn"
+      },
+      "Disclosure": {
+        "properties": {
+          "send": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "fx": {
+            "$ref": "#/components/schemas/FxReference"
+          },
+          "fees": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "receive": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "cancelUntil": {
+            "type": "string",
+            "title": "Canceluntil"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "send",
+          "fx",
+          "fees",
+          "receive",
+          "cancelUntil"
+        ],
+        "title": "Disclosure"
+      },
+      "Document": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "kind": {
+            "type": "string",
+            "title": "Kind"
+          },
+          "filename": {
+            "type": "string",
+            "title": "Filename"
+          },
+          "sha256": {
+            "type": "string",
+            "title": "Sha256"
+          },
+          "uploadedBy": {
+            "type": "string",
+            "title": "Uploadedby"
+          },
+          "fields": {
+            "items": {
+              "$ref": "#/components/schemas/DocumentField"
+            },
+            "type": "array",
+            "title": "Fields"
+          },
+          "warnings": {
+            "items": {
+              "$ref": "#/components/schemas/Reason"
+            },
+            "type": "array",
+            "title": "Warnings"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "filename",
+          "sha256",
+          "uploadedBy",
+          "fields",
+          "warnings"
+        ],
+        "title": "Document"
+      },
+      "DocumentField": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "value": {
+            "type": "string",
+            "title": "Value"
+          },
+          "provenance": {
+            "type": "string",
+            "enum": [
+              "untrusted_doc",
+              "verified_issuer",
+              "bank_record",
+              "user_input"
+            ],
+            "title": "Provenance"
+          },
+          "confidence": {
+            "type": "number",
+            "title": "Confidence"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "value",
+          "provenance",
+          "confidence"
+        ],
+        "title": "DocumentField"
+      },
+      "FxQuote": {
+        "properties": {
+          "rate": {
+            "type": "string",
+            "title": "Rate"
+          },
+          "midRate": {
+            "type": "string",
+            "title": "Midrate"
+          },
+          "marginPct": {
+            "type": "string",
+            "title": "Marginpct"
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "ECB",
+              "MOCK"
+            ],
+            "title": "Source"
+          },
+          "quotedAt": {
+            "type": "string",
+            "title": "Quotedat"
+          },
+          "send": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "receive": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "fees": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "referenceDate": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Referencedate"
+          },
+          "execution": {
+            "type": "string",
+            "const": "MOCK",
+            "title": "Execution",
+            "default": "MOCK"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "rate",
+          "midRate",
+          "marginPct",
+          "source",
+          "quotedAt",
+          "send",
+          "receive",
+          "fees"
+        ],
+        "title": "FxQuote"
+      },
+      "FxReference": {
+        "properties": {
+          "rate": {
+            "type": "string",
+            "title": "Rate"
+          },
+          "midRate": {
+            "type": "string",
+            "title": "Midrate"
+          },
+          "marginPct": {
+            "type": "string",
+            "title": "Marginpct"
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "ECB",
+              "MOCK"
+            ],
+            "title": "Source"
+          },
+          "quotedAt": {
+            "type": "string",
+            "title": "Quotedat"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "rate",
+          "midRate",
+          "marginPct",
+          "source",
+          "quotedAt"
+        ],
+        "title": "FxReference"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "InvoiceLine": {
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "amount": {
+            "$ref": "#/components/schemas/Money"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "label",
+          "amount"
+        ],
+        "title": "InvoiceLine"
+      },
+      "InvoiceSummary": {
+        "properties": {
+          "registrationWindow": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Registrationwindow"
+          },
+          "instalmentSchedule": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Instalmentschedule"
+          },
+          "separateObligations": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Separateobligations"
+          },
+          "ref": {
+            "type": "string",
+            "title": "Ref"
+          },
+          "issuer": {
+            "type": "string",
+            "title": "Issuer"
+          },
+          "term": {
+            "type": "string",
+            "title": "Term"
+          },
+          "dueDate": {
+            "type": "string",
+            "title": "Duedate"
+          },
+          "lines": {
+            "items": {
+              "$ref": "#/components/schemas/InvoiceLine"
+            },
+            "type": "array",
+            "title": "Lines"
+          },
+          "total": {
+            "$ref": "#/components/schemas/Money"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ref",
+          "issuer",
+          "term",
+          "dueDate",
+          "lines",
+          "total"
+        ],
+        "title": "InvoiceSummary"
+      },
+      "Mandate": {
+        "properties": {
+          "purpose": {
+            "type": "string",
+            "enum": [
+              "tuition",
+              "rent",
+              "living"
+            ],
+            "title": "Purpose"
+          },
+          "payeeRule": {
+            "$ref": "#/components/schemas/PayeeRule"
+          },
+          "cap": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "period": {
+            "type": "string",
+            "enum": [
+              "once",
+              "monthly"
+            ],
+            "title": "Period",
+            "default": "once"
+          },
+          "expiresAt": {
+            "type": "string",
+            "title": "Expiresat"
+          },
+          "cosignerId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cosignerid"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "spent": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "hash": {
+            "type": "string",
+            "title": "Hash"
+          },
+          "chainTx": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ChainTx"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "purpose",
+          "payeeRule",
+          "cap",
+          "expiresAt",
+          "id",
+          "spent",
+          "status",
+          "hash"
+        ],
+        "title": "Mandate"
+      },
+      "MandateIn": {
+        "properties": {
+          "purpose": {
+            "type": "string",
+            "enum": [
+              "tuition",
+              "rent",
+              "living"
+            ],
+            "title": "Purpose"
+          },
+          "payeeRule": {
+            "$ref": "#/components/schemas/PayeeRule"
+          },
+          "cap": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "period": {
+            "type": "string",
+            "enum": [
+              "once",
+              "monthly"
+            ],
+            "title": "Period",
+            "default": "once"
+          },
+          "expiresAt": {
+            "type": "string",
+            "title": "Expiresat"
+          },
+          "cosignerId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cosignerid"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "purpose",
+          "payeeRule",
+          "cap",
+          "expiresAt"
+        ],
+        "title": "MandateIn"
+      },
+      "MessageIn": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "maxLength": 10000,
+            "title": "Text",
+            "default": ""
+          },
+          "documentIds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 10,
+            "title": "Documentids"
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "vi",
+              "ko",
+              "zh",
+              "en"
+            ],
+            "title": "Locale",
+            "default": "en"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "MessageIn"
+      },
+      "Money": {
+        "properties": {
+          "amount": {
+            "type": "string",
+            "title": "Amount"
+          },
+          "currency": {
+            "type": "string",
+            "enum": [
+              "VND",
+              "KRW",
+              "CNY",
+              "AUD",
+              "USD",
+              "EUR"
+            ],
+            "title": "Currency"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "amount",
+          "currency"
+        ],
+        "title": "Money"
+      },
+      "Pack": {
+        "properties": {
+          "corridor": {
+            "type": "string",
+            "title": "Corridor"
+          },
+          "rulesVersion": {
+            "type": "string",
+            "title": "Rulesversion"
+          },
+          "documents": {
+            "items": {
+              "$ref": "#/components/schemas/PackDocument"
+            },
+            "type": "array",
+            "title": "Documents"
+          },
+          "ruleChecks": {
+            "items": {
+              "$ref": "#/components/schemas/Reason"
+            },
+            "type": "array",
+            "title": "Rulechecks"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "corridor",
+          "rulesVersion",
+          "documents",
+          "ruleChecks"
+        ],
+        "title": "Pack"
+      },
+      "PackDocument": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "title": "Kind"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ready",
+              "missing"
+            ],
+            "title": "Status"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "kind",
+          "status"
+        ],
+        "title": "PackDocument"
+      },
+      "Payee": {
+        "properties": {
+          "verification": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Verification"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "institution": {
+            "type": "string",
+            "title": "Institution"
+          },
+          "account": {
+            "$ref": "#/components/schemas/PayeeAccount"
+          },
+          "credential": {
+            "$ref": "#/components/schemas/PayeeCredential"
+          },
+          "nameCheck": {
+            "type": "string",
+            "enum": [
+              "match",
+              "close_match",
+              "no_match"
+            ],
+            "title": "Namecheck"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "institution",
+          "account",
+          "credential",
+          "nameCheck"
+        ],
+        "title": "Payee"
+      },
+      "PayeeAccount": {
+        "properties": {
+          "masked": {
+            "type": "string",
+            "title": "Masked"
+          },
+          "hashMatch": {
+            "type": "boolean",
+            "title": "Hashmatch"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "masked",
+          "hashMatch"
+        ],
+        "title": "PayeeAccount"
+      },
+      "PayeeCredential": {
+        "properties": {
+          "issuer": {
+            "type": "string",
+            "title": "Issuer"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "valid",
+              "revoked",
+              "none"
+            ],
+            "title": "Status"
+          },
+          "vcId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Vcid"
+          },
+          "chainTx": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ChainTx"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "issuer",
+          "status"
+        ],
+        "title": "PayeeCredential"
+      },
+      "PayeeRule": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "credentialed",
+              "name_checked"
+            ],
+            "title": "Type"
+          },
+          "issuer": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Issuer"
+          },
+          "payeeId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Payeeid"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "title": "PayeeRule"
+      },
+      "Payment": {
+        "properties": {
+          "createdAt": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Createdat"
+          },
+          "purpose": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Purpose"
+          },
+          "fees": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Money"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "cancelUntil": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Canceluntil"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "awaiting_approval",
+              "executing",
+              "sent",
+              "received_by_bursar",
+              "matched",
+              "cancelled",
+              "failed"
+            ],
+            "title": "Status"
+          },
+          "send": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "receive": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "payee": {
+            "$ref": "#/components/schemas/Payee"
+          },
+          "mandateId": {
+            "type": "string",
+            "title": "Mandateid"
+          },
+          "approvalId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Approvalid"
+          },
+          "invoiceRef": {
+            "type": "string",
+            "title": "Invoiceref"
+          },
+          "timeline": {
+            "items": {
+              "$ref": "#/components/schemas/TimelineEvent"
+            },
+            "type": "array",
+            "title": "Timeline"
+          },
+          "chainTx": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ChainTx"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "send",
+          "receive",
+          "payee",
+          "mandateId",
+          "invoiceRef",
+          "timeline"
+        ],
+        "title": "Payment"
+      },
+      "Reason": {
+        "properties": {
+          "ruleId": {
+            "type": "string",
+            "title": "Ruleid"
+          },
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "info",
+              "warn",
+              "block"
+            ],
+            "title": "Severity"
+          },
+          "params": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Params"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ruleId",
+          "code",
+          "severity"
+        ],
+        "title": "Reason"
+      },
+      "Reconciliation": {
+        "properties": {
+          "conversion": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Conversion"
+          },
+          "sentOut": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "receivedBack": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "lines": {
+            "items": {
+              "$ref": "#/components/schemas/ReconciliationLine"
+            },
+            "type": "array",
+            "title": "Lines"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "sentOut",
+          "receivedBack",
+          "lines"
+        ],
+        "title": "Reconciliation"
+      },
+      "ReconciliationLine": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "amount": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "clause": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Clause"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "code",
+          "amount"
+        ],
+        "title": "ReconciliationLine"
+      },
+      "Refund": {
+        "properties": {
+          "followUp": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Followup"
+          },
+          "estimate": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RefundEstimate"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "claimAmount": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Money"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "policy": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Policy"
+          },
+          "paperwork": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Paperwork"
+          },
+          "classesStart": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Classesstart"
+          },
+          "eligibility": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Eligibility"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "paymentId": {
+            "type": "string",
+            "title": "Paymentid"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "manual_review",
+              "refusal_reported",
+              "evidence_verified",
+              "requested",
+              "acknowledged",
+              "approved",
+              "sent",
+              "received",
+              "reconciled"
+            ],
+            "title": "Status"
+          },
+          "deadline": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Deadline"
+          },
+          "destination": {
+            "$ref": "#/components/schemas/Account"
+          },
+          "timeline": {
+            "items": {
+              "$ref": "#/components/schemas/TimelineEvent"
+            },
+            "type": "array",
+            "title": "Timeline"
+          },
+          "reconciliation": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Reconciliation"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "paymentId",
+          "status",
+          "deadline",
+          "destination",
+          "timeline"
+        ],
+        "title": "Refund"
+      },
+      "RefundEstimate": {
+        "properties": {
+          "conversion": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Conversion"
+          },
+          "sentOut": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "receivedBack": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "lines": {
+            "items": {
+              "$ref": "#/components/schemas/ReconciliationLine"
+            },
+            "type": "array",
+            "title": "Lines"
+          },
+          "kind": {
+            "type": "string",
+            "const": "MOCK_ESTIMATE",
+            "title": "Kind",
+            "default": "MOCK_ESTIMATE"
+          },
+          "asOf": {
+            "type": "string",
+            "title": "Asof"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "sentOut",
+          "receivedBack",
+          "lines",
+          "asOf"
+        ],
+        "title": "RefundEstimate"
+      },
+      "RejectIn": {
+        "properties": {
+          "reason": {
+            "type": "string",
+            "maxLength": 500,
+            "title": "Reason",
+            "default": ""
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "RejectIn"
+      },
+      "RentSetup": {
+        "properties": {
+          "purpose": {
+            "type": "string",
+            "const": "rent",
+            "title": "Purpose"
+          },
+          "payeeRule": {
+            "type": "string",
+            "const": "verified_landlord_only",
+            "title": "Payeerule"
+          },
+          "landlord": {
+            "$ref": "#/components/schemas/Payee"
+          },
+          "monthlyAmount": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "missing": {
+            "items": {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Missing"
+          },
+          "mandates": {
+            "items": {
+              "$ref": "#/components/schemas/Mandate"
+            },
+            "type": "array",
+            "title": "Mandates"
+          },
+          "activeMandateId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Activemandateid"
+          },
+          "mandateTemplate": {
+            "$ref": "#/components/schemas/MandateIn"
+          },
+          "housing": {
+            "type": "string",
+            "title": "Housing"
+          },
+          "verificationStatus": {
+            "type": "string",
+            "enum": [
+              "ready",
+              "needs"
+            ],
+            "title": "Verificationstatus"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "purpose",
+          "payeeRule",
+          "landlord",
+          "monthlyAmount",
+          "missing",
+          "mandates",
+          "activeMandateId",
+          "mandateTemplate",
+          "housing",
+          "verificationStatus"
+        ],
+        "title": "RentSetup"
+      },
+      "ResetOut": {
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "title": "Ok"
+          },
+          "registrationStatus": {
+            "type": "string",
+            "enum": [
+              "pending",
+              "ready"
+            ],
+            "title": "Registrationstatus"
+          },
+          "anchorStatus": {
+            "type": "string",
+            "const": "pending",
+            "title": "Anchorstatus"
+          },
+          "recovery": {
+            "type": "string",
+            "const": "automatic_retry",
+            "title": "Recovery"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ok",
+          "registrationStatus",
+          "anchorStatus",
+          "recovery"
+        ],
+        "title": "ResetOut"
+      },
+      "Risk": {
+        "properties": {
+          "score": {
+            "type": "integer",
+            "title": "Score"
+          },
+          "features": {
+            "items": {
+              "$ref": "#/components/schemas/Reason"
+            },
+            "type": "array",
+            "title": "Features"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "score",
+          "features"
+        ],
+        "title": "Risk"
+      },
+      "ScenarioFixtureIn": {
+        "properties": {
+          "scenario": {
+            "type": "string",
+            "enum": [
+              "T10",
+              "T11",
+              "refund_delay"
+            ],
+            "title": "Scenario"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "scenario"
+        ],
+        "title": "ScenarioFixtureIn"
+      },
+      "ScenarioIn": {
+        "properties": {
+          "ids": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "ScenarioIn"
+      },
+      "SessionIn": {
+        "properties": {
+          "persona": {
+            "type": "string",
+            "enum": [
+              "parent_minh",
+              "student_linh",
+              "mother_lan",
+              "parent_wang",
+              "student_hao",
+              "judge"
+            ],
+            "title": "Persona"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "persona"
+        ],
+        "title": "SessionIn"
+      },
+      "SessionOut": {
+        "properties": {
+          "token": {
+            "type": "string",
+            "title": "Token"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "token",
+          "user"
+        ],
+        "title": "SessionOut"
+      },
+      "SignIn": {
+        "properties": {
+          "assertion": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "title": "Assertion"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "assertion"
+        ],
+        "title": "SignIn"
+      },
+      "StudyPlan": {
+        "properties": {
+          "simulatedNow": {
+            "type": "string",
+            "title": "Simulatednow"
+          },
+          "clock": {
+            "type": "string",
+            "const": "SIMULATED",
+            "title": "Clock"
+          },
+          "source": {
+            "type": "string",
+            "title": "Source"
+          },
+          "invoiceVersion": {
+            "type": "string",
+            "title": "Invoiceversion"
+          },
+          "seedRefreshRequired": {
+            "type": "boolean",
+            "title": "Seedrefreshrequired",
+            "default": false
+          },
+          "housing": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Housing"
+          },
+          "tuition": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "registrationWindow": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Registrationwindow"
+          },
+          "currentPaymentWindow": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "type": "string"
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Currentpaymentwindow"
+          },
+          "dueAt": {
+            "type": "string",
+            "title": "Dueat"
+          },
+          "instalmentSchedule": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Instalmentschedule"
+          },
+          "paymentWindowStatus": {
+            "type": "string",
+            "enum": [
+              "open",
+              "not_open",
+              "closed",
+              "settled",
+              "legacy_unspecified"
+            ],
+            "title": "Paymentwindowstatus"
+          },
+          "separateObligations": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Separateobligations"
+          },
+          "classesStart": {
+            "type": "string",
+            "title": "Classesstart"
+          },
+          "refundPromise": {
+            "type": "string",
+            "title": "Refundpromise"
+          },
+          "academicTimeline": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Academictimeline"
+          },
+          "admissionDisposition": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Admissiondisposition"
+          },
+          "standardAdmissionCertificate": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Standardadmissioncertificate"
+          },
+          "visaApplication": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Visaapplication"
+          },
+          "sequence": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Sequence"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "simulatedNow",
+          "clock",
+          "source",
+          "invoiceVersion",
+          "housing",
+          "tuition",
+          "registrationWindow",
+          "currentPaymentWindow",
+          "dueAt",
+          "instalmentSchedule",
+          "paymentWindowStatus",
+          "separateObligations",
+          "classesStart",
+          "refundPromise",
+          "academicTimeline",
+          "standardAdmissionCertificate",
+          "visaApplication",
+          "sequence"
+        ],
+        "title": "StudyPlan"
+      },
+      "TamperIn": {
+        "properties": {
+          "seq": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Seq"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "seq"
+        ],
+        "title": "TamperIn"
+      },
+      "TimelineEvent": {
+        "properties": {
+          "at": {
+            "type": "string",
+            "title": "At"
+          },
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "actor": {
+            "type": "string",
+            "title": "Actor"
+          },
+          "params": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Params"
+          },
+          "auditSeq": {
+            "type": "integer",
+            "title": "Auditseq"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "at",
+          "code",
+          "actor",
+          "params",
+          "auditSeq"
+        ],
+        "title": "TimelineEvent"
+      },
+      "User": {
+        "properties": {
+          "admissionDisposition": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Admissiondisposition"
+          },
+          "simulatedNow": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Simulatednow"
+          },
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "parent",
+              "student",
+              "cosigner",
+              "judge"
+            ],
+            "title": "Role"
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "vi",
+              "ko",
+              "zh",
+              "en"
+            ],
+            "title": "Locale"
+          },
+          "familyId": {
+            "type": "string",
+            "title": "Familyid"
+          },
+          "accounts": {
+            "items": {
+              "$ref": "#/components/schemas/Account"
+            },
+            "type": "array",
+            "title": "Accounts"
+          },
+          "frozen": {
+            "type": "boolean",
+            "title": "Frozen",
+            "default": false
+          },
+          "frozenReason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Frozenreason"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "role",
+          "locale",
+          "familyId",
+          "accounts"
+        ],
+        "title": "User"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    },
+    "securitySchemes": {
+      "HTTPBearer": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}

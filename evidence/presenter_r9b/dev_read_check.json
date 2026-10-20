@@ -1,0 +1,202 @@
+{
+  "health": {
+    "ok": true,
+    "demo": true,
+    "bank": "MOCK",
+    "bursar": "MOCK",
+    "llmProvider": "openai",
+    "chainMode": "fisco",
+    "screeningMode": "watchman",
+    "llm": {
+      "configuredProvider": "openai",
+      "effectiveProvider": "openai",
+      "status": "ready",
+      "lastError": null,
+      "lastSuccessAt": null
+    },
+    "publicDemo": false
+  },
+  "studyPlan": {
+    "simulatedNow": "2027-01-12T03:00:00Z",
+    "clock": "SIMULATED",
+    "source": "Fictional Hanbit signed academic terms (MOCK)",
+    "invoiceVersion": "tuition-2027-v8",
+    "seedRefreshRequired": false,
+    "housing": {
+      "mode": "dormitory_option",
+      "mutuallyExclusive": true
+    },
+    "tuition": {
+      "amount": "7174000.00",
+      "currency": "KRW"
+    },
+    "registrationWindow": {
+      "opensAt": "2027-01-11T00:00:00Z",
+      "closesAt": "2027-01-15T08:00:00Z",
+      "timeZone": "Asia/Seoul"
+    },
+    "currentPaymentWindow": {
+      "opensAt": "2027-01-11T00:00:00Z",
+      "closesAt": "2027-01-15T08:00:00Z",
+      "timeZone": "Asia/Seoul"
+    },
+    "dueAt": "2027-01-15T08:00:00Z",
+    "instalmentSchedule": [
+      {
+        "number": 1,
+        "amount": "3587000.00",
+        "dueAt": "2027-01-15T08:00:00Z",
+        "paymentWindow": {
+          "opensAt": "2027-01-11T00:00:00Z",
+          "closesAt": "2027-01-15T08:00:00Z",
+          "timeZone": "Asia/Seoul"
+        }
+      },
+      {
+        "number": 2,
+        "amount": "3587000.00",
+        "dueAt": "2027-02-15T08:00:00Z",
+        "paymentWindow": {
+          "opensAt": "2027-02-11T00:00:00Z",
+          "closesAt": "2027-02-15T08:00:00Z",
+          "timeZone": "Asia/Seoul"
+        }
+      }
+    ],
+    "paymentWindowStatus": "open",
+    "separateObligations": [
+      {
+        "id": "dorm",
+        "label": "Ký túc xá tháng 3–6 (4 tháng)",
+        "amount": {
+          "amount": "1500000.00",
+          "currency": "KRW"
+        },
+        "period": "semester",
+        "collector": "Hanbit Dormitory Office (MOCK)",
+        "when": "Nộp theo thông báo riêng của ký túc xá trước khi nhận phòng",
+        "paidThroughBridge": false,
+        "refundPolicy": "Phần ký túc xá chưa sử dụng phải hỏi ban quản lý theo quy định riêng; chưa xác minh mức hay hạn hoàn",
+        "alternativeTo": "private_rent",
+        "source": "Dự toán MOCK theo chia sẻ của cố vấn, không phải lệnh thanh toán",
+        "applicable": true
+      },
+      {
+        "id": "health_insurance",
+        "label": "Bảo hiểm y tế sau khi đến Hàn",
+        "amount": {
+          "amount": "70000.00",
+          "currency": "KRW"
+        },
+        "period": "monthly",
+        "collector": "NHIS (external public insurance, no integration)",
+        "when": "Sau khi đến Hàn và tham gia bảo hiểm, sinh viên trả hóa đơn NHIS thực tế, có thể trích nợ tài khoản Hàn Quốc",
+        "paidThroughBridge": false,
+        "refundPolicy": "Không nằm trong hồ sơ hoàn học phí; áp dụng quy định bảo hiểm và thu phí thực tế của NHIS",
+        "source": "Dự toán MOCK 70.000 KRW/tháng, không phải mức phí NHIS chính thức",
+        "sourceUrl": "https://www.nhis.or.kr/english/wbheaa02900m01.do",
+        "applicable": true
+      }
+    ],
+    "classesStart": "2027-03-02T00:00:00Z",
+    "refundPromise": "2027-03-16T00:00:00Z",
+    "academicTimeline": {
+      "acceptedAt": "2026-12-15T00:00:00Z",
+      "certificateIssuedAt": "2026-12-22T00:00:00Z",
+      "visaAppliedAt": "2027-01-04T00:00:00Z",
+      "visaStatusAtSeed": "processing_MOCK",
+      "source": "Fictional Hanbit academic calendar (MOCK); no embassy integration"
+    },
+    "standardAdmissionCertificate": {
+      "status": "issued_MOCK",
+      "issuedAt": "2026-12-22T00:00:00Z",
+      "basis": "acceptance",
+      "downloadUrl": "/api/study-plan/standard-admission-certificate.pdf"
+    },
+    "visaApplication": {
+      "appliedAt": "2027-01-04T00:00:00Z",
+      "status": "processing_MOCK",
+      "integration": "MOCK sequence only; no embassy application is submitted"
+    },
+    "sequence": [
+      "admission_acceptance",
+      "standard_admission_certificate",
+      "D2_visa_application",
+      "registration_payment_while_visa_pending",
+      "visa_decision",
+      "tuition_refund_if_refused"
+    ]
+  },
+  "rentSetup": {
+    "purpose": "rent",
+    "payeeRule": "verified_landlord_only",
+    "landlord": {
+      "verification": {
+        "method": "bank_name_check_and_mock_rental_agreement",
+        "agreementStatus": "required",
+        "validFrom": "2027-01-01T00:00:00Z",
+        "validUntil": "2027-06-01T00:00:00Z",
+        "agreementId": null,
+        "source": "核对银行保存的租约记录；上传文字不能设定账户或租金"
+      },
+      "id": "payee_landlord",
+      "name": "Seoul Garden Residence (MOCK)",
+      "institution": "Landlord (MOCK)",
+      "account": {
+        "masked": "•••• 1193",
+        "hashMatch": true
+      },
+      "credential": {
+        "issuer": "Lotus Home Bank (MOCK)",
+        "status": "none",
+        "vcId": null,
+        "chainTx": null
+      },
+      "nameCheck": "match"
+    },
+    "monthlyAmount": {
+      "amount": "900000.00",
+      "currency": "KRW"
+    },
+    "missing": [
+      {
+        "kind": "rental_agreement",
+        "actorId": "usr_student_linh",
+        "action": "upload"
+      },
+      {
+        "kind": "rent_mandate",
+        "actorId": "usr_parent_minh",
+        "action": "create_and_sign"
+      }
+    ],
+    "mandates": [],
+    "activeMandateId": null,
+    "mandateTemplate": {
+      "purpose": "rent",
+      "payeeRule": {
+        "type": "name_checked",
+        "issuer": null,
+        "payeeId": "payee_landlord"
+      },
+      "cap": {
+        "amount": "900000.00",
+        "currency": "KRW"
+      },
+      "period": "monthly",
+      "expiresAt": "2027-06-01T00:00:00Z",
+      "cosignerId": null
+    },
+    "housing": "校外租房替代宿舍，不重复计算",
+    "verificationStatus": "needs"
+  },
+  "counts": {
+    "payments": 0,
+    "refunds": 0,
+    "approvals?status=all": 0,
+    "mandates": 0,
+    "documents": 0
+  },
+  "hostedCalls": 0,
+  "limits": "Direct HTTP reads after backed-up explicit private demo reset; public live stack unchanged"
+}

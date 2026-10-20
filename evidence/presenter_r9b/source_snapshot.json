@@ -1,0 +1,30 @@
+{
+  "baseCommit": "c93ecccda0777aaf832fb026c932f22e6f4e8935",
+  "sha256LF": {
+    "docs/API.md": "018c13e66185041fb41b257c3cc57b4930122784db7220fcc0acd9f5998755bd",
+    "docs/deliverables/technical.md": "811a4a55cfbb5eb24a73acf70d17ef94336740a385997f6cd929b7442c2a77e3",
+    "docs/deploy/ubuntu-vm.md": "b11d408ba121019ee3dc71404736dd1d08d17f4e01eaec1b6e61dfe87f4015d3",
+    "docs/deploy/windows-tunnel.md": "78d0940885e3b683298d5f0289b6ee2ba7e393d2d6cc290d035a3c78749c0241",
+    "docs/status/backend.md": "a2e0011e8ebfd2e9bcd2086695adcbc761c18fe3be6643d3b53c8047b76b6555",
+    "infra/deploy/.env.example": "32c7b979074fbca4cc3b33dbd85444c549b8dff5d3911bfebf0b7f75874bc3fa",
+    "infra/deploy/render.py": "99708ac4605c99f7be4c3cae64e25e46c4a7ce582d111e62b3f6845fe9f14854",
+    "infra/windows/.env.example": "88e7ac74108683a608cbd902dc6d084bf0c6b3a0960cb13382c8253827818985",
+    "infra/windows/live.py": "e2af26a865a34ebeeb51cfab20463c3f338979d60b26387af833f4a2ff695b10",
+    "services/api/.env.example": "c0f7336bd5ca5a3fd0d39f0c7de6ddb98e095d8c2e61f120f4524c24b6d87b98",
+    "services/api/README.md": "2807d6b2a2fbe00e5832d98f41f6563ae926ce8f02c9160de70df0bd08ade31e",
+    "services/api/bursarbridge/catalog.py": "f6c0e5f2dc9013b70ec75f6bf83030e1e4be905be3292152afc8653eb122f1bf",
+    "services/api/bursarbridge/engine.py": "056b1e722fbf5bb845eb286c39dd13fbc3f44c32eb66f2e1be5800f662c9086c",
+    "services/api/bursarbridge/fixtures.py": "2133dc9630cb7d490b834e029b0ce6d10008947cd3a4af29a20d2cd0e6ca3bfd",
+    "services/api/bursarbridge/main.py": "865c47ba2ba49cd43200ea45f871374c46f974b80b25e2b9732d698b45eb468c",
+    "services/api/bursarbridge/models.py": "1dee711deb36d61f44e885f2ed04a6e83d067dcb0669da66dc65b3134159aa30",
+    "services/api/bursarbridge/providers.py": "8342b3b1662e4d7a1fad20cc1155d26bf457a928bd3a17bea53e72817ef67871",
+    "services/api/bursarbridge/public.py": "b3d8d8bb3496b6a37c75cb7feffdb30dfcc311c62755335aaabe84c883f5d130",
+    "services/api/bursarbridge/reference.py": "cdfbf84c58e714a736e7ee40cb1be62655b51fd7d3325b3ae8a4c98123a2c36b",
+    "services/api/bursarbridge/study.py": "212af8b1459b213726498f7cf1f4ad70d83ff1089a18ebac2ea2617079411363",
+    "services/api/openapi.json": "e6b8c55d67921abdecc1c7f4aa02d956d7144f81bb75439da53fb50e9fa1f067",
+    "services/api/tests/test_policy_questions.py": "8284472a6c87846f1932bb4f9641e354a0d3e3d0e3ae142b9b3ff5aa3d012751",
+    "services/api/tests/test_public.py": "1352957a448d9b99f3b9762d7db707ac04454c106c9048c74211d4b11ed45924",
+    "services/api/tests/test_round9.py": "1372f8196feea398e47bec8a4c89129565bb8cbb906572b0cb88c83426c558cf",
+    "services/api/tests/test_semester.py": "1d91bc7639870792d3079c6a7fbb65a3769f3742fae34842a7be68352bd4b16c"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "transport": "real HTTP SSE",
+  "health": {
+    "ok": true,
+    "demo": true,
+    "bank": "MOCK",
+    "bursar": "MOCK",
+    "llmProvider": "openai",
+    "chainMode": "fisco"
+  },
+  "firstStepMs": 24.4,
+  "replyMs": 8333.9,
+  "events": [
+    {
+      "ms": 24.4,
+      "type": "step",
+      "kind": null,
+      "source": null,
+      "text": null
+    },
+    {
+      "ms": 2904.7,
+      "type": "step",
+      "kind": null,
+      "source": null,
+      "text": null
+    },
+    {
+      "ms": 5050.0,
+      "type": "step",
+      "kind": null,
+      "source": null,
+      "text": null
+    },
+    {
+      "ms": 5050.4,
+      "type": "step",
+      "kind": null,
+      "source": null,
+      "text": null
+    },
+    {
+      "ms": 5050.7,
+      "type": "step",
+      "kind": null,
+      "source": null,
+      "text": null
+    },
+    {
+      "ms": 5051.0,
+      "type": "step",
+      "kind": null,
+      "source": null,
+      "text": null
+    },
+    {
+      "ms": 5051.3,
+      "type": "step",
+      "kind": null,
+      "source": null,
+      "text": null
+    },
+    {
+      "ms": 5051.6,
+      "type": "step",
+      "kind": null,
+      "source": null,
+      "text": null
+    },
+    {
+      "ms": 5051.9,
+      "type": "card",
+      "kind": "quote",
+      "source": null,
+      "text": null
+    },
+    {
+      "ms": 5052.2,
+      "type": "card",
+      "kind": "pack",
+      "source": null,
+      "text": null
+    },
+    {
+      "ms": 8333.9,
+      "type": "token",
+      "kind": null,
+      "source": "openai",
+      "text": "Học phí trên hóa đơn là 7,200,000 KRW, ước tính tương đương 136,155,538.60 VND, hạn thanh toán là 15/01/2027; khoản thanh toán hiện được ngân hàng giữ lại nên các số tiền này chỉ để tham khảo, không phải khoản Linh cần đóng thêm."
+    },
+    {
+      "ms": 8334.2,
+      "type": "done",
+      "kind": null,
+      "source": null,
+      "text": null
+    }
+  ],
+  "limits": "Read-only deadline query; creates a synthetic session/thread, no payment. Direct API socket, not a browser/proxy assertion."
+}

@@ -1,0 +1,52 @@
+@@HOST@@ {
+    header {
+        Strict-Transport-Security "max-age=31536000"
+        X-Content-Type-Options nosniff
+        Referrer-Policy same-origin
+    }
+    request_body {
+        max_size 6MB
+    }
+    @api path /bbapi/* /api/*
+    handle @api {
+        uri replace /bbapi/ /api/ 1
+        header {
+            Cache-Control "no-store, no-transform"
+            X-Accel-Buffering no
+            defer
+        }
+        reverse_proxy 127.0.0.1:8000 {
+            transport http {
+                compression off
+            }
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+            header_up -X-Real-IP
+            header_up -X-Bursar-Return
+            header_up -Accept-Encoding
+        }
+    }
+    # The document request establishes one cookie before parallel persona fetches.
+    @bootstrap {
+        method GET
+        header Accept *text/html*
+        not header Cookie *bb_sandbox=*
+    }
+    handle @bootstrap {
+        rewrite * /api/public/bootstrap
+        header >Cache-Control "no-store, no-transform"
+        reverse_proxy 127.0.0.1:8000 {
+            transport http {
+                compression off
+            }
+            header_up X-Bursar-Return {http.request.orig_uri}
+            header_up X-Forwarded-For {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+            header_up -Accept-Encoding
+        }
+    }
+    handle {
+        reverse_proxy 127.0.0.1:3000
+    }
+    # No encode directive: SSE never passes through Next or gzip buffering.
+}

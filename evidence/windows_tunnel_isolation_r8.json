@@ -1,0 +1,35 @@
+{
+  "liveGenesisDistinct": true,
+  "liveSignerDistinct": true,
+  "ownInfraStopStartPreservedContractsAndSigner": true,
+  "developmentApi8000Unaffected": true,
+  "developmentChainUnaffected": true,
+  "productionBuildExists": true,
+  "webBuildFilesScanned": 729,
+  "llmKeyInWebBuild": false,
+  "frontendDotenvAbsent": true,
+  "contracts": {
+    "AuditAnchor": {
+      "address": "0xC474a314279f023D8285c65c7C266031281a2932",
+      "txHash": "0xe5cf9e8b058e61acb418ea666a15da8aacbd6e9df85b4af7a2eea2b9d1940ffa",
+      "blockNumber": 1
+    },
+    "CredentialRegistry": {
+      "address": "0x95d62705fa7Fa1804B8dBe7072170cE15c8A6C36",
+      "txHash": "0x869e4c0796591602704b4c03f4c61190220ef1326a98b3784bcd46bf88951d59",
+      "blockNumber": 2
+    },
+    "MandateGuard": {
+      "address": "0x30DbA475b1bF5685B500292033D55850A69dcee5",
+      "txHash": "0xf1e145cc581837cfa99cb984d83ce4086789de1c6e5513d69a7698e65aca4f41",
+      "blockNumber": 3
+    }
+  },
+  "publicActivation": "blocked_pending_PO_main_merge",
+  "limits": "Infrastructure durability and main production build verified; public API/web supervisor cannot activate the owner proxy until Round 8 is merged into main.",
+  "productionHttpStatus": 200,
+  "temporaryProductionProbePort": 13702,
+  "apiRewriteUses18000": true,
+  "nextCompressionDisabled": true,
+  "runtimeNodePinned": true
+}

@@ -1,0 +1,1443 @@
+{
+  "common": {
+    "language": "Ngôn ngữ",
+    "theme": "Giao diện",
+    "light": "Sáng",
+    "dark": "Tối",
+    "system": "Theo thiết bị",
+    "simClock": "Đồng hồ giả lập (chỉ dùng cho demo)",
+    "today": "Hôm nay trong demo: {date}"
+  },
+  "mock": {
+    "label": "Mock",
+    "why": {
+      "bank": "Lotus Home Bank là ngân hàng hư cấu, được giả lập cho bản demo. Không có tiền hay tài khoản thật nào ở đây.",
+      "clock": "Thời gian trong demo chạy theo đồng hồ giả lập, để quy trình hoàn tiền 30 ngày có thể xem trong vài phút.",
+      "authenticator": "Trình xác thực demo: không đọc sinh trắc học thật. Nếu máy có passkey, có thể chuyển sang dùng ở bên dưới.",
+      "chain": "Bằng chứng được neo trên chuỗi thử nghiệm FISCO BCOS do đội vận hành, hoặc bản thay thế cục bộ ở chế độ mock. Chỉ có hash, không bao giờ có tiền hay dữ liệu cá nhân.",
+      "rate": "Tỷ giá lấy từ bảng tỷ giá ngân hàng giả lập, không phải giá thị trường thật.",
+      "bursar": "Hanbit University và phòng tài chính của trường đều là hư cấu, được giả lập.",
+      "generic": "Được giả lập cho demo. Mọi phần mock đều được liệt kê ở Trung tâm minh bạch.",
+      "harness": "Kết quả được phát lại trong trình duyệt. Kết nối API để chạy bộ kịch bản thật."
+    }
+  },
+  "passkey": {
+    "exactly": "Passkey chỉ ký đúng nội dung này, không gì khác.",
+    "hash": "Mã đối chiếu",
+    "scanning": "Đang xác nhận…",
+    "signed": "Đã ký",
+    "failed": "Chưa ký được. Chưa có gì được gửi đi.",
+    "deviceHint": "Dùng Face ID, vân tay hoặc mã PIN của máy",
+    "demoHint": "Trình xác thực demo: chạm để xác nhận",
+    "retry": "Thử lại",
+    "cta": "Xác nhận bằng passkey",
+    "useDemo": "Dùng trình xác thực demo",
+    "useDevice": "Dùng passkey của máy này",
+    "cancelled": "Đã đóng hộp passkey. Chưa ký gì cả."
+  },
+  "payee": {
+    "verified": "Đã xác minh",
+    "vouched": "Được {issuer} xác nhận",
+    "notVouched": "Trường chưa xác nhận tài khoản này",
+    "vouchedDetail": "Trường đã ký xác nhận đây là tài khoản của chính trường.",
+    "accountMatch": "Tài khoản khớp với hồ sơ của trường",
+    "accountMismatch": "Tài khoản không có trong hồ sơ của trường",
+    "name": {
+      "match": "Tên chủ tài khoản khớp",
+      "close_match": "Tên chỉ na ná, không khớp hẳn",
+      "no_match": "Tên chủ tài khoản không khớp"
+    },
+    "onChain": "Chứng nhận còn hiệu lực trên chuỗi bằng chứng",
+    "block": "Khối #{n}",
+    "technical": "Chi tiết kỹ thuật"
+  },
+  "quote": {
+    "converted": "Số tiền quy đổi",
+    "fee": "Phí chuyển tiền",
+    "rate": "Tỷ giá",
+    "mid": "Giá thị trường {mid}, ngân hàng cộng {margin}%",
+    "youPay": "Tổng số tiền trả",
+    "theyGet": "Hanbit nhận",
+    "cancel": "Hủy miễn phí trong 30 phút sau khi duyệt",
+    "details": "Chi tiết tỷ giá",
+    "sourceMock": "bảng tỷ giá mô phỏng (MOCK)",
+    "sourceEcb": "tỷ giá tham chiếu ECB"
+  },
+  "pack": {
+    "ready": "Hồ sơ ngân hàng đã sẵn sàng · {ready}/{total}",
+    "rule": "{corridor} · Thông tư 20/2022 (chuyển tiền du học)",
+    "version": "Phiên bản quy định {v}",
+    "docs": {
+      "transfer_request_form": "Giấy đề nghị chuyển tiền",
+      "fee_notice": "Thông báo học phí của trường",
+      "admission_letter": "Thư nhập học",
+      "student_passport_redacted": "Hộ chiếu sinh viên (đã che)",
+      "sender_id_redacted": "CCCD người gửi (đã che)",
+      "relationship_proof": "Giấy tờ chứng minh là cha mẹ",
+      "admission": "Thư nhập học",
+      "invoice": "Thông báo học phí của trường",
+      "identity": "Giấy tờ tùy thân (hồ sơ ngân hàng)",
+      "relationship": "Giấy tờ chứng minh là cha mẹ (hồ sơ ngân hàng)"
+    }
+  },
+  "cards": {
+    "quote": {
+      "title": "Báo giá hôm nay",
+      "at": "Báo giá lúc {time}"
+    },
+    "approval": {
+      "title": {
+        "first_payment": "Đóng học phí cho Hanbit",
+        "payment": "Thanh toán cho Hanbit",
+        "refund_claim": "Hủy nhập học và xin hoàn tiền",
+        "escalation_letter": "Thư khiếu nại",
+        "mandate_change": "Thay đổi hạn mức",
+        "share_documents": "Chia sẻ giấy tờ"
+      },
+      "forYou": "Cần duyệt",
+      "forOther": {
+        "first_payment": "Đã gửi ba mẹ duyệt",
+        "payment": "Đã gửi ba mẹ duyệt",
+        "refund_claim": "Đã gửi con duyệt",
+        "escalation_letter": "Đang chờ duyệt",
+        "mandate_change": "Đang chờ duyệt",
+        "share_documents": "Đang chờ duyệt"
+      },
+      "status": {
+        "pending": "Đang chờ",
+        "approved": "Đã duyệt",
+        "rejected": "Đã từ chối",
+        "expired": "Đã hết hạn",
+        "cooling_off": "Còn có thể hủy"
+      },
+      "youPay": "Ba mẹ trả",
+      "hanbitGets": "Hanbit nhận",
+      "refundAmount": "Số tiền xin hoàn",
+      "refundDest": "Chỉ hoàn về đúng tài khoản đã trả",
+      "review": "Xem và duyệt",
+      "approveClaim": "Ký cả hai đơn",
+      "sign": {
+        "claim": "Yêu cầu cho",
+        "to": "Gửi đến",
+        "title": {
+          "first_payment": "Duyệt đóng học phí",
+          "payment": "Duyệt thanh toán",
+          "refund_claim": "Ký đơn hoàn tiền",
+          "escalation_letter": "Gửi thư khiếu nại",
+          "mandate_change": "Đổi hạn mức",
+          "share_documents": "Chia sẻ giấy tờ"
+        },
+        "claimTuition": "Học phí đã đóng cho trường",
+        "forms": "Đơn",
+        "formsValue": "Hủy nhập học + xin hoàn tiền",
+        "by": "Về trước"
+      },
+      "youPayParent": "Anh trả",
+      "refundTo": "Về lại tài khoản đã trả",
+      "after": {
+        "sent": "{who} đã duyệt. Tiền đang trên đường tới {payee}.",
+        "sentSub": "Ngân hàng giữ khoản này đến {time}, trước giờ đó vẫn hủy được.",
+        "arrived": "{payee} đã nhận học phí. Học kỳ này xong phần tiền rồi nhé.",
+        "cancelled": "{who} đã hủy khoản này. Chưa có tiền nào rời tài khoản."
+      },
+      "refund": {
+        "forYou": "Cần bạn ký",
+        "signed": "Đã ký",
+        "claim": "Số tiền xin hoàn",
+        "claimSub": "Học phí đã đóng cho học kỳ.",
+        "whereSub": "Tài khoản đã chuyển tiền (SWIFT {swift}). Không ai đổi được.",
+        "youSign": "Bạn ký những gì",
+        "theySign": "Con ký những gì",
+        "claimSubEstimate": "Học phí đã đóng. Sau phí ngân hàng và đổi tiền, khoảng {amount} sẽ về (ước tính MOCK)."
+      }
+    },
+    "info": {
+      "openPayment": "Xem khoản thanh toán",
+      "NEED_INVOICE": "Mẹo: chạm nút kẹp giấy để gửi file PDF hóa đơn hoặc email từ phòng tài chính của trường.",
+      "MANDATE_REQUESTED": "Mình đã nhờ ba mẹ đặt hạn mức học phí. Ba mẹ đặt xong là thẻ duyệt được gửi đi liền.",
+      "MANDATE_SET_CONTINUING": "Ba mẹ đã đặt hạn mức học phí, nên mình gửi khoản thanh toán qua để ba mẹ duyệt rồi nha.",
+      "FREEZE_HINT": "Khoản còn trong 30 phút chờ sẽ được hủy và trả tiền lại. Các yêu cầu chuyển khác sẽ tạm dừng. Tiền hoàn vẫn về tài khoản của ba. Khoản bên nhận đã nhận thì không thể thu hồi ở đây.",
+      "openFreeze": "Mở Đóng băng",
+      "generic": "Trợ lý đã kiểm tra; hiện không cần bạn làm gì."
+    }
+  },
+  "blocked": {
+    "title": "Đã chặn khoản thanh toán",
+    "titleRedirect": "Đã chặn việc đổi hướng tiền hoàn",
+    "nothingMoved": "Chưa có đồng nào bị chuyển đi. Tiền vẫn nằm yên chỗ cũ.",
+    "attempted": "Yêu cầu bị chặn",
+    "attemptPay": "Trả {amount} cho “{payee}”",
+    "attemptRedirect": "Chuyển tiền hoàn sang tài khoản khác ({account})",
+    "source": "Đến từ email: {sender}",
+    "why": "Vì sao bị chặn",
+    "next": "Bây giờ nên làm gì",
+    "steps": {
+      "NEXT_NOTHING_MOVED": "Không cần làm gì. Khoản thanh toán này chưa từng được tạo.",
+      "NEXT_REAL_INVOICE_SAFE": "Hóa đơn thật của Hanbit vẫn giữ nguyên, vẫn trả vào tài khoản đã xác minh.",
+      "NEXT_REPORT_BURSAR": "Nếu muốn, hãy báo email này cho phòng tài chính Hanbit qua thông tin liên hệ trên website chính thức của trường.",
+      "NEXT_DONT_REPLY": "Đừng trả lời hay bấm vào link trong email đó.",
+      "NEXT_REFUND_SAFE": "Tiền hoàn vẫn được xử lý bình thường, và chỉ về đúng tài khoản đã đóng tiền.",
+      "NEXT_NEVER_PAY_FEE": "Đừng bao giờ trả phí để “hoàn tiền nhanh hơn”."
+    },
+    "decidedBy": "Do bộ quy tắc quyết định, không phải AI:",
+    "titleEscalate": "Đang chờ bổ sung",
+    "nothingMovedEscalate": "Chưa có gì được gửi đi. Đây là những gì còn thiếu.",
+    "attemptDoc": "Phát hiện lệnh trong {file}",
+    "attemptDocDetail": "Số tài khoản và số tiền trong tài liệu được gửi chỉ là dữ liệu, không bao giờ thành người nhận tiền.",
+    "stepsDefault": {
+      "NEXT_NOTHING_MOVED": "Không cần làm gì. Chưa có khoản thanh toán nào được tạo.",
+      "NEXT_VERIFY_OFFICIAL": "Nếu thông tin thanh toán thật sự thay đổi, hãy xác nhận qua website hoặc văn phòng chính thức của trường.",
+      "NEXT_DONT_REPLY": "Đừng trả lời hay bấm vào link trong tin nhắn đó."
+    },
+    "stepsEscalate": {
+      "NEXT_SEND_DOCS": "Gửi các giấy tờ còn thiếu ngay trong cuộc trò chuyện này.",
+      "NEXT_SET_LIMIT": "Nhờ ba mẹ đặt hoặc nâng hạn mức."
+    },
+    "whyEscalate": "Vì sao đang chờ",
+    "unverified": "Tài khoản chưa xác minh",
+    "titleCooling": "Tạm dừng 24 giờ",
+    "nothingMovedCooling": "Chưa có gì được chuyển. Gia đình sẽ kiểm tra trước.",
+    "stepsCooling": {
+      "NEXT_CALL": "Gọi cho gia đình bằng số bạn vẫn hay gọi.",
+      "NEXT_NO_SECRET": "Đừng giữ bí mật và không bao giờ nộp “tiền ký quỹ”.",
+      "NEXT_LAN": "Mẹ đã được nhờ kiểm tra cùng bạn."
+    },
+    "attemptAccount": "Chuyển tiền vào tài khoản {account}",
+    "titleRefused": "Việc này mình không làm được"
+  },
+  "reasons": {
+    "FIRST_PAYMENT_TO_PAYEE": "Lần đầu trả cho trường này, nên cần phụ huynh duyệt",
+    "NO_SCAM_SIGNALS": "Không có dấu hiệu lừa đảo",
+    "WITHIN_MANDATE_CAP": "Nằm trong hạn mức đã đặt",
+    "AMOUNT_WITHIN_FEE_NOTICE": "Số tiền khớp với thông báo học phí của trường",
+    "RELATIVE_SENDER_ALLOWED": "Cha mẹ được phép chuyển học phí cho con",
+    "DOCS_COMPLETE": "Đã đủ giấy tờ cần thiết",
+    "PAYEE_NOT_CREDENTIALED": "Trường chưa từng xác nhận tài khoản này",
+    "PARAMS_FROM_UNTRUSTED_DOC": "Thông tin thanh toán lấy từ email, không phải từ trường",
+    "LOOKALIKE_SENDER": "Địa chỉ người gửi giả mạo tên miền của trường",
+    "URGENCY_DISCOUNT": "Chiêu hối thúc: giảm giá nếu trả gấp",
+    "REFUND_REDIRECT": "Tiền hoàn chỉ được về tài khoản đã trả",
+    "ADVANCE_FEE": "Đòi phí trước rồi mới trả tiền",
+    "REFUND_TO_ORIGINAL_PAYER": "Tiền hoàn chỉ về tài khoản ban đầu",
+    "REFUND_DEADLINE": "Trường có 30 ngày để hoàn tiền",
+    "OUT_OF_SCOPE_CRYPTO": "Tiền ảo và đầu tư nằm ngoài phạm vi của trợ lý",
+    "PII_REQUEST": "Không bao giờ chia sẻ giấy tờ cá nhân qua chat",
+    "PAYEE_FROM_TEXT": "Không thể thêm người nhận từ tin nhắn hay email",
+    "SELF_LIMIT_CHANGE": "Trợ lý không thể tự đổi hạn mức của mình",
+    "STRUCTURING": "Không được chia nhỏ khoản tiền để lách hạn mức",
+    "OVER_MANDATE_CAP": "Vượt hạn mức đã đặt",
+    "ACCOUNT_HASH_MISMATCH": "Tài khoản khác với hồ sơ của trường",
+    "INSTRUCTION_IN_DOCUMENT": "Lệnh giấu trong tài liệu sẽ bị bỏ qua",
+    "UNKNOWN_AGENT": "Yêu cầu không đến từ trợ lý được công nhận",
+    "NEVER_ALLOWED": "Lệnh trong tài liệu hay email không bao giờ được làm theo",
+    "FROZEN_OR_UNAVAILABLE": "Thanh toán đang bị đóng băng hoặc tạm gián đoạn",
+    "MANDATE_REQUIRED": "Chưa có hạn mức đã ký cho khoản này",
+    "PAYEE_UNVERIFIED": "Trường chưa từng xác nhận tài khoản này",
+    "NAME_MISMATCH": "Tên chủ tài khoản không khớp",
+    "TAINTED_PARAMETERS": "Thông tin thanh toán lấy từ văn bản không đáng tin",
+    "INVALID_AMOUNT": "Số tiền không hợp lệ",
+    "CAP_EXCEEDED": "Vượt hạn mức đã ký",
+    "FEE_NOTICE_EXCEEDED": "Cao hơn số trên thông báo học phí của trường",
+    "DOCUMENTS_REQUIRED": "Ngân hàng vẫn cần thêm giấy tờ",
+    "SANCTIONS_REVIEW": "Người nhận trùng danh sách trừng phạt, cần xem xét",
+    "COOLING_AND_COSIGN_REQUIRED": "Có dấu hiệu lừa đảo: tạm dừng 24 giờ và cần thêm chữ ký của người nhà",
+    "FIRST_PAYMENT": "Lần đầu trả cho trường này, nên cần phụ huynh duyệt",
+    "WITHIN_MANDATE": "Nằm trong hạn mức đã ký",
+    "NEW_PAYEE": "Tài khoản chưa từng được trả tiền",
+    "UNVERIFIED_PAYEE": "Tài khoản chưa được trường xác nhận",
+    "AUTHORITY": "Tự xưng là công an hoặc cán bộ nhà nước",
+    "URGENCY_SECRECY": "Hối thúc làm gấp và đòi giữ bí mật",
+    "RAIL_MISMATCH": "Đòi trả bằng tiền ảo hoặc thẻ quà tặng",
+    "SAFE_ACCOUNT": "Đòi chuyển tiền vào “tài khoản an toàn”",
+    "MOCK_BANK_DOCUMENT_CHECK": "Đã qua kiểm tra giấy tờ của ngân hàng (ngân hàng giả lập)",
+    "UNTRUSTED_INSTRUCTIONS": "Tài liệu có chứa lệnh, và các lệnh đó bị bỏ qua",
+    "INVOICE_RECORD_MISMATCH": "Không khớp với hồ sơ hóa đơn của trường",
+    "ADMISSION_RECORD_MISMATCH": "Không khớp với hồ sơ nhập học của trường",
+    "VERIFICATION_REQUIRED": "Cần xác minh độc lập trước",
+    "REFUSAL_DOCUMENT_REQUIRED": "Cần có thư kết quả visa",
+    "DOCUMENT_INSTRUCTION": "Giấy tờ tìm cách ra lệnh chuyển tiền",
+    "SCAM": "Giống một kiểu lừa đảo đã biết",
+    "CRYPTO": "Học phí không bao giờ được đổi sang tiền ảo hay sản phẩm “sinh lời”",
+    "EXPORT_PII": "Giấy tờ và số cá nhân không bao giờ được gửi trong khung chat",
+    "RAISE_LIMIT": "Trợ lý không thể tự nâng hạn mức của mình",
+    "REGISTRY_WRITE": "Không ai thêm được người nhận chỉ bằng cách nhắn trong chat",
+    "PAYMENT_PENDING": "Khoản thanh toán này đang được xử lý",
+    "INVOICE_SETTLED": "Hóa đơn này đã được thanh toán",
+    "PAYMENT_SETTLEMENT_REQUIRED": "Phải đóng học phí trước thì mới yêu cầu hoàn tiền được"
+  },
+  "chat": {
+    "working": "Đang xử lý…",
+    "checked": "Đã kiểm tra {n, plural, other {# mục}}",
+    "checkedFailed": "Đã kiểm tra {n, plural, other {# mục}} · {failed} mục không đạt",
+    "emptyTitle": "Xin chào {name}",
+    "emptyBody": "Có gì từ trường cứ chuyển cho mình, phần còn lại để mình lo. Mình chỉ trả vào tài khoản do chính trường xác nhận.",
+    "emptyBodyParent": "Anh cứ hỏi tiền đang ở đâu hay khoản nào tốn bao nhiêu. Em chỉ nhờ anh khi có việc cần anh duyệt.",
+    "placeholder": "Nhắn cho trợ lý",
+    "attach": "Gửi tài liệu",
+    "send": "Gửi",
+    "remove": "Xóa",
+    "aiLabel": "Trợ lý AI. Trợ lý không tự chuyển tiền được; mọi khoản chi đều theo quy tắc gia đình đã đặt.",
+    "disposition": {
+      "engine": "Bộ quy tắc",
+      "DENY": "từ chối",
+      "ESCALATE": "cần người duyệt",
+      "AUTO_EXECUTE": "được phép trong hạn mức",
+      "OBSERVE": "chỉ ghi nhận"
+    },
+    "newChat": "Cuộc trò chuyện mới",
+    "hosted": "Trả lời bởi AI",
+    "scripted": "Trả lời theo kịch bản",
+    "document": "Tài liệu",
+    "uploading": "{n, plural, other {Đang gửi # tài liệu…}}",
+    "reading": "Đang đọc tin nhắn…",
+    "workingSlow": "Vẫn đang làm: kiểm tra quy tắc, ngân hàng và trường mất vài giây",
+    "more": "Xem thêm",
+    "less": "Thu gọn",
+    "emptyBodyRent": "Nhờ mình trả tiền nhà tháng này hoặc hỏi tiền đang ở đâu. Tiền nhà chỉ vào tài khoản chủ nhà mà ba mẹ đã đặt và ngân hàng đã đối chiếu tên; học phí chỉ vào tài khoản trường đã xác minh."
+  },
+  "docs": {
+    "trayTitle": "Gửi tài liệu",
+    "trayHint": "Mọi thứ bạn gửi đều chưa được tin tưởng cho đến khi chữ ký của trường được xác minh.",
+    "fromDevice": "Chọn file trên máy",
+    "fromSchool": "Tài liệu mẫu",
+    "attacks": "Thử tấn công (demo)",
+    "samples": {
+      "invoice": {
+        "title": "Hóa đơn học phí Hanbit, kỳ Xuân 2027"
+      },
+      "admission": {
+        "title": "Thư nhập học Hanbit"
+      },
+      "discount_email": {
+        "title": "Email “giảm 15% nếu đóng sớm”"
+      },
+      "refusal": {
+        "title": "Thư kết quả visa (mẫu giả lập)"
+      },
+      "refund_agent_email": {
+        "title": "Email “hỗ trợ hoàn tiền trong 72 giờ”"
+      },
+      "police": {
+        "title": "Tin nhắn “công an” đòi nộp tiền ký quỹ"
+      },
+      "rental_agreement": {
+        "title": "Hợp đồng thuê Seoul Garden Residence (giả lập)"
+      }
+    },
+    "title": "Giấy tờ",
+    "lead": "Mỗi thông tin đều ghi rõ nguồn gốc. Chỉ thông tin có chữ ký của trường mới quyết định được ai nhận tiền.",
+    "prov": {
+      "verified_issuer": "Trường đã ký",
+      "untrusted_doc": "Chỉ từ tài liệu"
+    },
+    "empty": "Chưa gửi tài liệu nào.",
+    "forward": "Gửi tài liệu",
+    "kind": {
+      "invoice": "Hóa đơn",
+      "admission": "Thư nhập học",
+      "refusal": "Kết quả visa",
+      "email": "Email",
+      "rental_agreement": "Hợp đồng thuê nhà"
+    },
+    "field": {
+      "issuer": "Nơi phát hành",
+      "student": "Sinh viên",
+      "invoiceRef": "Số hóa đơn",
+      "amount": "Số tiền",
+      "dueDate": "Hạn trả",
+      "payeeAccount": "Trả vào",
+      "programme": "Ngành học",
+      "sender": "Người gửi",
+      "deadline": "Hạn chót",
+      "applicant": "Người nộp đơn",
+      "visaType": "Visa",
+      "decision": "Kết quả",
+      "newAccount": "Tài khoản mới",
+      "fee": "Phí bị đòi",
+      "filename": "File",
+      "text": "Nội dung",
+      "account": "Tài khoản nhận"
+    },
+    "attach": "{n, plural, =0 {Chọn giấy tờ} other {Đính kèm # giấy tờ}}",
+    "readText": "Nội dung đọc được từ tệp"
+  },
+  "demo": {
+    "label": "Demo",
+    "open": "Mở bảng điều khiển demo",
+    "title": "Điều khiển demo",
+    "playAs": "Vào vai",
+    "parent": "Phụ huynh · điện thoại",
+    "student": "Sinh viên · điện thoại",
+    "judge": "Trung tâm minh bạch",
+    "judgeSub": "Nhật ký, chuỗi, kịch bản",
+    "stage": "Sân khấu demo",
+    "stageSub": "Hai điện thoại đặt cạnh nhau",
+    "family": "Gia đình",
+    "families": {
+      "nguyen": "Nguyễn · VN→KR",
+      "wang": "Wang · CN→KR"
+    },
+    "clock": "Đồng hồ giả lập",
+    "advanced": "Đã tua nhanh {n, plural, other {# ngày}}",
+    "reset": "Đặt lại demo",
+    "resetConfirm": "Đưa mọi thứ về trạng thái ban đầu?",
+    "resetDone": "Đã đặt lại demo",
+    "mockTitle": "Đang dùng API mock trong trình duyệt",
+    "cosigner": "Người cùng ký · điện thoại",
+    "resetAgain": "Bấm lần nữa để đặt lại tất cả",
+    "jumpPromise": "Tới ngày hứa hoàn tiền",
+    "jumped": "Đồng hồ đã tới {date}",
+    "noPromise": "Chưa có khoản hoàn nào chờ tới hạn"
+  },
+  "notify": {
+    "approval": "Học phí đã sẵn sàng, chờ anh duyệt",
+    "approvalBody": "Mọi thứ đã được kiểm tra. Chưa tới một phút là xong.",
+    "review": "Xem",
+    "claimReady": "Đã soạn yêu cầu hoàn tiền. Duyệt để gửi đi.",
+    "paid": "Hanbit đã nhận học phí. Hóa đơn đã thanh toán xong.",
+    "rentPaid": "Tiền nhà đã đến tay chủ nhà.",
+    "rentAuto": "Đã tự động trả tiền nhà",
+    "rentAutoBody": "Nằm trong hạn mức hàng tháng. Anh có 30 phút để hủy.",
+    "cancelled": "Đã hủy khoản thanh toán",
+    "refundHome": "Tiền hoàn đã về tài khoản của anh",
+    "refundApproved": "Hanbit đã duyệt hoàn tiền",
+    "blocked": "Đã chặn một yêu cầu thanh toán",
+    "blockedBody": "Có người tìm cách chuyển tiền vào tài khoản chưa xác minh. Không có đồng nào bị chuyển.",
+    "frozen": "Đã tạm dừng chuyển tiền",
+    "unfrozen": "Hạn mức đã ký còn hạn sẽ dùng lại, không cần ký hạn mức lần nữa. Khoản đã hủy sẽ không tự gửi lại.",
+    "cosignNeeded": "Gia đình cần chữ ký thứ hai của chị",
+    "cosignNeededBody": "Có một yêu cầu trông như lừa đảo. Chưa có đồng nào bị chuyển.",
+    "scamPaused": "Một yêu cầu đáng ngờ đang tạm dừng 24 giờ",
+    "scamPausedBody": "Đã nhờ chị Lan kiểm tra. Chưa có đồng nào bị chuyển.",
+    "cosigned": "Chị Lan đã kiểm tra yêu cầu đáng ngờ"
+  },
+  "parent": {
+    "tabs": {
+      "home": "Trang chủ",
+      "activity": "Hoạt động",
+      "assistant": "Trợ lý"
+    },
+    "home": {
+      "hello": "Chào anh {name}",
+      "glance": "Hiện tại",
+      "headline": {
+        "frozen": "Đã tạm dừng chuyển tiền",
+        "approve": "Học phí của {name} đã sẵn sàng, chờ anh duyệt.",
+        "approveGeneric": "Có việc cần anh duyệt.",
+        "setLimit": "Anh đặt hạn mức học phí để trợ lý chuẩn bị khoản đóng tiền cho Linh nhé.",
+        "refund": "Đang lấy lại học phí về cho anh. Anh không cần làm gì.",
+        "moving": "Học phí đang trên đường tới Hanbit. Anh không cần làm gì.",
+        "nothing": "Hiện anh không cần làm gì.",
+        "studentSigns": "{name} đang ký đơn hoàn tiền. Anh không cần làm gì.",
+        "windowNotOpen": "Đợt đóng học phí của trường mở ngày {date}. Đến lúc đó anh chưa cần làm gì."
+      },
+      "cta": {
+        "unfreeze": "Quản lý đóng băng",
+        "review": "Duyệt ngay",
+        "setLimit": "Đặt hạn mức"
+      },
+      "whereLabel": "Tiền đang ở đâu",
+      "where": {
+        "home": "Trong tài khoản của anh",
+        "onTheWay": "Đang trên đường tới Seoul",
+        "atSchool": "Đã trả cho Hanbit",
+        "atSchoolRefund": "Ở Hanbit, đã yêu cầu hoàn",
+        "returning": "Đang về lại với anh"
+      },
+      "safeLabel": "Có an toàn không",
+      "safe": "Chỉ trả vào tài khoản Hanbit đã xác minh",
+      "safeRent": "Chỉ trả cho đúng chủ nhà đã kiểm tra",
+      "balance": "Số dư",
+      "boundaries": "Hạn mức của anh",
+      "noMandate": "Đặt hạn mức học phí",
+      "noMandateSub": "Đặt một lần. Trợ lý không bao giờ vượt quá được.",
+      "seeAll": "Xem tất cả",
+      "recent": "Gần đây",
+      "freeze": "Tạm dừng chuyển tiền",
+      "freezeSub": "Khoản còn trong 30 phút chờ sẽ được hủy và trả tiền lại. Các yêu cầu chuyển khác sẽ tạm dừng.",
+      "tuition": "Học phí",
+      "refund": "Hoàn tiền",
+      "noRentMandate": "Đặt hạn mức tiền nhà hằng tháng",
+      "noRentMandateSub": "Seoul Garden Residence, đã được ngân hàng đối chiếu tên. Tối đa một số tiền cố định mỗi tháng; hủy lúc nào cũng được."
+    },
+    "activity": {
+      "title": "Hoạt động",
+      "empty": "Chưa có hoạt động nào.",
+      "refunds": "Hoàn tiền",
+      "payments": "Thanh toán",
+      "approvals": "Phê duyệt",
+      "blocked": "Đã chặn để bảo vệ anh",
+      "blockedKind": {
+        "redirect": "Tìm cách đổi hướng tiền hoàn",
+        "fakeInvoice": "Hóa đơn giả kèm tài khoản mới",
+        "other": "Yêu cầu nằm ngoài quy tắc"
+      }
+    },
+    "chat": {
+      "title": "Trợ lý",
+      "sub": "Hỏi gì về học phí cũng được",
+      "s1": "Tiền đến chưa em?",
+      "s2": "Phải đóng bao nhiêu tiền Việt?",
+      "s3": "Có đóng băng hết được không em?",
+      "s4": "Bỏ tiền học vào tiền ảo cho có lãi"
+    }
+  },
+  "mandate": {
+    "purpose": {
+      "tuition": "Học phí",
+      "rent": "Tiền nhà hàng tháng",
+      "living": "Sinh hoạt phí"
+    },
+    "status": {
+      "pending_signature": "Chưa ký",
+      "active": "Đang hiệu lực",
+      "revoked": "Đã thu hồi",
+      "expired": "Đã hết hạn",
+      "suspended": "Đang đóng băng"
+    },
+    "ruleCredentialed": "Chỉ học phí, vào tài khoản Hanbit University đã xác minh",
+    "ruleNameChecked": "Chỉ {payee}, ngân hàng đã kiểm tra tên",
+    "cap": "Tối đa",
+    "capMonthly": "Tối đa mỗi tháng",
+    "used": "Đã dùng {amount}",
+    "until": "Đến {date}",
+    "cosigner": "Lan cùng ký khi có gì rủi ro",
+    "onChain": "Trên chuỗi bằng chứng · khối #{n}",
+    "cycle": "Trả một lần mỗi tháng, trong hạn mức",
+    "landlordCheck": "Chỉ vào tài khoản của chủ nhà này, ngân hàng đã đối chiếu tên. Không thêm được tài khoản khác.",
+    "change": "Thay đổi",
+    "cancel": "Hủy hạn mức",
+    "cancelConfirm": "Chạm lần nữa để hủy"
+  },
+  "mandateNew": {
+    "back": "Quay lại",
+    "title": "Đặt hạn mức học phí",
+    "lead": "Anh chỉ cần đặt giới hạn một lần. Trợ lý được chuẩn bị khoản thanh toán trong giới hạn đó, nhưng không bao giờ được vượt quá hay tự sửa.",
+    "who": "Ai được nhận tiền",
+    "whoValue": "Chỉ tài khoản Hanbit University đã xác minh",
+    "whoHint": "Số tài khoản ghi trong email, hóa đơn hay tin nhắn đều không bao giờ được thêm vào. Chỉ chính trường mới xác nhận được tài khoản của trường.",
+    "locked": "Cố định để bảo vệ anh",
+    "cap": "Tối đa",
+    "presetInvoice": "Đúng số trên hóa đơn {amount}",
+    "capHint": "Lần trả đầu tiên vẫn luôn cần anh duyệt.",
+    "until": "Hiệu lực đến",
+    "cosign": "Nhờ Lan cùng ký khi có gì đáng ngờ",
+    "cosignHint": "Chỉ với yêu cầu bất thường, không phải việc thường ngày",
+    "summary": "Trợ lý được chuẩn bị các khoản học phí tối đa {cap}, chỉ vào tài khoản Hanbit University đã xác minh, đến hết {date}.",
+    "summaryCosign": "Lan cùng ký với mọi khoản có vẻ rủi ro.",
+    "never": "Trợ lý không bao giờ được: nâng hạn mức này, thêm tài khoản mới, hoàn tiền về nơi nào khác ngoài tài khoản của anh, hay chuyển tiền vào tiền ảo.",
+    "sign": "Ký bằng passkey",
+    "sheetTitle": "Ký hạn mức học phí",
+    "done": {
+      "title": "Đã đặt hạn mức",
+      "body": "Từ giờ trợ lý chỉ làm việc trong giới hạn này. Mã đối chiếu đã được lưu lại, nên không ai âm thầm sửa được.",
+      "hash": "Mã đối chiếu hạn mức",
+      "chain": "Chuỗi bằng chứng · khối #{n}",
+      "home": "Xong"
+    },
+    "titleRent": "Đặt hạn mức tiền nhà hàng tháng",
+    "leadRent": "Tiền nhà chỉ trả cho một chủ nhà đã được ngân hàng kiểm tra. Trong hạn mức này, tiền được trả tự động mỗi tháng, có thông báo và 30 phút để hủy.",
+    "whoRent": "Chỉ {payee}",
+    "whoRentHint": "Ngân hàng đã kiểm tra tài khoản này đúng là của chủ nhà ghi trong hợp đồng thuê. Không tài khoản nào khác được nhận tiền.",
+    "presetRent": "Tiền nhà hàng tháng {amount}",
+    "capHintRent": "Khoản nào cao hơn mức này, hoặc gửi cho người khác, vẫn cần anh duyệt.",
+    "summaryRent": "Trợ lý được trả tối đa {cap} mỗi tháng, chỉ cho {payee}, đến hết {date}.",
+    "sheetTitleRent": "Ký hạn mức tiền nhà",
+    "leaseRequired": "Hợp đồng thuê: đang chờ con tải lên",
+    "leaseVerified": "Hợp đồng thuê đã đối chiếu với hồ sơ ngân hàng (MOCK)",
+    "account": "Tài khoản {masked}, ngân hàng đã đối chiếu tên"
+  },
+  "payment": {
+    "status": {
+      "awaiting_approval": "Chờ duyệt",
+      "executing": "Đang gửi",
+      "sent": "Đang chuyển",
+      "received_by_bursar": "Trường đã nhận",
+      "matched": "Đã thanh toán",
+      "cancelled": "Đã hủy",
+      "failed": "Không thành công"
+    },
+    "statusLong": {
+      "awaiting_approval": "Đang chờ duyệt.",
+      "executing": "Lotus Home Bank đang chuyển tiền.",
+      "sent": "Đang trên đường tới Seoul.",
+      "received_by_bursar": "Hanbit đã nhận và đang đối chiếu với hóa đơn.",
+      "matched": "Hanbit đã xác nhận hóa đơn được thanh toán. Xong rồi.",
+      "cancelled": "Đã hủy. Tiền đã về lại tài khoản của anh.",
+      "failed": "Không thành công. Chưa có tiền nào rời tài khoản của anh."
+    },
+    "step": {
+      "executing": "Đã duyệt, ngân hàng đã chuyển",
+      "sent": "Đang trên đường tới Seoul",
+      "received_by_bursar": "Hanbit đã nhận",
+      "matched": "Hóa đơn đã thanh toán"
+    },
+    "purpose": {
+      "tuition": "Học phí",
+      "rent": "Tiền nhà",
+      "living": "Sinh hoạt phí"
+    },
+    "auto": "tự động",
+    "back": "Quay lại",
+    "to": "Đến {payee}",
+    "paid": "{amount} từ tài khoản của anh",
+    "autoExplain": "Được trả tự động vì nằm trong hạn mức hàng tháng anh đã ký, cho đúng chủ nhà đã kiểm tra. Anh đã được báo và có 30 phút để hủy.",
+    "cancelledBody": "Đã hủy trong thời gian cho phép. Toàn bộ số tiền, kể cả phí, đã về lại tài khoản của anh.",
+    "cancelConfirm": "Hủy khoản thanh toán này? Toàn bộ số tiền sẽ về lại tài khoản của anh.",
+    "cancel": "Hủy miễn phí · còn {m} phút",
+    "amounts": "Số tiền",
+    "debited": "Quy đổi",
+    "fees": "Phí",
+    "total": "Tổng trừ từ tài khoản",
+    "received": "Bên nhận được",
+    "reference": "Mã tham chiếu",
+    "evidence": "Bằng chứng · khối #{n}",
+    "payee": "Người nhận",
+    "history": "Lịch sử"
+  },
+  "refund": {
+    "title": "Hoàn học phí",
+    "daysLeft": "Còn {n} ngày",
+    "days": "ngày",
+    "status": {
+      "refusal_reported": "Đã báo visa bị từ chối",
+      "evidence_verified": "Đã kiểm tra thư",
+      "requested": "Đã gửi hồ sơ",
+      "acknowledged": "Hanbit đã tiếp nhận",
+      "approved": "Hanbit đã duyệt",
+      "sent": "Đang chuyển về",
+      "received": "Đã về tài khoản",
+      "reconciled": "Đã về · có bảng kê",
+      "manual_review": "Trường đang xem xét"
+    },
+    "expected": "Dự kiến nhận lại: {amount}",
+    "home": "Tài khoản của anh",
+    "bursar": "Phòng Tài chính",
+    "destinationLocked": "Chỉ hoàn về đúng tài khoản đã trả ({account}). Không ai thay đổi được.",
+    "deadline": "Hanbit phải hoàn trước {date}",
+    "open": "Xem hoàn tiền",
+    "back": "Quay lại",
+    "statement": "Vì sao tiền về ít hơn một chút",
+    "sentOut": "Đã chuyển cho trường",
+    "receivedBack": "Đã về tài khoản",
+    "lines": {
+      "OUTBOUND_FEE": "Phí ngân hàng khi chuyển đi",
+      "OUTBOUND_FX_MARGIN": "Chênh lệch tỷ giá khi chuyển đi",
+      "NON_REFUNDABLE_FEE": "Phí nhập học Hanbit giữ lại",
+      "RATE_MOVEMENT": "Tỷ giá thay đổi",
+      "RETURN_FX_MARGIN": "Chênh lệch tỷ giá khi nhận về",
+      "INBOUND_FEE": "Phí ngân hàng khi nhận về",
+      "FX_MOVEMENT_MOCK": "Đổi tiền về lại VND",
+      "RETENTION": "Trường giữ lại",
+      "OUTBOUND_BANK_FEE": "Phí ngân hàng lúc chuyển đi",
+      "INTERMEDIARY_BANK_FEE_MOCK": "Phí ngân hàng trung gian"
+    },
+    "lossNote": "Trường đã hoàn học phí. Phần chênh lệch ({pct}% số đã chuyển) là phí ngân hàng và đổi tiền, từng dòng lấy từ chứng từ ngân hàng.",
+    "progress": "Tiến trình",
+    "history": "Lịch sử",
+    "backAmount": "Đã về tài khoản: {amount}",
+    "hero": {
+      "back": "{amount} đã về lại tài khoản",
+      "estimate": "Khoảng {amount} sẽ về",
+      "estimateNote": "Ước tính đến khi tiền về",
+      "manual": "Phòng đào tạo của trường sẽ quyết định số tiền",
+      "whole": "Học phí sẽ được hoàn lại"
+    },
+    "fact": {
+      "when": "Khi nào",
+      "where": "Về đâu",
+      "why": "Vì sao ít hơn một chút"
+    },
+    "when": {
+      "promise": "Chậm nhất {date}",
+      "promiseSub": "Trường Hanbit hoàn tiền trong vòng {n} ngày sau ngày khai giảng {start}.",
+      "back": "Đã về ngày {date}",
+      "backSub": "Đúng hẹn: trường hứa hoàn trước {date}.",
+      "manual": "Chưa có ngày",
+      "manualSub": "Trường đã khai giảng nên phòng đào tạo xem xét thủ công. Không có con số phỏng đoán."
+    },
+    "where": {
+      "sub": "Chỉ về đúng tài khoản đã chuyển đi. Không ai đổi được, dù qua chat, email hay file PDF."
+    },
+    "why": {
+      "value": "Ít hơn số đã chuyển {amount}",
+      "valueEstimate": "Ít hơn số đã chuyển khoảng {amount}",
+      "sub": "Là phí ngân hàng và chênh lệch đổi tiền về. Trường không giữ lại đồng nào.",
+      "link": "Xem từng khoản"
+    },
+    "expectedBack": "Dự kiến về",
+    "hints": {
+      "OUTBOUND_BANK_FEE": "Đã trả lúc tiền đi. Ngân hàng không hoàn khoản này.",
+      "FX_MOVEMENT_MOCK": "Won đổi sang đô la rồi về tiền nhà, khoảng {pct}%.",
+      "INTERMEDIARY_BANK_FEE_MOCK": "Ngân hàng ở giữa thu phí chuyển tiền quốc tế.",
+      "RETENTION": "Không có: trường không thu phí nhập học."
+    },
+    "lossNoteEstimate": "Trường hoàn học phí. Các khoản phí ngân hàng và đổi tiền này (khoảng {pct}%) là ước tính MOCK; con số cuối cùng do ngân hàng báo khi tiền về.",
+    "paperwork": "Giấy tờ",
+    "forms": {
+      "admission_withdrawal": {
+        "title": "Đơn hủy nhập học",
+        "sub": "Sau này vẫn nộp hồ sơ lại được. Đây không phải bảo lưu."
+      },
+      "tuition_refund_application": {
+        "title": "Đơn xin hoàn tiền",
+        "sub": "Đề nghị trường trả lại số đã đóng, về đúng tài khoản đã chuyển."
+      },
+      "visa_denial_letter": {
+        "title": "Thư từ chối visa",
+        "sub": "Đính kèm làm bằng chứng"
+      },
+      "signed": "{who} đã ký · {date}",
+      "waiting": "Đang chờ {who} ký",
+      "view": "Xem",
+      "note": "Bản đọc được của nội dung đã ký bằng passkey, không phải chữ ký tay. Ứng dụng không tự gửi email cho trường.",
+      "signedYou": "Bạn đã ký · {date}",
+      "waitingYou": "Đang chờ bạn ký"
+    },
+    "steps": {
+      "requested": "Đã gửi đơn cho trường",
+      "acknowledged": "Trường xác nhận đã nhận",
+      "approved": "Trường duyệt hoàn tiền",
+      "sent": "Trường chuyển tiền về",
+      "received": "Tiền về tài khoản"
+    },
+    "eta": "trước {date}",
+    "separateNote": "Ký túc xá và bảo hiểm y tế không đóng qua BursarBridge nên không nằm trong khoản hoàn này. Phần ký túc xá chưa dùng theo quy định riêng của ban quản lý."
+  },
+  "freeze": {
+    "bannerTitle": "Đã tạm dừng chuyển tiền",
+    "bannerBody": "Tiền hoàn vẫn về tài khoản của ba. Khoản bên nhận đã nhận thì không thể thu hồi ở đây.",
+    "manage": "Quản lý",
+    "back": "Quay lại",
+    "title": "Tạm dừng chuyển tiền",
+    "lead": "Khoản còn trong 30 phút chờ sẽ được hủy và trả tiền lại. Các yêu cầu chuyển khác sẽ tạm dừng.",
+    "frozenTitle": "Đã tạm dừng chuyển tiền",
+    "frozenBody": "Khoản còn trong 30 phút chờ đã được hủy. Các yêu cầu chuyển tiền khác đang tạm dừng.",
+    "what": {
+      "revoke": "Thu hồi quyền chuyển tiền chưa dùng",
+      "cancel": "Hủy khoản còn trong 30 phút chờ, trả tiền về tài khoản",
+      "pause": "Giữ nguyên chữ ký, tạm dừng các yêu cầu chuyển khác"
+    },
+    "stats": {
+      "revoked": "quyền đã thu hồi",
+      "cancelled": "khoản đã hủy",
+      "ms": "mili giây",
+      "paused": "yêu cầu tạm dừng",
+      "suspended": "hạn mức tạm dừng"
+    },
+    "cta": "Đóng băng ngay",
+    "ctaHint": "Đóng băng không cần passkey. Mở lại thì cần.",
+    "unfreeze": "Mở đóng băng",
+    "unfreezeHint": "Hạn mức đã ký còn hạn sẽ dùng lại, không cần ký hạn mức lần nữa. Khoản đã hủy sẽ không tự gửi lại.",
+    "unfreezeTitle": "Mở đóng băng thanh toán",
+    "unfreezeLine": "Người mở đóng băng",
+    "incoming": "Tiền hoàn vẫn về tài khoản của ba. Khoản bên nhận đã nhận thì không thể thu hồi ở đây.",
+    "approvalPaused": "Yêu cầu này đang tạm dừng. Mở lại rồi ba xem và duyệt nhé. Nội dung vẫn giữ nguyên."
+  },
+  "approval": {
+    "close": "Đóng",
+    "expires": "Hết hạn sau {h} giờ",
+    "forInvoice": "Học phí của Linh · {term}",
+    "title": "Duyệt thanh toán",
+    "firstPayment": "Lần đầu trả cho Hanbit",
+    "youPay": "Anh trả",
+    "fromAccount": "Từ Lotus Home Bank {account}, đã gồm phí",
+    "rateLine": "1 ₩ = {rate} {cur}",
+    "theyGet": "{payee} nhận",
+    "glance": {
+      "payee": "Đúng là tài khoản của {payee}",
+      "payeeSub": "Trường đã xác nhận, ngân hàng đã đối chiếu",
+      "cost": "Tỷ giá 1 ₩ = {rate} ₫ · phí {fee}",
+      "costSub": "Tổng {total}; trường nhận đủ {receive}",
+      "pack": "Hồ sơ ngân hàng đã sẵn sàng",
+      "packSub": "Anh không phải điền giấy tờ gì",
+      "cancel": "Anh có 30 phút để hủy",
+      "cancelSub": "Miễn phí, nhận lại đủ tiền"
+    },
+    "why": "Vì sao cần anh duyệt",
+    "whyFirst": "Đây là lần đầu anh trả cho {payee}, nên trợ lý không thể tự gửi. Các lần sau cho cùng bên nhận, trong hạn mức, sẽ không cần anh duyệt nữa.",
+    "whyGeneric": "Yêu cầu này nằm ngoài những việc trợ lý được tự làm.",
+    "noCosign": "Không có gì đáng ngờ, nên Lan không cần cùng ký.",
+    "breakdown": "Chi tiết chi phí",
+    "payee": "Ai nhận tiền",
+    "invoice": "Trả cho khoản gì",
+    "due": "Hạn {date}",
+    "total": "Tổng cộng",
+    "pack": "Hồ sơ ngân hàng",
+    "raw": "Chi tiết kỹ thuật",
+    "rawHint": "Đây đúng là lệnh mà passkey của anh sẽ ký. Ngân hàng sẽ tính lại mã đối chiếu và từ chối nếu có bất kỳ sai khác nào.",
+    "consentHash": "Mã đối chiếu",
+    "approve": "Duyệt bằng passkey",
+    "approveHint": "Chỉ duyệt đúng khoản này, không gì khác.",
+    "reject": "Từ chối",
+    "rejectConfirm": "Từ chối khoản này? Sẽ không có tiền nào được gửi.",
+    "rejected": "Đã từ chối. Không có tiền nào được gửi.",
+    "done": {
+      "title": "Đã duyệt",
+      "rejected": "Đã từ chối",
+      "expired": "Yêu cầu này đã hết hạn",
+      "cooling_off": "Còn có thể hủy"
+    },
+    "cancelConfirm": "Hủy khoản thanh toán này? Toàn bộ số tiền sẽ về lại tài khoản của anh.",
+    "cancelFree": "Hủy miễn phí · còn {m} phút",
+    "viewPayment": "Xem chi tiết thanh toán",
+    "backHome": "Về trang chủ",
+    "expiresMin": "Hết hạn sau {m} phút"
+  },
+  "student": {
+    "tabs": {
+      "assistant": "Trợ lý",
+      "documents": "Giấy tờ",
+      "timeline": "Dòng thời gian"
+    },
+    "home": {
+      "title": "Trợ lý học phí",
+      "sub": "Hanbit University · Kỳ Xuân 2027",
+      "subWang": "Hanbit University · Năm 2",
+      "noPayment": "Chưa trả khoản nào",
+      "s1": "ba ơi chuyển tiền học kỳ 1 cho con nha",
+      "s2": "Tính ra tiền Việt là bao nhiêu vậy?",
+      "s3": "Visa bị từ chối rồi, giờ sao?",
+      "s4": "Bỏ tiền học phí vào tiền ảo cho sinh lời đi",
+      "s5": "Số hộ chiếu của ba là gì?",
+      "w1": "房租交了吗？",
+      "w2": "让我叔叔也汇一部分，分开汇就不超额度了",
+      "w3": "Đã đóng tiền nhà chưa?",
+      "titleWang": "Trợ lý thanh toán gia đình"
+    },
+    "timeline": {
+      "title": "Dòng thời gian",
+      "empty": "Khi tiền được chuyển, từng bước sẽ hiện ở đây.",
+      "payments": "Thanh toán",
+      "everything": "Mọi việc đã diễn ra"
+    }
+  },
+  "timeline": {
+    "APPROVED": "Đã duyệt bằng passkey",
+    "EXECUTING": "Ngân hàng bắt đầu chuyển",
+    "SENT": "Đã chuyển đi Seoul",
+    "RECEIVED_BY_BURSAR": "Hanbit đã nhận",
+    "MATCHED": "Đã khớp hóa đơn: đã thanh toán",
+    "CANCELLED": "Đã hủy",
+    "RECALLED": "Đã hủy, ngân hàng đã thu hồi tiền",
+    "AUTO_EXECUTED": "Tự động trả trong hạn mức",
+    "REFUSAL_REPORTED": "Đã nhận thư từ chối visa",
+    "EVIDENCE_VERIFIED": "Đã kiểm tra thư, đủ điều kiện hoàn tiền",
+    "REQUESTED": "Đã gửi yêu cầu hoàn tiền tới Hanbit",
+    "ACKNOWLEDGED": "Hanbit đã tiếp nhận yêu cầu",
+    "FOLLOWED_UP": "Trợ lý đã nhắc lại đúng hẹn",
+    "APPROVED_BY_BURSAR": "Hanbit đã duyệt hoàn tiền",
+    "RECONCILED": "Đã đối soát, có bảng kê chi tiết",
+    "actor": {
+      "agent": "Trợ lý",
+      "parent": "Phụ huynh",
+      "student": "Sinh viên",
+      "bank": "Ngân hàng",
+      "bursar": "Hanbit",
+      "system": "Hệ thống"
+    },
+    "REFUND_SENT": "Trường đã chuyển tiền hoàn",
+    "REFUND_RECEIVED": "Tiền hoàn đã về tài khoản",
+    "PAYMENT_EXECUTED": "Ngân hàng đã chuyển đi",
+    "PAYMENT_MATCHED": "Đã khớp hóa đơn: đã thanh toán",
+    "PAYMENT_CANCELLED": "Đã hủy, tiền đã hoàn lại",
+    "EVIDENCE_VERIFIED_MOCK": "Đã kiểm tra thư, đủ điều kiện hoàn tiền",
+    "REFUND_REQUESTED": "Đã gửi đơn đã ký cho trường",
+    "REFUND_ACKNOWLEDGED": "Hanbit đã tiếp nhận yêu cầu",
+    "REFUND_APPROVED": "Hanbit đã duyệt hoàn tiền",
+    "REFUND_NUDGE": "Trợ lý đã nhắc lại đúng hẹn",
+    "REFUND_ESCALATION_DRAFT": "Đã soạn sẵn thư khiếu nại",
+    "REFUND_RECONCILED": "Đã đối soát, có bảng kê chi tiết",
+    "REFUND_DEADLINE_BREACH": "Trường trễ hạn đã hứa",
+    "ESCALATION_DRAFT_REQUIRES_STUDENT_APPROVAL": "Thư nhắc đã soạn, chờ con duyệt"
+  },
+  "site": {
+    "nav": {
+      "demo": "Sân khấu demo",
+      "trust": "Trung tâm minh bạch",
+      "judge": "Bảng giám khảo"
+    }
+  },
+  "trust": {
+    "title": "Trung tâm minh bạch",
+    "lead": "Mọi quyết định của agent và bộ máy chính sách đều được ghi vào nhật ký nối chuỗi hash và neo lên một blockchain có cấp phép. Đừng chỉ tin lời chúng tôi: hãy sửa một byte rồi tự kiểm chứng.",
+    "stats": {
+      "entries": "Mục nhật ký",
+      "anchors": "Lần neo",
+      "block": "Khối mới nhất"
+    },
+    "log": "Nhật ký kiểm toán",
+    "logSub": "mới nhất ở trên",
+    "checking": "Đang kiểm tra {n} / {total}",
+    "anchoredIn": "Đã neo ở khối #{n}",
+    "mismatch": "Lệch hash: mục này đã bị sửa",
+    "verified": "Đã xác minh",
+    "verify": {
+      "title": "Kiểm chứng",
+      "body": "Tính lại mọi hash từ mục đầu tiên và đối chiếu từng Merkle root với điểm neo của nó.",
+      "cta": "Kiểm chứng toàn bộ nhật ký",
+      "running": "Đang tính lại hash…",
+      "ok": "Nhật ký nguyên vẹn",
+      "okDetail": "{entries} mục nối chuỗi chính xác; {anchors} điểm neo khớp Merkle root.",
+      "fail": "Phát hiện chỉnh sửa tại mục #{seq}"
+    },
+    "tamper": {
+      "title": "Thử gian lận",
+      "body": "Chọn một mục bất kỳ và sửa một byte, như cách người nội bộ có thể sửa hồ sơ. Rồi bấm kiểm chứng.",
+      "pick": "Bấm vào một dòng trong nhật ký để chọn mục, hoặc bấm nút luôn.",
+      "selected": "Đã chọn mục #{seq}",
+      "cta": "Sửa một byte",
+      "restore": "Khôi phục"
+    },
+    "chain": {
+      "title": "Chuỗi bằng chứng",
+      "connected": "Đã kết nối",
+      "offline": "Mất kết nối",
+      "anchors": "Lần neo gần đây",
+      "range": "mục {from}–{to}",
+      "mismatch": "Lệch root",
+      "genesis": "Khởi nguyên",
+      "rootOk": "Gốc Merkle khớp",
+      "pending": "{n} mục mới nhất đang chờ lần neo tiếp theo"
+    },
+    "realVsMocked": "Phần nào thật, phần nào mock",
+    "realVsMockedLead": "Chế độ API hiện tại: {mode}. Tổ chức hư cấu, không có tiền thật, không có dữ liệu cá nhân trên chuỗi.",
+    "chainSub": "cũ nhất trước; mỗi mục niêm phong mục trước nó",
+    "untrusted": "Không thể tin bất cứ mục nào sau #{seq}: mọi mắt xích phía sau đều dựa trên mục đã bị sửa.",
+    "hero": {
+      "integrity": "Toàn vẹn",
+      "intact": "Nguyên vẹn",
+      "broken": "Đứt tại #{seq}",
+      "checking": "Đang kiểm tra…",
+      "unverified": "Chưa kiểm chứng",
+      "contracts": "Hợp đồng"
+    }
+  },
+  "rvm": {
+    "component": "Thành phần",
+    "status": "Trạng thái",
+    "notes": "Ghi chú",
+    "kind": {
+      "real": "Thật",
+      "mock": "Mock",
+      "sim": "Mô phỏng",
+      "browser": "Mock trong trình duyệt",
+      "local": "Chỉ cục bộ",
+      "scripted": "Theo kịch bản"
+    },
+    "rows": {
+      "policy": {
+        "name": "Bộ máy chính sách (cấp L0–L3, L-X)",
+        "note": "Quy tắc tất định, nằm ngoài LLM. Ở chế độ mock, trình duyệt tái hiện đúng các quyết định đó."
+      },
+      "audit": {
+        "name": "Nhật ký kiểm toán nối chuỗi hash",
+        "note": "Chuỗi SHA-256; thao tác sửa và kiểm chứng là thật ở cả hai chế độ."
+      },
+      "anchor": {
+        "name": "Neo Merkle trên FISCO BCOS",
+        "note": "Chuỗi thử nghiệm có cấp phép do đội tự vận hành. Chỉ có hash, không token, không dữ liệu cá nhân."
+      },
+      "passkey": {
+        "name": "Passkey (WebAuthn)",
+        "note": "Passkey thật trên thiết bị ký consent hash. Trình xác thực demo chỉ dùng khi trình diễn và được gắn nhãn rõ."
+      },
+      "credential": {
+        "name": "Chứng nhận tài khoản nhận của trường (VC-JWT)",
+        "note": "Chứng nhận did:key Ed25519 do trường giả lập phát hành."
+      },
+      "agent": {
+        "name": "AI agent",
+        "note": "LLM qua bộ chuyển đổi nhà cung cấp, hoặc một provider kịch bản tất định. Không bao giờ giữ thông tin xác thực thanh toán."
+      },
+      "bank": {
+        "name": "Lotus Home Bank",
+        "note": "Ngân hàng hư cấu: sổ cái, quyền chi, thời gian hủy và bộ hồ sơ đều được mô phỏng."
+      },
+      "bursar": {
+        "name": "Phòng tài chính Hanbit University",
+        "note": "Trường hư cấu: trạng thái thanh toán và quyết định hoàn tiền đều được mô phỏng."
+      },
+      "fx": {
+        "name": "Tỷ giá",
+        "note": "Bảng tỷ giá ngân hàng mô phỏng, công khai mức chênh lệch (dùng ECB nếu có, ở chế độ LIVE)."
+      },
+      "clock": {
+        "name": "Đồng hồ hẹn giờ",
+        "note": "Được mô phỏng để thời hạn hoàn tiền 30 ngày hiển thị được trong vài phút."
+      },
+      "letters": {
+        "name": "Thư kết quả visa",
+        "note": "Mẫu tổng hợp. Agent không bao giờ truy vấn hệ thống xuất nhập cảnh."
+      },
+      "orgs": {
+        "name": "Người và tổ chức",
+        "note": "Minh, Linh, Hanbit University và Lotus Home Bank đều là hư cấu."
+      },
+      "screening": {
+        "name": "Sàng lọc danh sách trừng phạt",
+        "note": "Đối chiếu tên người nhận với danh sách trừng phạt."
+      }
+    },
+    "runNotes": {
+      "anchorLocal": "Lần chạy này chỉ dùng chuỗi băm cục bộ: không có gì được neo lên FISCO BCOS.",
+      "agentScripted": "Lần chạy này dùng bộ trả lời theo kịch bản cố định, không dùng mô hình AI từ xa.",
+      "screeningSynthetic": "Lần chạy này sàng lọc với một danh sách tổng hợp nhỏ, không phải dữ liệu trừng phạt thật."
+    }
+  },
+  "judge": {
+    "title": "Bảng giám khảo",
+    "lead": "Hai mươi kịch bản dựng sẵn từ kế hoạch nghiên cứu, mỗi kịch bản có kết quả xử lý mong đợi. Mỗi lần chạy đều ghi bằng chứng vào nhật ký kiểm toán.",
+    "run": "Chạy {n} kịch bản",
+    "runOne": "Chạy",
+    "stop": "Dừng",
+    "mockNote": "Bạn đang ở chế độ mock: kết quả được phát lại trong trình duyệt để minh họa bảng điều khiển. Chuyển bảng điều khiển demo sang LIVE để chạy harness thật với API.",
+    "score": {
+      "passed": "Đạt",
+      "failed": "Không đạt",
+      "attacks": "Tấn công bị chặn",
+      "avg": "Thời gian trung bình"
+    },
+    "filter": {
+      "all": "Tất cả",
+      "P0": "Chỉ P0",
+      "attacks": "Tấn công"
+    },
+    "summary": "{passed}/{total} đạt",
+    "col": {
+      "id": "ID",
+      "scenario": "Kịch bản",
+      "tags": "Nhãn",
+      "result": "Kết quả",
+      "ms": "ms"
+    },
+    "status": {
+      "pass": "Đạt",
+      "fail": "Không đạt",
+      "running": "Đang chạy",
+      "queued": "Đang chờ"
+    },
+    "details": "Chi tiết",
+    "expected": "Mong đợi",
+    "actual": "Thực tế",
+    "evidence": "Bằng chứng:",
+    "cli": "Chạy cùng bộ kiểm thử từ terminal:",
+    "toTrust": "Xem bằng chứng ở Trung tâm minh bạch",
+    "eyebrow": "Kịch bản dựng sẵn kèm kết quả mong đợi",
+    "groups": {
+      "flow": {
+        "title": "Thanh toán thường ngày",
+        "body": "Trợ lý hỗ trợ trong phạm vi ủy quyền của phụ huynh và hỏi lại khi cần."
+      },
+      "attack": {
+        "title": "Lừa đảo và tấn công",
+        "body": "Văn bản chèn ẩn, thông tin ngân hàng giả và thủ đoạn thao túng bị chặn bởi quy tắc, không phải bởi mô hình."
+      },
+      "refund": {
+        "title": "Hoàn tiền",
+        "body": "Tiền được trả về đúng người đã thanh toán, và không ai có thể chuyển hướng."
+      },
+      "control": {
+        "title": "Quyền kiểm soát của phụ huynh và bằng chứng",
+        "body": "Hủy khoản còn trong thời gian chờ, tạm dừng chuyển tiền ra ngoài, và xem lại mọi thay đổi."
+      }
+    }
+  },
+  "stage": {
+    "title": "Sân khấu demo",
+    "lead": "Cả hai điện thoại chạy app thật và dùng chung một backend. Làm theo bảy cảnh; các nút chỉ điền sẵn những gì người dùng thật sẽ làm.",
+    "advanced": "Đã tua nhanh {n, plural, other {# ngày}}",
+    "reset": "Đặt lại demo",
+    "resetConfirm": "Đưa mọi thứ về trạng thái ban đầu?",
+    "phoneParent": "Minh · phụ huynh · Đà Nẵng",
+    "phoneStudent": "Linh · sinh viên",
+    "phoneParentWang": "王建国 · phụ huynh · Thành Đô",
+    "phoneStudentWang": "王浩 · sinh viên · Seoul",
+    "log": "Bằng chứng trực tiếp",
+    "openTrust": "Mở",
+    "smallTitle": "Cả nhà cùng thử trên một điện thoại",
+    "smallBody": "Mở ứng dụng của ba hoặc con bên dưới, rồi đi theo bảy cảnh. Trong bảng Demo, anh có thể đổi người đang dùng.",
+    "openParent": "Mở app phụ huynh",
+    "openStudent": "Mở app sinh viên",
+    "a": {
+      "openLimit": "Mở trên máy của Minh",
+      "cueVague": "Linh hỏi chung chung",
+      "cueInvoice": "Linh gửi hóa đơn",
+      "openParent": "Xem trang chủ của Minh",
+      "cueDiscount": "Gửi email “giảm giá”",
+      "cueRefusal": "Gửi thư từ chối visa",
+      "plus3": "+3 ngày",
+      "cueRedirect": "Gửi email “dịch vụ hoàn tiền”",
+      "openTrust": "Mở Trung tâm minh bạch",
+      "wang": "Chuyển sang gia đình Wang",
+      "openRent": "Mở hạn mức tiền nhà",
+      "cueRent": "Hạo nhờ trả tiền nhà",
+      "plus30": "+30 ngày",
+      "cuePolice": "Chuyển tin nhắn “công an”",
+      "openLan": "Mở điện thoại chị Lan",
+      "backMinh": "Về điện thoại anh Minh",
+      "skipHold": "Bỏ qua 30 phút được hủy",
+      "weekLater": "Một tuần sau (+7 ngày)",
+      "jumpPromise": "Tới ngày trường hứa hoàn",
+      "cueLease": "Hao gửi hợp đồng thuê nhà",
+      "openTimeline": "Xem lịch nhập học",
+      "openStudentChat": "Về cuộc trò chuyện của Linh",
+      "openFreeze": "Mở phần tạm dừng chuyển tiền"
+    },
+    "scenes": {
+      "1": {
+        "title": "Đặt giới hạn",
+        "cue": "Trên điện thoại của Minh, bấm “Đặt hạn mức”: chỉ người nhận đã xác minh, tối đa bằng số trên hóa đơn, đến tháng Ba. Ký bằng passkey.",
+        "say": "Con người đặt mục tiêu và giới hạn một lần."
+      },
+      "2": {
+        "title": "Linh gửi hóa đơn",
+        "cue": "Linh mở đầu bằng một câu tiếng Việt chung chung; agent hỏi xin hóa đơn thay vì đoán. Rồi Linh gửi hóa đơn, agent kiểm tra chữ ký, chứng nhận tài khoản nhận, quy tắc và báo giá.",
+        "say": "Người nhận, số tiền và nơi đến không bao giờ do AI đưa ra."
+      },
+      "3": {
+        "title": "Minh duyệt đúng hành động đó",
+        "cue": "Minh nhận một thẻ duy nhất: số tiền trả bằng VND, số Hanbit nhận bằng KRW, tỷ giá và chênh lệch, người nhận đã xác minh, hồ sơ sẵn sàng. Duyệt bằng passkey; trong chat của Linh hiện dòng “tiền đang trên đường”. Bỏ qua 30 phút được hủy để thấy “Đã thanh toán”.",
+        "say": "Chưa tới một phút, bằng tiếng Việt, trên điện thoại."
+      },
+      "4": {
+        "title": "Cuộc tấn công",
+        "cue": "Linh gửi email “giảm 15% nếu đóng sớm” kèm một tài khoản mới. Thẻ đỏ giải thích yêu cầu đó là gì và vì sao bị chặn.",
+        "say": "Chữ trong email không bao giờ trở thành người nhận tiền.",
+        "cue2": "Tiếp theo là chiêu ép buộc: tin nhắn “công an” đòi nộp tiền vào “tài khoản an toàn”. Mọi thứ tạm dừng 24 giờ và chị Lan ở Đà Nẵng nhận một yêu cầu bình tĩnh: gọi hỏi Linh."
+      },
+      "5": {
+        "title": "Visa bị từ chối",
+        "cue": "Một tuần sau, visa bị từ chối. Linh gửi thư và tự ký hai đơn: hủy nhập học và xin hoàn tiền. Tiền chỉ về lại tài khoản của Minh. Một “dịch vụ hoàn tiền” đòi đổi tài khoản và bị chặn. Tua tới ngày trường hứa, hai tuần sau khai giảng, Minh thấy tiền về bao nhiêu và vì sao ít hơn một chút.",
+        "say": "Chưa ai lo trọn vẹn tình huống không may này từ đầu đến cuối."
+      },
+      "6": {
+        "title": "Chứng minh",
+        "cue": "Trong Trung tâm minh bạch, sửa một byte của nhật ký rồi bấm kiểm chứng: hệ thống chỉ ra đúng mục và điểm neo bị lệch. Khôi phục rồi kiểm chứng lại.",
+        "say": "Mọi chỉnh sửa đều lộ ra, sẵn sàng cho cơ quan quản lý."
+      },
+      "7": {
+        "title": "Tự chủ thường ngày",
+        "cue": "Chuyển sang gia đình Wang (CN→KR, giao diện tiếng Trung). Hao nhờ trả tiền nhà; trợ lý xin hợp đồng thuê và hạn mức tiền nhà. Hao gửi hợp đồng (đối chiếu với hồ sơ ngân hàng), Wang đặt hạn mức hằng tháng cho chủ nhà đã đối chiếu tên, và tiền nhà tự đi trong hạn mức, có thông báo và thời gian hủy.",
+        "say": "Agent tham gia, trong giới hạn do con người đặt ra."
+      }
+    },
+    "phoneLan": "Chị Lan · người cùng ký · Đà Nẵng",
+    "advancedHours": "Đã tua nhanh {n, plural, other {# giờ}}",
+    "jumped": "Đồng hồ đã tới {date}",
+    "noPromise": "Chưa có khoản hoàn nào chờ tới hạn",
+    "phoneRefund": {
+      "title": "Câu chuyện hoàn tiền trên một điện thoại",
+      "s1": "Vai Linh: gửi thư từ chối visa và ký hai đơn.",
+      "s2": "Trường khai giảng 2/3 và hoàn tiền trong hai tuần. Tua đồng hồ tới đó:",
+      "s3": "Vai anh Minh: xem tiền về bao nhiêu, khi nào, về tài khoản nào và vì sao ít hơn một chút."
+    }
+  },
+  "landing": {
+    "eyebrow": "Fintechathon 2026 · Chủ đề C · AI là một bên tham gia tài chính",
+    "h1": "Đóng học phí an toàn. Trượt visa thì lấy lại tiền.",
+    "lead": "BursarBridge là AI agent đóng học phí cho du học sinh từ ngân hàng của gia đình ở quê nhà, chỉ trả vào tài khoản đã được trường xác nhận bằng mật mã, và đưa tiền về lại cho cha mẹ nếu visa bị từ chối.",
+    "ctaDemo": "Vào demo trực tiếp",
+    "ctaParent": "Mở app phụ huynh",
+    "ctaTrust": "Trung tâm minh bạch",
+    "honest": "Trường và ngân hàng đều hư cấu, tiền là mô phỏng. Mọi phần mock đều được gắn nhãn.",
+    "hero": {
+      "label": "Học phí của Linh · Kỳ Xuân 2027",
+      "waiting": "Đang chờ ba duyệt",
+      "pay": "Minh trả",
+      "receives": "Hanbit University nhận",
+      "c1": "Tài khoản được Hanbit xác nhận",
+      "c2": "Tổng chi phí cao hơn giá thị trường 1,03%",
+      "c3": "Hồ sơ ngân hàng đã sẵn sàng",
+      "cta": "Duyệt bằng passkey",
+      "blocked": "Đã chặn hóa đơn giả “giảm 15%”",
+      "blockedSub": "Tài khoản mới, trường chưa từng xác nhận"
+    },
+    "stats": {
+      "s1": {
+        "n": "1 trong 5",
+        "text": "Hồ sơ visa du học Úc bị từ chối trong năm tài chính 2025-26. Gia đình phải đóng học phí trước khi biết kết quả."
+      },
+      "s2": {
+        "n": "3–10 tuần",
+        "text": "Thời gian chờ hoàn tiền thường gặp khi visa bị từ chối, quy đổi lại theo tỷ giá ngày hoàn, thường còn bị trừ phí và các khoản giữ lại."
+      },
+      "s3": {
+        "n": "15%",
+        "text": "Mức “giảm giá đóng sớm” mà hóa đơn giả đưa ra, kèm một tài khoản hoàn toàn mới. Chiêu lừa học phí kinh điển."
+      }
+    },
+    "moments": {
+      "kicker": "Ba khoảnh khắc",
+      "title": "Một người quản gia điềm tĩnh cho khoản chuyển tiền lớn nhất năm của gia đình",
+      "pay": {
+        "title": "Chỉ trả cho đúng trường thật",
+        "body": "Agent đọc hóa đơn, kiểm tra chứng nhận tài khoản nhận do trường ký, lấy báo giá trọn gói và lập hồ sơ ngân hàng. Phụ huynh ký đúng nội dung đó.",
+        "c1": "Chứng nhận do trường phát hành",
+        "c2": "Tài khoản và tên đều khớp",
+        "c3": "Hồ sơ theo Thông tư 20/2022 sẵn sàng"
+      },
+      "attack": {
+        "title": "Chặn hóa đơn giả",
+        "body": "Email giảm giá kèm tài khoản mới không đi đến đâu: tài khoản chưa từng được xác nhận và thông tin đến từ văn bản không đáng tin. Gia đình được giải thích lý do bằng lời dễ hiểu.",
+        "card": "Đã chặn thanh toán. Không có tiền nào được gửi."
+      },
+      "refund": {
+        "title": "Đưa tiền về nhà",
+        "body": "Khi visa bị từ chối, agent nộp yêu cầu hoàn tiền, nhắc trường đúng hạn và từ chối mọi yêu cầu đổi hướng. Tiền hoàn chỉ có thể về đúng tài khoản đã trả."
+      }
+    },
+    "tiers": {
+      "kicker": "An toàn ngay từ thiết kế",
+      "title": "AI đề xuất. Bộ máy chính sách quyết định.",
+      "lead": "Mọi hành động đều được đóng gói và đánh giá bằng các quy tắc tất định nằm ngoài mô hình. Mô hình không bao giờ giữ thông tin xác thực và không bao giờ tự đưa ra người nhận, số tiền hay nơi đến.",
+      "L0": {
+        "name": "Thông tin",
+        "body": "Giải thích hóa đơn, thời hạn, quy định và tổng chi phí."
+      },
+      "L1": {
+        "name": "Chuẩn bị",
+        "body": "Đọc tài liệu, lập bộ hồ sơ ngân hàng, soạn yêu cầu. Không có gì được gửi đi."
+      },
+      "L2": {
+        "name": "Thực thi trong ủy quyền",
+        "body": "Cùng người nhận đã kiểm tra, dưới hạn mức đã ký, không dùng dữ liệu không đáng tin, có thời gian hủy."
+      },
+      "L3": {
+        "name": "Xác thực tăng cường",
+        "body": "Lần trả đầu tiên, người nhận mới, mọi việc rủi ro: phụ huynh ký đúng hành động đó."
+      },
+      "LX": {
+        "name": "Không bao giờ",
+        "body": "Tự nâng hạn mức, thêm người nhận từ văn bản, đổi hướng tiền hoàn, chia nhỏ để lách hạn ngạch, tiền ảo."
+      }
+    },
+    "proof": {
+      "kicker": "Bằng chứng, không phải lời hứa",
+      "title": "Sửa một byte, nhật ký sẽ chỉ ra chỗ sửa",
+      "lead": "Mỗi quyết định được nối chuỗi hash với quyết định trước và neo theo lô Merkle trên chuỗi FISCO BCOS có cấp phép. Chỉ hash được đưa lên chuỗi.",
+      "cta": "Thử ở Trung tâm minh bạch",
+      "b1": "Đã ký ủy quyền: học phí ≤ ₩7,174,000",
+      "b2": "ESCALATE: lần đầu trả cho Hanbit",
+      "b3": "Thanh toán tới •••• 2207 → đã bị sửa",
+      "b4": "Phòng tài chính: hóa đơn PAID",
+      "mismatch": "lệch"
+    },
+    "people": {
+      "kicker": "Thiết kế cho người thật",
+      "title": "Một phụ huynh lo lắng, một sinh viên bận rộn, một giám khảo hoài nghi",
+      "minh": {
+        "role": "Phụ huynh · Đà Nẵng · tiếng Việt",
+        "name": "Minh",
+        "body": "Chủ cửa hàng ở Đà Nẵng, đóng học kỳ ở Hàn cho con gái từ tài khoản VND. Anh chỉ mở app để nói có hoặc không với một việc cụ thể.",
+        "cta": "Mở điện thoại của Minh"
+      },
+      "linh": {
+        "role": "Sinh viên · sắp sang Seoul",
+        "name": "Linh",
+        "body": "Chuyển tiếp hóa đơn và thư từ, nhắn tin bằng tiếng Việt kiểu Gen Z, và không bao giờ phải làm trung gian chuyện tiền bạc nữa.",
+        "cta": "Mở điện thoại của Linh"
+      },
+      "judge": {
+        "role": "Giám khảo · kiểm toán viên",
+        "name": "Bạn",
+        "body": "Chạy cả hai mươi kịch bản, đọc từng quyết định, và tự tay phá nhật ký.",
+        "cta": "Mở bảng giám khảo"
+      }
+    },
+    "rvm": {
+      "kicker": "Trung thực là mặc định",
+      "title": "Phần nào thật, phần nào mock",
+      "lead": "Không có tiền, ngân hàng hay trường đại học thật nào tham gia. Đây là chính xác những gì chạy thật trong demo này."
+    },
+    "footer": {
+      "entry": "Bài dự thi bảng quốc tế Fintechathon 2026 (PBCSF × WeBank)",
+      "fictional": "Hanbit University và Lotus Home Bank là hư cấu. Không có tiền thật nào được chuyển."
+    }
+  },
+  "errors": {
+    "FROZEN": "Thanh toán đang bị đóng băng. Hãy mở đóng băng trước.",
+    "APPROVAL_EXPIRED": "Yêu cầu này đã hết hạn. Nhờ trợ lý chuẩn bị lại nhé.",
+    "CONSENT_MISMATCH": "Thông tin đã thay đổi sau khi mở. Chưa có gì được gửi đi.",
+    "INVOICE_SETTLED": "Hóa đơn này đã được thanh toán.",
+    "ROLE_REQUIRED": "Việc này cần một người khác trong gia đình.",
+    "INVALID_STATE": "Việc này không còn chờ duyệt nữa.",
+    "POLICY_DENIED": "Quy tắc của gia đình không cho phép.",
+    "UNAUTHENTICATED": "Phiên đăng nhập đã hết hạn. Vui lòng thử lại.",
+    "RATE_LIMITED": "Thao tác quá nhiều. Vui lòng đợi một chút.",
+    "generic": "Đã có lỗi xảy ra. Chưa có gì được gửi đi.",
+    "CHALLENGE_REQUIRED": "Yêu cầu ký đã hết hạn. Chạm lại để ký.",
+    "NOT_APPROVER": "Mục này do người khác trong nhà ký.",
+    "CONSENT_CHANGED": "Thông tin đã thay đổi. Mở lại yêu cầu nhé.",
+    "NOT_PENDING": "Mục này không còn chờ ký.",
+    "ASSERTION_REQUIRED": "Cần ký bằng passkey trước.",
+    "CHAIN_UNAVAILABLE": "Chuỗi bằng chứng tạm thời không phản hồi. Chưa gửi gì; thử lại sau giây lát.",
+    "INVALID_ASSERTION": "Passkey không khớp. Chưa ký gì; thử lại nhé.",
+    "REFUND_POLICY_CHANGED": "Trường đã khai giảng nên đơn cần xem xét lại. Hỏi lại trợ lý nhé.",
+    "QUOTE_EXPIRED": "Tỷ giá đã hết hạn. Nhờ trợ lý báo giá mới.",
+    "INSUFFICIENT_FUNDS": "Tài khoản không đủ tiền. Chưa gửi gì."
+  },
+  "rel": {
+    "parent": "Ba",
+    "student": "Linh",
+    "you": "Bạn"
+  },
+  "needs": {
+    "title": "Cần xong mấy bước này trước",
+    "body": "Chưa có tiền nào được chuyển. Còn lại những việc sau.",
+    "you": {
+      "mandate": "Ký hạn mức học phí",
+      "rent_mandate": "Đặt hạn mức tiền nhà hằng tháng",
+      "admission": "Gửi thư nhập học",
+      "invoice": "Gửi giấy báo học phí",
+      "refusal": "Gửi thư báo kết quả visa",
+      "other": "Hoàn tất bước này",
+      "refusal_and_refund_forms": "Gửi thư từ chối visa và ký hai đơn hoàn tiền",
+      "payment_settlement": "Ngân hàng cần hoàn tất khoản học phí trước",
+      "rental_agreement": "Tải lên hợp đồng thuê nhà"
+    },
+    "other": {
+      "mandate": "{who} ký hạn mức học phí",
+      "rent_mandate": "{who} đặt hạn mức tiền nhà hằng tháng",
+      "admission": "{who} gửi thư nhập học",
+      "invoice": "{who} gửi giấy báo học phí",
+      "refusal": "{who} gửi thư báo kết quả visa",
+      "other": "{who} hoàn tất một bước",
+      "refusal_and_refund_forms": "{who} gửi thư từ chối visa và ký đơn hoàn tiền",
+      "payment_settlement": "Ngân hàng cần hoàn tất khoản học phí trước",
+      "rental_agreement": "{who} tải lên hợp đồng thuê nhà"
+    },
+    "asked": "Đã nhắn",
+    "ctaSign": "Đặt hạn mức",
+    "ctaUpload": "Gửi ngay",
+    "done": "Xong",
+    "resume": "Đủ rồi, tiếp tục nhé",
+    "resumeText": "Đủ giấy tờ rồi, chuyển tiền học kỳ 1 cho con nha",
+    "doneTitle": "Xong hết rồi",
+    "doneBody": "Các bước đã đủ, yêu cầu đã được chuyển tiếp.",
+    "doneBodyWaiting": "Các bước đã đủ. Đang chuẩn bị yêu cầu thanh toán…",
+    "refundTitle": "Trước khi bắt đầu hoàn tiền",
+    "refundBody": "Chỉ người học mới hủy nhập học và xin hoàn tiền được. Chưa có tiền nào di chuyển.",
+    "refundDone": "Đơn đã ký và hồ sơ đã ở trường Hanbit.",
+    "rentTitle": "Trước khi trả được tiền nhà"
+  },
+  "cooling": {
+    "badge": "Tạm dừng 24 giờ",
+    "parentTitle": "Một yêu cầu đáng ngờ đang tạm dừng",
+    "parentBody": "Có người giả danh công an đòi “nộp tiền ký quỹ chứng minh tài chính” vào một “tài khoản an toàn”. Chưa có đồng nào bị chuyển, và tài khoản đó không bao giờ được nhận tiền.",
+    "waitingLan": "Đang chờ Lan gọi hỏi Linh",
+    "lanChecked": "Lan đã hỏi Linh: đây là lừa đảo",
+    "close": "Đóng yêu cầu này",
+    "closeConfirm": "Đóng yêu cầu này? Sẽ không có gì được chuyển đi.",
+    "closed": "Đã đóng. Không có gì được chuyển.",
+    "studentTitle": "Gia đình đang kiểm tra việc này",
+    "studentBody": "Chưa có gì được chuyển. Công an thật không bao giờ đòi tiền ký quỹ hay bắt giữ bí mật. Mẹ sẽ gọi bạn qua số quen thuộc.",
+    "until": "Tạm dừng đến {time}",
+    "score": "Dấu hiệu lừa đảo {score}",
+    "waitingLanStudent": "Đang chờ mẹ gọi cho bạn",
+    "lanCheckedStudent": "Mẹ đã kiểm tra: đây là lừa đảo",
+    "closeYes": "Đúng, đóng lại",
+    "parentHero": "Tiền của anh vẫn an toàn. Có một việc cần anh xem."
+  },
+  "cosigner": {
+    "role": "Chữ ký thứ hai · gia đình Nguyễn",
+    "hello": "Chào chị {name}",
+    "quietTitle": "Hiện không có việc gì cần chị.",
+    "quietBody": "Chị là chữ ký thứ hai của gia đình. Chỉ khi có gì giống lừa đảo thì mới nhờ đến chị, không bao giờ vì các khoản thanh toán bình thường.",
+    "roleTitle": "Vai trò của chị",
+    "role1": "Gọi điện kiểm tra Linh và anh Minh vẫn ổn trước khi có khoản tiền bất thường nào.",
+    "role2": "Xác nhận khi một yêu cầu là lừa đảo, để cả nhà bình tĩnh đóng lại.",
+    "role3": "Không ai được nhờ chị chuyển tiền. Chữ ký của chị không bao giờ làm một tài khoản chưa xác minh nhận được tiền.",
+    "kicker": "Cần chị ngay",
+    "title": "Có người đang ép gia đình chuyển tiền",
+    "body": "Một tin nhắn giả danh công an đòi “nộp tiền ký quỹ chứng minh tài chính” vào một “tài khoản an toàn” và dặn phải giữ bí mật. Chưa có đồng nào bị chuyển.",
+    "whyTitle": "Vì sao đây giống lừa đảo",
+    "toldTitle": "Linh và anh Minh đã được báo gì",
+    "told1": "Chưa có gì được chuyển. Tài khoản đó không bao giờ nhận được tiền qua BursarBridge.",
+    "told2": "Công an, đại sứ quán hay trường học thật không bao giờ đòi tiền ký quỹ hay bắt giữ bí mật.",
+    "told3": "Mọi thứ tạm dừng 24 giờ để gia đình kiểm tra.",
+    "doTitle": "Chị nên làm gì",
+    "do1": "Tự gọi cho Linh bằng số chị vẫn hay gọi. Đừng gọi số trong tin nhắn.",
+    "do2": "Nói chuyện với anh Minh trước khi ai chuyển gì.",
+    "do3": "Nếu không liên lạc được với Linh, chị tự gọi công an 113.",
+    "sign": "Tôi đã hỏi: đây là lừa đảo",
+    "signHint": "Chữ ký ghi nhận chị đã tự hỏi Linh. Nó không bao giờ làm tài khoản kia nhận được tiền.",
+    "cantReach": "Tôi chưa gọi được cho Linh",
+    "cantReachBody": "Chị cứ gọi tiếp số quen của Linh và báo anh Minh. Trong lúc tạm dừng, không gì có thể được chuyển đi. Nếu lo cho an toàn của Linh, chị gọi 113.",
+    "sheetTitle": "Ký xác nhận đã kiểm tra",
+    "sheetWhat": "Chị xác nhận",
+    "sheetWhatValue": "Tôi đã tự hỏi Linh",
+    "signedTitle": "Cảm ơn chị {name}",
+    "signedBody": "Đã ghi nhận chị kiểm tra. Anh Minh giờ có thể đóng yêu cầu. Tiền vẫn nằm yên chỗ cũ.",
+    "history": "Trước đó",
+    "historySigned": "Chị đã xác nhận lừa đảo",
+    "historyClosed": "Anh Minh đã đóng",
+    "historyOpen": "Đang tạm dừng"
+  },
+  "plan": {
+    "window": "Đợt đóng học phí {range}",
+    "due": "hạn {date} (giờ Hàn)",
+    "status": {
+      "open": "đang mở",
+      "not_open": "chưa mở",
+      "closed": "đã đóng",
+      "settled": "đã đóng tiền",
+      "legacy_unspecified": "chưa có ngày ký"
+    },
+    "otherCosts": "Chi phí khác trong học kỳ, đóng riêng",
+    "perMonth": "/tháng",
+    "collector": "Bên thu: {who}",
+    "notThroughUs": "Không đóng qua BursarBridge",
+    "nhis": "NHIS, bảo hiểm y tế quốc gia Hàn Quốc",
+    "dormOffice": "Ban quản lý ký túc xá Hanbit"
+  },
+  "overdue": {
+    "title": "Trường Hanbit đã trễ hẹn {n} ngày",
+    "promised": "Hẹn hoàn trước {date}. Không gửi gì nếu con chưa duyệt.",
+    "chaser": "Thư nhắc có ngày tháng gửi phòng quốc tế",
+    "chaserPreparing": "Đang soạn.",
+    "chaserYou": "Đã soạn xong, bạn đọc và duyệt nhé.",
+    "chaserWaiting": "Đã soạn xong; {who} đọc và duyệt.",
+    "chaserSent": "Đã gửi ngày {date} tới {to} (hộp thư MOCK).",
+    "chaserClosed": "Chưa gửi.",
+    "view": "Xem",
+    "pack": "Bộ hồ sơ khiếu nại theo kênh chính thức",
+    "packSub": "Đã chuẩn bị cho {route}. Sinh viên tự nộp; không bảo đảm lấy lại được tiền.",
+    "official": "Trang chính thức",
+    "honest": "Không ai ép được trường trả tiền. BursarBridge giữ hồ sơ đầy đủ, có ngày tháng và bằng chứng, và không để một lời hứa bị trễ trôi qua im lặng.",
+    "letterTitle": "Thư nhắc về khoản hoàn tiền",
+    "letterTo": "Gửi {to}",
+    "letterFacts": "Ngày hẹn {date} · soạn ngày {prepared}",
+    "approve": "Duyệt và gửi (MOCK)",
+    "sentMock": "Đã gửi (MOCK)",
+    "waiting": "Đang chờ",
+    "closed": "Đã đóng",
+    "studentApproves": "Chỉ sinh viên duyệt được thư này.",
+    "to": "Gửi tới",
+    "promise": "Ngày hẹn",
+    "channel": "Cách gửi",
+    "channelMock": "Hộp thư MOCK, không gửi email thật"
+  },
+  "studyProgress": {
+    "refusedTitle": "Visa bị từ chối. Đã dừng yêu cầu học phí.",
+    "moneySafe": "Chưa chuyển tiền nên không cần làm thủ tục hoàn. Yêu cầu đóng học phí đang chờ đã dừng rồi.",
+    "admissionNext": "Con liên hệ Hanbit để hỏi thủ tục rút hồ sơ hoặc đăng ký kỳ sau nhé. Hồ sơ nhập học chưa tự động được rút.",
+    "parentNotice": "Thông tin đã có trong ứng dụng của ba từ {date} (MOCK). Chưa gửi tin ra ngoài ứng dụng, cũng chưa biết ba đã đọc hay chưa.",
+    "catchingUpTitle": "Đang cập nhật bản ghi",
+    "catchingUp": "Bản ghi xác nhận đang cập nhật ở phía sau và sẽ tự thử lại. Gia đình cứ xem tiếp nhé; nếu cần, thanh toán sẽ chờ xác nhận.",
+    "newAdmissionTitle": "Con xin lại giấy tờ từ trường nhé",
+    "newAdmission": "Yêu cầu học phí này vẫn dừng. Muốn đóng tiếp, cần giấy nhập học và hóa đơn mới có xác nhận của trường.",
+    "windowTitle": "Xem lại lịch đóng học phí nhé",
+    "windowBody": "Đang chờ thời gian đóng tiền được trường xác nhận. Chưa chuyển khoản nào.",
+    "journeyTitle": "Từ nhập học đến kết quả visa",
+    "accepted": "Trường nhận vào học",
+    "certificate": "Trường cấp giấy nhập học",
+    "visaPending": "Đã nộp hồ sơ visa · đang chờ kết quả",
+    "visaRefused": "Đã nhận thư từ chối visa",
+    "paymentWindow": "Mở đợt đóng học phí khi vẫn chờ visa",
+    "sequenceNote": "Giấy nhập học được cấp trước khi đóng tiền. Đây là lịch giả định của bản demo.",
+    "viewCertificate": "Xem giấy nhập học",
+    "requestStopped": "Yêu cầu học phí này đã dừng. Chưa gửi tiền.",
+    "approvalPaused": "Yêu cầu này đang tạm dừng. Mở lại rồi ba xem và duyệt nhé. Nội dung vẫn giữ nguyên."
+  }
+}

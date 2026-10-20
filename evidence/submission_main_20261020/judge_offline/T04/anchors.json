@@ -1,0 +1,23 @@
+[
+  {
+    "at": "2027-01-12T03:00:00Z",
+    "firstSeq": 1,
+    "lastSeq": 4,
+    "mode": "local",
+    "root": "1b29c8316b585b177117da697109083cf03941b42bacb13fce7e24d76da0d6e6"
+  },
+  {
+    "at": "2027-01-12T03:00:00Z",
+    "firstSeq": 5,
+    "lastSeq": 11,
+    "mode": "local",
+    "root": "2f88e8a8a2f8bd5099a178ac3938e327cbb842d82934ea8432e5ed8bbfae983e"
+  },
+  {
+    "at": "2027-02-11T03:00:00Z",
+    "firstSeq": 12,
+    "lastSeq": 18,
+    "mode": "local",
+    "root": "7d065b0a6ab2da4e685f897db4980ac6e4220387fefc1f742ef28612be0a9537"
+  }
+]

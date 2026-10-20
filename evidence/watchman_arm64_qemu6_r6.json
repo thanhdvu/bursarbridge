@@ -1,0 +1,8 @@
+{
+  "architecture": "linux-arm64",
+  "method": "GOOS=linux GOARCH=arm64 CGO_ENABLED=0 cross build; execute actual Watchman v1.2.2 under qemu-aarch64-static 6.2",
+  "binarySha256": "ff6db9cd067e3c1ff95b9d5678fa921b76c5f24da92829f738c32700e6d77044",
+  "governmentListsOnly": false,
+  "lists": null,
+  "limits": "Not a full arm64 Ubuntu VM installation. Actual native arm64 binary executed in emulation; government-list readiness checked on isolated ports."
+}

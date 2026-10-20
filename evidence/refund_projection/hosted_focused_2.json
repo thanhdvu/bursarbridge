@@ -1,0 +1,56 @@
+{
+  "provider": "openai",
+  "model": "gpt-6.1-sol",
+  "hosted": true,
+  "results": [
+    {
+      "id": "C28",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "tôi muốn nộp tiền học cho con",
+          "assistant": "Anh vui lòng ký xác nhận để tiếp tục thanh toán hóa đơn học kỳ cho con.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "incidents": [],
+      "ms": 6083.8
+    },
+    {
+      "id": "C75",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "khi nào tiền học phí của con về, bị trừ bao nhiêu?",
+          "assistant": "Hồ sơ hoàn tiền đã được gửi; theo chính sách, tiền sẽ được hoàn chậm nhất 16/03/2027, tính từ ngày bắt đầu học, về đúng tài khoản gốc anh đã dùng để thanh toán. Hiện chưa nhận được tiền: ước tính MOCK số tiền về là 165.532.581 VND, với phí ngân hàng ban đầu 25.000 VND, phí chuyển tiền quốc tế/trung gian 375.000 VND, hao hụt tỷ giá 3.385.869 VND và khoản trường giữ lại 0 VND; hóa đơn không thu phí nhập học, các chi phí ngân hàng và tỷ giá do gia đình chịu nên số thực nhận chưa được bảo đảm.",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "tiền hoàn khi nào về, bị trừ bao nhiêu?",
+          "assistant": "Hồ sơ đang được yêu cầu hoàn và chưa nhận được tiền; theo chính sách, hạn hoàn là 16/03/2027, tính từ ngày bắt đầu học, về đúng tài khoản gốc anh đã dùng để thanh toán. Ước tính MOCK số tiền về là 165.532.581 VND, sau phí ngân hàng ban đầu 25.000 VND, phí chuyển quốc tế/trung gian 375.000 VND và hao hụt tỷ giá 3.385.869 VND do gia đình chịu; trường giữ lại 0 VND, hóa đơn không thu phí nhập học, và số thực nhận chưa được bảo đảm.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "incidents": [],
+      "ms": 12197.6
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2
+  },
+  "limits": "Deterministic HTTP assertions; hosted style still needs native-speaker review. No model-as-judge. Local chain and MOCK screening isolate dialogue."
+}

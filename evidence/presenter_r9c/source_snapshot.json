@@ -1,0 +1,23 @@
+{
+  "baseCommit": "e5ca4925d43d2754c68f72898253f7937642bd3f",
+  "sha256LF": {
+    "docs/API.md": "9542db9a5ab65c063ba4bcee213114a7179c84bcc7626672e1443be9c96cb61e",
+    "docs/deliverables/security.md": "79c6a9f7ede905ad0c0f89d4ea8ca5794985b0a4682a3900d33e76f13247d908",
+    "docs/deliverables/technical.md": "e6816086c6de00b65617ecb1e2287e7396e55bb7ff2dc57856446b4021f57a94",
+    "docs/status/backend.md": "12cc26c19bfae6e3de0acc4649615b8c234aef38b4ee34b814c4e1d689b081b1",
+    "services/api/README.md": "0850e2743dc64ea8d56af3d43f9eb2f5f3937f640ae54be5e18b9a28ece823e6",
+    "services/api/bursarbridge/agent.py": "8b44541f5f41b38b189a2b8d98c693b075139e8447389bdd33e96ac30d57a604",
+    "services/api/bursarbridge/chain.py": "3e86b0c89b5e6f78b91c9abb33e7212da480ccd911924cd163becb67fb24f407",
+    "services/api/bursarbridge/conversation.py": "5a049f0b57ed29c9c1e0984ab7bd7613bf7e4bc1832fbc0f64dc0d4671066cfa",
+    "services/api/bursarbridge/conversation_evals.py": "459d74876f9c631a21b34b002eb25ff572d5a3535418dadd2fe77d78d088db4f",
+    "services/api/bursarbridge/engine.py": "24b9fc17442c7f5707a63f6842f0d04d18d5eefaa4b698ec38492cb87a6fe60b",
+    "services/api/bursarbridge/main.py": "bda336d4ab634a00d00b8ecfe28dada9618e022cf79042d52577314134bda56b",
+    "services/api/bursarbridge/models.py": "6c26db7f8e9f5f832f314192d9b861c3d9b59b0b18fa1f7312cc7d96243aebc2",
+    "services/api/bursarbridge/providers.py": "0093ef1bc2efa8a1f85eadb0783bcb5b74d4e53e019eb8c054da66198b3e2a68",
+    "services/api/bursarbridge/reference.py": "f802d06bf1d30dbfcf020f6f5b1713a3e4c62f00fed039cfe679698580016805",
+    "services/api/bursarbridge/study.py": "5e7db0eef391912b2e7cc2bd4ae6e73718e25ef872ad851c8d45ff066b903b69",
+    "services/api/evals/conversations.json": "f9539470321d01a558207db3c6fb0dcd149ad778e8a246576dfa4a5738fd335d",
+    "services/api/openapi.json": "fcb47b842d537862ce4285a7c810ea7e5fd30f02b97c415e6a83a32fabb4bf96",
+    "services/api/tests/test_round9c.py": "aaf8dfd9f21b490e0ac04084103f25179dd5be80c8e328300e45bb2310f5cd35"
+  }
+}

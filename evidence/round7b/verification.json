@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-10-17T18:24:44.683806+00:00",
+  "mode": "fisco",
+  "rpc": "http://127.0.0.1:8545",
+  "runs": 20,
+  "auditEntries": 151,
+  "anchors": 36,
+  "ok": true,
+  "command": "uv run --frozen python scripts/verify_audit.py --rpc http://127.0.0.1:8545",
+  "observedOutput": "OK: 20 runs, 151 entries, 36 anchors; on-chain receipts and roots verified"
+}

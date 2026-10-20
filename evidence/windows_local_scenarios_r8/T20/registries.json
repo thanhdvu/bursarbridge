@@ -1,0 +1,14 @@
+[
+  {
+    "kind": "credential",
+    "hash": "dd494bc017771e145f2e9be9405f07b4bd67883cb718c92121f8712b46de717a",
+    "status": "valid",
+    "mode": "local"
+  },
+  {
+    "kind": "credential",
+    "hash": "f53314a846b3fbfe437ffb00f03debe2db760a0254ae94e341f193bba55fd786",
+    "status": "valid",
+    "mode": "local"
+  }
+]

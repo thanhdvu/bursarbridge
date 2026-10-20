@@ -1,0 +1,66 @@
+version: 2026-10-18.2
+corridors:
+  VN→KR:
+    purpose: tuition
+    required:
+    - admission
+    - invoice
+    - identity
+    - relationship
+    rules:
+    - R-VN-01
+    - R-VN-02
+    - R-VN-03
+    source: https://english.luatvietnam.vn/legal-updates/guidance-on-one-way-money-transfer-abroad-from-vietnam-892-92779-article.html
+    refundSource: Hanbit University fictional contractual policy (MOCK), not Korean
+      law
+    refundPolicy: &id001
+      id: HBU-REF-01-v3
+      source: Hanbit University fictional contractual policy (MOCK), not Korean law
+      classesStart: '2027-03-02T00:00:00Z'
+      paymentWithinDaysAfterClassesStart: 14
+      promiseAt: '2027-03-16T00:00:00Z'
+      dormitory: Ask the dormitory office about unused fees under its separate rule;
+        no exact entitlement or timing verified
+      beforeStart: Full paid tuition only; dormitory and NHIS payments are separate
+        and excluded
+      admissionFee: Nonrefundable if separately charged; none charged on this invoice
+      afterStart: Manual degree-office assessment; no language-course day table applies
+      freshman: Withdraw admission and reapply; leave of absence is not a substitute
+      destination: Original payer bank record only, including bank-held SWIFT
+      settlement: International office manual international wire (MOCK)
+    researchContext: https://yiec.yonsei.ac.kr/yiec_en/korean/ko-law02.do (language
+      programme only; NOT degree authority); team presenter notes 17 Oct 21:12
+  CN→KR:
+    purpose: tuition
+    required:
+    - admission
+    - invoice
+    - identity
+    - relationship
+    rules:
+    - R-CN-01
+    - R-CN-02
+    annualSimplifiedQuotaUSD: '50000'
+    source: https://www.safe.gov.cn/en/2009/1223/913.html
+    refundSource: Hanbit University fictional contractual policy (MOCK), not Korean
+      law
+    refundPolicy: *id001
+    researchContext: https://yiec.yonsei.ac.kr/yiec_en/korean/ko-law02.do (language
+      programme only; NOT degree authority); team presenter notes 17 Oct 21:12
+  VN→AU:
+    purpose: tuition
+    required:
+    - admission
+    - invoice
+    - identity
+    - relationship
+    rules:
+    - R-VN-01
+    - R-VN-02
+    - R-VN-03
+    - R-AU-01
+    source: https://www.ombudsman.gov.au/__data/assets/pdf_file/0027/315846/Media-Release-Visa-Refusal-Refunds.pdf
+    refundDays: 28
+    refundSource: Australian visa-refusal refund requirements; legal eligibility must
+      be assessed individually

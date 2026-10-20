@@ -1,0 +1,291 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * BursarBridge design tokens.
+ * Ink on paper in light mode, harbour night in dark mode.
+ * Semantic colours carry meaning only: verified (jade), blocked (signal), attention (amber), route (harbour blue).
+ * Brand: deep harbour navy ink with a "bridge" blue accent. The signature is the suspension arc (money-path.tsx):
+ * Đà Nẵng to Seoul, hangers as checks, the packet as the money. Display moments use a serif (Newsreader).
+ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-ui), "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans KR", "Noto Sans SC", system-ui, sans-serif;
+  --font-mono: var(--font-code), ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --font-heading: var(--font-sans);
+  --font-display: var(--font-serif), "Noto Serif KR", "Noto Serif SC", "Songti SC", Georgia, serif;
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-ink: var(--brand-ink);
+  --color-stage: var(--stage);
+  --color-stage-foreground: var(--stage-foreground);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-subtle: var(--subtle);
+  --color-hairline: var(--hairline);
+
+  --color-verified: var(--verified);
+  --color-verified-soft: var(--verified-soft);
+  --color-verified-ink: var(--verified-ink);
+  --color-blocked: var(--blocked);
+  --color-blocked-soft: var(--blocked-soft);
+  --color-blocked-ink: var(--blocked-ink);
+  --color-attention: var(--attention);
+  --color-attention-soft: var(--attention-soft);
+  --color-attention-ink: var(--attention-ink);
+  --color-route: var(--route);
+  --color-route-soft: var(--route-soft);
+  --color-route-ink: var(--route-ink);
+  --color-mock: var(--mock);
+  --color-mock-soft: var(--mock-soft);
+
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.35);
+  --radius-2xl: calc(var(--radius) * 1.7);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  --shadow-card: var(--elev-card);
+  --shadow-lift: var(--elev-lift);
+
+  --animate-shimmer: shimmer 2.2s linear infinite;
+  --animate-pulse-ring: pulse-ring 2s cubic-bezier(0.2, 0.6, 0.3, 1) infinite;
+
+  @keyframes shimmer {
+    from {
+      background-position: 200% 0;
+    }
+    to {
+      background-position: -200% 0;
+    }
+  }
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.85);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(1.7);
+      opacity: 0;
+    }
+  }
+}
+
+:root {
+  --radius: 0.875rem;
+
+  --background: oklch(0.982 0.004 85);
+  --foreground: oklch(0.2 0.025 262);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.025 262);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.025 262);
+  --primary: oklch(0.255 0.06 260);
+  --primary-foreground: oklch(0.985 0.003 85);
+  --brand: oklch(0.5 0.17 258);
+  --brand-soft: oklch(0.95 0.03 258);
+  --brand-ink: oklch(0.38 0.14 260);
+  --stage: oklch(0.2 0.045 262);
+  --stage-foreground: oklch(0.96 0.008 85);
+  --elev-card: 0 0 0 1px oklch(0.25 0.04 262 / 0.035), 0 1px 2px -1px oklch(0.25 0.05 262 / 0.08), 0 12px 32px -18px oklch(0.25 0.06 262 / 0.22);
+  --elev-lift: 0 0 0 1px oklch(0.25 0.04 262 / 0.04), 0 2px 4px -2px oklch(0.25 0.05 262 / 0.08), 0 28px 56px -24px oklch(0.25 0.07 262 / 0.38);
+  --secondary: oklch(0.955 0.005 85);
+  --secondary-foreground: oklch(0.22 0.03 262);
+  --muted: oklch(0.955 0.005 85);
+  --muted-foreground: oklch(0.49 0.018 262);
+  --accent: oklch(0.95 0.006 85);
+  --accent-foreground: oklch(0.22 0.03 262);
+  --subtle: oklch(0.968 0.004 85);
+  --hairline: oklch(0.93 0.005 85);
+  --destructive: oklch(0.56 0.2 26);
+  --border: oklch(0.905 0.006 85);
+  --input: oklch(0.89 0.007 85);
+  --ring: oklch(0.55 0.14 250);
+
+  --verified: oklch(0.56 0.12 163);
+  --verified-soft: oklch(0.955 0.035 163);
+  --verified-ink: oklch(0.38 0.08 163);
+  --blocked: oklch(0.56 0.2 26);
+  --blocked-soft: oklch(0.96 0.025 26);
+  --blocked-ink: oklch(0.42 0.16 26);
+  --attention: oklch(0.72 0.15 70);
+  --attention-soft: oklch(0.965 0.04 85);
+  --attention-ink: oklch(0.46 0.1 60);
+  --route: oklch(0.55 0.15 252);
+  --route-soft: oklch(0.955 0.025 252);
+  --route-ink: oklch(0.42 0.13 255);
+  --mock: oklch(0.5 0.02 262);
+  --mock-soft: oklch(0.94 0.008 262);
+}
+
+.dark {
+  --background: oklch(0.155 0.016 262);
+  --foreground: oklch(0.95 0.006 85);
+  --card: oklch(0.195 0.018 262);
+  --card-foreground: oklch(0.95 0.006 85);
+  --popover: oklch(0.215 0.02 262);
+  --popover-foreground: oklch(0.95 0.006 85);
+  --primary: oklch(0.95 0.006 85);
+  --primary-foreground: oklch(0.18 0.02 262);
+  --secondary: oklch(0.245 0.02 262);
+  --secondary-foreground: oklch(0.95 0.006 85);
+  --muted: oklch(0.235 0.018 262);
+  --muted-foreground: oklch(0.72 0.016 262);
+  --accent: oklch(0.26 0.02 262);
+  --accent-foreground: oklch(0.95 0.006 85);
+  --subtle: oklch(0.18 0.017 262);
+  --hairline: oklch(1 0 0 / 6%);
+  --destructive: oklch(0.68 0.18 24);
+  --border: oklch(1 0 0 / 9%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.7 0.13 250);
+
+  --verified: oklch(0.74 0.13 163);
+  --verified-soft: oklch(0.3 0.05 163 / 55%);
+  --verified-ink: oklch(0.86 0.1 163);
+  --blocked: oklch(0.68 0.18 24);
+  --blocked-soft: oklch(0.32 0.08 24 / 55%);
+  --blocked-ink: oklch(0.86 0.09 24);
+  --attention: oklch(0.8 0.14 78);
+  --attention-soft: oklch(0.34 0.06 75 / 50%);
+  --attention-ink: oklch(0.88 0.1 85);
+  --route: oklch(0.72 0.13 250);
+  --route-soft: oklch(0.32 0.06 255 / 55%);
+  --route-ink: oklch(0.86 0.08 250);
+  --mock: oklch(0.72 0.02 262);
+  --mock-soft: oklch(0.27 0.02 262);
+
+  --brand: oklch(0.74 0.13 252);
+  --brand-soft: oklch(0.32 0.07 258 / 55%);
+  --brand-ink: oklch(0.87 0.08 252);
+  --stage: oklch(0.13 0.03 262);
+  --stage-foreground: oklch(0.96 0.008 85);
+  --elev-card: 0 0 0 1px oklch(1 0 0 / 0.045), inset 0 1px 0 0 oklch(1 0 0 / 0.04), 0 12px 32px -16px oklch(0 0 0 / 0.65);
+  --elev-lift: 0 0 0 1px oklch(1 0 0 / 0.06), inset 0 1px 0 0 oklch(1 0 0 / 0.05), 0 28px 60px -24px oklch(0 0 0 / 0.8);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: color-mix(in oklch, var(--route) 25%, transparent);
+  }
+}
+
+/* A surface with some depth: soft top light on the card. */
+@utility surface {
+  background-image: linear-gradient(in srgb to bottom, rgb(0 0 0 / 0), color-mix(in srgb, var(--brand) 6%, transparent));
+}
+/* The deep "harbour night" panel used for the stage and hero moments, in both themes. */
+@utility stage-panel {
+  background-color: var(--stage);
+  color: var(--stage-foreground);
+  background-image: radial-gradient(120% 80% at 50% 0%, color-mix(in oklch, var(--brand) 26%, transparent), transparent 60%),
+    radial-gradient(60% 50% at 85% 100%, color-mix(in oklch, var(--verified) 12%, transparent), transparent 70%);
+}
+/* Inside a stage panel: remap the tokens the bridge and text use so they read on deep navy. */
+@utility stage-scope {
+  --foreground: var(--stage-foreground);
+  --card: var(--stage);
+  --border: oklch(1 0 0 / 0.16);
+  --muted-foreground: oklch(0.8 0.025 262);
+  --brand: oklch(0.8 0.11 245);
+  --verified: oklch(0.8 0.13 163);
+  --color-foreground: var(--stage-foreground);
+  --color-muted-foreground: oklch(0.8 0.025 262);
+  --color-card: var(--stage);
+  --color-border: oklch(1 0 0 / 0.16);
+  --color-brand: oklch(0.8 0.11 245);
+  color: var(--stage-foreground);
+}
+@utility tnum {
+  font-variant-numeric: tabular-nums;
+}
+@utility shimmer-text {
+  background: linear-gradient(
+      90deg,
+      currentColor 0%,
+      currentColor 40%,
+      color-mix(in oklch, currentColor 30%, transparent) 50%,
+      currentColor 60%,
+      currentColor 100%
+    )
+    0 0 / 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: var(--animate-shimmer);
+}
+@utility paper-grain {
+  background-image: radial-gradient(color-mix(in oklch, var(--foreground) 6%, transparent) 0.6px, transparent 0.6px);
+  background-size: 4px 4px;
+}
+@utility hairline-grid {
+  background-image: linear-gradient(to right, var(--hairline) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--hairline) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+@utility pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom), 0.75rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shimmer-text {
+    animation: none;
+    -webkit-text-fill-color: currentColor;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Korean wraps between words, not inside them ("확인 / 할 일", never "확인할 / 일" split mid-word). */
+:lang(ko) {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}

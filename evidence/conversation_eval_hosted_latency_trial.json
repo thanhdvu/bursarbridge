@@ -1,0 +1,48 @@
+{
+  "provider": "openai",
+  "hosted": true,
+  "results": [
+    {
+      "id": "C18",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "fail",
+      "errors": [
+        "Hosted reply fell back; not counted as a hosted pass"
+      ],
+      "transcript": [
+        {
+          "user": "ba ơi chuyển tiền học kỳ 1 cho con nha",
+          "assistant": "Để mình chuẩn bị khoản học phí 7,200,000 KRW cho Linh nhé. Mình có thông tin hóa đơn do trường ký rồi, nhưng ngân hàng vẫn cần thư nhập học, bản PDF hóa đơn. Linh gửi các giấy tờ đó ở đây nhé.",
+          "sources": [
+            "scripted_fallback"
+          ]
+        }
+      ],
+      "ms": 62871.3
+    },
+    {
+      "id": "C35",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "ba gửi con 5 triệu tiêu vặt nha",
+          "assistant": "Linh ơi, tiền tiêu vặt ba gửi cho Linh nằm ngoài phạm vi hỗ trợ của BursarBridge; bên mình hỗ trợ học phí và tiền thuê nhà thôi nhé. Linh nhắn trực tiếp cho ba về khoản tiêu vặt này nhé.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "ms": 5880.7
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 1,
+    "total": 2
+  },
+  "limits": "Deterministic HTTP assertions; hosted style still needs native-speaker review. No model-as-judge. Local chain and MOCK screening isolate dialogue."
+}

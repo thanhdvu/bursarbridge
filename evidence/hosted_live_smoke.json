@@ -1,0 +1,12 @@
+{
+  "provider": "openai",
+  "request": "ba gui con 5 trieu tieu vat nha",
+  "tokens": [
+    {
+      "source": "openai",
+      "text": "Linh ơi, tiền tiêu vặt cá nhân nằm ngoài phạm vi hỗ trợ của BursarBridge; bên mình hỗ trợ học phí và tiền thuê nhà nhé. Linh nhắn trực tiếp cho ba để trao đổi về khoản tiêu vặt này nha.",
+      "type": "token"
+    }
+  ],
+  "noPaymentChange": true
+}

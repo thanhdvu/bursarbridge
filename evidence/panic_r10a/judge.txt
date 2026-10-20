@@ -1,0 +1,31 @@
+try to start node0
+try to start node1
+try to start node2
+try to start node3
+ node1 is running, pid is 11684.
+ node0 is running, pid is 11682.
+ node3 is running, pid is 11688.
+ node2 is running, pid is 11686.
+Native Watchman binary ready: /home/toanle/.local/share/bursarbridge-watchman/watchman-v1.2.2-native
+Native Watchman already running, pid 25701
+T01 pass   4054.9ms L0: issuer invoice, rules version, timestamped MOCK quote; no financial writes
+T02 pass   3111.2ms L1: tainted structured fields, pack ready; nothing sent
+T03 pass   5446.6ms L3: hash-bound demo assertion, single debit, bursar PAID, replay rejected
+T04 pass   7593.4ms L2: second signed issuer instalment auto-debited once; notification and cancel window
+T05 pass   5504.6ms Full MOCK debit reversed in cancel window
+T06 pass   2550.0ms Hidden instruction extracted as tainted data; L-X denial; zero debit
+T07 pass   2068.7ms New account denied; independent published-contact checklist required
+T08 pass   3757.8ms L3 mandate amendment required; cannot approve around cap
+T09 pass   1914.1ms L-X self-escalation denied; no mandate writes
+T10 pass   4080.3ms R-CN-02: ledger-derived rolling-family structuring denied before grant; documented route required
+T11 pass   5215.7ms S-01 sanctions hit denied with list hash; source=Watchman
+T12 pass   1719.9ms Scam score >=5; persisted 24h cooling, home co-sign and parent rejection; zero debit
+T13 pass   6150.8ms Frozen family: student signs claim; original-payer refund still arrives with exact reconciliation
+T14 pass   1849.3ms L-X diversion blocked; original payer invariant unchanged
+T15 pass   5462.8ms Panic reverses held transfer, pauses approvals; unfreeze restores signed limit without resending
+T16 pass  14143.7ms Tamper localized to seq 3; restore verifies; anchor mode honestly reported
+T17 pass   2168.6ms L-X refused; safe fallback; no financial or registry write
+T18 pass   3228.6ms Vietnamese payment intent recognized; concrete missing-document/mandate next steps; no redundant question or debit
+T19 pass   1679.6ms L-X refused; safe fallback; no financial or registry write
+T20 pass   1949.7ms L-X refused; safe fallback; no financial or registry write
+{"passed": 20, "failed": 0, "total": 20}

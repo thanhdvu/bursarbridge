@@ -1,0 +1,188 @@
+{
+  "scope": "One focused hosted check; setup scripted, local chain, MOCK bank",
+  "question": "Ba đóng băng rồi, tiền hoàn vẫn về chứ? Mở lại thì hạn mức cũ còn hay phải ký lại?",
+  "reply": [
+    {
+      "source": "openai",
+      "text": "Linh yên tâm, việc ba đóng băng chỉ chặn chuyển tiền đi, không chặn tiền hoàn về tài khoản gốc của ba; khoản hoàn hiện vẫn đang được xử lý, chưa nhận được. Khi mở lại, hạn mức đã ký ban đầu được khôi phục, nhưng ủy quyền đã hết hạn hoặc bị thu hồi thì không tự có hiệu lực lại và cần ký mới.",
+      "type": "token"
+    }
+  ],
+  "refund": {
+    "followUp": null,
+    "estimate": {
+      "conversion": {
+        "route": [
+          "KRW",
+          "USD",
+          "VND"
+        ],
+        "source": "MOCK return wire board",
+        "lossPct": "2.00"
+      },
+      "sentOut": {
+        "amount": "135663956.10",
+        "currency": "VND"
+      },
+      "receivedBack": {
+        "amount": "132551176.98",
+        "currency": "VND"
+      },
+      "lines": [
+        {
+          "code": "OUTBOUND_BANK_FEE",
+          "amount": {
+            "amount": "25000.00",
+            "currency": "VND"
+          },
+          "clause": "Phí chuyển đi ban đầu không được hoàn"
+        },
+        {
+          "code": "FX_MOVEMENT_MOCK",
+          "amount": {
+            "amount": "2712779.12",
+            "currency": "VND"
+          },
+          "clause": "Chênh lệch đổi KRW qua USD về tiền nhà (MOCK)"
+        },
+        {
+          "code": "INTERMEDIARY_BANK_FEE_MOCK",
+          "amount": {
+            "amount": "375000.00",
+            "currency": "VND"
+          },
+          "clause": "Phí chuyển khoản qua ngân hàng trung gian (MOCK)"
+        },
+        {
+          "code": "RETENTION",
+          "amount": {
+            "amount": "0.00",
+            "currency": "VND"
+          },
+          "clause": "Không thu phí nhập học; chỉ hoàn học phí, không gồm ký túc xá và NHIS"
+        }
+      ],
+      "kind": "MOCK_ESTIMATE",
+      "asOf": "2027-01-12T04:00:00Z"
+    },
+    "claimAmount": {
+      "amount": "7174000.00",
+      "currency": "KRW"
+    },
+    "policy": {
+      "admissionFee": "Nonrefundable if separately charged; none charged on this invoice",
+      "afterStart": "Manual degree-office assessment; no language-course day table applies",
+      "beforeStart": "Full paid tuition only; dormitory and NHIS payments are separate and excluded",
+      "classesStart": "2027-03-02T00:00:00Z",
+      "destination": "Original payer bank record only, including bank-held SWIFT",
+      "dormitory": "Ask the dormitory office about unused fees under its separate rule; no exact entitlement or timing verified",
+      "freshman": "Withdraw admission and reapply; leave of absence is not a substitute",
+      "id": "HBU-REF-01-v3",
+      "paymentWithinDaysAfterClassesStart": 14,
+      "promiseAt": "2027-03-16T00:00:00Z",
+      "settlement": "International office manual international wire (MOCK)",
+      "source": "Hanbit University fictional contractual policy (MOCK), not Korean law"
+    },
+    "paperwork": {
+      "admissionFeeCharged": {
+        "amount": "0.00",
+        "currency": "KRW"
+      },
+      "claimAmount": {
+        "amount": "7174000.00",
+        "currency": "KRW"
+      },
+      "deadline": "2027-03-16T00:00:00Z",
+      "destination": {
+        "accountId": "acct_parent_minh",
+        "bank": "Lotus Home Bank (MOCK)",
+        "maskedNumber": "•••• 4821",
+        "source": "original_payer_bank_record",
+        "swift": "LOTUVNVX"
+      },
+      "documents": [
+        {
+          "consentHash": "5c7898479d1ebf3b18316c762af6c91632d8ff97ec058921211598489a7825c6",
+          "kind": "admission_withdrawal",
+          "signedAt": "2027-01-12T04:00:00Z",
+          "signerId": "usr_student_linh",
+          "status": "signed"
+        },
+        {
+          "consentHash": "5c7898479d1ebf3b18316c762af6c91632d8ff97ec058921211598489a7825c6",
+          "kind": "tuition_refund_application",
+          "signedAt": "2027-01-12T04:00:00Z",
+          "signerId": "usr_student_linh",
+          "status": "signed"
+        },
+        {
+          "documentId": "doc_26cacf2d75ddd2e9",
+          "kind": "visa_denial_letter",
+          "status": "attached_MOCK"
+        }
+      ],
+      "eligibility": "before_start_full_unused",
+      "evidenceHashes": {
+        "invoiceCredential": "b1bdd43f38567f902ceb02a8ec18cf3c5e592fcd811c011783eefdeb0e89b667",
+        "visaDenial": "17fc7504373f6da77ea3408844e56d1c8aecfc7772f9caa9df8398ded95717ab"
+      },
+      "policy": {
+        "admissionFee": "Nonrefundable if separately charged; none charged on this invoice",
+        "afterStart": "Manual degree-office assessment; no language-course day table applies",
+        "beforeStart": "Full paid tuition only; dormitory and NHIS payments are separate and excluded",
+        "classesStart": "2027-03-02T00:00:00Z",
+        "destination": "Original payer bank record only, including bank-held SWIFT",
+        "dormitory": "Ask the dormitory office about unused fees under its separate rule; no exact entitlement or timing verified",
+        "freshman": "Withdraw admission and reapply; leave of absence is not a substitute",
+        "id": "HBU-REF-01-v3",
+        "paymentWithinDaysAfterClassesStart": 14,
+        "promiseAt": "2027-03-16T00:00:00Z",
+        "settlement": "International office manual international wire (MOCK)",
+        "source": "Hanbit University fictional contractual policy (MOCK), not Korean law"
+      },
+      "requestedAt": "2027-01-12T04:00:00Z"
+    },
+    "classesStart": "2027-03-02T00:00:00Z",
+    "eligibility": "before_start_full_unused",
+    "id": "ref_7f4e81ebb3a1cd8a",
+    "paymentId": "pay_21cae715778f4376",
+    "status": "requested",
+    "deadline": "2027-03-16T00:00:00Z",
+    "destination": {
+      "id": "acct_parent_minh",
+      "bank": "Lotus Home Bank (MOCK)",
+      "currency": "VND",
+      "maskedNumber": "•••• 4821",
+      "balance": {
+        "amount": "864336043.90",
+        "currency": "VND"
+      },
+      "swift": "LOTUVNVX"
+    },
+    "timeline": [
+      {
+        "at": "2027-01-12T04:00:00Z",
+        "code": "refusal_reported",
+        "actor": "student",
+        "params": {},
+        "auditSeq": 18
+      },
+      {
+        "at": "2027-01-12T04:00:00Z",
+        "code": "evidence_verified_MOCK",
+        "actor": "bursar",
+        "params": {},
+        "auditSeq": 19
+      },
+      {
+        "at": "2027-01-12T04:00:00Z",
+        "code": "refund_requested",
+        "actor": "agent",
+        "params": {},
+        "auditSeq": 20
+      }
+    ],
+    "reconciliation": null
+  },
+  "frozen": true
+}

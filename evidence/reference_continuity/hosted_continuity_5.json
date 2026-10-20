@@ -1,0 +1,173 @@
+{
+  "provider": "openai",
+  "model": "gpt-6.1-sol",
+  "hosted": true,
+  "results": [
+    {
+      "id": "C70",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "con gái tôi sắp đi du học hàn, nếu đóng tiền rồi mà bị trượt visa thì sao, có lấy lại được ko",
+          "assistant": "Nếu bị từ chối visa, con gái bạn cần nộp yêu cầu rút nhập học và hoàn tiền trước ngày khai giảng 02/03/2027 để được hoàn toàn bộ học phí đã đóng, tiền ký túc xá chưa sử dụng và bảo hiểm chưa kích hoạt. Theo chính sách, khoản hoàn được chuyển về tài khoản người đóng tiền ban đầu chậm nhất 16/03/2027, tính từ ngày khai giảng chứ không phải ngày gửi yêu cầu. Hóa đơn này không thu phí nhập học; gia đình vẫn chịu phí ngân hàng, phí chuyển tiền quốc tế và chênh lệch tỷ giá nên không thể bảo đảm nhận lại nguyên số tiền đã bỏ ra.",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "bao lâu thì tiền về, mất phí gì ko",
+          "assistant": "Nếu con gái bạn nộp yêu cầu trước ngày khai giảng 02/03/2027, khoản hoàn sẽ về tài khoản người đóng tiền ban đầu chậm nhất 16/03/2027; thời hạn này tính từ ngày khai giảng, không phải ngày gửi yêu cầu. Hóa đơn này không thu phí nhập học, nhưng gia đình vẫn chịu phí ngân hàng chuyển đi ban đầu, phí chuyển tiền quốc tế qua ngân hàng trung gian và hao hụt tỷ giá KRW → USD → tiền trong nước, nên không bảo đảm nhận lại nguyên số tiền đã bỏ ra.",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "lỡ chậm đóng đợt 2 thì sao?",
+          "assistant": "Đợt hai là 4.477.000 KRW, hạn 15/01/2027—cùng hạn với đợt đầu, không phải một hạn muộn hơn. Nếu quá hạn mà chưa đóng, việc xác nhận đủ điều kiện đăng ký học của con gái bạn sẽ bị tạm giữ cho đến khi bộ phận tài vụ trường xác nhận thanh toán hoặc ban hành thông báo học phí có chữ ký điều chỉnh; chỉ bộ phận này mới có thể duyệt gia hạn. Điều khoản hiện tại không quy định mức phí chậm đóng, nên chưa thể khẳng định có thu thêm hay không.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "incidents": [],
+      "ms": 26543.3
+    },
+    {
+      "id": "C71",
+      "locale": "en",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "If my daughter's visa is denied after I pay, can we recover the money?",
+          "assistant": "If your daughter’s visa is denied, she should submit a refund request before classes start on 02 Mar 2027: the policy provides for a refund of paid tuition, unused dormitory and unactivated insurance, payable by 16 Mar 2027 to your original payer bank account. Bank and international-wire fees and currency-conversion losses remain your family’s responsibility, so the full amount sent is not guaranteed back.",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "And when would it arrive, what costs do we lose?",
+          "assistant": "If your daughter files before classes start, the refund is due by 16 Mar 2027—the promised window runs from classes starting on 02 Mar 2027, not from the request date. Your family bears the original outgoing bank fee, intermediary international-wire fees and currency-conversion losses; no admission fee was charged on this bill, but the full amount sent is not guaranteed back.",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "What happens if the second instalment is late?",
+          "assistant": "The second instalment of 4,477,000 KRW is due by 15 Jan 2027. If it remains unpaid after that date, your daughter’s registration clearance is put on hold until the bursar confirms payment or issues a revised signed fee notice; only the university bursar can approve an extension this way. The signed terms specify no monetary late fee, so whether any such fee applies is not established.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "incidents": [],
+      "ms": 22303.3
+    },
+    {
+      "id": "C72",
+      "locale": "ko",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "딸의 비자가 거절되면 이미 낸 돈은 환불되나요?",
+          "assistant": "네, 비자가 거절되면 따님이 수업 시작일인 2027년 3월 2일 전에 입학 철회와 환불을 신청해야 하며, 이 경우 납부한 수업료 전액과 사용하지 않은 기숙사비·아직 개시되지 않은 보험료가 환불 대상입니다. 환불은 원래 납부자의 은행 기록상 계좌로 반환되지만, 송금 수수료와 환전 손실은 가족 부담이므로 납부액 전액이 그대로 돌아오는 것은 보장되지 않습니다.",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "그럼 언제 들어오고 어떤 비용이 빠지나요?",
+          "assistant": "따님이 수업 시작 전 환불을 신청하면, 신청일이 아니라 수업 시작일인 2027년 3월 2일부터 계산해 2027년 3월 16일까지 원래 납부자의 계좌로 환불하는 조건입니다. 이 청구서에는 공제할 입학금이 없지만, 최초 송금 수수료·중개은행 국제송금 수수료와 원화에서 달러를 거쳐 본국 통화로 환전하는 과정의 손실은 가족 부담이므로 실제 수령액은 보장되지 않습니다.",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "두 번째 분할 납부가 늦으면 어떻게 되나요?",
+          "assistant": "두 번째 분할금 4,477,000 KRW도 첫 번째와 같은 2027년 1월 15일까지 납부해야 하며, 미납 상태로 기한을 넘기면 대학 재무처가 납부를 확인하거나 수정된 서명 고지서를 발행할 때까지 학사 등록 승인이 보류됩니다. 금전적 연체료는 서명된 조건에 명시되어 있지 않으며, 기한 연장이 필요하면 보호자님이 대학 재무처에 요청해야 합니다.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "incidents": [],
+      "ms": 20575.3
+    },
+    {
+      "id": "C73",
+      "locale": "zh",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "如果女儿签证被拒，已经交的钱能退吗？",
+          "assistant": "可以:如果女儿签证被拒,在 2027年3月2日 开课前提交退费申请,可退已付学费、未使用的宿舍费及未启用的保险费;她需向学校办理撤回录取及退费申请,退款承诺期限为开课日起至 2027年3月16日,退回原付款账户。本账单未收取入学费,但家庭需承担原汇出银行费、中转电汇费及汇兑损失,因此不能保证净到账金额等于原付款金额。",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "那多久能到账，会扣哪些费用？",
+          "assistant": "若女儿在 2027年3月2日 开课前提交退费申请,校方承诺在 2027年3月16日 前退款,期限从开课日起算,而非申请日起算。账单未收取入学费,因此没有这项扣款;但原汇出银行费、中转国际电汇费及韩元经美元换回本币的汇兑损失由家庭承担,不能保证净到账金额等于原付款金额。",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "如果第二期缴费逾期会怎样？",
+          "assistant": "第二期金额为 4,477,000 KRW,截止日同样是 2027年1月15日,并没有更晚的第二期缴费期限。逾期未缴会导致注册手续暂缓,直至学校财务处确认付款或签发修订后的缴费通知;不会自动取消录取或退款。已签条款未规定具体滞纳金,如需延期,只有学校财务处能通过修订后的正式缴费通知批准。",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "incidents": [],
+      "ms": 20133.6
+    },
+    {
+      "id": "C74",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "con gái tôi sắp đi du học hàn, nếu đóng tiền rồi mà bị trượt visa thì sao, có lấy lại được ko",
+          "assistant": "Có thể được hoàn: nếu bị từ chối visa, con gái bạn cần nộp hồ sơ rút nhập học và xin hoàn tiền trước ngày khai giảng 02/03/2027 để được hoàn toàn bộ học phí đã đóng, tiền ký túc xá chưa sử dụng và bảo hiểm chưa kích hoạt. Theo chính sách, trường hoàn về tài khoản người thanh toán ban đầu chậm nhất 16/03/2027, tính từ ngày khai giảng chứ không phải ngày nộp yêu cầu. Gia đình vẫn chịu phí ngân hàng, phí chuyển quốc tế và chênh lệch tỷ giá nên số tiền thực nhận có thể thấp hơn số đã chuyển.",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "bao lâu thì tiền về, mất phí gì ko",
+          "assistant": "Nếu con gái bạn nộp hồ sơ trước ngày khai giảng, theo chính sách tiền sẽ về tài khoản người thanh toán ban đầu chậm nhất 16/03/2027; thời hạn tính từ ngày khai giảng 02/03/2027, không phải ngày nộp yêu cầu. Hóa đơn này không thu phí nhập học, nhưng gia đình vẫn chịu phí ngân hàng chuyển đi ban đầu, phí chuyển quốc tế qua ngân hàng trung gian và hao hụt đổi từ KRW qua USD sang nội tệ, nên không bảo đảm nhận lại đủ số tiền đã chuyển.",
+          "sources": [
+            "openai"
+          ]
+        },
+        {
+          "user": "vậy tổng tiền học là bao nhiêu?",
+          "assistant": "Tổng hóa đơn cả học kỳ tại Hanbit University là 8.954.000 KRW, gồm học phí, ký túc xá và bảo hiểm; quy đổi ước tính 169.318.450 VND theo tỷ giá mô phỏng (MOCK), không phải tỷ giá thị trường trực tiếp.",
+          "sources": [
+            "openai"
+          ]
+        }
+      ],
+      "incidents": [],
+      "ms": 21733.9
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5
+  },
+  "limits": "Deterministic HTTP assertions; hosted style still needs native-speaker review. No model-as-judge. Local chain and MOCK screening isolate dialogue."
+}

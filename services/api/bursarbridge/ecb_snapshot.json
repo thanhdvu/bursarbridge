@@ -1,0 +1,30 @@
+{
+  "source": "https://api.frankfurter.dev/v2/rates?base=EUR&quotes=KRW,CNY,AUD,USD&providers=ECB",
+  "provider": "ECB",
+  "rates": [
+    {
+      "date": "2026-10-16",
+      "base": "EUR",
+      "quote": "AUD",
+      "rate": 1.6171
+    },
+    {
+      "date": "2026-10-16",
+      "base": "EUR",
+      "quote": "CNY",
+      "rate": 7.524
+    },
+    {
+      "date": "2026-10-16",
+      "base": "EUR",
+      "quote": "KRW",
+      "rate": 1499.01
+    },
+    {
+      "date": "2026-10-16",
+      "base": "EUR",
+      "quote": "USD",
+      "rate": 1.1253
+    }
+  ]
+}

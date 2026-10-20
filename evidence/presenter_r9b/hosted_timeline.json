@@ -1,0 +1,124 @@
+{
+  "scope": "One focused hosted turn only; no full hosted suite",
+  "question": "Nhà mình có giấy nhập học và nộp visa chưa, hay phải đóng học phí trước mới xin visa?",
+  "replies": [
+    {
+      "source": "openai",
+      "text": "Linh đã có giấy nhập học cấp ngày 22/12/2026 và đã nộp hồ sơ visa ngày 04/01/2027, hiện đang chờ kết quả. Vì vậy, không phải đóng học phí trước mới xin visa; theo lịch của trường, học phí được đóng trong thời gian chờ visa, với đợt đầu 3.587.000 KRW đến hạn 15/01/2027.",
+      "type": "token"
+    }
+  ],
+  "studyPlan": {
+    "simulatedNow": "2027-01-12T03:00:00Z",
+    "clock": "SIMULATED",
+    "source": "Fictional Hanbit signed academic terms (MOCK)",
+    "invoiceVersion": "tuition-2027-v8",
+    "seedRefreshRequired": false,
+    "housing": {
+      "mode": "dormitory_option",
+      "mutuallyExclusive": true
+    },
+    "tuition": {
+      "amount": "7174000.00",
+      "currency": "KRW"
+    },
+    "registrationWindow": {
+      "opensAt": "2027-01-11T00:00:00Z",
+      "closesAt": "2027-01-15T08:00:00Z",
+      "timeZone": "Asia/Seoul"
+    },
+    "currentPaymentWindow": {
+      "opensAt": "2027-01-11T00:00:00Z",
+      "closesAt": "2027-01-15T08:00:00Z",
+      "timeZone": "Asia/Seoul"
+    },
+    "dueAt": "2027-01-15T08:00:00Z",
+    "instalmentSchedule": [
+      {
+        "number": 1,
+        "amount": "3587000.00",
+        "dueAt": "2027-01-15T08:00:00Z",
+        "paymentWindow": {
+          "opensAt": "2027-01-11T00:00:00Z",
+          "closesAt": "2027-01-15T08:00:00Z",
+          "timeZone": "Asia/Seoul"
+        }
+      },
+      {
+        "number": 2,
+        "amount": "3587000.00",
+        "dueAt": "2027-02-15T08:00:00Z",
+        "paymentWindow": {
+          "opensAt": "2027-02-11T00:00:00Z",
+          "closesAt": "2027-02-15T08:00:00Z",
+          "timeZone": "Asia/Seoul"
+        }
+      }
+    ],
+    "paymentWindowStatus": "open",
+    "separateObligations": [
+      {
+        "id": "dorm",
+        "label": "Dormitory March-June (4 months)",
+        "amount": {
+          "amount": "1500000.00",
+          "currency": "KRW"
+        },
+        "period": "semester",
+        "collector": "Hanbit Dormitory Office (MOCK)",
+        "when": "Separate dormitory notice before move-in",
+        "paidThroughBridge": false,
+        "refundPolicy": "Ask the dormitory office about unused fees; no exact entitlement or date verified",
+        "alternativeTo": "private_rent",
+        "source": "MOCK adviser-based budget, not a payment instruction",
+        "applicable": true
+      },
+      {
+        "id": "health_insurance",
+        "label": "Health insurance after arrival",
+        "amount": {
+          "amount": "70000.00",
+          "currency": "KRW"
+        },
+        "period": "monthly",
+        "collector": "NHIS (external public insurance, no integration)",
+        "when": "After arrival and enrollment; student pays the actual NHIS bill, e.g. Korean-account auto-debit",
+        "paidThroughBridge": false,
+        "refundPolicy": "Outside the tuition claim; actual NHIS coverage and billing rules apply",
+        "source": "MOCK 70,000/month planning assumption, not a verified NHIS premium",
+        "sourceUrl": "https://www.nhis.or.kr/english/wbheaa02900m01.do",
+        "applicable": true
+      }
+    ],
+    "classesStart": "2027-03-02T00:00:00Z",
+    "refundPromise": "2027-03-16T00:00:00Z",
+    "academicTimeline": {
+      "acceptedAt": "2026-12-15T00:00:00Z",
+      "certificateIssuedAt": "2026-12-22T00:00:00Z",
+      "visaAppliedAt": "2027-01-04T00:00:00Z",
+      "visaStatusAtSeed": "processing_MOCK",
+      "source": "Fictional Hanbit academic calendar (MOCK); no embassy integration"
+    },
+    "standardAdmissionCertificate": {
+      "status": "issued_MOCK",
+      "issuedAt": "2026-12-22T00:00:00Z",
+      "basis": "acceptance",
+      "downloadUrl": "/api/study-plan/standard-admission-certificate.pdf"
+    },
+    "visaApplication": {
+      "appliedAt": "2027-01-04T00:00:00Z",
+      "status": "processing_MOCK",
+      "integration": "MOCK sequence only; no embassy application is submitted"
+    },
+    "sequence": [
+      "admission_acceptance",
+      "standard_admission_certificate",
+      "D2_visa_application",
+      "registration_payment_while_visa_pending",
+      "visa_decision",
+      "tuition_refund_if_refused"
+    ]
+  },
+  "approvals": [],
+  "payments": []
+}

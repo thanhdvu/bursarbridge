@@ -1,0 +1,9 @@
+{
+  "previewRequests": 40,
+  "sandboxesAfterPreviews": 0,
+  "separateVisitors": 2,
+  "crossSandboxTokenStatus": 401,
+  "capacityBrowserStatus": 503,
+  "retryPage": true,
+  "scope": "Isolated loopback Caddy template with simulated Cloudflare headers; local chain and scripted provider; public live stack untouched"
+}

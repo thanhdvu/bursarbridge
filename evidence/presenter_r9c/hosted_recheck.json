@@ -1,0 +1,38 @@
+{
+  "provider": "openai",
+  "model": "gpt-6.1-sol",
+  "hosted": true,
+  "results": [
+    {
+      "id": "C79",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "visa e bị từ chối rồi :(",
+          "assistant": "Rất tiếc khi nghe tin này, Linh. Chưa có học phí nào được thanh toán nên không cần hoàn tiền; các yêu cầu thanh toán học phí đã dừng và thông báo cho ba đã có trong ứng dụng gia đình. Linh hãy liên hệ bộ phận tuyển sinh để hỏi về việc rút nhập học hoặc nộp lại cho kỳ sau; hiện chưa có yêu cầu rút nhập học nào được gửi.",
+          "sources": [
+            "openai"
+          ],
+          "providerStatus": {
+            "configuredProvider": "openai",
+            "effectiveProvider": "openai",
+            "status": "ready",
+            "lastError": null,
+            "lastSuccessAt": "2026-10-18T05:49:59.552711+00:00"
+          }
+        }
+      ],
+      "incidents": [],
+      "ms": 6764.5
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1
+  },
+  "limits": "Deterministic HTTP assertions; hosted style still needs native-speaker review. No model-as-judge. Local chain and MOCK screening isolate dialogue."
+}

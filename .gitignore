@@ -1,0 +1,15 @@
+node_modules/
+.next/
+dist/
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+*.sqlite
+*.db
+infra/fisco/nodes/
+.DS_Store
+.turbo/
+coverage/

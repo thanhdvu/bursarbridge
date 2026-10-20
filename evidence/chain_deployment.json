@@ -1,0 +1,17 @@
+{
+  "AuditAnchor": {
+    "address": "0xc75d7F89e39166D1A49C2FcD567EfAbce798eEb4",
+    "txHash": "0xc4aefd12a987bcf538ffa0c0b2ab894f3d0f992a218cfcc5354952c1085f870b",
+    "blockNumber": 1
+  },
+  "CredentialRegistry": {
+    "address": "0x9231AFfD3A36d050C6B89C57F8a1b195ccB0Cd33",
+    "txHash": "0x6bfe8b900b794e601a10d2d85f9d356435e796672cfb9922c03fedc8c148bc55",
+    "blockNumber": 2
+  },
+  "MandateGuard": {
+    "address": "0xD1dd71115d9C9Cfc37fb2238933CFEDCa6eB61C2",
+    "txHash": "0x0ac7fbbe145f7990b2fe0058e924fa7161ea49179f2b833400fb3ecce70ab7dc",
+    "blockNumber": 3
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "provider": "openai",
+  "model": "gpt-6.1-sol",
+  "hosted": true,
+  "results": [
+    {
+      "id": "C76",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "visa bị từ chối rồi, giúp em với",
+          "assistant": "Linh cần ký đơn rút nhập học và đề nghị hoàn học phí trước ngày 02/03/2027. Theo chính sách, trường cam kết hoàn học phí đã đóng chậm nhất ngày 16/03/2027 về tài khoản gốc của ba. Số tiền về dự kiến theo mô phỏng là 132.551.177 VND sau phí ngân hàng và chênh lệch tỷ giá, chưa phải số tiền được bảo đảm.",
+          "sources": [
+            "openai"
+          ],
+          "providerStatus": {
+            "configuredProvider": "openai",
+            "effectiveProvider": "openai",
+            "status": "ready",
+            "lastError": null,
+            "lastSuccessAt": "2026-10-18T04:57:22.182857+00:00"
+          }
+        }
+      ],
+      "incidents": [],
+      "ms": 11501.3
+    },
+    {
+      "id": "C78",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "nếu trường không chịu trả tiền hoàn thì sao?",
+          "assistant": "Nếu trường quá hạn hoàn học phí đã cam kết vào 16/03/2027, bước tiếp theo là sinh viên duyệt thư nhắc hoàn tiền mô phỏng để gửi trường. Nếu sau 7 ngày kể từ thư nhắc vẫn chưa nhận được tiền, BursarBridge sẽ chuẩn bị bộ hồ sơ khiếu nại đã che thông tin nhạy cảm để nộp thủ công qua Korea e-People / Bộ Giáo dục; không tự động nộp hay bảo đảm thu hồi tiền cho anh.",
+          "sources": [
+            "openai"
+          ],
+          "providerStatus": {
+            "configuredProvider": "openai",
+            "effectiveProvider": "openai",
+            "status": "ready",
+            "lastError": null,
+            "lastSuccessAt": "2026-10-18T04:57:30.958664+00:00"
+          }
+        }
+      ],
+      "incidents": [],
+      "ms": 8629.6
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2
+  },
+  "limits": "Deterministic HTTP assertions; hosted style still needs native-speaker review. No model-as-judge. Local chain and MOCK screening isolate dialogue."
+}

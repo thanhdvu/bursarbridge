@@ -1,0 +1,30 @@
+{
+  "baseCommit": "6e21c89",
+  "hostedCalls": 0,
+  "liveStateAccessed": false,
+  "scope": "Round 11 source and contract; LF-normalized SHA-256. No private env or key read for these hashes.",
+  "sha256LF": {
+    "services/api/bursarbridge/auth.py": "591783cab4d0d7c8a27326d5ea0174b783800ae28f9c973b6ea628bf79ad134a",
+    "services/api/bursarbridge/main.py": "b655e7851eecd290795bbd9bb142d3baad65202f3501c742e4506b91f915b1df",
+    "services/api/bursarbridge/public.py": "356979fe55afbe8e83a9a034bfe72b2a7d8a08a1578b7ef0ff47f97ea4d5babc",
+    "services/api/tests/test_round11.py": "41249a73ef7773c8ace4d8ab7f7a78044652ec9446e4818e31cff965683ce81a",
+    "services/api/tests/test_webauthn.py": "aa39b50a7483cb9464e91cf688504a5f35d2a2ff12cc92d749e1f6844b31cdc6",
+    "services/api/.env.example": "926c598651a9d451daf0d37c804498d25c6c20729beda3c227970752a9c7079d",
+    "services/api/openapi.json": "fcb47b842d537862ce4285a7c810ea7e5fd30f02b97c415e6a83a32fabb4bf96",
+    "docs/API.md": "33091d5f92fb35121e523cbed51e479c989d7160f75676f86f0dfdef80e0b964",
+    "docs/status/backend.md": "925bbdb03079f559d0f8352adb211099b674a41f6c0c962cc376dcf2cdb1206b",
+    "docs/deliverables/test-cases.md": "ceb757a8bf599a674ad8f23678f534a825bbbc65358005d83d07ab7d26390d78",
+    "evidence/README.md": "d9bfa615756d7c6507e3b7fe96ffd0453b1180b83a8522b6cf9080ce967c4a76",
+    "evidence/public_origins_r11/README.md": "d58fdc9896a7c548e2669f61bf0e07b345c83fbd1e18fb21fcf4cb9d270881b0"
+  },
+  "proseReview": {
+    "skill": "blader/humanizer 3.1.0",
+    "mode": "file",
+    "scope": [
+      "Round 11 API Changelog and backend status additions",
+      "Current test catalogue and evidence index updates",
+      "Round 11 evidence README"
+    ],
+    "method": "Plain operational wording, exact code/result checks, preserved commands/link targets; older historical records retained"
+  }
+}

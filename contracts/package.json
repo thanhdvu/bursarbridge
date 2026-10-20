@@ -1,0 +1,8 @@
+{
+  "name": "bursarbridge-contracts",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {"compile": "node compile.cjs"},
+  "devDependencies": {"solc": "0.8.19"},
+  "overrides": {"tmp": "^0.2.6"}
+}

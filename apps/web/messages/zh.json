@@ -1,0 +1,1443 @@
+{
+  "common": {
+    "language": "语言",
+    "theme": "外观",
+    "light": "浅色",
+    "dark": "深色",
+    "system": "跟随系统",
+    "simClock": "模拟时钟（仅限演示）",
+    "today": "演示中的今天：{date}"
+  },
+  "mock": {
+    "label": "Mock",
+    "why": {
+      "bank": "Lotus Home Bank 是为本演示模拟的虚构银行，不涉及任何真实资金或账户。",
+      "clock": "演示采用模拟时钟，30 天的退款流程几分钟就能演示完。",
+      "authenticator": "演示用验证器：不会读取真实的生物特征。如设备支持通行密钥，可在下方切换。",
+      "chain": "存证锚定在团队运营的 FISCO BCOS 测试链上，MOCK 模式下改用本地替代。链上只存哈希，不涉及资金和个人数据。",
+      "rate": "汇率来自模拟的银行牌价，并非实时市场行情。",
+      "bursar": "韩光大学及其财务处均为虚构，由系统模拟。",
+      "generic": "演示模拟内容。所有模拟部分均在信任中心列明。",
+      "harness": "结果在浏览器中回放。连接 API 后可运行真实的场景测试。"
+    }
+  },
+  "passkey": {
+    "exactly": "通行密钥只签署这一项内容，不涉及其他。",
+    "hash": "内容指纹",
+    "scanning": "正在验证身份…",
+    "signed": "已签署",
+    "failed": "签署未成功，未发送任何内容。",
+    "deviceHint": "使用面容 ID、指纹或设备密码",
+    "demoHint": "演示验证器：轻点确认",
+    "retry": "重试",
+    "cta": "用通行密钥确认",
+    "useDemo": "改用演示验证器",
+    "useDevice": "改用本机通行密钥",
+    "cancelled": "已关闭通行密钥窗口，未签署任何内容。"
+  },
+  "payee": {
+    "verified": "已验证",
+    "vouched": "已获{issuer}认证",
+    "notVouched": "未获大学认证",
+    "vouchedDetail": "大学已签发凭证，确认该账户归其所有。",
+    "accountMatch": "账户与大学登记信息一致",
+    "accountMismatch": "账户不在大学登记信息中",
+    "name": {
+      "match": "户名一致",
+      "close_match": "户名仅为相似",
+      "no_match": "户名不一致"
+    },
+    "onChain": "凭证在存证链上状态有效",
+    "block": "区块 #{n}",
+    "technical": "技术详情"
+  },
+  "quote": {
+    "converted": "兑换金额",
+    "fee": "银行汇款手续费",
+    "rate": "汇率",
+    "mid": "市场中间价 {mid}，银行加价 {margin}%",
+    "youPay": "您共需支付",
+    "theyGet": "韩光大学收到",
+    "cancel": "批准后 30 分钟内可免费撤销",
+    "details": "汇率详情",
+    "sourceMock": "模拟汇率牌价（MOCK）",
+    "sourceEcb": "欧洲央行参考汇率"
+  },
+  "pack": {
+    "ready": "银行材料已就绪 · {ready}/{total}",
+    "rule": "{corridor} · 越南国家银行第20/2022号通知（留学汇款）",
+    "version": "规则版本 {v}",
+    "docs": {
+      "transfer_request_form": "汇款申请书",
+      "fee_notice": "大学缴费通知",
+      "admission_letter": "录取通知书",
+      "student_passport_redacted": "学生护照（已脱敏）",
+      "sender_id_redacted": "您的身份证件（已脱敏）",
+      "relationship_proof": "亲子关系证明",
+      "admission": "录取通知书",
+      "invoice": "大学缴费通知",
+      "identity": "身份证件（银行存档）",
+      "relationship": "亲子关系证明（银行存档）"
+    }
+  },
+  "cards": {
+    "quote": {
+      "title": "今日报价",
+      "at": "报价时间 {time}"
+    },
+    "approval": {
+      "title": {
+        "first_payment": "向韩光大学缴纳学费",
+        "payment": "向韩光大学付款",
+        "refund_claim": "撤销入学并申请退款",
+        "escalation_letter": "升级投诉函",
+        "mandate_change": "修改授权额度",
+        "share_documents": "共享材料"
+      },
+      "forYou": "待您批准",
+      "forOther": {
+        "first_payment": "已发给家长审批",
+        "payment": "已发给家长审批",
+        "refund_claim": "已发给学生审批",
+        "escalation_letter": "等待批准",
+        "mandate_change": "等待批准",
+        "share_documents": "等待批准"
+      },
+      "status": {
+        "pending": "待处理",
+        "approved": "已批准",
+        "rejected": "已拒绝",
+        "expired": "已过期",
+        "cooling_off": "冷静期中"
+      },
+      "youPay": "家长支付",
+      "hanbitGets": "韩光大学收到",
+      "refundAmount": "申请退款金额",
+      "refundDest": "只能退回原付款账户",
+      "review": "查看并批准",
+      "approveClaim": "签署两份表格",
+      "sign": {
+        "claim": "申请项目",
+        "to": "收款方",
+        "title": {
+          "first_payment": "批准学费付款",
+          "payment": "批准付款",
+          "refund_claim": "签署退款表格",
+          "escalation_letter": "发送升级投诉函",
+          "mandate_change": "修改授权额度",
+          "share_documents": "共享材料"
+        },
+        "claimTuition": "已付给学校的学费",
+        "forms": "表格",
+        "formsValue": "撤销入学 + 退款申请",
+        "by": "最晚到账"
+      },
+      "youPayParent": "您支付",
+      "refundTo": "退回原付款账户",
+      "after": {
+        "sent": "{who}已批准。款项正在汇往{payee}。",
+        "sentSub": "银行会保留到 {time}，期间{who}仍可取消。",
+        "arrived": "{payee}已收到学费。本学期的学费已办妥。",
+        "cancelled": "{who}已取消这笔付款。账户里没有钱被转出。"
+      },
+      "refund": {
+        "forYou": "需要你签名",
+        "signed": "已签名",
+        "claim": "申请金额",
+        "claimSub": "本学期已缴的学费。",
+        "whereSub": "原付款账户（SWIFT {swift}），谁都改不了。",
+        "youSign": "你要签的内容",
+        "theySign": "学生要签的内容",
+        "claimSubEstimate": "已缴学费。扣除银行和换汇费用后约 {amount} 会退回（MOCK 估算）。"
+      }
+    },
+    "info": {
+      "openPayment": "查看付款",
+      "NEED_INVOICE": "小提示：点回形针图标，就能转发缴费单 PDF 或财务处的邮件。",
+      "MANDATE_REQUESTED": "已请家长设置学费额度。家长设好后，审批卡片会马上发出。",
+      "MANDATE_SET_CONTINUING": "家长已设好学费额度，我已把付款发给家长审批。",
+      "FREEZE_HINT": "仍在30分钟保留期内的付款会取消，钱会退回。其他向外付款审批会暂停。 退给爸爸的钱仍会到账。对方已收到的款项无法在这里撤回。",
+      "openFreeze": "打开冻结",
+      "generic": "助手已核对，目前不需要你做什么。"
+    }
+  },
+  "blocked": {
+    "title": "付款已拦截",
+    "titleRedirect": "已拦截退款改道",
+    "nothingMoved": "未发出任何款项，您的资金分文未动。",
+    "attempted": "对方试图执行",
+    "attemptPay": "向“{payee}”支付 {amount}",
+    "attemptRedirect": "把退款转到另一个账户（{account}）",
+    "source": "来自邮件：{sender}",
+    "why": "拦截原因",
+    "next": "接下来怎么做",
+    "steps": {
+      "NEXT_NOTHING_MOVED": "无需操作。这笔付款根本没有创建。",
+      "NEXT_REAL_INVOICE_SAFE": "真正的韩光大学账单不受影响，仍可付给已验证的账户。",
+      "NEXT_REPORT_BURSAR": "如有需要，可通过韩光大学官网上的联系方式，向财务处举报这封邮件。",
+      "NEXT_DONT_REPLY": "不要回复那封邮件，也不要点击其中的链接。",
+      "NEXT_REFUND_SAFE": "退款照常进行，只会退回家长的账户。",
+      "NEXT_NEVER_PAY_FEE": "任何以“加快退款”为由的收费，一律不要付。"
+    },
+    "decidedBy": "由策略引擎决定，而非 AI：",
+    "titleEscalate": "还有事项待处理",
+    "nothingMovedEscalate": "尚未发出任何款项。还缺以下内容。",
+    "attemptDoc": "在 {file} 中发现的指令",
+    "attemptDocDetail": "转发文件中的账户和金额只作为数据处理，绝不会被当作收款方。",
+    "stepsDefault": {
+      "NEXT_NOTHING_MOVED": "无需操作。没有创建任何付款。",
+      "NEXT_VERIFY_OFFICIAL": "如果付款信息确实有变，请通过大学官网或办公室核实。",
+      "NEXT_DONT_REPLY": "不要回复那条消息，也不要点击其中的链接。"
+    },
+    "stepsEscalate": {
+      "NEXT_SEND_DOCS": "在本对话中转发缺少的材料。",
+      "NEXT_SET_LIMIT": "请家长设置或提高额度。"
+    },
+    "whyEscalate": "为什么还在等待",
+    "unverified": "未经认证的账户",
+    "titleCooling": "已暂停 24 小时",
+    "nothingMovedCooling": "没有任何资金转出，家人会先核实。",
+    "stepsCooling": {
+      "NEXT_CALL": "用你平时常用的号码给家人打电话。",
+      "NEXT_NO_SECRET": "不要保密，也绝不要交任何“保证金”。",
+      "NEXT_LAN": "已请妈妈和你一起核实。"
+    },
+    "attemptAccount": "向账户 {account} 转账",
+    "titleRefused": "这件事我不能做"
+  },
+  "reasons": {
+    "FIRST_PAYMENT_TO_PAYEE": "首次向该大学付款，需家长批准",
+    "NO_SCAM_SIGNALS": "请求中未发现诈骗迹象",
+    "WITHIN_MANDATE_CAP": "在您设定的额度内",
+    "AMOUNT_WITHIN_FEE_NOTICE": "金额与大学缴费通知一致",
+    "RELATIVE_SENDER_ALLOWED": "家长可为子女汇付学费",
+    "DOCS_COMPLETE": "所需材料已备齐",
+    "PAYEE_NOT_CREDENTIALED": "该账户从未获大学认证",
+    "PARAMS_FROM_UNTRUSTED_DOC": "付款信息来自邮件，而非大学",
+    "LOOKALIKE_SENDER": "发件人域名仿冒大学官方域名",
+    "URGENCY_DISCOUNT": "施压话术：快付就打折",
+    "REFUND_REDIRECT": "退款只能退回原付款账户",
+    "ADVANCE_FEE": "要求先交费才放款",
+    "REFUND_TO_ORIGINAL_PAYER": "退款只退回原账户",
+    "REFUND_DEADLINE": "大学须在 30 天内完成退款",
+    "OUT_OF_SCOPE_CRYPTO": "加密货币和投资不在助手的权限范围内",
+    "PII_REQUEST": "个人证件绝不在聊天中分享",
+    "PAYEE_FROM_TEXT": "不能从聊天或邮件文字中添加收款方",
+    "SELF_LIMIT_CHANGE": "助手无法修改自己的额度",
+    "STRUCTURING": "不允许为规避额度而拆分付款",
+    "OVER_MANDATE_CAP": "超出您设定的额度",
+    "ACCOUNT_HASH_MISMATCH": "账户与大学登记信息不符",
+    "INSTRUCTION_IN_DOCUMENT": "文件中隐藏的指令一律忽略",
+    "UNKNOWN_AGENT": "请求并非来自已识别的智能体",
+    "NEVER_ALLOWED": "文件或邮件中的指令一律不执行",
+    "FROZEN_OR_UNAVAILABLE": "付款已冻结或暂时不可用",
+    "MANDATE_REQUIRED": "尚无已签署的额度覆盖这笔付款",
+    "PAYEE_UNVERIFIED": "该账户从未获大学认证",
+    "NAME_MISMATCH": "户名不一致",
+    "TAINTED_PARAMETERS": "付款信息来自不可信文本",
+    "INVALID_AMOUNT": "金额无效",
+    "CAP_EXCEEDED": "超出您签署的额度",
+    "FEE_NOTICE_EXCEEDED": "超出大学缴费通知的金额",
+    "DOCUMENTS_REQUIRED": "银行仍需补充材料",
+    "SANCTIONS_REVIEW": "收款方命中制裁名单，需人工复核",
+    "COOLING_AND_COSIGN_REQUIRED": "疑似诈骗：暂停 24 小时，并需另一位家人联签",
+    "FIRST_PAYMENT": "首次向该大学付款，需家长批准",
+    "WITHIN_MANDATE": "在您签署的额度内",
+    "NEW_PAYEE": "从未付过款的账户",
+    "UNVERIFIED_PAYEE": "账户未获大学认证",
+    "AUTHORITY": "自称警方或官方人员",
+    "URGENCY_SECRECY": "催促尽快操作并要求保密",
+    "RAIL_MISMATCH": "要求用加密货币或礼品卡支付",
+    "SAFE_ACCOUNT": "要求把钱转到“安全账户”",
+    "MOCK_BANK_DOCUMENT_CHECK": "银行材料核验通过（模拟银行）",
+    "UNTRUSTED_INSTRUCTIONS": "文件中含有指令，已忽略",
+    "INVOICE_RECORD_MISMATCH": "与大学账单记录不符",
+    "ADMISSION_RECORD_MISMATCH": "与大学录取记录不符",
+    "VERIFICATION_REQUIRED": "需先经独立核实",
+    "REFUSAL_DOCUMENT_REQUIRED": "需提供签证结果通知书",
+    "DOCUMENT_INSTRUCTION": "文件试图下达付款指令",
+    "SCAM": "符合已知的诈骗套路",
+    "CRYPTO": "学费绝不会转入加密货币或“理财”产品",
+    "EXPORT_PII": "个人证件和号码绝不会在聊天中分享",
+    "RAISE_LIMIT": "助手不能自行提高额度",
+    "REGISTRY_WRITE": "无法通过聊天添加收款方",
+    "PAYMENT_PENDING": "这笔付款已在处理中",
+    "INVOICE_SETTLED": "这张发票已付清",
+    "PAYMENT_SETTLEMENT_REQUIRED": "需先缴清学费，才能申请退款"
+  },
+  "chat": {
+    "working": "处理中…",
+    "checked": "已核查 {n, plural, other {# 项}}",
+    "checkedFailed": "已核查 {n, plural, other {# 项}} · {failed} 项未通过",
+    "emptyTitle": "{name}，你好",
+    "emptyBody": "大学发来的任何材料都可以转给我，剩下的交给我。我只付款给大学亲自认证过的账户。",
+    "emptyBodyParent": "钱在哪、要花多少，随时问我。只有需要您批准时，我才会请您操作。",
+    "placeholder": "给助手发消息",
+    "attach": "转发文件",
+    "send": "发送",
+    "remove": "移除",
+    "aiLabel": "AI 助手。它无法自行动用资金，所有付款都按家庭设定的规则执行。",
+    "disposition": {
+      "engine": "策略引擎",
+      "DENY": "已拒绝",
+      "ESCALATE": "需人工批准",
+      "AUTO_EXECUTE": "额度内放行",
+      "OBSERVE": "仅记录"
+    },
+    "newChat": "新对话",
+    "hosted": "AI 回复",
+    "scripted": "预设回复",
+    "document": "附件",
+    "uploading": "{n, plural, other {正在发送 # 份文件…}}",
+    "reading": "正在阅读消息…",
+    "workingSlow": "仍在处理：核对规则、银行和学校需要几秒钟",
+    "more": "展开",
+    "less": "收起",
+    "emptyBodyRent": "可以让我付这个月的房租，或者问钱现在在哪里。房租只付到父母设定、银行核对过户名的房东账户；学费只付到学校认证的账户。"
+  },
+  "docs": {
+    "trayTitle": "转发文件",
+    "trayHint": "你转发的任何内容都先视为不可信，直到大学签名验证通过。",
+    "fromDevice": "从本机选择文件",
+    "fromSchool": "示例文件",
+    "attacks": "攻击测试（演示）",
+    "samples": {
+      "invoice": {
+        "title": "韩光大学 2027 春季学期学费账单"
+      },
+      "admission": {
+        "title": "韩光大学录取通知书"
+      },
+      "discount_email": {
+        "title": "“提前缴费享 15% 折扣”邮件"
+      },
+      "refusal": {
+        "title": "签证结果通知书（合成样本）"
+      },
+      "refund_agent_email": {
+        "title": "“72 小时代办退款”邮件"
+      },
+      "police": {
+        "title": "“警方要求缴纳资金证明保证金”消息"
+      },
+      "rental_agreement": {
+        "title": "Seoul Garden Residence 租房合同（合成）"
+      }
+    },
+    "title": "文件",
+    "lead": "每个字段都会记录来源。只有大学签名的字段，才能决定钱付给谁。",
+    "prov": {
+      "verified_issuer": "大学已签名",
+      "untrusted_doc": "仅来自文件"
+    },
+    "empty": "还没有转发任何文件。",
+    "forward": "转发文件",
+    "kind": {
+      "invoice": "账单",
+      "admission": "录取通知书",
+      "refusal": "签证结果",
+      "email": "邮件",
+      "rental_agreement": "租房合同"
+    },
+    "field": {
+      "issuer": "签发方",
+      "student": "学生",
+      "invoiceRef": "账单编号",
+      "amount": "金额",
+      "dueDate": "截止日期",
+      "payeeAccount": "收款账户",
+      "programme": "专业",
+      "sender": "发件人",
+      "deadline": "截止时间",
+      "applicant": "申请人",
+      "visaType": "签证类型",
+      "decision": "结果",
+      "newAccount": "新账户",
+      "fee": "索要费用",
+      "filename": "文件名",
+      "text": "内容",
+      "account": "收款账户"
+    },
+    "attach": "{n, plural, =0 {请选择文件} other {添加 # 个文件}}",
+    "readText": "从文件中读取的内容"
+  },
+  "demo": {
+    "label": "演示",
+    "open": "打开演示控制面板",
+    "title": "演示控制面板",
+    "playAs": "切换角色",
+    "parent": "家长 · 手机",
+    "student": "学生 · 手机",
+    "judge": "信任中心",
+    "judgeSub": "审计、存证链、测试场景",
+    "stage": "演示舞台",
+    "stageSub": "两部手机并排展示",
+    "family": "家庭",
+    "families": {
+      "nguyen": "Nguyễn · VN→KR",
+      "wang": "Wang · CN→KR"
+    },
+    "clock": "模拟时钟",
+    "advanced": "时钟已快进 {n, plural, other {# 天}}",
+    "reset": "重置演示",
+    "resetConfirm": "将所有内容恢复到初始状态？",
+    "resetDone": "演示已重置",
+    "mockTitle": "正在使用浏览器内的 Mock API",
+    "cosigner": "共同签名人 · 手机",
+    "resetAgain": "再点一次即全部重置",
+    "jumpPromise": "跳到退款承诺日",
+    "jumped": "时钟已到 {date}",
+    "noPromise": "还没有等待承诺日的退款"
+  },
+  "notify": {
+    "approval": "学费待您批准",
+    "approvalBody": "各项检查已完成，不到一分钟就能办好。",
+    "review": "去查看",
+    "claimReady": "退款申请已拟好，批准后即可发送。",
+    "paid": "韩光大学已收到学费，账单已标记为已缴。",
+    "rentPaid": "房租已付给房东。",
+    "rentAuto": "房租已自动支付",
+    "rentAutoBody": "在您的每月额度内。30 分钟内可撤销。",
+    "cancelled": "付款已撤销",
+    "refundHome": "退款已退回您的账户",
+    "refundApproved": "韩光大学已批准退款",
+    "blocked": "已拦截一笔付款请求",
+    "blockedBody": "有人试图把钱转到未验证的账户。资金分文未动。",
+    "frozen": "向外付款已暂停",
+    "unfrozen": "仍有效的原授权额度会恢复，无需重新签署额度。已取消的付款不会自动重发。",
+    "cosignNeeded": "家人需要您的第二签名",
+    "cosignNeededBody": "有一个请求疑似诈骗，目前没有任何资金转出。",
+    "scamPaused": "一个可疑请求已暂停 24 小时",
+    "scamPausedBody": "已请 Lan 核实，没有任何资金转出。",
+    "cosigned": "Lan 已核实可疑请求"
+  },
+  "parent": {
+    "tabs": {
+      "home": "首页",
+      "activity": "记录",
+      "assistant": "助手"
+    },
+    "home": {
+      "hello": "{name}，您好",
+      "glance": "当前状态",
+      "headline": {
+        "frozen": "向外付款已暂停",
+        "approve": "{name}的学费已准备好，等您批准。",
+        "approveGeneric": "有一项事项需要您批准。",
+        "setLimit": "设好学费额度，助手就能为 Linh 准备付款。",
+        "refund": "学费正在退回给您，您无需操作。",
+        "moving": "学费正在汇往韩光大学，您无需操作。",
+        "nothing": "暂无需要您处理的事项。",
+        "studentSigns": "{name} 正在签退款表格，您不用做什么。",
+        "windowNotOpen": "学校缴费期 {date} 开始，在那之前您不用做什么。"
+      },
+      "cta": {
+        "unfreeze": "管理冻结",
+        "review": "立即查看",
+        "setLimit": "设置额度"
+      },
+      "whereLabel": "钱在哪里",
+      "where": {
+        "home": "在您的账户中",
+        "onTheWay": "正在汇往首尔",
+        "atSchool": "已付给韩光大学",
+        "atSchoolRefund": "在韩光大学，已申请退款",
+        "returning": "正在退回给您"
+      },
+      "safeLabel": "是否安全",
+      "safe": "只付给韩光大学认证的账户",
+      "safeRent": "只付给已核验的房东",
+      "balance": "余额",
+      "boundaries": "您的额度",
+      "noMandate": "设置学费额度",
+      "noMandateSub": "设定一次，助手永远无法超出。",
+      "seeAll": "查看全部",
+      "recent": "最近",
+      "freeze": "暂停向外付款",
+      "freezeSub": "仍在30分钟保留期内的付款会取消，钱会退回。其他向外付款审批会暂停。",
+      "tuition": "学费",
+      "refund": "退款",
+      "noRentMandate": "设置每月房租额度",
+      "noRentMandateSub": "Seoul Garden Residence，银行已核对户名。每月不超过固定金额，随时可以取消。"
+    },
+    "activity": {
+      "title": "记录",
+      "empty": "暂无记录。",
+      "refunds": "退款",
+      "payments": "付款",
+      "approvals": "审批",
+      "blocked": "已为您拦截",
+      "blockedKind": {
+        "redirect": "企图更改退款账户",
+        "fakeInvoice": "带新账户的虚假账单",
+        "other": "违反规则的请求"
+      }
+    },
+    "chat": {
+      "title": "助手",
+      "sub": "学费相关问题，尽管问",
+      "s1": "钱到账了吗？",
+      "s2": "要付多少越南盾？",
+      "s3": "能一键冻结所有付款吗？",
+      "s4": "把学费换成加密货币赚点收益"
+    }
+  },
+  "mandate": {
+    "purpose": {
+      "tuition": "学费",
+      "rent": "每月房租",
+      "living": "生活费"
+    },
+    "status": {
+      "pending_signature": "未签署",
+      "active": "生效中",
+      "revoked": "已撤销",
+      "expired": "已过期",
+      "suspended": "已冻结"
+    },
+    "ruleCredentialed": "仅限学费，付到韩光大学认证的账户",
+    "ruleNameChecked": "只付给 {payee}，户名已经银行核验",
+    "cap": "最高",
+    "capMonthly": "每月最高",
+    "used": "已用 {amount}",
+    "until": "有效期至 {date}",
+    "cosigner": "有风险时由 Lan 联签",
+    "onChain": "已上存证链 · 区块 #{n}",
+    "cycle": "每个自然月支付一次，不超过额度",
+    "landlordCheck": "只付到银行核对过户名的这位房东账户，无法添加其他账户。",
+    "change": "修改",
+    "cancel": "取消额度",
+    "cancelConfirm": "再点一次确认取消"
+  },
+  "mandateNew": {
+    "back": "返回",
+    "title": "设置学费额度",
+    "lead": "边界只需设定一次。助手只能在额度内准备付款，既不能超出，也不能修改。",
+    "who": "收款方范围",
+    "whoValue": "仅限韩光大学认证的账户",
+    "whoHint": "邮件、账单或聊天中写的账户一律无法添加。大学的账户只能由大学自己认证。",
+    "locked": "为保障安全，不可更改",
+    "cap": "最高金额",
+    "presetInvoice": "账单金额 {amount}",
+    "capHint": "即使在额度内，首笔付款仍需您批准。",
+    "until": "有效期至",
+    "cosign": "有风险时请 Lan 联签",
+    "cosignHint": "仅限异常请求，日常付款不需要",
+    "summary": "{date} 前，助手可准备不超过 {cap} 的学费付款，且只付给韩光大学认证的账户。",
+    "summaryCosign": "看起来有风险的付款由 Lan 联签。",
+    "never": "助手永远不能：提高此额度、添加新账户、把退款转到您以外的账户，或把钱换成加密货币。",
+    "sign": "用通行密钥签署",
+    "sheetTitle": "签署学费额度",
+    "done": {
+      "title": "额度已设置",
+      "body": "从现在起，助手只在这个边界内操作。额度指纹已记录，任何人都无法悄悄修改。",
+      "hash": "额度指纹",
+      "chain": "存证链 · 区块 #{n}",
+      "home": "完成"
+    },
+    "titleRent": "设置每月房租额度",
+    "leadRent": "房租只付给经您的银行核验的那位房东。额度内每月自动支付，并通知您，30 分钟内可撤销。",
+    "whoRent": "仅限 {payee}",
+    "whoRentHint": "您的银行已核实，该账户属于租约上写明的房东。其他账户一律无法收款。",
+    "presetRent": "每月房租 {amount}",
+    "capHintRent": "超出额度或付给其他收款方的，仍会交由您批准。",
+    "summaryRent": "{date} 前，助手每月最多可付 {cap}，且只付给 {payee}。",
+    "sheetTitleRent": "签署房租额度",
+    "leaseRequired": "租约：等待学生上传",
+    "leaseVerified": "租约已与银行记录核对（MOCK）",
+    "account": "账户 {masked}，银行已核对户名"
+  },
+  "payment": {
+    "status": {
+      "awaiting_approval": "待批准",
+      "executing": "汇款中",
+      "sent": "在途",
+      "received_by_bursar": "已收款",
+      "matched": "已缴清",
+      "cancelled": "已撤销",
+      "failed": "失败"
+    },
+    "statusLong": {
+      "awaiting_approval": "等待批准。",
+      "executing": "Lotus Home Bank 正在汇出。",
+      "sent": "正在汇往首尔。",
+      "received_by_bursar": "韩光大学已收款，正在与账单核对。",
+      "matched": "韩光大学已将账单标记为已缴，全部完成。",
+      "cancelled": "已撤销，钱已退回您的账户。",
+      "failed": "付款失败，您的账户未扣款。"
+    },
+    "step": {
+      "executing": "已批准，银行已汇出",
+      "sent": "正在汇往首尔",
+      "received_by_bursar": "韩光大学已收款",
+      "matched": "账单已标记为已缴"
+    },
+    "purpose": {
+      "tuition": "学费",
+      "rent": "房租",
+      "living": "生活费"
+    },
+    "auto": "自动",
+    "back": "返回",
+    "to": "收款方：{payee}",
+    "paid": "从您的账户支付 {amount}",
+    "autoExplain": "这笔付款在您签署的每月额度内，且付给同一位已核验的房东，因此自动支付。已通知您，30 分钟内可撤销。",
+    "cancelledBody": "已在撤销期内撤销，全部款项（含手续费）已退回您的账户。",
+    "cancelConfirm": "撤销这笔付款？全部款项将退回您的账户。",
+    "cancel": "免费撤销 · 剩 {m} 分钟",
+    "amounts": "金额",
+    "debited": "兑换金额",
+    "fees": "手续费",
+    "total": "账户支出合计",
+    "received": "实收",
+    "reference": "参考号",
+    "evidence": "存证 · 区块 #{n}",
+    "payee": "收款方",
+    "history": "历史记录"
+  },
+  "refund": {
+    "title": "学费退款",
+    "daysLeft": "还剩 {n} 天",
+    "days": "天",
+    "status": {
+      "refusal_reported": "已报告拒签",
+      "evidence_verified": "通知书已核验",
+      "requested": "已提交申请",
+      "acknowledged": "韩光大学已受理",
+      "approved": "韩光大学已批准",
+      "sent": "正在退回",
+      "received": "已退回您的账户",
+      "reconciled": "已到账 · 明细已出",
+      "manual_review": "学校审核中"
+    },
+    "expected": "预计退回：{amount}",
+    "home": "您的账户",
+    "bursar": "财务处",
+    "destinationLocked": "只能退回原付款账户（{account}），任何人都无法更改。",
+    "deadline": "韩光大学须在 {date} 前退款",
+    "open": "查看退款",
+    "back": "返回",
+    "statement": "为什么退回的钱少一点",
+    "sentOut": "汇给学校",
+    "receivedBack": "已退回账户",
+    "lines": {
+      "OUTBOUND_FEE": "汇出手续费",
+      "OUTBOUND_FX_MARGIN": "汇出时银行点差",
+      "NON_REFUNDABLE_FEE": "韩光大学不予退还的入学费",
+      "RATE_MOVEMENT": "汇率变动",
+      "RETURN_FX_MARGIN": "退回时银行点差",
+      "INBOUND_FEE": "入账手续费",
+      "FX_MOVEMENT_MOCK": "换回本币",
+      "RETENTION": "学校扣留",
+      "OUTBOUND_BANK_FEE": "汇出时的银行手续费",
+      "INTERMEDIARY_BANK_FEE_MOCK": "中间银行电汇费"
+    },
+    "lossNote": "学校已退还学费。差额（汇出金额的 {pct}%）是银行和换汇费用，每一笔都来自银行记录。",
+    "progress": "进度",
+    "history": "历史记录",
+    "backAmount": "已退回您的账户：{amount}",
+    "hero": {
+      "back": "{amount} 已退回原账户",
+      "estimate": "约 {amount} 会退回",
+      "estimateNote": "到账前为估算",
+      "manual": "退款金额由教务处决定",
+      "whole": "学费会退回"
+    },
+    "fact": {
+      "when": "何时",
+      "where": "退到哪里",
+      "why": "为什么少一点"
+    },
+    "when": {
+      "promise": "最晚 {date}",
+      "promiseSub": "韩光大学在开学（{start}）后 {n} 天内退款。",
+      "back": "{date} 到账",
+      "backSub": "按时到账：学校承诺的日期是 {date}。",
+      "manual": "暂无日期",
+      "manualSub": "已经开学，所以由教务处人工审核。不做任何猜测。"
+    },
+    "where": {
+      "sub": "只退回原付款账户。无论聊天、邮件还是 PDF，谁都改不了。"
+    },
+    "why": {
+      "value": "比汇出时少 {amount}",
+      "valueEstimate": "比汇出时少约 {amount}",
+      "sub": "是银行手续费和换汇回来的差价。学校一分不扣。",
+      "link": "查看每一笔"
+    },
+    "expectedBack": "预计退回",
+    "hints": {
+      "OUTBOUND_BANK_FEE": "汇款时已付，银行不退。",
+      "FX_MOVEMENT_MOCK": "退回时韩元→美元→本币，约 {pct}%。",
+      "INTERMEDIARY_BANK_FEE_MOCK": "中间行收取国际电汇费。",
+      "RETENTION": "无：学校没有收入学费。"
+    },
+    "lossNoteEstimate": "学校退还学费。这些银行和换汇费用（约 {pct}%）是 MOCK 估算，最终金额以到账时银行的记录为准。",
+    "paperwork": "文件",
+    "forms": {
+      "admission_withdrawal": {
+        "title": "撤销入学",
+        "sub": "以后仍可重新申请。这不是休学。"
+      },
+      "tuition_refund_application": {
+        "title": "退款申请",
+        "sub": "请学校把已付款项退回原付款账户。"
+      },
+      "visa_denial_letter": {
+        "title": "拒签通知",
+        "sub": "作为证明附上"
+      },
+      "signed": "{who} 已签 · {date}",
+      "waiting": "等待 {who} 签名",
+      "view": "查看",
+      "note": "这是通行密钥所签内容的可读副本，不是手写签名。这里不会自动给学校发邮件。",
+      "signedYou": "你已签 · {date}",
+      "waitingYou": "等待你签名"
+    },
+    "steps": {
+      "requested": "表格已提交学校",
+      "acknowledged": "学校确认收到",
+      "approved": "学校批准退款",
+      "sent": "学校汇出退款",
+      "received": "退款到账"
+    },
+    "eta": "{date} 前",
+    "separateNote": "宿舍费和健康保险不经 BursarBridge 支付，因此不在这笔退款中。未使用的宿舍费按宿舍自身规定处理。"
+  },
+  "freeze": {
+    "bannerTitle": "向外付款已暂停",
+    "bannerBody": "退给爸爸的钱仍会到账。对方已收到的款项无法在这里撤回。",
+    "manage": "管理",
+    "back": "返回",
+    "title": "暂停向外付款",
+    "lead": "仍在30分钟保留期内的付款会取消，钱会退回。其他向外付款审批会暂停。",
+    "frozenTitle": "向外付款已暂停",
+    "frozenBody": "仍在30分钟保留期内的付款已取消，其他向外付款审批已暂停。",
+    "what": {
+      "revoke": "撤回尚未使用的付款权限",
+      "cancel": "取消仍在30分钟保留期内的付款并退回资金",
+      "pause": "暂停其他向外付款审批，保留原签名"
+    },
+    "stats": {
+      "revoked": "项权限已撤销",
+      "cancelled": "笔付款已撤销",
+      "ms": "毫秒",
+      "paused": "已暂停审批",
+      "suspended": "已暂停额度"
+    },
+    "cta": "立即冻结",
+    "ctaHint": "冻结无需通行密钥，解冻需要。",
+    "unfreeze": "解除冻结",
+    "unfreezeHint": "仍有效的原授权额度会恢复，无需重新签署额度。已取消的付款不会自动重发。",
+    "unfreezeTitle": "解除付款冻结",
+    "unfreezeLine": "解冻人",
+    "incoming": "退给爸爸的钱仍会到账。对方已收到的款项无法在这里撤回。",
+    "approvalPaused": "这笔请求正在等待。恢复付款后再查看，原内容不变。"
+  },
+  "approval": {
+    "close": "关闭",
+    "expires": "{h} 小时后过期",
+    "forInvoice": "Linh 的学费 · {term}",
+    "title": "审批",
+    "firstPayment": "首次向韩光大学付款",
+    "youPay": "您支付",
+    "fromAccount": "从 Lotus Home Bank {account} 扣款，含手续费",
+    "rateLine": "1 ₩ = {rate} {cur}",
+    "theyGet": "{payee}收到",
+    "glance": {
+      "payee": "该账户确实属于{payee}",
+      "payeeSub": "经大学认证、银行核对",
+      "cost": "汇率 1 ₩ = {rate} ₫ · 手续费 {fee}",
+      "costSub": "合计 {total}；学校实收 {receive}",
+      "pack": "银行材料已备齐",
+      "packSub": "无需您填写任何表格",
+      "cancel": "30 分钟内可撤销",
+      "cancelSub": "免费撤销，全额退回"
+    },
+    "why": "为什么需要您批准",
+    "whyFirst": "这是您首次向{payee}付款，没有您的批准，助手无法发出。之后在额度内付给对方，就不需要您再操作了。",
+    "whyGeneric": "这项请求超出了助手可自行处理的范围。",
+    "noCosign": "未发现风险，无需 Lan 联签。",
+    "breakdown": "费用明细",
+    "payee": "收款方",
+    "invoice": "付款用途",
+    "due": "{date} 到期",
+    "total": "合计",
+    "pack": "银行材料",
+    "raw": "技术细节",
+    "rawHint": "这就是您的通行密钥要签署的指令原文。银行会重新计算指纹，内容稍有不同即拒绝。",
+    "consentHash": "内容指纹",
+    "approve": "用通行密钥批准",
+    "approveHint": "仅批准这一笔付款，不涉及其他。",
+    "reject": "拒绝",
+    "rejectConfirm": "拒绝这笔付款？不会发出任何款项。",
+    "rejected": "已拒绝，未发出任何款项。",
+    "done": {
+      "title": "已批准",
+      "rejected": "已拒绝",
+      "expired": "该请求已过期",
+      "cooling_off": "冷静期中"
+    },
+    "cancelConfirm": "撤销这笔付款？全部款项将退回您的账户。",
+    "cancelFree": "免费撤销 · 剩 {m} 分钟",
+    "viewPayment": "查看付款详情",
+    "backHome": "返回首页",
+    "expiresMin": "{m} 分钟后过期"
+  },
+  "student": {
+    "tabs": {
+      "assistant": "助手",
+      "documents": "文件",
+      "timeline": "进度"
+    },
+    "home": {
+      "title": "学费助手",
+      "sub": "韩光大学 · 2027 春季学期",
+      "subWang": "韩光大学 · 大二",
+      "noPayment": "还没有付款",
+      "s1": "爸，第一学期的学费帮我转一下呗",
+      "s2": "要交多少越南盾？",
+      "s3": "签证拒签了，现在怎么办？",
+      "s4": "把学费拿去买加密货币赚点收益",
+      "s5": "我爸的护照号是多少？",
+      "w1": "房租交了吗？",
+      "w2": "让我叔叔也汇一部分，分开汇就不超额度了",
+      "w3": "这个月房租交了没？",
+      "titleWang": "家庭付款助手"
+    },
+    "timeline": {
+      "title": "进度",
+      "empty": "资金一有动向，每一步都会显示在这里。",
+      "payments": "付款",
+      "everything": "全部记录"
+    }
+  },
+  "timeline": {
+    "APPROVED": "已用通行密钥批准",
+    "EXECUTING": "银行已发起汇款",
+    "SENT": "已汇往首尔",
+    "RECEIVED_BY_BURSAR": "韩光大学已收款",
+    "MATCHED": "已与账单核对：已缴清",
+    "CANCELLED": "已撤销",
+    "RECALLED": "已撤销，银行已追回",
+    "AUTO_EXECUTED": "额度内自动支付",
+    "REFUSAL_REPORTED": "已收到拒签通知书",
+    "EVIDENCE_VERIFIED": "通知书已核验，符合退款条件",
+    "REQUESTED": "已向韩光大学提交退款申请",
+    "ACKNOWLEDGED": "韩光大学已受理申请",
+    "FOLLOWED_UP": "助手已按计划跟进",
+    "APPROVED_BY_BURSAR": "韩光大学已批准退款",
+    "RECONCILED": "退款已对账，明细已生成",
+    "actor": {
+      "agent": "助手",
+      "parent": "家长",
+      "student": "学生",
+      "bank": "银行",
+      "bursar": "韩光大学",
+      "system": "系统"
+    },
+    "REFUND_SENT": "学校已汇出退款",
+    "REFUND_RECEIVED": "退款已到账",
+    "PAYMENT_EXECUTED": "银行已汇出",
+    "PAYMENT_MATCHED": "已与账单核对：已缴清",
+    "PAYMENT_CANCELLED": "已撤销，资金已退回",
+    "EVIDENCE_VERIFIED_MOCK": "通知书已核验，符合退款条件",
+    "REFUND_REQUESTED": "已签表格提交学校",
+    "REFUND_ACKNOWLEDGED": "韩光大学已受理申请",
+    "REFUND_APPROVED": "韩光大学已批准退款",
+    "REFUND_NUDGE": "助手已按计划跟进",
+    "REFUND_ESCALATION_DRAFT": "已为您拟好升级投诉函",
+    "REFUND_RECONCILED": "退款已对账，明细已生成",
+    "REFUND_DEADLINE_BREACH": "学校超过了承诺日期",
+    "ESCALATION_DRAFT_REQUIRES_STUDENT_APPROVAL": "催办信已拟好，等待学生确认"
+  },
+  "site": {
+    "nav": {
+      "demo": "演示舞台",
+      "trust": "信任中心",
+      "judge": "评审控制台"
+    }
+  },
+  "trust": {
+    "title": "信任中心",
+    "lead": "智能体和策略引擎的每一个决定，都会写入哈希链日志，并锚定在许可链上。不必轻信我们：改一个字节，亲自验证。",
+    "stats": {
+      "entries": "日志条目",
+      "anchors": "锚定次数",
+      "block": "最新区块"
+    },
+    "log": "审计日志",
+    "logSub": "最新在前",
+    "checking": "正在核验 {n}/{total}",
+    "anchoredIn": "已锚定于区块 #{n}",
+    "mismatch": "哈希不一致：该条目已被篡改",
+    "verified": "已验证",
+    "verify": {
+      "title": "验证",
+      "body": "从第一条开始重新计算每个哈希，并将每个 Merkle 根与对应锚点比对。",
+      "cta": "验证完整日志",
+      "running": "正在重新计算哈希…",
+      "ok": "日志完整",
+      "okDetail": "{entries} 个条目链接正确；{anchors} 个锚点与 Merkle 根一致。",
+      "fail": "检测到第 #{seq} 条被篡改"
+    },
+    "tamper": {
+      "title": "试着作弊",
+      "body": "任选一条记录，改动一个字节，就像内部人员篡改记录那样。然后点“验证”。",
+      "pick": "点击日志中的一行来选择条目，或直接按按钮。",
+      "selected": "已选中第 #{seq} 条",
+      "cta": "改动一个字节",
+      "restore": "恢复"
+    },
+    "chain": {
+      "title": "存证链",
+      "connected": "已连接",
+      "offline": "离线",
+      "anchors": "最近锚定",
+      "range": "条目 {from}–{to}",
+      "mismatch": "根哈希不一致",
+      "genesis": "创世",
+      "rootOk": "根哈希一致",
+      "pending": "最新 {n} 条记录等待下一次锚定"
+    },
+    "realVsMocked": "哪些是真的，哪些是模拟的",
+    "realVsMockedLead": "当前 API 模式：{mode}。机构均为虚构，不涉及真实资金，链上不存个人数据。",
+    "chainSub": "按时间顺序；每条记录封存前一条",
+    "untrusted": "#{seq} 之后的记录均不可信：后续每一环都建立在被篡改的记录之上。",
+    "hero": {
+      "integrity": "完整性",
+      "intact": "完好",
+      "broken": "断于 #{seq}",
+      "checking": "校验中…",
+      "unverified": "尚未校验",
+      "contracts": "合约"
+    }
+  },
+  "rvm": {
+    "component": "组件",
+    "status": "状态",
+    "notes": "说明",
+    "kind": {
+      "real": "真实",
+      "mock": "Mock",
+      "sim": "模拟",
+      "browser": "浏览器内 Mock",
+      "local": "仅本地",
+      "scripted": "脚本"
+    },
+    "rows": {
+      "policy": {
+        "name": "策略引擎（L0–L3、L-X 分级）",
+        "note": "在大模型之外运行的确定性规则。MOCK 模式下由浏览器回放相同的决策。"
+      },
+      "audit": {
+        "name": "哈希链审计日志",
+        "note": "SHA-256 哈希链；两种模式下，篡改与验证都真实执行。"
+      },
+      "anchor": {
+        "name": "FISCO BCOS 上的 Merkle 锚定",
+        "note": "团队运营的许可制测试链。只上链哈希，不发行代币，不含个人数据。"
+      },
+      "passkey": {
+        "name": "通行密钥（WebAuthn）",
+        "note": "由真实设备的通行密钥对授权哈希签名。另设演示验证器供演示使用，并已明确标注。"
+      },
+      "credential": {
+        "name": "大学收款方凭证（VC-JWT）",
+        "note": "由模拟大学签发的 did:key Ed25519 凭证。"
+      },
+      "agent": {
+        "name": "AI 智能体",
+        "note": "通过供应商适配器调用大模型，或使用确定性的脚本化提供方。从不持有支付凭证。"
+      },
+      "bank": {
+        "name": "Lotus Home Bank",
+        "note": "虚构银行：账本、授权、撤销窗口和材料包均为模拟。"
+      },
+      "bursar": {
+        "name": "韩光大学财务处",
+        "note": "虚构大学：付款状态和退款决定均为模拟。"
+      },
+      "fx": {
+        "name": "汇率",
+        "note": "模拟银行牌价，并公开点差（LIVE 模式下，覆盖币种采用欧洲央行数据）。"
+      },
+      "clock": {
+        "name": "计时用时钟",
+        "note": "采用模拟时钟，30 天退款期限几分钟即可演示完。"
+      },
+      "letters": {
+        "name": "签证结果通知书",
+        "note": "合成样本。智能体从不查询出入境系统。"
+      },
+      "orgs": {
+        "name": "人物与机构",
+        "note": "Minh、Linh、韩光大学和 Lotus Home Bank 均为虚构。"
+      },
+      "screening": {
+        "name": "制裁名单筛查",
+        "note": "将收款方名称与制裁名单比对。"
+      }
+    },
+    "runNotes": {
+      "anchorLocal": "本次运行仅使用本地哈希链：没有任何内容锚定到 FISCO BCOS。",
+      "agentScripted": "本次运行使用确定性的脚本应答，而非托管模型。",
+      "screeningSynthetic": "本次运行使用小型合成名单筛查，而非真实制裁数据。"
+    }
+  },
+  "judge": {
+    "title": "评审控制台",
+    "lead": "二十个来自研究方案的脚本化场景，每个都设有预期处置结果。每次运行都会把证据写入审计日志。",
+    "run": "运行 {n} 个场景",
+    "runOne": "运行",
+    "stop": "停止",
+    "mockNote": "当前为 MOCK 模式：结果在浏览器中回放，用于展示控制台。在演示控制面板切换到 LIVE，即可对 API 运行真实测试框架。",
+    "score": {
+      "passed": "通过",
+      "failed": "未通过",
+      "attacks": "已拦截攻击",
+      "avg": "平均耗时"
+    },
+    "filter": {
+      "all": "全部",
+      "P0": "仅 P0",
+      "attacks": "攻击"
+    },
+    "summary": "{total} 项中通过 {passed} 项",
+    "col": {
+      "id": "ID",
+      "scenario": "场景",
+      "tags": "标签",
+      "result": "结果",
+      "ms": "ms"
+    },
+    "status": {
+      "pass": "通过",
+      "fail": "未通过",
+      "running": "运行中",
+      "queued": "排队中"
+    },
+    "details": "详情",
+    "expected": "预期",
+    "actual": "实际",
+    "evidence": "证据：",
+    "cli": "在终端运行同一套测试：",
+    "toTrust": "在信任中心查看证据",
+    "eyebrow": "预设场景及预期结果",
+    "groups": {
+      "flow": {
+        "title": "日常缴费",
+        "body": "代理在家长授权范围内协助，并在需要时主动询问。"
+      },
+      "attack": {
+        "title": "诈骗与攻击",
+        "body": "注入文本、伪造的银行信息和社会工程手段由规则拦截，而非依赖模型。"
+      },
+      "refund": {
+        "title": "退款",
+        "body": "款项退回原付款人，任何人都无法改道。"
+      },
+      "control": {
+        "title": "家长控制与证据",
+        "body": "取消保留期内的付款，暂停向外付款审批，记录每一处改动。"
+      }
+    }
+  },
+  "stage": {
+    "title": "演示舞台",
+    "lead": "两部手机运行的都是真实应用，共用同一个后端。按七个场景依次演示；按钮只是预填真人会做的操作。",
+    "advanced": "时钟已快进 {n, plural, other {# 天}}",
+    "reset": "重置演示",
+    "resetConfirm": "将所有内容恢复到初始状态？",
+    "phoneParent": "Minh · 家长 · 岘港",
+    "phoneStudent": "Linh · 学生",
+    "phoneParentWang": "王建国 · 家长 · 成都",
+    "phoneStudentWang": "王浩 · 学生 · 首尔",
+    "log": "实时证据",
+    "openTrust": "打开",
+    "smallTitle": "一部手机体验全家流程",
+    "smallBody": "在下方打开家人的应用，或跟着七个场景操作。演示菜单可以切换家人。",
+    "openParent": "打开家长端",
+    "openStudent": "打开学生端",
+    "a": {
+      "openLimit": "在 Minh 的手机上打开",
+      "cueVague": "Linh 含糊地提问",
+      "cueInvoice": "Linh 转发账单",
+      "openParent": "显示 Minh 的首页",
+      "cueDiscount": "转发“折扣”邮件",
+      "cueRefusal": "转发拒签通知书",
+      "plus3": "+3 天",
+      "cueRedirect": "转发“退款代理”邮件",
+      "openTrust": "打开信任中心",
+      "wang": "切换到王家",
+      "openRent": "打开房租额度",
+      "cueRent": "王浩请求付房租",
+      "plus30": "+30 天",
+      "cuePolice": "转发“警察”消息",
+      "openLan": "查看 Lan 的手机",
+      "backMinh": "回到 Minh 的手机",
+      "skipHold": "跳过 30 分钟撤销期",
+      "weekLater": "一周后（+7 天）",
+      "jumpPromise": "跳到学校承诺日",
+      "cueLease": "浩上传租房合同",
+      "openTimeline": "查看入学时间线",
+      "openStudentChat": "返回聊天",
+      "openFreeze": "暂停或恢复付款"
+    },
+    "scenes": {
+      "1": {
+        "title": "设定边界",
+        "cue": "在 Minh 的手机上点“设置额度”：仅限已认证收款方，上限为账单金额，有效期至三月。用通行密钥签署。",
+        "say": "目标和边界，由人一次设定。"
+      },
+      "2": {
+        "title": "Linh 转发账单",
+        "cue": "Linh 先用越南语含糊地提问，智能体不去猜，而是请她提供账单。她转发后，智能体核验签名、收款方凭证、规则和报价。",
+        "say": "收款方、金额和去向，永远不由 AI 决定。"
+      },
+      "3": {
+        "title": "Minh 批准这一具体操作",
+        "cue": "阿明收到一张卡片：用越南盾支付多少、韩光大学收到多少韩元、汇率与加价、已验证的收款方、材料齐全。用通行密钥批准后，阿玲的对话里会显示“钱正在路上”。跳过 30 分钟撤销期即可看到“已付款”。",
+        "say": "不到一分钟，用越南语，在手机上完成。"
+      },
+      "4": {
+        "title": "攻击来了",
+        "cue": "Linh 转发一封带新账户的“提前缴费享 15% 折扣”邮件。红色卡片说明对方试图做什么、为什么被拦截。",
+        "say": "邮件里的文字，永远成不了收款方。",
+        "cue2": "接着是施压诈骗：一条“警察”消息要求向“安全账户”交保证金。一切暂停 24 小时，远在岘港的 Lan 收到一个平静的请求：先向 Linh 核实。"
+      },
+      "5": {
+        "title": "签证被拒",
+        "cue": "一周后签证被拒。Linh 转发通知，并亲自签署两份表格：撤销入学和退款申请。钱只能退回 Minh 的账户。“退款代理”想改收款账户，被拒绝。跳到学校承诺日（开学两周后），Minh 看到退回多少、为什么少一点。",
+        "say": "拒签退款这条最难的路，没有别人端到端负责到底。"
+      },
+      "6": {
+        "title": "拿出证据",
+        "cue": "在信任中心改动日志中的一个字节，然后点“验证”：系统会精确定位被改的条目和锚点。恢复后再验证一次。",
+        "say": "防篡改，经得起监管检查。"
+      },
+      "7": {
+        "title": "日常自主",
+        "cue": "切换到王家（CN→KR，中文界面）。浩请求付房租，助手要求租房合同和房租额度。浩上传租约（与银行记录核对），王先生为已核对户名的房东设置每月额度，房租便在额度内自动支付，并有通知和撤销窗口。",
+        "say": "智能体参与其中，但始终在人设定的边界之内。"
+      }
+    },
+    "phoneLan": "Lan · 共同签名人 · 岘港",
+    "advancedHours": "时钟已前进 {n, plural, other {# 小时}}",
+    "jumped": "时钟已到 {date}",
+    "noPromise": "还没有等待承诺日的退款",
+    "phoneRefund": {
+      "title": "一部手机看完退款",
+      "s1": "以 Linh 身份：转发拒签通知并签署两份表格。",
+      "s2": "3月2日开学，学校两周内退款。把时钟拨到那天：",
+      "s3": "以 Minh 身份：看退回多少、何时、退到哪个账户、为什么少一点。"
+    }
+  },
+  "landing": {
+    "eyebrow": "Fintechathon 2026 · 赛题 C · AI 作为金融参与者",
+    "h1": "学费安全付，拒签钱退回。",
+    "lead": "BursarBridge 是一个 AI 智能体：从家庭所在国的银行为留学生缴纳学费，只付款给经大学密码学认证的账户；一旦签证被拒，把钱退回给父母。",
+    "ctaDemo": "进入在线演示",
+    "ctaParent": "打开家长端",
+    "ctaTrust": "信任中心",
+    "honest": "大学和银行均为虚构，资金为模拟。所有模拟部分都已标注。",
+    "hero": {
+      "label": "Linh 的学费 · 2027 春季学期",
+      "waiting": "等爸爸批准",
+      "pay": "Minh 支付",
+      "receives": "韩光大学收到",
+      "c1": "账户经韩光大学认证",
+      "c2": "综合成本比中间价高 1.03%",
+      "c3": "银行材料已备齐",
+      "cta": "用通行密钥批准",
+      "blocked": "已拦截“15% 折扣”虚假账单",
+      "blockedSub": "新账户，未经大学认证"
+    },
+    "stats": {
+      "s1": {
+        "n": "五分之一",
+        "text": "2025-26 财年澳大利亚学生签证申请的拒签比例。家庭往往在结果出来之前就已缴清学费。"
+      },
+      "s2": {
+        "n": "3–10 周",
+        "text": "拒签退款的通常等待时间，按退款当日汇率重新兑换，还常被扣除手续费和留存款。"
+      },
+      "s3": {
+        "n": "15%",
+        "text": "虚假账单常打出的“提前缴费折扣”，配上一个全新账户。典型的学费诈骗。"
+      }
+    },
+    "moments": {
+      "kicker": "三个关键时刻",
+      "title": "家庭一年中最大的一笔汇款，交给一位沉稳的管家",
+      "pay": {
+        "title": "只付给真正的大学",
+        "body": "智能体读取账单，核验大学签发的收款方凭证，获取综合报价，并备齐银行材料。家长签署的正是这一笔。",
+        "c1": "凭证由大学签发",
+        "c2": "账户与户名一致",
+        "c3": "越南国家银行第20/2022号通知材料已备齐"
+      },
+      "attack": {
+        "title": "拦下虚假账单",
+        "body": "带新账户的折扣邮件寸步难行：这个账户从未获认证，信息也来自不可信文本。家人看到的拦截原因通俗易懂。",
+        "card": "付款已拦截，未发出任何款项。"
+      },
+      "refund": {
+        "title": "把钱带回家",
+        "body": "签证被拒时，智能体提交退款申请、按计划跟进，并拒绝任何改道。退款只能退回原付款账户。"
+      }
+    },
+    "tiers": {
+      "kicker": "安全源于设计",
+      "title": "AI 提议，策略引擎决定。",
+      "lead": "每个操作都封装为一个请求信封，由模型之外的确定性规则裁决。模型从不持有凭证，也从不提供收款方、金额或去向。",
+      "L0": {
+        "name": "告知",
+        "body": "解释账单、截止日期、规则和综合成本。"
+      },
+      "L1": {
+        "name": "准备",
+        "body": "读取文件、整理材料包、起草申请。不对外发出任何东西。"
+      },
+      "L2": {
+        "name": "授权内执行",
+        "body": "同一已核验收款方、不超签署上限、无不可信数据，并保留撤销窗口。"
+      },
+      "L3": {
+        "name": "升级确认",
+        "body": "首次付款、新收款方、任何有风险的操作：由家长签署具体操作。"
+      },
+      "LX": {
+        "name": "绝不",
+        "body": "提高自身额度、从文本添加收款方、改道退款、拆分付款规避额度、加密货币。"
+      }
+    },
+    "proof": {
+      "kicker": "用证据，不靠承诺",
+      "title": "改一个字节，日志就告诉你在哪",
+      "lead": "每个决定都与上一个哈希相连，并以 Merkle 批次锚定在许可制 FISCO BCOS 链上。链上只存哈希。",
+      "cta": "去信任中心试试",
+      "b1": "已签署授权：学费 ≤ ₩7,174,000",
+      "b2": "ESCALATE：首次向韩光大学付款",
+      "b3": "付款至 •••• 2207 → 已被改动",
+      "b4": "财务处：账单已缴清",
+      "mismatch": "不一致"
+    },
+    "people": {
+      "kicker": "为真实的人设计",
+      "title": "紧张的家长、忙碌的学生、挑剔的评委",
+      "minh": {
+        "role": "家长 · 岘港 · 越南语",
+        "name": "Minh",
+        "body": "岘港的店主，从越南盾账户为在韩国读书的女儿支付学期费用。只有在需要对某件具体的事说“行”或“不行”时，他才会打开应用。",
+        "cta": "打开 Minh 的手机"
+      },
+      "linh": {
+        "role": "学生 · 即将赴首尔",
+        "name": "Linh",
+        "body": "转发账单和信件，用越南语俚语聊天，再也不用在钱的事上当传话筒。",
+        "cta": "打开 Linh 的手机"
+      },
+      "judge": {
+        "role": "评委 · 审计方",
+        "name": "您",
+        "body": "运行全部二十个场景，查看每一个决定，亲手篡改日志试试。",
+        "cta": "打开评审控制台"
+      }
+    },
+    "rvm": {
+      "kicker": "默认诚实",
+      "title": "哪些是真的，哪些是模拟的",
+      "lead": "不涉及任何真实资金、银行或大学。以下逐项列明本演示中哪些部分是真实运行的。"
+    },
+    "footer": {
+      "entry": "Fintechathon 2026 国际赛道参赛作品（清华五道口 × 微众银行）",
+      "fictional": "韩光大学和 Lotus Home Bank 均为虚构，不涉及真实资金流动。"
+    }
+  },
+  "errors": {
+    "FROZEN": "付款已冻结，请先解除冻结。",
+    "APPROVAL_EXPIRED": "该请求已过期，请让助手重新准备。",
+    "CONSENT_MISMATCH": "打开后内容有变动，未发出任何款项。",
+    "INVOICE_SETTLED": "该账单已缴清。",
+    "ROLE_REQUIRED": "需要其他家庭成员操作。",
+    "INVALID_STATE": "此事项已无需您处理。",
+    "POLICY_DENIED": "家庭规则不允许此操作。",
+    "UNAUTHENTICATED": "登录已过期，请重试。",
+    "RATE_LIMITED": "操作太频繁，请稍后再试。",
+    "generic": "出了点问题，未发出任何款项。",
+    "CHALLENGE_REQUIRED": "签名请求已超时，请再点一次。",
+    "NOT_APPROVER": "这一项由另一位家人签名。",
+    "CONSENT_CHANGED": "内容已变更，请重新打开请求。",
+    "NOT_PENDING": "这一项已不再等待签名。",
+    "ASSERTION_REQUIRED": "请先用通行密钥签名。",
+    "CHAIN_UNAVAILABLE": "证据链暂时无响应，未发送任何内容，请稍后再试。",
+    "INVALID_ASSERTION": "通行密钥校验不匹配，未签署，请重试。",
+    "REFUND_POLICY_CHANGED": "已经开学，表格需要重新评估，请再问一次助手。",
+    "QUOTE_EXPIRED": "汇率已过期，请让助手重新报价。",
+    "INSUFFICIENT_FUNDS": "账户余额不足，未发送任何内容。"
+  },
+  "rel": {
+    "parent": "爸爸",
+    "student": "Linh",
+    "you": "你"
+  },
+  "needs": {
+    "title": "付款前还需要",
+    "body": "目前没有任何资金转出，还差以下几步。",
+    "you": {
+      "mandate": "签署学费授权额度",
+      "rent_mandate": "设置每月房租额度",
+      "admission": "转发录取通知书",
+      "invoice": "转发缴费通知书",
+      "refusal": "转发签证结果通知",
+      "other": "完成这一步",
+      "refusal_and_refund_forms": "转发拒签通知并签署两份退款表格",
+      "payment_settlement": "需先等银行完成学费付款",
+      "rental_agreement": "上传租房合同"
+    },
+    "other": {
+      "mandate": "{who}签署学费授权额度",
+      "rent_mandate": "{who} 设置每月房租额度",
+      "admission": "{who}转发录取通知书",
+      "invoice": "{who}转发缴费通知书",
+      "refusal": "{who}转发签证结果通知",
+      "other": "{who}完成一个步骤",
+      "refusal_and_refund_forms": "{who} 转发拒签通知并签署退款表格",
+      "payment_settlement": "需先等银行完成学费付款",
+      "rental_agreement": "{who} 上传租房合同"
+    },
+    "asked": "已提醒",
+    "ctaSign": "设置额度",
+    "ctaUpload": "去转发",
+    "done": "已完成",
+    "resume": "都准备好了，继续",
+    "resumeText": "都准备好了，请支付第一学期学费",
+    "doneTitle": "全部完成",
+    "doneBody": "所有步骤已完成，请求已继续处理。",
+    "doneBodyWaiting": "所有步骤已完成，正在准备付款请求…",
+    "refundTitle": "退款开始之前",
+    "refundBody": "只有学生本人能撤销入学并申请退款。目前没有任何资金变动。",
+    "refundDone": "表格已签署，申请已提交学校。",
+    "rentTitle": "付房租之前"
+  },
+  "cooling": {
+    "badge": "暂停 24 小时",
+    "parentTitle": "一个可疑请求已暂停",
+    "parentBody": "有人冒充警察，要求把“资金证明保证金”转入“安全账户”。没有任何资金转出，那个账户也永远不会被付款。",
+    "waitingLan": "等待 Lan 向 Linh 核实",
+    "lanChecked": "Lan 已向 Linh 核实：这是诈骗",
+    "close": "关闭此请求",
+    "closeConfirm": "关闭此请求？不会转出任何资金。",
+    "closed": "已关闭，没有任何资金转出。",
+    "studentTitle": "家人正在核实",
+    "studentBody": "没有任何资金转出。真正的警察不会要求交保证金或保密。妈妈会用你常用的号码给你打电话。",
+    "until": "暂停至 {time}",
+    "score": "诈骗信号 {score}",
+    "waitingLanStudent": "正在等妈妈给你打电话",
+    "lanCheckedStudent": "妈妈已确认：这是诈骗",
+    "closeYes": "确认关闭",
+    "parentHero": "您的钱很安全。有一件事需要您看一下。"
+  },
+  "cosigner": {
+    "role": "第二签名 · Nguyễn 家",
+    "hello": "{name}，您好",
+    "quietTitle": "目前没有需要您处理的事。",
+    "quietBody": "您是家里的第二签名人。只有在疑似诈骗时才会联系您，日常付款不会打扰您。",
+    "roleTitle": "您的职责",
+    "role1": "在任何异常资金流动前，打电话确认 Linh 和 Minh 是否安全。",
+    "role2": "确认某个请求是诈骗，让家人可以从容关闭它。",
+    "role3": "没有人可以让您转账。您的签名也永远不会让未经认证的账户收到钱。",
+    "kicker": "需要您现在处理",
+    "title": "有人在逼迫家人转账",
+    "body": "一条冒充警察的消息要求把“资金证明保证金”转入“安全账户”，还要求保密。目前没有任何资金转出。",
+    "whyTitle": "为什么像诈骗",
+    "toldTitle": "Linh 和 Minh 收到的提示",
+    "told1": "没有任何资金转出。通过 BursarBridge 永远无法向那个账户付款。",
+    "told2": "真正的警察、使馆或学校绝不会要求交保证金或保密。",
+    "told3": "在家人核实期间，一切暂停 24 小时。",
+    "doTitle": "现在该做什么",
+    "do1": "用您平时常用的号码亲自给 Linh 打电话，不要拨打消息里的号码。",
+    "do2": "在任何人转账之前，先和 Minh 商量。",
+    "do3": "如果联系不上 Linh，请您亲自拨打越南报警电话 113。",
+    "sign": "我已核实：这是诈骗",
+    "signHint": "您的签名记录您已亲自向 Linh 核实，它永远不会让那个账户收到钱。",
+    "cantReach": "我联系不上 Linh",
+    "cantReachBody": "继续拨打 Linh 的常用号码，并告诉 Minh。暂停期间不会转出任何资金。如果担心 Linh 的安全，请拨打 113。",
+    "sheetTitle": "签名确认已核实",
+    "sheetWhat": "您确认",
+    "sheetWhatValue": "我已亲自向 Linh 核实",
+    "signedTitle": "谢谢您，{name}",
+    "signedBody": "您的核实已记录。Minh 现在可以关闭这个请求，资金原封不动。",
+    "history": "此前",
+    "historySigned": "您已确认是诈骗",
+    "historyClosed": "已由 Minh 关闭",
+    "historyOpen": "已暂停，等待中"
+  },
+  "plan": {
+    "window": "缴费期 {range}",
+    "due": "截止 {date}（韩国时间）",
+    "status": {
+      "open": "进行中",
+      "not_open": "尚未开始",
+      "closed": "已截止",
+      "settled": "已缴",
+      "legacy_unspecified": "未签署日期"
+    },
+    "otherCosts": "本学期其他费用（另行缴纳）",
+    "perMonth": "/月",
+    "collector": "收款方：{who}",
+    "notThroughUs": "不经 BursarBridge 支付",
+    "nhis": "韩国国民健康保险（NHIS）",
+    "dormOffice": "韩光大学宿舍办公室"
+  },
+  "overdue": {
+    "title": "韩光大学已超过承诺日 {n} 天",
+    "promised": "承诺 {date} 前退款。未经学生同意不会发送任何内容。",
+    "chaser": "发给国际处的注明日期的催办信",
+    "chaserPreparing": "正在准备。",
+    "chaserYou": "已准备好，请阅读并确认。",
+    "chaserWaiting": "已准备好，由 {who} 阅读并确认。",
+    "chaserSent": "{date} 已发送至 {to}（MOCK 发件箱）。",
+    "chaserClosed": "未发送。",
+    "view": "查看",
+    "pack": "官方渠道投诉材料",
+    "packSub": "已为 {route} 准备。由学生本人提交；不保证能追回款项。",
+    "official": "官方网站",
+    "honest": "没有人能强迫学校付款。BursarBridge 让申请完整、有日期、有证据，并确保逾期的承诺不会石沉大海。",
+    "letterTitle": "关于退款的催办信",
+    "letterTo": "致 {to}",
+    "letterFacts": "承诺日 {date} · 拟于 {prepared}",
+    "approve": "确认并发送（MOCK）",
+    "sentMock": "已发送（MOCK）",
+    "waiting": "等待中",
+    "closed": "已关闭",
+    "studentApproves": "只有学生本人可以确认这封信。",
+    "to": "收件方",
+    "promise": "承诺日",
+    "channel": "方式",
+    "channelMock": "MOCK 发件箱，不发真实邮件"
+  },
+  "studyProgress": {
+    "refusedTitle": "签证被拒，学费请求已停止",
+    "moneySafe": "还没有付款，不需要退款。待处理的学费请求已关闭。",
+    "admissionNext": "请联系学校询问撤回入学或下期重新申请的办法。入学并未自动撤回。",
+    "parentNotice": "爸爸的家庭应用从{date}起可查看更新（MOCK）。没有向外发消息，也不代表爸爸已读。",
+    "catchingUpTitle": "记录正在更新",
+    "catchingUp": "确认记录正在后台更新，系统会自动重试。您可以继续查看，需要的付款核验会等待确认。",
+    "newAdmissionTitle": "请向学校申请新文件",
+    "newAdmission": "再次付款前，需要学校签署的新入学文件和账单。",
+    "windowTitle": "请查看缴费日期",
+    "windowBody": "正在等待学校确认的缴费时间，尚未转出资金。",
+    "journeyTitle": "从录取到签证结果",
+    "accepted": "学校确认录取",
+    "certificate": "入学证明已签发",
+    "visaPending": "签证申请已提交，等待结果",
+    "visaRefused": "已收到拒签材料",
+    "paymentWindow": "签证审核期间，学费缴费窗口开放",
+    "sequenceNote": "入学证明在付款前签发。这是演示用的虚构日期。",
+    "viewCertificate": "查看入学证明",
+    "requestStopped": "这笔学费请求已停止，没有付款。",
+    "approvalPaused": "这笔请求正在等待。恢复付款后再查看，原内容不变。"
+  }
+}

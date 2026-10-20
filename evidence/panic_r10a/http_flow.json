@@ -1,0 +1,780 @@
+{
+  "transport": "Real loopback HTTP on isolated port 18001",
+  "chainMode": "local",
+  "hostedCalls": 0,
+  "cancellation": {
+    "freeze": {
+      "frozen": true,
+      "reason": "USER_REQUESTED",
+      "frozenReason": "USER_REQUESTED",
+      "recovery": "parent_passkey_unfreeze",
+      "revokedTokens": 0,
+      "cancelledPayments": 1,
+      "pausedApprovals": 0,
+      "suspendedMandates": 1,
+      "incomingRefundsPaused": false,
+      "tookMs": 1.375
+    },
+    "unfreeze": {
+      "frozen": false,
+      "reason": null,
+      "frozenReason": null,
+      "restoredMandates": 1
+    },
+    "payment": {
+      "createdAt": "2027-01-12T03:00:00Z",
+      "purpose": "tuition",
+      "fees": {
+        "amount": "25000.00",
+        "currency": "VND"
+      },
+      "cancelUntil": null,
+      "id": "pay_240ef1532a8f62cc",
+      "status": "cancelled",
+      "send": {
+        "amount": "135663956.10",
+        "currency": "VND"
+      },
+      "receive": {
+        "amount": "7174000.00",
+        "currency": "KRW"
+      },
+      "payee": {
+        "verification": {
+          "method": "issuer_signed_tuition_virtual_account",
+          "purpose": "tuition"
+        },
+        "id": "payee_hanbit",
+        "name": "Hanbit University",
+        "institution": "Hanbit University (MOCK)",
+        "account": {
+          "masked": "\u2022\u2022\u2022\u2022 3104",
+          "hashMatch": true
+        },
+        "credential": {
+          "issuer": "did:key:z6MkvKcfmLQQrTow8zFtrJ63BjFALj1NekyYtecWmHWhjkEn",
+          "status": "valid",
+          "vcId": "16f0d058a95b5ab068cab9145eebf6383079c87d5d9fcf47544cfd66da216d7f",
+          "chainTx": null
+        },
+        "nameCheck": "match"
+      },
+      "mandateId": "mdt_eb9f696d2163855a",
+      "approvalId": "apr_88c4fc69dbcec81b",
+      "invoiceRef": "HBU-2027-0042-fam_minh",
+      "timeline": [
+        {
+          "at": "2027-01-12T03:00:00Z",
+          "code": "payment_executed",
+          "actor": "bank",
+          "params": {
+            "consentHash": "8e9d048ac7180e4b99b63c02f1a491253d0314a17768face0746111cb65d20d4",
+            "grantId": "grt_8832e7d202af7f4c"
+          },
+          "auditSeq": 10
+        },
+        {
+          "at": "2027-01-12T03:00:00Z",
+          "code": "payment_cancelled",
+          "actor": "freeze",
+          "params": {},
+          "auditSeq": 12
+        }
+      ],
+      "chainTx": null
+    },
+    "mandate": {
+      "purpose": "tuition",
+      "payeeRule": {
+        "type": "credentialed",
+        "issuer": "did:key:z6MkvKcfmLQQrTow8zFtrJ63BjFALj1NekyYtecWmHWhjkEn",
+        "payeeId": null
+      },
+      "cap": {
+        "amount": "7174000.00",
+        "currency": "KRW"
+      },
+      "period": "once",
+      "expiresAt": "2027-06-01T00:00:00Z",
+      "cosignerId": "usr_mother_lan",
+      "id": "mdt_eb9f696d2163855a",
+      "spent": {
+        "amount": "0.00",
+        "currency": "KRW"
+      },
+      "status": "active",
+      "hash": "9d45553fa17f4fc781ffe9d2f07b850bdf629ad7f41baf8758c70bb327feca76",
+      "chainTx": null
+    },
+    "balanceRestored": true
+  },
+  "refundWhileFrozen": {
+    "followUp": null,
+    "estimate": null,
+    "claimAmount": {
+      "amount": "7174000.00",
+      "currency": "KRW"
+    },
+    "policy": {
+      "admissionFee": "Nonrefundable if separately charged; none charged on this invoice",
+      "afterStart": "Manual degree-office assessment; no language-course day table applies",
+      "beforeStart": "Full paid tuition only; dormitory and NHIS payments are separate and excluded",
+      "classesStart": "2027-03-02T00:00:00Z",
+      "destination": "Original payer bank record only, including bank-held SWIFT",
+      "dormitory": "Ask the dormitory office about unused fees under its separate rule; no exact entitlement or timing verified",
+      "freshman": "Withdraw admission and reapply; leave of absence is not a substitute",
+      "id": "HBU-REF-01-v3",
+      "paymentWithinDaysAfterClassesStart": 14,
+      "promiseAt": "2027-03-16T00:00:00Z",
+      "settlement": "International office manual international wire (MOCK)",
+      "source": "Hanbit University fictional contractual policy (MOCK), not Korean law"
+    },
+    "paperwork": {
+      "admissionFeeCharged": {
+        "amount": "0.00",
+        "currency": "KRW"
+      },
+      "claimAmount": {
+        "amount": "7174000.00",
+        "currency": "KRW"
+      },
+      "deadline": "2027-03-16T00:00:00Z",
+      "destination": {
+        "accountId": "acct_parent_minh",
+        "bank": "Lotus Home Bank (MOCK)",
+        "maskedNumber": "\u2022\u2022\u2022\u2022 4821",
+        "source": "original_payer_bank_record",
+        "swift": "LOTUVNVX"
+      },
+      "documents": [
+        {
+          "consentHash": "050aad75d08880d4c25cba4a44a2176ab0b0e114c48b5fe4b964aaa7d0571306",
+          "kind": "admission_withdrawal",
+          "signedAt": "2027-01-12T04:00:00Z",
+          "signerId": "usr_student_linh",
+          "status": "signed"
+        },
+        {
+          "consentHash": "050aad75d08880d4c25cba4a44a2176ab0b0e114c48b5fe4b964aaa7d0571306",
+          "kind": "tuition_refund_application",
+          "signedAt": "2027-01-12T04:00:00Z",
+          "signerId": "usr_student_linh",
+          "status": "signed"
+        },
+        {
+          "documentId": "doc_64568804236472ba",
+          "kind": "visa_denial_letter",
+          "status": "attached_MOCK"
+        }
+      ],
+      "eligibility": "before_start_full_unused",
+      "evidenceHashes": {
+        "invoiceCredential": "16f0d058a95b5ab068cab9145eebf6383079c87d5d9fcf47544cfd66da216d7f",
+        "visaDenial": "17fc7504373f6da77ea3408844e56d1c8aecfc7772f9caa9df8398ded95717ab"
+      },
+      "policy": {
+        "admissionFee": "Nonrefundable if separately charged; none charged on this invoice",
+        "afterStart": "Manual degree-office assessment; no language-course day table applies",
+        "beforeStart": "Full paid tuition only; dormitory and NHIS payments are separate and excluded",
+        "classesStart": "2027-03-02T00:00:00Z",
+        "destination": "Original payer bank record only, including bank-held SWIFT",
+        "dormitory": "Ask the dormitory office about unused fees under its separate rule; no exact entitlement or timing verified",
+        "freshman": "Withdraw admission and reapply; leave of absence is not a substitute",
+        "id": "HBU-REF-01-v3",
+        "paymentWithinDaysAfterClassesStart": 14,
+        "promiseAt": "2027-03-16T00:00:00Z",
+        "settlement": "International office manual international wire (MOCK)",
+        "source": "Hanbit University fictional contractual policy (MOCK), not Korean law"
+      },
+      "requestedAt": "2027-01-12T04:00:00Z"
+    },
+    "classesStart": "2027-03-02T00:00:00Z",
+    "eligibility": "before_start_full_unused",
+    "id": "ref_e74e8a955b82fa97",
+    "paymentId": "pay_d12911ed874fe766",
+    "status": "reconciled",
+    "deadline": "2027-03-16T00:00:00Z",
+    "destination": {
+      "id": "acct_parent_minh",
+      "bank": "Lotus Home Bank (MOCK)",
+      "currency": "VND",
+      "maskedNumber": "\u2022\u2022\u2022\u2022 4821",
+      "balance": {
+        "amount": "996887220.88",
+        "currency": "VND"
+      },
+      "swift": "LOTUVNVX"
+    },
+    "timeline": [
+      {
+        "at": "2027-01-12T04:00:00Z",
+        "code": "refusal_reported",
+        "actor": "student",
+        "params": {},
+        "auditSeq": 20
+      },
+      {
+        "at": "2027-01-12T04:00:00Z",
+        "code": "evidence_verified_MOCK",
+        "actor": "bursar",
+        "params": {},
+        "auditSeq": 21
+      },
+      {
+        "at": "2027-01-12T04:00:00Z",
+        "code": "refund_requested",
+        "actor": "agent",
+        "params": {},
+        "auditSeq": 22
+      },
+      {
+        "at": "2027-01-13T04:00:00Z",
+        "code": "refund_acknowledged",
+        "actor": "bursar",
+        "params": {},
+        "auditSeq": 24
+      },
+      {
+        "at": "2027-01-15T04:00:00Z",
+        "code": "refund_approved",
+        "actor": "bursar",
+        "params": {},
+        "auditSeq": 25
+      },
+      {
+        "at": "2027-01-19T04:00:00Z",
+        "code": "refund_nudge",
+        "actor": "agent",
+        "params": {},
+        "auditSeq": 26
+      },
+      {
+        "at": "2027-03-14T00:00:00Z",
+        "code": "refund_sent",
+        "actor": "bursar",
+        "params": {},
+        "auditSeq": 28
+      },
+      {
+        "at": "2027-03-16T00:00:00Z",
+        "code": "refund_received",
+        "actor": "bank",
+        "params": {},
+        "auditSeq": 30
+      },
+      {
+        "at": "2027-03-16T00:00:00Z",
+        "code": "refund_reconciled",
+        "actor": "bank",
+        "params": {},
+        "auditSeq": 31
+      }
+    ],
+    "reconciliation": {
+      "conversion": {
+        "lossPct": "2.00",
+        "route": [
+          "KRW",
+          "USD",
+          "VND"
+        ],
+        "source": "MOCK return wire board"
+      },
+      "sentOut": {
+        "amount": "135663956.10",
+        "currency": "VND"
+      },
+      "receivedBack": {
+        "amount": "132551176.98",
+        "currency": "VND"
+      },
+      "lines": [
+        {
+          "code": "OUTBOUND_BANK_FEE",
+          "amount": {
+            "amount": "25000.00",
+            "currency": "VND"
+          },
+          "clause": "Ph\u00ed chuy\u1ec3n \u0111i ban \u0111\u1ea7u kh\u00f4ng \u0111\u01b0\u1ee3c ho\u00e0n"
+        },
+        {
+          "code": "FX_MOVEMENT_MOCK",
+          "amount": {
+            "amount": "2712779.12",
+            "currency": "VND"
+          },
+          "clause": "Ch\u00eanh l\u1ec7ch \u0111\u1ed5i KRW qua USD v\u1ec1 ti\u1ec1n nh\u00e0 (MOCK)"
+        },
+        {
+          "code": "INTERMEDIARY_BANK_FEE_MOCK",
+          "amount": {
+            "amount": "375000.00",
+            "currency": "VND"
+          },
+          "clause": "Ph\u00ed chuy\u1ec3n kho\u1ea3n qua ng\u00e2n h\u00e0ng trung gian (MOCK)"
+        },
+        {
+          "code": "RETENTION",
+          "amount": {
+            "amount": "0.00",
+            "currency": "VND"
+          },
+          "clause": "Kh\u00f4ng thu ph\u00ed nh\u1eadp h\u1ecdc; ch\u1ec9 ho\u00e0n h\u1ecdc ph\u00ed, kh\u00f4ng g\u1ed3m k\u00fd t\u00fac x\u00e1 v\u00e0 NHIS"
+        }
+      ]
+    }
+  },
+  "audit": {
+    "entries": [
+      {
+        "actor": "system",
+        "at": "2027-01-12T03:00:00Z",
+        "hash": "7c68bda04555184422a7e196461cb25af0460bbd4b1272fcf3b717d5dd290298",
+        "kind": "seed",
+        "prevHash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 1,
+        "summary": "Synthetic personas and MOCK issuer seeded"
+      },
+      {
+        "actor": "system",
+        "at": "2027-01-12T03:00:00Z",
+        "hash": "68bcd3d70e482330cc5f4fde20afbd712af8ffa3d76d5c6a492e7fb0b200fad3",
+        "kind": "reset_chain_pending",
+        "prevHash": "7c68bda04555184422a7e196461cb25af0460bbd4b1272fcf3b717d5dd290298",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 2,
+        "summary": "Sandbox reset locally; registry and audit commitments queued for background retry"
+      },
+      {
+        "actor": "usr_parent_minh",
+        "at": "2027-01-12T03:00:00Z",
+        "hash": "b97d8cf19ba770d0b4bd115afdd39a4e9b8bc63f9fecea23f870ec44c94dba3c",
+        "kind": "mandate_created",
+        "mandateHash": "d86f15c1a0fba966a331646cd917c01909d404d360fe4245368d703236f503f0",
+        "prevHash": "68bcd3d70e482330cc5f4fde20afbd712af8ffa3d76d5c6a492e7fb0b200fad3",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 3,
+        "summary": "Mandate awaiting signature"
+      },
+      {
+        "actor": "usr_parent_minh",
+        "at": "2027-01-12T03:00:00Z",
+        "authenticator": "demo",
+        "consentHash": "d86f15c1a0fba966a331646cd917c01909d404d360fe4245368d703236f503f0",
+        "hash": "cde7c9b7443cc228ba5352e7dc30d2983e3321e46dcff72cbe3214bc2718ad8a",
+        "kind": "demo_consent",
+        "prevHash": "b97d8cf19ba770d0b4bd115afdd39a4e9b8bc63f9fecea23f870ec44c94dba3c",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 4,
+        "summary": "DEMO authenticator used"
+      },
+      {
+        "actor": "usr_parent_minh",
+        "at": "2027-01-12T03:00:00Z",
+        "hash": "1f574fd2932e02a13cfc4bb2e68e1b9ac31aa9e8043526cc7d3eea234363ca01",
+        "kind": "mandate_signed",
+        "mandateHash": "d86f15c1a0fba966a331646cd917c01909d404d360fe4245368d703236f503f0",
+        "prevHash": "cde7c9b7443cc228ba5352e7dc30d2983e3321e46dcff72cbe3214bc2718ad8a",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 5,
+        "summary": "Mandate activated"
+      },
+      {
+        "actor": "usr_student_linh",
+        "at": "2027-01-12T03:00:00Z",
+        "documentHash": "09633856c612e8ee7b676cd11d13fb17d19b02b85e8b0c8ab73c5d9fc2f6cc94",
+        "hash": "4f5a64b28af732d43b00c076806d40fd8f9e05336fdcd2a862ae1659ca8dc9da",
+        "kind": "document_parsed",
+        "prevHash": "1f574fd2932e02a13cfc4bb2e68e1b9ac31aa9e8043526cc7d3eea234363ca01",
+        "provenance": "untrusted_doc",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 6,
+        "summary": "Document fields are tainted",
+        "warnings": []
+      },
+      {
+        "actor": "usr_student_linh",
+        "at": "2027-01-12T03:00:00Z",
+        "documentHash": "ed13db0f9afda51f2a981fd73b13e44bb47a0537efeb67b6a8b255fdeef96cf5",
+        "hash": "9cc293b4a50a1d4af0788163f2ed7e605d7985b2b37c4891f5e6a35bade695c1",
+        "kind": "document_parsed",
+        "prevHash": "4f5a64b28af732d43b00c076806d40fd8f9e05336fdcd2a862ae1659ca8dc9da",
+        "provenance": "untrusted_doc",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 7,
+        "summary": "Document fields are tainted",
+        "warnings": []
+      },
+      {
+        "actor": "agent",
+        "at": "2027-01-12T03:00:00Z",
+        "hash": "06509529231748a547a46b826997269e9a3f4b61f1a9c019b6b2c5419c8e01fa",
+        "kind": "disposition",
+        "prevHash": "9cc293b4a50a1d4af0788163f2ed7e605d7985b2b37c4891f5e6a35bade695c1",
+        "provenance": {
+          "amount": "verified_issuer",
+          "payee": "verified_issuer"
+        },
+        "ruleIds": [
+          "L3-01"
+        ],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 8,
+        "summary": "FIRST_PAYMENT"
+      },
+      {
+        "actor": "agent",
+        "at": "2027-01-12T03:00:00Z",
+        "consentHash": "cf100b2b1fcee3e314ac7c9f49298e9643f0bf4d415cbe019475acaa83ca13da",
+        "hash": "e7d4dd9c5a15d1784f234b42e6afaed0b674e8815cdc408ab4417d3677484faa",
+        "kind": "approval_created",
+        "prevHash": "06509529231748a547a46b826997269e9a3f4b61f1a9c019b6b2c5419c8e01fa",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "screenHash": "c0a24f8ced062f21e5578e5a358a73b46a620a51fedfd4bcfab3d1fa6f024b9e",
+        "seq": 9,
+        "summary": "Exact tuition action prepared"
+      },
+      {
+        "actor": "usr_parent_minh",
+        "assertionHash": "f960ae691ed65f3be919971aa812eca9402bc480dbe4f14137e4701550cb5b49",
+        "at": "2027-01-12T03:00:00Z",
+        "authenticator": "demo",
+        "consentHash": "cf100b2b1fcee3e314ac7c9f49298e9643f0bf4d415cbe019475acaa83ca13da",
+        "hash": "4a3231357b75ab178ad3a3b8472a5e11c81825b4ddd013a98b22a40b5ff44071",
+        "kind": "assertion_verified",
+        "prevHash": "e7d4dd9c5a15d1784f234b42e6afaed0b674e8815cdc408ab4417d3677484faa",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 10,
+        "summary": "Reference-bound assertion verified"
+      },
+      {
+        "actor": "bank",
+        "at": "2027-01-12T03:00:00Z",
+        "consentHash": "cf100b2b1fcee3e314ac7c9f49298e9643f0bf4d415cbe019475acaa83ca13da",
+        "grantId": "grt_bdbe952766c57a7c",
+        "hash": "2b0641909f21692da39c770eefd700ead5d0ee168d0d6dbf8f892155d2dc75c7",
+        "kind": "payment_executed",
+        "prevHash": "4a3231357b75ab178ad3a3b8472a5e11c81825b4ddd013a98b22a40b5ff44071",
+        "reference": "pay_d12911ed874fe766",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 11,
+        "summary": "payment executed"
+      },
+      {
+        "actor": "usr_parent_minh",
+        "at": "2027-01-12T03:00:00Z",
+        "consentHash": "cf100b2b1fcee3e314ac7c9f49298e9643f0bf4d415cbe019475acaa83ca13da",
+        "hash": "a4b8261a998aa1a5ba8bbfcfc94f8cd2cbef0a186a5ad5bf7dcaef8fb1f031ff",
+        "kind": "approval_signed",
+        "prevHash": "2b0641909f21692da39c770eefd700ead5d0ee168d0d6dbf8f892155d2dc75c7",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 12,
+        "summary": "Exact action approved"
+      },
+      {
+        "actor": "bursar",
+        "at": "2027-01-12T03:30:00Z",
+        "hash": "3b1fe9506d945c4a6ff389486359895c98551d13d8bbb090e7f0f4677596e0c6",
+        "kind": "received_by_bursar",
+        "prevHash": "a4b8261a998aa1a5ba8bbfcfc94f8cd2cbef0a186a5ad5bf7dcaef8fb1f031ff",
+        "reference": "pay_d12911ed874fe766",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 13,
+        "summary": "received by bursar"
+      },
+      {
+        "actor": "bursar",
+        "at": "2027-01-12T03:30:00Z",
+        "hash": "5f177850b9aa6aac12fe8fa04fa92bca424841b0e088dcbd5c130622ac1be1b3",
+        "kind": "payment_matched",
+        "prevHash": "3b1fe9506d945c4a6ff389486359895c98551d13d8bbb090e7f0f4677596e0c6",
+        "reference": "pay_d12911ed874fe766",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 14,
+        "summary": "payment matched"
+      },
+      {
+        "actor": "system",
+        "at": "2027-01-12T04:00:00Z",
+        "days": 0,
+        "hash": "15b1e4bdadb0f839e26c2e2a4077e12382835522c95fd8facca5c0786d45a2b7",
+        "hours": 1,
+        "kind": "clock_advanced",
+        "prevHash": "5f177850b9aa6aac12fe8fa04fa92bca424841b0e088dcbd5c130622ac1be1b3",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 15,
+        "summary": "Simulated clock advanced"
+      },
+      {
+        "actor": "usr_student_linh",
+        "at": "2027-01-12T04:00:00Z",
+        "documentHash": "17fc7504373f6da77ea3408844e56d1c8aecfc7772f9caa9df8398ded95717ab",
+        "hash": "5413f727826fd762fa59be1730a3256424e8c85bcea77fd18221269ea51658d4",
+        "kind": "document_parsed",
+        "prevHash": "15b1e4bdadb0f839e26c2e2a4077e12382835522c95fd8facca5c0786d45a2b7",
+        "provenance": "untrusted_doc",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 16,
+        "summary": "Document fields are tainted",
+        "warnings": []
+      },
+      {
+        "actor": "agent",
+        "at": "2027-01-12T04:00:00Z",
+        "consentHash": "050aad75d08880d4c25cba4a44a2176ab0b0e114c48b5fe4b964aaa7d0571306",
+        "hash": "1aa7834dda1c3f7202357903659cd27bee6f75809065c14bc3b700631dbc6f47",
+        "kind": "refund_approval_created",
+        "prevHash": "5413f727826fd762fa59be1730a3256424e8c85bcea77fd18221269ea51658d4",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 17,
+        "summary": "Student consent required"
+      },
+      {
+        "actor": "usr_parent_minh",
+        "at": "2027-01-12T04:00:00Z",
+        "cancelledPayments": 0,
+        "familyId": "fam_minh",
+        "frozen": true,
+        "frozenReason": "USER_REQUESTED",
+        "hash": "6eeb9adb08e47796c85c78b3ff37b692354140d7d7ad70372a2313c83c4c7a00",
+        "incomingRefundsPaused": false,
+        "kind": "freeze",
+        "pausedApprovals": 0,
+        "prevHash": "1aa7834dda1c3f7202357903659cd27bee6f75809065c14bc3b700631dbc6f47",
+        "reason": "USER_REQUESTED",
+        "recovery": "parent_passkey_unfreeze",
+        "revokedTokens": 0,
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 18,
+        "summary": "Outbound payments paused; cancellable transfers reversed; refunds continue",
+        "suspendedMandates": 1,
+        "tookMs": 0.034
+      },
+      {
+        "actor": "usr_student_linh",
+        "assertionHash": "28957eae24bca3fb0a3061a65239d6d303b25ffae2ce3378d19b54eae7456e32",
+        "at": "2027-01-12T04:00:00Z",
+        "authenticator": "demo",
+        "consentHash": "050aad75d08880d4c25cba4a44a2176ab0b0e114c48b5fe4b964aaa7d0571306",
+        "hash": "ef10d7f229783bd46c0075a514b9603359c82310a5b192395f9f0a80d9ad2994",
+        "kind": "assertion_verified",
+        "prevHash": "6eeb9adb08e47796c85c78b3ff37b692354140d7d7ad70372a2313c83c4c7a00",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 19,
+        "summary": "Reference-bound assertion verified"
+      },
+      {
+        "actor": "student",
+        "at": "2027-01-12T04:00:00Z",
+        "hash": "efce9bea81cd7eca8f8ada0ac0a8cb4c0c3cfb4cbd4ed06e39fcd842b82e6c00",
+        "kind": "refusal_reported",
+        "prevHash": "ef10d7f229783bd46c0075a514b9603359c82310a5b192395f9f0a80d9ad2994",
+        "reference": "ref_e74e8a955b82fa97",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 20,
+        "summary": "refusal reported"
+      },
+      {
+        "actor": "bursar",
+        "at": "2027-01-12T04:00:00Z",
+        "hash": "4f0c01061d9f293e9c3421688e327a2b33a9cc12f5200cc31fa0ef24bd9cbd2c",
+        "kind": "evidence_verified_MOCK",
+        "prevHash": "efce9bea81cd7eca8f8ada0ac0a8cb4c0c3cfb4cbd4ed06e39fcd842b82e6c00",
+        "reference": "ref_e74e8a955b82fa97",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 21,
+        "summary": "evidence verified MOCK"
+      },
+      {
+        "actor": "agent",
+        "at": "2027-01-12T04:00:00Z",
+        "hash": "5ff99713a20b0c5569effa619b10e90645b0a6828c0d32e2ab9f1ef8dc912f00",
+        "kind": "refund_requested",
+        "prevHash": "4f0c01061d9f293e9c3421688e327a2b33a9cc12f5200cc31fa0ef24bd9cbd2c",
+        "reference": "ref_e74e8a955b82fa97",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 22,
+        "summary": "refund requested"
+      },
+      {
+        "actor": "usr_student_linh",
+        "at": "2027-01-12T04:00:00Z",
+        "consentHash": "050aad75d08880d4c25cba4a44a2176ab0b0e114c48b5fe4b964aaa7d0571306",
+        "hash": "5d81c3e02be369d39afe6a19dda29ea522766580ed92cbacba98c1dc72407afa",
+        "kind": "approval_signed",
+        "prevHash": "5ff99713a20b0c5569effa619b10e90645b0a6828c0d32e2ab9f1ef8dc912f00",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 23,
+        "summary": "Exact action approved"
+      },
+      {
+        "actor": "bursar",
+        "at": "2027-01-13T04:00:00Z",
+        "hash": "08111e12b14fe375beeff838372b575d137b6df5466d6d919487673718add900",
+        "kind": "refund_acknowledged",
+        "prevHash": "5d81c3e02be369d39afe6a19dda29ea522766580ed92cbacba98c1dc72407afa",
+        "reference": "ref_e74e8a955b82fa97",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 24,
+        "summary": "refund acknowledged"
+      },
+      {
+        "actor": "bursar",
+        "at": "2027-01-15T04:00:00Z",
+        "hash": "25feb6e0b8c8bfe73ad44263866130d8791cf82c3b64d38ad531995141d0df85",
+        "kind": "refund_approved",
+        "prevHash": "08111e12b14fe375beeff838372b575d137b6df5466d6d919487673718add900",
+        "reference": "ref_e74e8a955b82fa97",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 25,
+        "summary": "refund approved"
+      },
+      {
+        "actor": "agent",
+        "at": "2027-01-19T04:00:00Z",
+        "hash": "5f06ac9c9c56a9d82ab4df36bd70cb0c62af3f414b22d52b97eb3008954b6de3",
+        "kind": "refund_nudge",
+        "prevHash": "25feb6e0b8c8bfe73ad44263866130d8791cf82c3b64d38ad531995141d0df85",
+        "reference": "ref_e74e8a955b82fa97",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 26,
+        "summary": "refund nudge"
+      },
+      {
+        "actor": "system",
+        "at": "2027-02-12T04:00:00Z",
+        "days": 0,
+        "hash": "cb6456bec85d32b474b043dbd36ba686192f18a47a5972091cbbdde40b20742f",
+        "hours": 744,
+        "kind": "clock_advanced",
+        "prevHash": "5f06ac9c9c56a9d82ab4df36bd70cb0c62af3f414b22d52b97eb3008954b6de3",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 27,
+        "summary": "Simulated clock advanced"
+      },
+      {
+        "actor": "bursar",
+        "at": "2027-03-14T00:00:00Z",
+        "hash": "e848b2c60bac97f5d9542bbc521a15fb84d76342a75aaf1afaee5a14574081c3",
+        "kind": "refund_sent",
+        "prevHash": "cb6456bec85d32b474b043dbd36ba686192f18a47a5972091cbbdde40b20742f",
+        "reference": "ref_e74e8a955b82fa97",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 28,
+        "summary": "refund sent"
+      },
+      {
+        "actor": "system",
+        "at": "2027-03-15T04:00:00Z",
+        "days": 0,
+        "hash": "8bf450bdd09bbd4e2d236559e612a75c02bc07e10cdec541e44f41e7309715fe",
+        "hours": 744,
+        "kind": "clock_advanced",
+        "prevHash": "e848b2c60bac97f5d9542bbc521a15fb84d76342a75aaf1afaee5a14574081c3",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 29,
+        "summary": "Simulated clock advanced"
+      },
+      {
+        "actor": "bank",
+        "at": "2027-03-16T00:00:00Z",
+        "hash": "8a4864ff7a977bce7d9aa12bb0a5c7a2a9c6c01a30e1db9ca04421c265e8d5bb",
+        "kind": "refund_received",
+        "prevHash": "8bf450bdd09bbd4e2d236559e612a75c02bc07e10cdec541e44f41e7309715fe",
+        "reference": "ref_e74e8a955b82fa97",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 30,
+        "summary": "refund received"
+      },
+      {
+        "actor": "bank",
+        "at": "2027-03-16T00:00:00Z",
+        "hash": "52a55da803bb4a2b955aa7774b0c3b11c92cd6140c6e2570c8ed49fa1094fe33",
+        "kind": "refund_reconciled",
+        "prevHash": "8a4864ff7a977bce7d9aa12bb0a5c7a2a9c6c01a30e1db9ca04421c265e8d5bb",
+        "reference": "ref_e74e8a955b82fa97",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 31,
+        "summary": "refund reconciled"
+      },
+      {
+        "actor": "system",
+        "at": "2027-03-16T00:00:00Z",
+        "days": 0,
+        "hash": "adb9fcbba4ec612437d19a71b667abefa14d84b14610797cf2bd83eabdeb5004",
+        "hours": 20,
+        "kind": "clock_advanced",
+        "prevHash": "52a55da803bb4a2b955aa7774b0c3b11c92cd6140c6e2570c8ed49fa1094fe33",
+        "ruleIds": [],
+        "rulesHash": "b94c5adb8e51d2f3b672a727c807b7b1a5a482636e2ce87de9e90d3cfef7bf16",
+        "rulesVersion": "2026-10-18.2",
+        "seq": 32,
+        "summary": "Simulated clock advanced"
+      }
+    ],
+    "next": null
+  },
+  "limits": "Scripted provider, local commitments and MOCK bank; real FISCO coverage is separately T13/T15"
+}

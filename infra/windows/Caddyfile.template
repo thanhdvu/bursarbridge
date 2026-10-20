@@ -1,0 +1,70 @@
+{
+    admin off
+    auto_https off
+    servers {
+        trusted_proxies static 127.0.0.1/32 ::1/128
+        client_ip_headers Cf-Connecting-Ip
+        trusted_proxies_strict
+    }
+}
+http://@@HOST@@:@@EDGE_PORT@@ {
+    bind 127.0.0.1
+    header {
+        Strict-Transport-Security "max-age=31536000"
+        X-Content-Type-Options nosniff
+        Referrer-Policy same-origin
+    }
+    request_body {
+        max_size 6MB
+    }
+    @api path /bbapi/* /api/*
+    handle @api {
+        uri replace /bbapi/ /api/ 1
+        header {
+            Cache-Control "no-store, no-transform"
+            X-Accel-Buffering no
+            defer
+        }
+        reverse_proxy 127.0.0.1:@@API_PORT@@ {
+            transport http {
+                compression off
+            }
+            header_up X-Forwarded-For {client_ip}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Host {host}
+            header_up -X-Real-IP
+            header_up -X-Bursar-Return
+            header_up -Cf-Connecting-Ip
+            header_up -Accept-Encoding
+        }
+    }
+    @bootstrap {
+        method GET
+        header Accept *text/html*
+        not header Cookie *bb_sandbox=*
+    }
+    handle @bootstrap {
+        rewrite * /api/public/bootstrap
+        header >Cache-Control "no-store, no-transform"
+        reverse_proxy 127.0.0.1:@@API_PORT@@ {
+            transport http {
+                compression off
+            }
+            header_up X-Bursar-Return {http.request.orig_uri}
+            header_up X-Forwarded-For {client_ip}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Host {host}
+            header_up -X-Real-IP
+            header_up -Cf-Connecting-Ip
+            header_up -Accept-Encoding
+        }
+    }
+    handle {
+        reverse_proxy 127.0.0.1:@@WEB_PORT@@ {
+            header_up X-Forwarded-For {client_ip}
+            header_up X-Forwarded-Proto https
+            header_up X-Forwarded-Host {host}
+        }
+    }
+    # Only loopback cloudflared is trusted. No encode, TLS or Caddy admin listener.
+}

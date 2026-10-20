@@ -1,0 +1,72 @@
+{
+  "transcript": [
+    {
+      "user": "con gái tôi sắp đi du học hàn, nếu đóng tiền rồi mà bị trượt visa thì sao, có lấy lại được ko",
+      "assistant": "Có, nếu nộp hồ sơ hoàn tiền do trượt visa trước ngày khai giảng 02/03/2027, gia đình được hoàn toàn bộ học phí đã đóng, tiền ký túc xá chưa sử dụng và bảo hiểm chưa kích hoạt. Con gái bạn cần nộp hồ sơ rút nhập học và xin hoàn tiền; theo chính sách, trường hoàn chậm nhất vào 16/03/2027, tính từ ngày khai giảng chứ không phải ngày nộp yêu cầu. Tiền chỉ được trả về đúng tài khoản gốc của bạn đã chuyển tiền; hóa đơn này không thu phí nhập học riêng, nhưng gia đình chịu phí ngân hàng chuyển đi, phí ngân hàng trung gian và hao hụt tỷ giá nên không bảo đảm nhận lại nguyên số tiền đã chi.",
+      "sources": [
+        "openai"
+      ],
+      "firstStepMs": 29.8,
+      "totalMs": 7612.9,
+      "cards": []
+    },
+    {
+      "user": "bao lâu thì tiền về, mất phí gì ko",
+      "assistant": "Nếu con gái bạn nộp hồ sơ trước ngày khai giảng 02/03/2027, trường cam kết hoàn tiền chậm nhất vào 16/03/2027; thời hạn tính từ ngày khai giảng, không phải ngày nộp yêu cầu. Hóa đơn này không thu phí nhập học riêng, nhưng gia đình chịu phí ngân hàng chuyển đi ban đầu, phí chuyển tiền quốc tế qua ngân hàng trung gian và hao hụt tỷ giá, nên không bảo đảm nhận lại đủ số tiền đã chi.",
+      "sources": [
+        "openai"
+      ],
+      "firstStepMs": 10.5,
+      "totalMs": 6592.8,
+      "cards": []
+    },
+    {
+      "user": "lỡ chậm đóng đợt 2 thì sao?",
+      "assistant": "Đợt hai là 4.477.000 KRW, hạn đóng 15/01/2027—cùng hạn với đợt đầu, không phải một hạn muộn hơn. Nếu quá hạn mà chưa đóng, việc xác nhận đủ điều kiện đăng ký học sẽ bị tạm giữ đến khi bộ phận tài vụ xác nhận thanh toán hoặc ban hành thông báo học phí có ký sửa đổi; không tự động hủy nhập học. Điều khoản hiện tại không quy định mức phí phạt chậm đóng; nếu cần gia hạn, bạn cần liên hệ tài vụ trường vì chỉ trường mới có quyền chấp thuận bằng thông báo sửa đổi.",
+      "sources": [
+        "openai"
+      ],
+      "firstStepMs": 8.5,
+      "totalMs": 7020.9,
+      "cards": []
+    },
+    {
+      "user": "riêng tiền bảo hiểm là bao nhiêu vậy?",
+      "assistant": "Riêng tiền bảo hiểm trong hóa đơn học kỳ này là 280.000 KRW.",
+      "sources": [
+        "openai"
+      ],
+      "firstStepMs": 12.3,
+      "totalMs": 5869.3,
+      "cards": []
+    }
+  ],
+  "referenceStable": true,
+  "financialStateUnchanged": true,
+  "initialCounts": {
+    "/approvals?status=all": 0,
+    "/payments": 0,
+    "/refunds": 0,
+    "/mandates": 0,
+    "/documents": 0
+  },
+  "invoiceVersion": "semester-2027-v5",
+  "health": {
+    "ok": true,
+    "demo": true,
+    "bank": "MOCK",
+    "bursar": "MOCK",
+    "llmProvider": "openai",
+    "chainMode": "fisco",
+    "screeningMode": "watchman",
+    "llm": {
+      "configuredProvider": "openai",
+      "effectiveProvider": "openai",
+      "status": "ready",
+      "lastError": null,
+      "lastSuccessAt": "2026-10-17T19:21:23.168273+00:00"
+    },
+    "publicDemo": false
+  },
+  "limits": "New parent thread in the backed-up/reseeded v5 private dev ledger; no documents, payments, signatures or grants"
+}

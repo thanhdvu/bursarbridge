@@ -1,0 +1,65 @@
+{
+  "api": 8000,
+  "health": {
+    "ok": true,
+    "demo": true,
+    "bank": "MOCK",
+    "bursar": "MOCK",
+    "llmProvider": "openai",
+    "chainMode": "fisco",
+    "screeningMode": "watchman",
+    "llm": {
+      "configuredProvider": "openai",
+      "effectiveProvider": "openai",
+      "status": "ready",
+      "lastError": null,
+      "lastSuccessAt": null
+    },
+    "publicDemo": false
+  },
+  "reset": {
+    "ok": true,
+    "registrationStatus": "pending",
+    "anchorStatus": "pending",
+    "recovery": "automatic_retry"
+  },
+  "resetElapsedMs": 33.9,
+  "observedRecovery": [
+    {
+      "registrationStatus": "pending",
+      "anchorStatus": "retrying"
+    },
+    {
+      "registrationStatus": "pending",
+      "anchorStatus": "retrying"
+    },
+    {
+      "registrationStatus": "ready",
+      "anchorStatus": "ready"
+    }
+  ],
+  "verification": {
+    "ok": true,
+    "entries": 3,
+    "anchors": 1,
+    "mode": "fisco",
+    "onChain": true
+  },
+  "anchors": [
+    {
+      "at": "2027-01-12T03:00:00Z",
+      "blockNumber": 1998,
+      "contract": "0xc75d7F89e39166D1A49C2FcD567EfAbce798eEb4",
+      "firstSeq": 1,
+      "index": 906,
+      "lastSeq": 2,
+      "mode": "fisco",
+      "root": "749838c9ab8aca37018ea303118f7313b756ed07d388c4e5fc0f8b6ee69ce24e",
+      "txHash": "0x85ed132ebaceab41db9823d89dc5b8d11373efcb22c5e54fdfc1dfc812c5246f"
+    }
+  ],
+  "payments": 0,
+  "refunds": 0,
+  "hostedCalls": 0,
+  "scope": "Backed-up explicit private dev sandbox reset with real FISCO registration/anchor recovery; no chain reset or public deployment"
+}

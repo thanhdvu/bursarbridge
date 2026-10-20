@@ -1,0 +1,90 @@
+{
+  "provider": "openai",
+  "model": "gpt-6.1-sol",
+  "hosted": true,
+  "results": [
+    {
+      "id": "C76",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "visa bị từ chối rồi, giúp em với",
+          "assistant": "Linh cần ký đơn rút nhập học và đề nghị hoàn học phí; theo cam kết, trường sẽ hoàn trước hoặc vào 16/03/2027. Số tiền thực nhận ước tính MOCK là 132.551.177 VND, chỉ về tài khoản gốc của ba; đây chưa phải khoản đã nhận và không được bảo đảm.",
+          "sources": [
+            "openai"
+          ],
+          "providerStatus": {
+            "configuredProvider": "openai",
+            "effectiveProvider": "openai",
+            "status": "ready",
+            "lastError": null,
+            "lastSuccessAt": "2026-10-18T04:55:54.931070+00:00"
+          }
+        }
+      ],
+      "incidents": [],
+      "ms": 7576.9
+    },
+    {
+      "id": "C77",
+      "locale": "zh",
+      "provider": "openai",
+      "status": "pass",
+      "errors": [],
+      "transcript": [
+        {
+          "user": "帮我付这个月的房租",
+          "assistant": "Hao,请先上传租赁合同,并由爸爸签署每月房租付款授权;材料齐全后,才能继续核对房东并办理付款。",
+          "sources": [
+            "openai"
+          ],
+          "providerStatus": {
+            "configuredProvider": "openai",
+            "effectiveProvider": "openai",
+            "status": "ready",
+            "lastError": null,
+            "lastSuccessAt": "2026-10-18T04:56:01.040916+00:00"
+          }
+        }
+      ],
+      "incidents": [],
+      "ms": 5934.7
+    },
+    {
+      "id": "C78",
+      "locale": "vi",
+      "provider": "openai",
+      "status": "fail",
+      "errors": [
+        "Missing expected reply wording"
+      ],
+      "transcript": [
+        {
+          "user": "nếu trường không chịu trả tiền hoàn thì sao?",
+          "assistant": "Nếu trường chưa hoàn học phí đúng hạn cam kết 16/03/2027, BursarBridge sẽ soạn thư nhắc để sinh viên duyệt trước khi gửi mô phỏng; nếu vẫn chưa nhận được tiền sau 7 ngày, bước tiếp theo là chuẩn bị bộ hồ sơ khiếu nại đã che thông tin nhạy cảm để nộp thủ công. Việc nhắc và khiếu nại không bảo đảm thu hồi được tiền cho anh.",
+          "sources": [
+            "openai"
+          ],
+          "providerStatus": {
+            "configuredProvider": "openai",
+            "effectiveProvider": "openai",
+            "status": "ready",
+            "lastError": null,
+            "lastSuccessAt": "2026-10-18T04:56:08.276162+00:00"
+          }
+        }
+      ],
+      "incidents": [],
+      "ms": 7085.1
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 1,
+    "total": 3
+  },
+  "limits": "Deterministic HTTP assertions; hosted style still needs native-speaker review. No model-as-judge. Local chain and MOCK screening isolate dialogue."
+}
